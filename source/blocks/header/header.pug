@@ -1,0 +1,60 @@
+mixin header(authorization = false,userName="юлий цезарь")
+    header.header
+        .header__body 
+            .header__logo 
+                img(src="../../pictures/toxin.svg", alt="")
+            nav.header__menu
+                ul.header__list 
+                    li
+                        a(href="") О нас 
+                    li.list__options
+                        .options-header 
+                            a Услуги
+                            span.arrow expand_more
+                        .options-bar 
+                            p 
+                                a(href="") Услуга 1
+                            p 
+                                a(href="") Услуга 2
+                    li
+                        a(href="") Вакансии
+                    li 
+                        a(href="") Новости
+                    li.list__agree 
+                        .agree-header
+                            a Соглашения
+                            span.arrow expand_more
+                        .agree-bar 
+                            p
+                                a(href="") Соглашение 1 
+                            p
+                                a(href="") Соглашение 2
+                    if authorization 
+                
+                    else
+                        li.entry-bar
+                            +button-border('войти')
+                            +button-filled('зарегистрироваться')
+                if authorization 
+                        .bar-smallscr
+                            .entry-bar 
+                                    .divider
+                                    p.login=userName
+                            .header__list.smallscr
+                                span
+                            span.entry-bar.smallscr.id 
+                                a(href="")
+                                    i.material-icons person
+                else
+                        .bar-smallscr
+                            .header__list.smallscr
+                                span
+                            span.entry-bar.smallscr.login
+                                a(href="")
+                                    i.material-icons input
+                            span.entry-bar.smallscr.register 
+                                a(href="" )
+                                    i.material-icons person_add
+                            
+            
+            

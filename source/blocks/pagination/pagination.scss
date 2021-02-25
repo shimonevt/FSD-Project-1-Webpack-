@@ -1,0 +1,54 @@
+@import "../../fonts/style/fonts.scss";
+.pagination {
+    font-family: "Montserrat_Regular";
+    .pagination__body {
+        
+        ul {
+            list-style: none;
+            display: flex;          
+            padding-left: 0px;
+            
+            font-size: 12px;
+            .ellipse.clickable {
+                color: rgba(31, 32, 65, 0.5);
+            }
+            li {
+                width: 40px;
+                height: 40px; 
+                text-align: center;
+                line-height: 40px;                           
+                a {
+                    text-decoration: none;
+                    color: rgba(31, 32, 65, 0.5);
+                }
+            }
+            li:first-child {
+                display: none;
+            }
+            li.active {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                border-radius: 22px;
+                .current {
+                    color : #FFFFFF;
+                    mix-blend-mode: screen;
+                }
+            }
+            li:last-child {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                border-radius: 22px;
+                .next {
+                    font-family: "Material Icons";
+                    font-size: 24px;
+                    color : #FFFFFF;
+                    display: inline;
+                }
+            }
+        }
+    }
+    .pagination__count {
+        margin: 10px 0px 0px;
+        color: rgba(31, 32, 65, 0.75);
+        font-size: 14px;
+        text-align: center;
+    }
+}

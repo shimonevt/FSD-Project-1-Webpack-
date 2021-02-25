@@ -1,0 +1,44 @@
+@import "../../fonts/style/fonts.scss";
+.icon-text-list {
+    max-width : 291px;
+    &__group {
+        display: flex;
+        .group__icon {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            width: 46px;
+            height: 46px;
+            font-family: "Montserrat_Regular";
+            i {
+                background: #FFFFFF;
+                mix-blend-mode: screen;
+                font-size : 48px;
+                position: relative;
+                top:10px;
+                left: -1px;
+                color:rgba(31, 32, 65, 1);
+            }
+        }
+        .group__text {
+            margin-left: 10px;
+            p {
+                font-size: 14px;
+                margin : 0px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+                font-family: "Montserrat_Regular";
+            }
+            .text__header {
+                font-family: 'Montserrat_Bold';
+                margin-top : 0px;
+                
+            }
+        }
+        
+    }
+    .group__divider {
+            background: rgba(31, 32, 65, 0.1);
+            height: 1px;
+            width: 100%;
+            margin : 20px 11px 20px 0px;
+            }
+}

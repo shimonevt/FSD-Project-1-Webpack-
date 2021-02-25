@@ -1,0 +1,16 @@
+mixin date-dropdown(isUIelem=false)
+        -let fName,sName;
+        if isUIelem
+            -fName="date dropdown";
+            -sName="date dropdown";
+        else 
+            -fName="прибытие";
+            -sName="выезд";
+        .date-dropdown
+            .date__bar
+                .date__item
+                    p.item__name=fName
+                    input.first-date(type="text", placeholder="ДД.ММ.ГГГГ")
+                .date__item
+                    p.item__name=sName
+                    input.second-date(type="text", placeholder="ДД.ММ.ГГГГ")

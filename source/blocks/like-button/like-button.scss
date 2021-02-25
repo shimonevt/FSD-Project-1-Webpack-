@@ -1,0 +1,40 @@
+@import "../../fonts/style/fonts.scss";
+.like-button {
+    display: flex; 
+    cursor: default;
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background : #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    transition-duration: 500ms;
+    font-family: "Montserrat_Regular";
+    &__body {
+        display: flex;
+        align-items:center;
+        font-size: 10px;
+        position: relative;
+        color: rgba(31, 32, 65, 0.25);
+        transition-duration: 500ms;
+        .body__like-img {
+            width: 20px;
+            display: flex; 
+            justify-content: center;            
+            i.material-icons.md-10{
+                font-family: "Material Icons";
+                font-size: 10px;
+                color :  #BC9CFF;
+            }
+        }
+    }
+}
+.like-button.active {
+        border: 1px solid  #BC9CFF;
+        transition-duration: 500ms;
+        .like-button__body {
+            color: #BC9CFF;
+            transition-duration: 500ms;
+           
+        }         
+}

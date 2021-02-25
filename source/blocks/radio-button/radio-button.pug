@@ -1,0 +1,26 @@
+mixin radio-button(header="",gender="man")
+        p.header=header
+        if gender="man"
+            .radio-button
+                label
+                    input.radio-button__option(type="radio", name="gender" checked)
+                    span Мужчина
+                label
+                    input.radio-button__option(type="radio", name="gender")
+                    span Женщина
+        else if gender="woman"
+            .radio-button
+                label
+                    input.radio-button__option(type="radio", name="gender")
+                    span Мужчина
+                label
+                    input.radio-button__option(type="radio", name="gender" checked)
+                    span Женщина
+        else
+            .radio-button
+                label
+                    input.radio-button__option(type="radio", name="gender")
+                    span Мужчина
+                label
+                    input.radio-button__option(type="radio", name="gender")
+                    span Женщина 

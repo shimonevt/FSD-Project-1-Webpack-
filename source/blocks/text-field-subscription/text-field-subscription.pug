@@ -1,0 +1,13 @@
+mixin text-field-subscription(isUIelem=false)
+        -let name;
+        if isUIelem
+            -name = "subcription text field";
+        else
+
+        .text-field.subscription
+            p.type__info=name
+            .text-field__body
+                form(method="post")
+                    input(type="email", placeholder="Email")
+                button
+                    i.material-icons.md-24 arrow_forward

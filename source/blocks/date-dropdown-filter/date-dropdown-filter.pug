@@ -1,0 +1,13 @@
+mixin date-dropdown-filter(isUIelem=false)
+        -let name;
+        if isUIelem
+            -name="date dropdown filter";
+        else
+
+        .date-dropdown-filter
+            p.info__type=name
+            .text-field__body.dropdown-filter
+                form(method="post")
+                    input.dropdown-filter__input(type="text" placeholder="")
+                button
+                    i.material-icons.md-24 expand_more

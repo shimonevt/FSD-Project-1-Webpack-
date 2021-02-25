@@ -1,0 +1,46 @@
+@import "../../fonts/style/fonts.scss";
+.toggle {   
+    width: 260px;
+    .toggle-button {       
+        width: 40px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        margin:0px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    .toggle-button::after {
+        content: '';
+        display: inline-block;
+        position : relative;
+        width: 12px;
+        height: 12px;
+        background: rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+        left : 4px;
+        top : 1px;
+        transition: 500ms;
+        transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }  
+    .toggle-button:checked::after {
+        transform: translateX(calc(100% + 6px));
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    .toggle-button:checked {
+        background: #FFFFFF;
+        border: 1px solid #BC9CFF;
+    }  
+    label {
+        position: relative;
+        left : 10px;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        font-family: "Montserrat_Regular";
+    }
+}

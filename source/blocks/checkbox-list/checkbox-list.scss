@@ -1,0 +1,108 @@
+@import "../../fonts/style/fonts.scss";
+.info__type {
+    font-family: 'Montserrat_bold';
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;                    
+}
+.check__box {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #FFFFFF;
+    border:  1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-left: -30px;
+    margin-top: -2px;
+
+}
+.item__input:checked  + .check__box:before {
+    content : '';
+    position : absolute;
+    left: 4px;
+    top : 3.5px;
+    width: 9.9px;
+    height: 9px;
+    background: url(../../pictures/vector.svg) no-repeat center center;
+} 
+.options__item > .item__input {
+    position : absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0 );
+}
+.checkbox-list {
+    max-width: 266px;
+    font-family : "Montserrat_Regular";
+    p {
+        margin : 0px;
+    }
+    .info__arrow i {
+        position: relative;
+        top : 4px;
+        transition-duration: 500ms;
+        color: rgba(31, 32, 65, 0.5);
+    }   
+    .list__options {
+        color: rgba(31, 32, 65, 0.5); 
+        font-size: 14px;
+        height: 0px;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        transition-duration: 500ms;  
+        -moz-transition-duration: 500ms;
+        .options__item { 
+                pointer-events: none;
+                -moz-transition:  500ms;    
+                -webkit-transition: 500ms;
+                transition: 500ms;
+        } 
+}  
+.list__info.active {
+    .info__arrow {
+            
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+                transition-duration: 500ms;
+            
+        }
+}
+.list__options.active{ 
+    width: 100%;
+    height: 180px;
+    background: #FFFFFF;
+    transition-duration: 500ms;  
+    -moz-transition-duration: 500ms;
+    opacity: 1;
+>.options__item {        
+            display: block;
+            margin-bottom : 10px;
+            max-width: 70%;
+            padding-left: 30px;
+            height : 20px;               
+            pointer-events: auto;
+        }                                   
+    }
+    .list__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor : default;
+        .info__arrow {
+            padding : 10px 16px 16px 16px;
+            transition-duration: 500ms;
+        }
+        img {
+            margin: 0px;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transition-duration: 500ms;
+        }
+        > p {
+            margin: 0px;
+            display: inline;
+        }
+    }   
+}

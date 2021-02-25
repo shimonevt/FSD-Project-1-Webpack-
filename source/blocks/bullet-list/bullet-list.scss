@@ -1,0 +1,44 @@
+.bullet__list {
+    max-width: 292px;
+    font-family: 'Montserrat_Regular';
+    .bullet__header {
+        
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height : 15px;
+        color: #1F2041;
+    }
+    ul {
+        padding: 0px;
+        list-style: none;
+        .list__item {
+            list-style-type: none;
+            padding-left: 0px;
+            display: flex;
+            align-items: center;
+            margin-bottom:10px;
+            .bullet {
+                background: rgba(31, 32, 65, 0.25);
+                max-width: 10px;
+                min-width: 10px;
+                max-height: 10px;
+                min-height: 10px;
+                border-radius: 5px;
+            }
+            .item__text {
+                font-size: 14px;
+                color: rgba(31, 32, 65, 0.75);
+                margin : 0px 0px 0px 10px;
+                line-height: 24px;
+                position: relative;
+            }
+        }
+        .list__item:nth-child(3)  {
+            .bullet {
+                width : 13.5px;
+                position: relative;
+                top : -12px;
+            }
+        }
+    }
+}

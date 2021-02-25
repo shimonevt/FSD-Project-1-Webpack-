@@ -1,0 +1,21 @@
+mixin card-login(headers=false)
+        .card-login.card
+            if headers        
+                p.card__title Войти
+                +text-field('Email','Email')
+                +text-field('Пароль','Пароль','password')
+                +button-arrow('войти')
+                .login__info
+                    p.info__text Нет аккаунта на Toxin?
+                    +button-border('создать')
+            else 
+                p.card__title Войти
+                +text-field('','Email')
+                +text-field('','Пароль','password')
+                +button-arrow('войти')
+                .login__info
+                    p.info__text Нет аккаунта на Toxin?
+                    +button-border('создать')
+                
+
+

@@ -1,0 +1,9 @@
+mixin rating(rate=0,ratingName="rating")    
+        .rating
+            -for(let i=0,a=5; i < 5;i++,a--)
+                if rate == a && rate != 0
+                    input.rating__star(id=ratingName+"-"+a+"-star", type="radio", name=ratingName, value=a, checked)
+                    label.rating__label(for=ratingName+"-"+a+"-star")
+                else
+                    input.rating__star(id=ratingName+"-"+a+"-star", type="radio", name=ratingName, value=a)
+                    label.rating__label(for=ratingName+"-"+a+"-star")

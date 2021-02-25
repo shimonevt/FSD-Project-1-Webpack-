@@ -1,0 +1,45 @@
+mixin select(infoType='dropdown',selectType='guests',isActive=false,values=[0,0,0])
+            -let minValue = 0;
+            -let names, listData;
+            -let selectClass;
+            if isActive
+                -selectClass ='select active'
+            else
+                -selectClass ='select'
+            if selectType =='rooms'
+                -names = ['спальни', 'кровати', 'ванные комнаты']
+                -listData = ['bedrooms', 'beds', 'bathrooms']
+            else if selectType = 'guests'
+                -names = ['взрослые', 'дети', 'младенцы']
+                -listData = ['guests', 'guests', 'babies']
+            div(class=selectClass,data-type=selectType)
+                p.info__type=infoType
+                .select__body
+                    if selectType =='guests'
+                        .select__text(type='guests') Сколько гостей
+                    if selectType == 'rooms'
+                        .select__text(type='rooms') Выберите комнаты                            
+                    .select__bar
+                        ul.select__list
+                                -let i =0
+                                each name in names
+                                    if values[i]<0
+                                        -vals[i]=minValue
+                                    .list__group(data-item=listData[i])
+                                        li.list__item=names[i]
+                                        .buttons__group
+                                            if values[i]==minValue
+                                                button.button__minus.button -
+                                            else
+                                                button.button__minus.button.active -
+                                            p.item__count=values[i]
+                                            button.button__plus +
+                                    -i++
+                        if selectType =='guests'
+                            .edit-buttons
+                                .edit__clear.edit-btn
+                                    include ../button-icon/button-icon
+                                    +button-icon('очистить',1)
+                                .edit__accept.edit-btn
+                                    include ../button-icon/button-icon
+                                    +button-icon('применить',0)

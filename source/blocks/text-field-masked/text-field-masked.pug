@@ -1,0 +1,10 @@
+mixin text-field-masked(isUIelem=false)
+            -let name;
+            if isUIelem
+                -name="text field masked";
+            else
+            .text-field-masked
+                p.info__type=name
+                .text-field__body
+                    form(action="", method="post")
+                        input.masked-text-field(type="text" placeholder="ДД.ММ.ГГГГ")

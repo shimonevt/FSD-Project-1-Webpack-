@@ -1,0 +1,24 @@
+mixin icon-text-list(elemNum=2)
+        -icons=['insert_emoticon','location_city','whatshot']
+        -headers=['Комфорт','Удобство','Уют']
+        -text=['Шумопоглощающие стены','Окно в каждой спален','Номер оснащен камином']
+        .icon-text-list
+            -let i = 0
+            each header in headers 
+                    if i+1 == elemNum
+                        .icon-text-list__group
+                            .group__icon
+                                i.material-icons=icons[i]
+                            .group__text
+                                p.text__header=headers[i]
+                                p=text[i]    
+                    else if i<elemNum
+                        .icon-text-list__group
+                            .group__icon
+                                i.material-icons=icons[i]
+                            .group__text
+                                p.text__header=headers[i]
+                                p=text[i]
+                        .group__divider 
+                    -i++;
+            

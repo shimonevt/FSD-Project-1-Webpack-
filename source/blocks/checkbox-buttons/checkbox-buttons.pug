@@ -1,0 +1,19 @@
+mixin checkbox-buttons(text="checkbox buttons",isChecked=[0,0,0])
+        -let items = ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']
+        .checkbox-buttons
+            p.title=text
+            -let i =0
+            each item in items
+                if isChecked[i]
+                        label.options__item
+                            input.item__input(type="checkbox" checked)
+                            span.check__box
+                            .item__text
+                                p=items[i]
+                else
+                    label.options__item
+                        input.item__input(type="checkbox")
+                        span.check__box
+                        .item__text
+                            p=items[i]
+                -i++

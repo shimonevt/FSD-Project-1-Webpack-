@@ -1,0 +1,191 @@
+@import "../../fonts/style/fonts.scss";
+
+.select[data-type='guests']{
+    max-width: 320px;
+}
+.select[data-type='rooms']{
+    max-width: 266px;
+}
+
+.select { 
+    font-size: 14px;
+    position: relative;
+    margin: 0px 0px 20px 0px;
+        .select__body{
+            border : 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 4px;
+            max-width: 320px;
+            height: 44px;
+            box-sizing: border-box;
+        }
+        .info__type {
+            font-family: "Montserrat_Bold";
+            margin: 0px 0px 5px 0px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #1F2041;                   
+        }
+        .select__text {
+            display: inline;
+            box-sizing: border-box;
+            font-family: 'Montserrat_Regular';
+            background: #FFFFFF;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgba(31, 32, 65, 0.75);
+            padding: 11px 44px 0 14px;
+            border-radius: 4px;
+            line-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+    }
+    .select__text::after{
+        font-family: "Material Icons";
+        content: "expand_more";
+        color: rgba(31, 32, 65, 0.5);
+        font-size: 24px;
+        position: absolute;
+        height: 24px;
+        right: 10px;
+        top: 29px;
+    }
+    .select__title:focus {
+        outline:none;
+        }
+        .select__bar {
+            height: 0px;
+            .edit-buttons{
+                display: none;
+            }
+        }
+        ul {
+            appearance: none;
+            border-top: none;
+            padding : 0px;
+            margin : 0px;
+            display: none;  
+            li.list__item {
+                list-style: none;
+                padding : 10px 0px 11px 15px;
+                font-family: '';
+                font-family: "Montserrat_Bold";
+                text-transform: uppercase;
+                font-size: 12px;
+                color: #1F2041;
+            }       
+    }   
+}
+.select__body:hover {
+        border: 1px solid rgba(31, 32, 65, 0.5);  
+        outline: none;  
+        border-radius: 4px;  
+}
+.select.active {
+    .select__body{
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 4px 4px 0px 0px;
+        overflow: hidden;
+    }
+    .select__bar {
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-radius: 0px 0px 4px 4px;
+        display : block;
+        justify-content: space-between;
+        position: absolute;
+        top : 100%;
+        left : 0;
+        right : 0;
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+        z-index: 4;
+    }
+    .select__list {
+        position: relative;
+        display: block;
+        width: 100%;
+        .list__group{
+            display: flex;
+            justify-content: space-between;
+            height : 30px;
+            margin: 7px 0px 7px 0px;
+            li {
+                padding-top : 7px;
+            }
+            .buttons__group {
+                display: flex;
+                margin : 7px 7px 7px 0px;
+                align-items: center;
+                width : 92px;
+                justify-content: space-between;
+                .item__count {
+                    color: #1F2041;
+                    font-family: 'Montserrat_bold';
+                    margin : 0px;
+                }
+                button {
+                    border-radius: 15px;
+                    width : 30px;
+                    height : 30px;
+                    outline: none;
+                    font-size: 18px;
+                    border : 1px solid rgba(31, 32, 65, 0.25);
+                    background-color: #FFFFFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;                    
+                }
+                .button__minus{
+                    border : 1px solid rgba(31, 32, 65, 0.25);
+                    color: rgba(31, 32, 65, 0.25);
+                    }
+                .button__minus.active {
+                        border: 1px solid rgba(31, 32, 65, 0.5);
+                        color: rgba(31, 32, 65, 0.5);
+                    }
+                .button__plus {
+                        border: 1px solid rgba(31, 32, 65, 0.5);
+                        line {
+                            stroke: rgba(31, 32, 65, 0.5);
+                        }
+                    }
+                
+            }
+        }
+    }
+        .edit-buttons {
+            display: flex;
+            justify-content: flex-end;
+            padding: 12px 7px 13px 14px;
+            border : none;
+            .edit-btn{
+                height: 15px;
+            }
+            .edit__clear{
+                display: none;
+            }
+            
+        }
+        .edit-buttons.active{
+            justify-content: space-between;
+            .edit__clear{
+                display: block;
+
+            }
+        }
+    
+    
+}
+.select.active[data-type='rooms']{
+    .select__bar{
+        height: 119px;
+    }
+}
+.select.active[data-type='guests']{
+    .select__bar{
+        height: 159px;
+    }
+}

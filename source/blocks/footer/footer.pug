@@ -1,0 +1,70 @@
+mixin footer(smallScreen=false)
+    -header = ['Навигация','О нас','Служба поддержки','Подписка'];
+    -item1 = ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'];
+    -item2 = ['Новости','Наша команда','Сообщества'];
+    -item3 = ['Служба поддержки','Вакансии','Связь с нами'];
+    -item4 = ['Услуги','Инвесторы'];
+    if smallScreen
+        footer.footer.small
+            .footer__body
+                .info__bar 
+                    .logo__bar 
+                        img(src="../../pictures/toxin.svg", alt="")
+            .copyright__bar 
+                            p Copyright © 2018 Toxin отель. Все права зачищены.
+                            .bar__media
+                                a(href="") 
+                                    img(src="../../pictures/tweet.svg", alt="")
+                                a(href="") 
+                                    img(src="../../pictures/fb.svg", alt="")
+                                a(href="") 
+                                    img(src="../../pictures/inst.svg", alt="")
+    else
+        footer.footer
+            .footer__body 
+                .info__bar 
+                    .logo__bar 
+                        img(src="../../pictures/toxin.svg", alt="")
+                        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                    -let i=0
+                    each item in header
+                        if i==2
+                            ul.bar__item
+                                li.item__header=header[i]
+                                li 
+                                    a(href="")=item1[i]
+                                li 
+                                    a(href="")=item2[i]
+                                li 
+                                    a(href="")=item3[i]
+                        else if i==3
+                            ul.bar__item 
+                                li.item__header=header[i]
+                                li 
+                                    a(href="")=item1[i]
+                                li 
+                                    +text-field-subscription
+                        else
+                            ul.bar__item
+                                li.item__header=header[i]
+                                li 
+                                    a(href="")=item1[i]
+                                li 
+                                    a(href="")=item2[i]
+                                li 
+                                    a(href="")=item3[i]
+                                li 
+                                    a(href="")=item4[i]
+                        -i++      
+            .footer-border
+            .copyright__bar 
+                            p Copyright © 2018 Toxin отель. Все права зачищены.
+                            .bar__media
+                                a(href="") 
+                                    img(src="../../pictures/tweet.svg", alt="")
+                                a(href="") 
+                                    img(src="../../pictures/fb.svg", alt="")
+                                a(href="") 
+                                    img(src="../../pictures/inst.svg", alt="")
+                                  
+                    

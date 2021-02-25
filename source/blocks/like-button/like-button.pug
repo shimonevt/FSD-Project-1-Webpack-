@@ -1,0 +1,12 @@
+mixin like-button(num="2",isActive=false)
+        if isActive 
+            -buttonClass=" active"
+            -heartText="favorite"
+        else
+            -buttonClass=" "
+            -heartText="favorite_border"
+        div(class="like-button"+buttonClass)
+            .like-button__body
+                .body__like-img
+                    i.material-icons.md-10.heart=heartText
+                .body__like-nmbr=num

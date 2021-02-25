@@ -1,0 +1,37 @@
+.room-search.card  {
+    display: block;
+    max-width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px 30px;
+    font-family: 'Montserrat_Regular';
+    .card__body{
+        display: block;
+    }
+    p.card__title {
+        font-family: 'Montserrat_Bold';
+        font-size: 24px;
+        line-height: 29px;
+        color: #1F2041;
+        margin: 0px 0px 21px 0px;
+      }
+    input, body .card p {
+        font-family: 'Montserrat_Regular';
+        color: rgba(31, 32, 65, 0.75);
+    }
+    .select{
+        margin: 21px 0px 0px 0px;
+        .info__type{
+            line-height: 15px;
+            color: #1F2041;
+            font-size: 12px;
+        }
+    }
+    .button-arrow {
+        position: relative;
+        margin: 30px 0px 0px 0px;
+    }
+  } 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../../../source/blocks/card-booking/card-booking.scss")
+        script(src="https://code.jquery.com/jquery-3.5.1.js")
+        script(src="../../../source/blocks/card-booking/card-booking.js")
+        include ../../blocks/button-arrow/button-arrow
+        include ../../blocks/select/select
+    body
+         mixin card-booking(number='888',roomClass='люкс',costPerDay='9 990',selecTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
+            .card-booking.card
+                .booking__info
+                    .info__room
+                        p №
+                        p.room__number=' '+number
+                        p.room__class=roomClass
+                    .info__price
+                        p.cost=costPerDay
+                        p <b>₽</b> в сутки
+                include ../../blocks/date-dropdown/date-dropdown
+                +date-dropdown()
+                +select(selecTitle,selectType,isActive,selectNum)
+                .booking__costs
+                    .costs__room
+                        .room__description.description Стоимость номера
+                        .room__price.price 
+                            <div>0</div> ₽
+                    .costs__discount
+                        .discount__description.description Сбор за услуги: скидка <div>2 179₽</div> <div class="info">i</div>
+                        .discount__price.price 
+                            <div>0</div> ₽
+                    .costs__additional
+                        .additional__description.description Сбор за дополнительные услуги<div class="info">i</div>
+                        .additional__price.price <div>0</div> ₽
+                    .costs__total
+                        p Итого
+                        .total-divider
+                        .total__price 0₽
+                    +button-arrow('забронировать')
+                    

@@ -1,0 +1,8 @@
+mixin card-room-search
+        .card.room-search.card
+            p.card__title Найдём номера под ваши пожелания
+            .card__body
+                include ../../blocks/date-dropdown/date-dropdown
+                +date-dropdown()
+                +select('гости','guests',false,[0,0,0])    
+                +button-arrow('подобрать номер')

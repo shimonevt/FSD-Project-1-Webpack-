@@ -1,0 +1,46 @@
+@import "../../fonts/style/fonts.scss";
+.text-field.subscription {
+    max-width: 267px;
+    margin-top: 10px;
+    .type__info{
+        font-family: "Montserrat_Bold";
+        text-transform: uppercase;
+        color: #1F2041;
+        font-size: 12px;
+        margin: 0px 0px 5px 0px;
+    }
+    .text-field__body {
+        font-family: "Montserrat_Regular";
+         height: 44px;
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        input {   
+            width: 70%;         
+            border : none;
+            }
+            button {
+            width: 30px;
+            height: 30px;
+            border : none;
+            background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            padding: 0px;
+            border-radius: 4px;
+            position: relative;
+            left: -1px;
+            outline: none;
+                i {                            
+                    padding : 8px 10px 8px 10px;
+                    background: #FFFFFF;
+                    color : rgba(31,32 ,65, 1);
+                    mix-blend-mode: screen;
+                    border-radius: 4px;
+                    border: none;
+                    position: relative;
+                    left: -14px;
+                    top:1px;
+                }
+            }
+    }
+    
+}

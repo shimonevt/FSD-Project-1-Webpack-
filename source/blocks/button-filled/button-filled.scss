@@ -1,0 +1,22 @@
+ button.button-filled {
+    border: none;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 1;
+    outline: none;
+    border : none;
+    display: inline-block;
+    padding: 9px 20px 10px 20px;
+    border-radius: 22px;
+    p {
+        color : #FFFFFF;
+        margin: 0px;
+        text-transform: uppercase;
+        font-family: "Montserrat_Bold";
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+}
+ button.button-filled:hover {
+    opacity: 0.5;
+}

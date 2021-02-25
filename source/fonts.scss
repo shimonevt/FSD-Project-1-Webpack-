@@ -1,0 +1,37 @@
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('assets/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: url('assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+		 url('assets/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+		 url('assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Montserrat_Regular';
+    src: url('assets/fonts/Montserrat-Regular.eot');
+    src:  url('assets/fonts/Montserrat-Regular.woff') format("woff"),
+        url('assets/fonts/Montserrat-Regular.ttf') format("truetype"),
+        url('assets/fonts/Montserrat-Regular.otf') format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat_Bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url('assets/fonts/Montserrat-Bold.eot'); /* For IE6-8 */
+	src: url('assets/fonts/Montserrat-Bold.otf') format('otf'),
+		 url('assets/fonts/Montserrat-Bold.woff') format('woff'),
+		 url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Quicksand_Bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url('assets/fonts/Quicksand-Bold.eot'); /* For IE6-8 */
+	src: url('assets/fonts/Quicksand-Bold.otf') format('otf'),
+		 url('assets/fonts/Quicksand-Bold.woff') format('woff'),
+		 url('assets/fonts/Quicksand-Bold.ttf') format('truetype');
+}

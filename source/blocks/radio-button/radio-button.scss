@@ -1,0 +1,58 @@
+@import "../../fonts/style/fonts.scss";
+.header{
+        font-family: "Montserrat_Bold";
+        color: #1F2041;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+.radio-button {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 14px;
+    width : 220px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat_Regular";
+    margin : 16px 0px 16px 0px;
+    
+    .radio-button__option {
+        background: #FFFFFF;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25); 
+        outline: none;
+        margin: 0px;
+        margin-right: 10px;
+        + span {
+            position: relative;
+            top : 2px;
+        }
+        
+    }
+    .radio-button__option::after {
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;    
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        left: 3px;
+        top : 2px;
+        }
+    .radio-button__option:checked{
+        border: 1px solid #BC9CFF;
+        + span {
+            color: rgba(31, 32, 65, 0.75);
+            }
+        }
+    .radio-button__option:checked::after {
+        content: ''; 
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 10px;
+    }
+}

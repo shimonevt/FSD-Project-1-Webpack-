@@ -1,0 +1,87 @@
+@import "../../fonts/style/fonts.scss";
+@import "../../blocks/range-slider/ion-rangeslider.min.css";
+.range-slider {
+    width: 266px;
+    margin-bottom: 10px;
+    .title { 
+        margin: 0px;
+    }
+    .slider__info {
+        display: flex;
+        justify-content: space-between;
+        height: 15px;
+        margin-bottom: 23.44px;
+    }
+    .slider__info-text{
+        font-family: "Montserrat_Bold";
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .slider__values {
+        display: flex;
+        font-family: "Montserrat_Regular";
+        input {
+            width: 35px;
+            border: none;
+            margin: 0px;
+            outline : none;
+            font-size: 12px;
+            line-height: 14.63px;
+            color: rgba(31, 32, 65, 0.5);
+            padding : 0px;
+        }
+        p {
+            color: rgba(31, 32, 65, 0.5);
+            font-size: 12px;
+            margin : 0px;
+        }
+        .values-to {
+            margin-left: 2px;
+        }
+    }
+    .irs--flat {
+        height: 6px;
+    }
+    .irs-to,.irs-from {
+        display: none;
+    }
+    .irs {
+        position: relative;   
+        width: 266px;
+    }
+    .irs-line,.irs-bar {
+        top : 0px;
+    }
+    .irs-single {
+        display: none;
+    }
+    .irs-line {
+        width: 266px;
+        height: 6px;
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+    }
+    .irs-max, .irs-min {
+        display: none;
+    }
+        .irs-bar {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            height: 6px;
+            box-sizing: border-box;
+        }
+    .irs-handle {
+        width: 16px;
+        height: 16px;
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        top : -5px;
+        i {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+    }
+    .irs--flat .irs-handle>i:first-child {
+        width: 0px;
+    }   
+}

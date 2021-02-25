@@ -1,0 +1,8 @@
+mixin toggle(isChecked=false)
+        .toggle
+            if isChecked
+                input.toggle-button(type="checkbox" id="toggle-button" checked)
+                label(for="toggle-button") Получать спецпредложения
+            else
+                input.toggle-button(type="checkbox" id="toggle-button")
+                label(for="toggle-button") Получать спецпредложения

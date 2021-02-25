@@ -1,0 +1,54 @@
+
+.date-dropdown{
+    max-width:  100%;  
+    height: 65px; 
+    font-family: 'Montserrat_Regular';
+} 
+    .date__bar{
+        max-width: 320px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+        grid-auto-flow: column;  
+        margin : 0px 0px 27px 0px;
+        .date__item {
+            position: relative;
+        }
+            .date__item input {
+                border: 1px solid rgba(31,32,65,.25);
+                box-sizing: border-box;
+                border-radius: 4px;
+                width: 100%;
+                padding-left: 14px;
+                height: 44px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31,32,65,.75);
+                outline: none;
+            }  
+            .date__item::before{
+                content: 'expand_more';
+                font-family: "Material Icons";
+                text-transform: lowercase;
+                font-style: normal;
+                font-size: 24px;
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                color: rgba(31, 32, 65, 0.5);
+            }
+    } 
+.date__item >.item__name {
+    font-family: 'Montserrat_Bold';
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0px 0px 5px 0px;
+    color: #1F2041;
+}
+.material-icons {
+        font-family: "Material Icons";
+        font-style: normal;
+        font-size: 24px;
+        color: rgba(31, 32, 65, 0.5);
+    }

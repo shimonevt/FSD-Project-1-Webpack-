@@ -1,0 +1,54 @@
+.card-registration.card {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px 30px;
+    font-family: 'Montserrat_Regular';
+    p.card__title {
+        font-family: 'Montserrat_Bold';
+        font-size: 24px;
+        line-height: 29px;
+        color: #1F2041;
+        margin: 0px 0px 21px 0px;
+    }
+    p.card__subtitle {
+        font-family: 'Montserrat_Bold';
+        margin : 0px 0px 5px 0px;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1F2041;
+    }
+    .text-field {
+      margin-bottom: 10px;
+    }
+    .radio-button {
+      margin: 0px 0px 20px 0px;
+    }
+    .toggle{
+      margin: 0px 0px 20px 0px;
+    }
+    .button-arrow{
+      margin: 0px 0px 30px 0px;
+    }
+    .log-in{
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      p.log-in__info{
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+        margin-top:12px;
+      }
+    } 
+    .button-border {
+      height: 40px;;
+      .button-border__text{
+        padding: 12px 24px 13px;
+      }
+    }
+  }

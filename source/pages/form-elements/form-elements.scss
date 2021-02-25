@@ -1,0 +1,72 @@
+@import "../../import/import.scss";
+body{
+   background: #ffffff;
+   font-family: "Montserrat_Regular";
+}
+.form-elements__container {
+    padding: 140px 141px 130px 140px;    
+    .col-container {
+        display: flex;
+    }
+    .col {
+        margin-right: 126px;
+        min-width: 320px;
+    }
+    .col.sec{
+        margin-right: 72px;
+    }
+    .container{
+        margin-bottom: 20px;
+    }
+    .container.double-margin{
+        
+        margin-bottom: 40px;
+    }
+    .container-select {
+        margin-top: 100px;
+    }
+    .container-checkbox{
+        margin-top: 158px;
+    }
+    .toggle-divider{
+        height: 10px;
+    }
+    .flex-container{
+        display: flex;
+        justify-content: space-between;
+        max-width: 260px;
+        .like-button:nth-child(2){
+            margin-right: 170px;
+        }
+    }
+    .container-rich-checkbox{
+        margin-top: 256px;
+    }
+    .container-slider{
+        display: flex;
+        margin-bottom: 40px;
+    }
+    .btn-container {
+        margin-bottom: 30px;
+    }
+    .slct-container.first {
+        margin-top: 196px;
+    }
+    .slct-container.second{
+        margin-top: 180px;
+    }
+    .lst-container{
+        margin-top: 256px;
+    }
+    .low-container{
+        display: flex;
+        margin-top: 100px;
+        .icon-text-container{
+            display: block;
+            margin-right: 167px; 
+            .icon-text-list{
+                width: 291px;
+            }
+        }        
+    }
+}
