@@ -1,4 +1,3 @@
-@import "../../fonts/style/fonts.scss";
 .info__type {
     font-family: 'Montserrat_bold';
     font-weight: bold;
@@ -23,7 +22,7 @@
     top : 3.5px;
     width: 9.9px;
     height: 9px;
-    background: url(../../pictures/vector.svg) no-repeat center center;
+    background: url(../../assets/pictures/vector.svg) no-repeat center center;
 } 
 .options__item > .item__input {
     position : absolute;

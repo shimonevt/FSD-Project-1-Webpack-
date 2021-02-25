@@ -7,12 +7,81 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Form elements
     body 
+        +logo
         .form-elements__container 
             
-            .col
-                .container
-                    +text-field()
-                .container 
-                    +text-field()
-                
-                +bullet-list
+            .col-container
+                .col
+                    .container
+                        +text-field()
+                    .container
+                        +text-field("text field","This is pretty awesome","email")
+                    .container
+                        +select() 
+                    .container.double-margin
+                        +text-field-masked(true)
+                    .container.double-margin
+                        +date-dropdown(true)
+                    .container.double-margin
+                        +date-dropdown-filter(true)
+                    .container.double-margin
+                        +text-field-subscription(true)
+                    .container.container-select 
+                        +select('dropdown','rooms',false,[2,2,0])
+                    .container 
+                        +select('dropdown','rooms',true,[2,2,0])
+                    .container.container-checkbox
+                        +checkbox-list('expendable checkbox list')
+                    .container
+                        +checkbox-list('expendable checkbox list',true,[0,1,1,1,0,0])
+                .col.sec
+                    .container.double-margin 
+                        +checkbox-buttons(text="checkbox buttons")
+                    .container.double-margin 
+                        +radio-button("radio button","man")
+                    .container.double-margin
+                        p.header toggle
+                        +toggle(true)
+                        .toggle-divider
+                        +toggle() 
+                    .container.double-margin
+                        p.header like button
+                        .flex-container
+                            +like-button()
+                            +like-button("12",true)
+                    .container 
+                        p.header rate button
+                        .flex-container
+                            +rating(4,"rating-4")
+                            +rating(5,"rating-5")
+                    .container.slct-container.first 
+                        +select('dropdown','guests',true,[0,0,0])
+                    .container-rich-checkbox
+                        p.header rich checkbox buttons
+                        +rich-checkbox-buttons()
+                    
+                .col.third
+                    .container.container-slider 
+                        +range-slider("range slider")
+                    .container
+                        p.header buttons
+                        .btn-container
+                            +button-filled
+                        .btn-container
+                            +button-border
+                        .btn-container
+                            +button-icon
+                        .btn-container
+                            +button-arrow("перейти к оплате")
+                    .container 
+                        p.header pagination
+                        +pagination
+                    .slct-container
+                        +select('dropdown','guests',true,[2,1,0])
+                    .container.lst-container
+                        p.header bullet list
+                        +bullet-list
+            .low-container
+                .container.icon-text-container
+                    +icon-text-list()
+                +card-comment(12,true)

@@ -1,8 +1,34 @@
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="colors-and-type.scss")
         title Colors and type
-    body 
+    body
+        mixin color-set(name,color,opacity="")
+            .color-set
+                .color-set__color-box(style="background: " + color + "; opacity: " + opacity)
+                .color-set__text-box
+                    .text__header=name+' '+ opacity
+                    .text__color-name=color
+        mixin type-set(header,text,size)
+            div(class="type-set type-set-"+header style="font-size: " +size)
+                p.type__header=header 
+                .type__text=text   
+        include ../../blocks/logo/logo
+        +logo()
+        .colors-type-container
+            .color-column 
+                +color-set('dark shade','#1F2041','100%') 
+                +color-set('dark shade','#1F2041','75%')
+                +color-set('dark shade','#1F2041','50%')
+                +color-set('dark shade','#1F2041','25%')
+                +color-set('dark shade','#1F2041','5%')
+                +color-set('purple','#BC9CFF')  
+                +color-set('green','#6FC97F')  
+            .type-column  
+                +type-set('H1','This one is the sub-section or widget title','24px')
+                +type-set('H2','Next one is the item title inside widgets','19px')
+                +type-set('H3','This is a label or CTA text','12px')
+                +type-set('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.','14px')

@@ -1,10 +1,10 @@
-mixin hotel-room-card(imgHref="room-888.jpg",number="888",isLuxe=true,starNum=5,roomCost="9 990",revNum="145 ")
-    .hotel-room-card.card
+mixin card-hotel-room(number="888",isLuxe=true,starNum=5,roomCost="9 990",revNum="145 ")
+    .card-hotel-room.card
         .card__image-slider
-                img(src="../../../source/pictures/rooms/"+imgHref)
-                img(src="../../../source/pictures/rooms/"+imgHref)
-                img(src="../../../source/pictures/rooms/"+imgHref)
-                img(src="../../../source/pictures/rooms/"+imgHref)  
+                div(class ="room-"+number)
+                div(class ="room-"+number)
+                div(class ="room-"+number)
+                div(class ="room-"+number)  
         .hotel-room__info
             .info-row
                 .info__room

@@ -1,4 +1,16 @@
 @import "../../import/import.scss";
-body {
-    display: inline;
+body{
+    margin: 0px;
+    background: #e5e5e5;
+    .container {
+        margin: 40px 0px;
+    }
+    .header.container{
+        height: 70px;
+        position: relative;       
+    }
+    header.header{
+        position: relative;
+    }
+
 }

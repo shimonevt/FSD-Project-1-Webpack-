@@ -1,0 +1,230 @@
+@import "../../import/import.scss";
+body {
+    font-family: "Montserrat_Regular";
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    
+}
+span.entry-bar.smallscr i.material-icons {
+    position: relative;
+    top:4px;
+    }
+.room-images__container {
+    
+    height: 485px;
+    max-width: 1440px;
+    margin: 70px auto 67px;
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "f s"
+        " f th";
+}
+.image-container.first{
+    grid-area: f;
+}
+.image-container.second {
+   
+    grid-area: s;
+}
+.image-container.third {
+    
+    grid-area: th;
+    
+}
+.image-container {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.room-details__container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "room-info statistics card-booking"
+                        "card-comment card-comment card-booking"
+                        "rules cancel row";
+    grid-gap: 30px 10px;
+    max-width: 1160px;
+    margin : 70px auto 70px;
+    padding: 0px 20px;
+}
+.details__info-container{
+    grid-area: room-info;
+    margin: 0px auto;
+}
+.icon-text-list__group .group__icon i {
+    position: relative;
+    top: 11px;
+}
+.statistics__info-container{
+    grid-area: statistics;
+    margin: 0px auto;
+}
+.card-container {
+    grid-area: card-booking;
+    max-width: 380px;
+    margin: 0px auto;
+    .card-booking.card .date__bar .date__item::before {
+        top: 40px;
+    }
+    .card-booking.card  .select .select__text::after {
+        top: 40px;
+    }
+}
+.comment-container {
+    grid-area: card-comment;
+    margin: 0px auto;
+    .card-comment{
+        margin: 0px 0px 20px 0px;
+    }
+}
+.rules-container{
+    grid-area: rules;
+    margin: 0px auto;
+}
+.cancel-container {
+    grid-area: cancel;
+    margin: 0px auto;
+}
+.comment__info {
+    display: flex;
+    justify-content: space-between;
+    p.comment-number {
+        margin: 0px;
+    }
+    
+}
+p.container-header {
+    font-family: "Montserrat_Bold";
+    font-size: 19px;
+    line-height: 23px;
+    margin: 0px 0px 20px 0px;
+    color: #1F2041;
+}
+.statistics-container{
+    display: flex;
+}
+.statistics-diagram {
+    max-width: 121px;
+    min-width: 121px;
+    max-height: 121px;
+    min-height: 121px;
+    border-radius: 60.5px;
+    overflow: hidden;
+    .diagram__circle{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "orange purple"
+                                "orange green";
+        grid-gap: 2px;
+    }
+    
+    .orange {
+        grid-area: orange;
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+    .purple {
+        grid-area: purple;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    .green{
+        grid-area: green;
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+    .statistics-text {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: -118px;
+        left: 3px;
+        padding: 20px;
+        border-radius: 60.5px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background: #FFFFFF;
+        color: #BC9CFF;
+        .number{
+            font-family: "Montserrat_Bold";
+            font-size: 24px;
+            line-height: 29px;
+        }
+        .text{
+            font-size: 12px;
+            line-height: 15px;
+        }
+        .number,.text{
+            position: relative;
+            top:13px;
+        }
+    }
+}
+.statistics-info {
+    list-style: none;
+    padding-left: 30px;
+    li::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+    li:first-child::before{
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+    li:nth-child(2):before{
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+    li:nth-child(3):before{
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    li:nth-child(4):before{
+        background: linear-gradient(180deg, #919191 0%, #3D4975 100%)
+    }
+}
+p.cancel__text {
+    margin: 0px;
+}
+@media(max-width: 1110px){
+    .room-details__container {
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:    "card-booking card-booking" 
+                            "room-info statistics"
+                            "card-comment card-comment"
+                            "rules cancel";
+    }
+}
+@media(max-width: 560px) {
+    
+    .room-details__container {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 5px;
+    }
+    .room__images-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+        "f f"
+        " s th";
+    }
+}
+@media(max-width: 450px) {
+    .card-booking.card{
+        padding: 20px 10px;
+    }
+    .statistics-info{
+        padding:0px 10px;
+    }
+}
+

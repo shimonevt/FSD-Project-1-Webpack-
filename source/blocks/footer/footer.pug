@@ -9,22 +9,22 @@ mixin footer(smallScreen=false)
             .footer__body
                 .info__bar 
                     .logo__bar 
-                        img(src="../../pictures/toxin.svg", alt="")
+                        img(src="../../assets/pictures/toxin.svg", alt="")
             .copyright__bar 
                             p Copyright © 2018 Toxin отель. Все права зачищены.
                             .bar__media
                                 a(href="") 
-                                    img(src="../../pictures/tweet.svg", alt="")
+                                    .tweet
                                 a(href="") 
-                                    img(src="../../pictures/fb.svg", alt="")
+                                    .fb
                                 a(href="") 
-                                    img(src="../../pictures/inst.svg", alt="")
+                                    .inst
     else
         footer.footer
             .footer__body 
                 .info__bar 
                     .logo__bar 
-                        img(src="../../pictures/toxin.svg", alt="")
+                        img(src="../../assets/pictures/toxin.svg", alt="")
                         p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                     -let i=0
                     each item in header
@@ -61,10 +61,8 @@ mixin footer(smallScreen=false)
                             p Copyright © 2018 Toxin отель. Все права зачищены.
                             .bar__media
                                 a(href="") 
-                                    img(src="../../pictures/tweet.svg", alt="")
+                                    .tweet
                                 a(href="") 
-                                    img(src="../../pictures/fb.svg", alt="")
+                                    .fb
                                 a(href="") 
-                                    img(src="../../pictures/inst.svg", alt="")
-                                  
-                    
+                                    .inst

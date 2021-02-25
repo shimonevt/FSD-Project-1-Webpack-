@@ -1,3 +1,4 @@
+import 'air-datepicker'
 jQuery(function($){
 	
 	var start = $('.first-date');

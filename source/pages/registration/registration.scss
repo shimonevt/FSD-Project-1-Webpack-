@@ -1,0 +1,17 @@
+@import "../../import/import.scss";
+.registration__container{
+    display: flex;
+    justify-content: center;
+    background : url(../../assets/pictures/sign-in__reg.jpg) no-repeat center center;
+    background-size: cover;
+    margin: 70px auto 0px;
+    .card-container{
+        width: 380px;
+        margin: 19px 0px;
+    }
+}
+@media(max-width:450px) {
+    .card-registration.card {
+        padding: 30px 20px 30px;
+    }
+}

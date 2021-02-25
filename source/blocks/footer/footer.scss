@@ -1,4 +1,3 @@
-@import "../../fonts/style/fonts.scss";
 .footer{
     font-family: "Montserrat_Regular";
     background: #FFFFFF;
@@ -34,6 +33,23 @@
             }
         }
 }
+    
+.bar__media{
+    display: flex;
+}
+.tweet,.inst,.fb {
+        width: 24px;
+        height: 24px;
+    }
+        .tweet {
+            background: url(../../assets/pictures/tweet.svg)no-repeat center center;
+            }
+        .fb {
+            background: url(../../assets/pictures/fb.svg) no-repeat center center;
+        }
+        .inst {
+            background: url(../../assets/pictures/inst.svg) no-repeat center center;
+        }
 .footer__body{
     padding: 0px 20px;
 }
@@ -142,7 +158,7 @@ li.item__header {
             p {
                 text-align: center;
             }
-            .bar__media{
+            .bar__media {
                 margin-top: 25px;
             }
         }

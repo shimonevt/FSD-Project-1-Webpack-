@@ -1,3 +1,4 @@
+include ../../import/import
 doctype html
 html(lang="en")
     head
@@ -6,3 +7,12 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Headers and footers
     body 
+        +logo
+        .container.header 
+            +header()
+        .container.header
+            +header(true)
+        .container 
+            +footer
+        .container 
+            +footer(true)

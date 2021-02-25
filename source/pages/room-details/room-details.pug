@@ -1,0 +1,57 @@
+include ../../import/import
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Room details
+    body
+            +header 
+            .room-images__container
+                .image-container.first
+                    img(src="assets/pictures/rooms/room-888.jpg")
+                .image-container.second 
+                    img(src="assets/pictures/rooms/room-888-2.jpg")
+                .image-container.third  
+                    img(src="assets/pictures/rooms/room-888-3.jpg")
+            .room-details__container 
+                .card-container 
+                        +card-booking('888','люкс','9 990','гости','guests',false,[3,0,0])
+                .details__info-container
+                    p.container-header Сведения о номере 
+                    +icon-text-list(3)
+                .statistics__info-container
+                    p.container-header Впечатления от номера
+                    .statistics-container
+                        .statistics-diagram
+                            .diagram__circle                               
+                                .orange
+                                .purple
+                                .green
+                            .statistics-text 
+                                .number 260 
+                                .text голосов 
+                        ul.statistics-info 
+                            li Великолепно
+                            li Хорошо
+                            li Удовлетворительно
+                            li Разочарован
+                
+                .comment-container 
+                    .comment__info
+                        p.container-header Отзывы посетителей номера
+                        p.comment-number 2 отзыва 
+                    +card-comment(12,true)
+                    +card-comment(2,false,
+                            'Патрисия Стёклышкова',
+                            "avatar-2.svg",
+                            "Неделю назад",
+                            'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                .rules-container 
+                    p.container-header Правила
+                    +bullet-list
+                .cancel-container 
+                    p.container-header  Отмена
+                    p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            +footer

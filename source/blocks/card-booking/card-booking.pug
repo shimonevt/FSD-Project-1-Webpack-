@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../../../source/blocks/card-booking/card-booking.scss")
-        script(src="https://code.jquery.com/jquery-3.5.1.js")
-        script(src="../../../source/blocks/card-booking/card-booking.js")
-        include ../../blocks/button-arrow/button-arrow
-        include ../../blocks/select/select
-    body
-         mixin card-booking(number='888',roomClass='люкс',costPerDay='9 990',selecTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
+mixin card-booking(number='888',roomClass='люкс',costPerDay='9 990',selecTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
             .card-booking.card
                 .booking__info
                     .info__room

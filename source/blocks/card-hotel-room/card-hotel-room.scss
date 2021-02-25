@@ -1,6 +1,6 @@
 @import '../../blocks/card-hotel-room/slick.css';
 
-.hotel-room-card.card {
+.card-hotel-room.card {
     width: 270px;
     height: 257px;
     padding : 0px;
@@ -9,7 +9,21 @@
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    
+    .card__image-slider{
+                width: 270px;
+                height: 150px;
+                div {
+                    background-size: cover;
+                    height: 100%;
+                }
+                
+    }
+    .room-888 {
+        background: url(../../assets/pictures/rooms/room-888.jpg) no-repeat center center;
+    }
+    .room-840 {
+        background: url(../../assets/pictures/rooms/room-840.jpg) no-repeat center center;
+    }
         .slick-slider {
             width: 270px;
             height: 150px;
@@ -17,10 +31,7 @@
                 border-radius: 4px 4px 0px 0px;
             
             }
-            .slick-slide img{
-                width: 270px;
-                height: 150px;
-            }
+            
             .slick-arrow {
                 width: 150px;
                 height: 42px;

@@ -1,4 +1,4 @@
-import './cleave';
+import 'cleave.js';
 jQuery(function($){
     if ($('.masked-text-field').length) {
         new Cleave('.masked-text-field', {

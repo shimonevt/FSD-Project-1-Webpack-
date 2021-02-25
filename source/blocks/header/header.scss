@@ -20,8 +20,11 @@ header.header{
     }
         .header__logo{
             margin : 0px 0px 0px 0px;
+            width: 106px;
+            height: 40px;
             position: relative;
             z-index:  3;
+            background: url(../../assets/pictures/toxin.svg) no-repeat center center;
         } 
         .header__menu {
             display: flex;  
@@ -76,13 +79,14 @@ header.header{
                 }
             }
             .list__options.active ,.list__agree.active {
+                position: relative;
                 .agree-bar {
                     width: 100px;
                 }
                 .options-bar, .agree-bar {
                     display: block;
-                    position: fixed;
-                    top:45px;
+                    position: absolute;
+                    top:20px;
                     background-color: #FFFFFF;
                     color: rgba(31, 32, 65, 0.5);
                     border-radius: 0px 0px 4px 4px;
@@ -93,6 +97,9 @@ header.header{
                 }
                 .agree-bar{
                     width: 120px;
+                }
+                .options-bar {
+                    width: 80px;
                 }
             }
             .button-border{

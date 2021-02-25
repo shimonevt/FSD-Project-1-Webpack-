@@ -1,4 +1,4 @@
-
+import '../calendar/calendar';
 jQuery(function($){
     var cardStart = $('.card-booking .first-date');
 	var cardEnd = $('.card-booking .second-date');
@@ -97,6 +97,9 @@ jQuery(function($){
             AdditionalPay.innerHTML = AddPay*100 ;
             totalCost.innerHTML = totalCost.innerHTML.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
     };
+	cardEnd.click(function() {	
+		$(this).parent('.date__item').parent('.date__bar').find('.first-date').focus();
+	 });
 	
 });
 

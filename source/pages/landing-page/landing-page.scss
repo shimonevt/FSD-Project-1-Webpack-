@@ -1,0 +1,60 @@
+@import "../../import/import.scss";
+.landing-page__container {
+    margin: 70px auto;
+    width: 100%;
+    background: url(../../assets/pictures/landing-page.jpg) no-repeat center center;
+    background-size: cover;
+    
+    .container__body{
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 70px 374px 320px auto 20px;  
+    }
+    
+    .card-container{
+        grid-column: 1;
+        grid-row:2;
+        
+    }
+    .text-container {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row: 4;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        p {
+            font-family: 'Montserrat_Regular';
+            max-width: 297px;
+            margin: 0px;
+            color: rgba(31, 32, 65, 0.75);
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+@media(max-width: 850px) {
+    .landing-page__container .container__body{
+        grid-template-rows: 70px 374px 180px auto 20px;  
+    }
+}
+@media(max-width: 470px) {
+    .landing-page__container .container__body {
+        padding: 0px 5px;
+        grid-template-columns: 5px auto auto 5px;
+    }
+    .landing-page__container .card-container {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .card.room-search {
+        padding: 20px 10px;
+    }
+    .header__body {
+        padding: 0px 5px;
+    }
+
+}

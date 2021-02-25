@@ -1,4 +1,4 @@
-import	'./ion-rangeslider.min';
+import 'ion-rangeslider'
 jQuery(document).ready(function($){ 
     var $inputFrom = $(".values-from");
 	var $inputTo = $(".values-to"); 

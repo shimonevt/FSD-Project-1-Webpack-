@@ -1,4 +1,4 @@
-import './datepicker';
+import 'air-datepicker';
 jQuery(function($){
     var calendar = document.querySelector('.calendar');
     $.fn.datepicker.language['my-lang'] = {

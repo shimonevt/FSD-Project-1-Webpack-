@@ -1,0 +1,22 @@
+include ../../import/import
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Cards
+    body 
+        +logo
+        .cards__container
+            .col
+                +card-room-search()
+                +card-registration()
+            .col
+                +card-booking('888','люкс','9 990','гости','guests',false,[1,2,0])
+                +card-login
+            .col
+                +calendar()
+                +card-hotel-room()
+                +card-hotel-room("840",false,4,"9 990","65 ")
+                
