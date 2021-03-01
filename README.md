@@ -3,7 +3,7 @@
 ### Index
 - [index](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/index.html)
 ### UI Kit
-- [Colors and type](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/index.html)
+- [Colors and type](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/colors-and-type.html)
 - [Form elements](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/form-elements.html)
 - [Cards](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/cards.html)
 - [Headers and footers](https://shimonevt.github.io/FSD-Project-1-Webpack-/build/headers-and-footers.html)
