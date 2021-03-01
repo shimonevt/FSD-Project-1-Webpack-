@@ -1,10 +1,10 @@
-mixin card-hotel-room(number="888",isLuxe=true,starNum=5,roomCost="9 990",revNum="145 ")
+mixin card-hotel-room(number="888",roomImg="room-888.jpg",isLuxe=true,starNum=5,roomCost="9 990",revNum="145 ")
     .card-hotel-room.card
-        .card__image-slider
+        .card__image-slider(data-img=roomImg)
+                img(src=require("assets/pictures/"+roomImg))
                 div(class ="room-"+number)
                 div(class ="room-"+number)
                 div(class ="room-"+number)
-                div(class ="room-"+number)  
         .hotel-room__info
             .info-row
                 .info__room

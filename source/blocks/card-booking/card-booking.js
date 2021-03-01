@@ -71,7 +71,6 @@ jQuery(function($){
 	$('.card-booking.card').each(function(i,elem){
 		let firstDate = cardStart.val();
 		let secondDate = cardEnd.val();
-		console.log(firstDate);
 		getDateForCard(firstDate,secondDate);
 		roomCost(elem);
 	})

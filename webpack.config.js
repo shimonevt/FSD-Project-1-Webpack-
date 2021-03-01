@@ -22,7 +22,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      assets: path.resolve(__dirname, "source/assets")
+      assets: path.resolve(__dirname, "source/assets"),
+      pictures: path.resolve(__dirname,"source/assets/pictures")
     }
   },
   output: {
@@ -127,7 +128,8 @@ module.exports = {
         test: /\.(svg|jpg|png)$/,
         loader: "file-loader",
         options: {
-            name: 'assets/pictures/[name].[ext]'
+            name: 'assets/pictures/[name].[ext]',
+            esModule: false
         },
         
       },

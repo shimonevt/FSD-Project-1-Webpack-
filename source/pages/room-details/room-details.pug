@@ -10,11 +10,11 @@ html(lang="en")
             +header 
             .room-images__container
                 .image-container.first
-                    img(src="assets/pictures/rooms/room-888.jpg")
+                    img(src=require(`pictures/room-888.jpg`))
                 .image-container.second 
-                    img(src="assets/pictures/rooms/room-888-2.jpg")
+                    img(src=require(`pictures/room-888-2.jpg`))
                 .image-container.third  
-                    img(src="assets/pictures/rooms/room-888-3.jpg")
+                    img(src=require(`pictures/room-888-3.jpg`))
             .room-details__container 
                 .card-container 
                         +card-booking('888','люкс','9 990','гости','guests',false,[3,0,0])
@@ -45,7 +45,7 @@ html(lang="en")
                     +card-comment(12,true)
                     +card-comment(2,false,
                             'Патрисия Стёклышкова',
-                            "avatar-2.svg",
+                            "avatar-2.jpg",
                             "Неделю назад",
                             'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
                 .rules-container 

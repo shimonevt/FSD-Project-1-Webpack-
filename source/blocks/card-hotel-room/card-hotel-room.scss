@@ -15,14 +15,12 @@
                 div {
                     background-size: cover;
                     height: 100%;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 
-    }
-    .room-888 {
-        background: url(../../assets/pictures/rooms/room-888.jpg) no-repeat center center;
-    }
-    .room-840 {
-        background: url(../../assets/pictures/rooms/room-840.jpg) no-repeat center center;
     }
         .slick-slider {
             width: 270px;
@@ -43,6 +41,7 @@
                 justify-content: center;
                 opacity: 0;
                 transition-duration: 500ms;
+                cursor: pointer;
             i.material-icons {
                 color : #ffffff; 
                 display: inline;

@@ -115,7 +115,6 @@ $(document).ready(function() {
 						temp2 = value   + itemsRooms[i].words[3];
 					}
 					stringSelectText[i] = temp2;
-					console.log(stringSelectText[i]);
 					break;
 				}
 			}

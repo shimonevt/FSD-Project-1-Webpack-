@@ -1,3 +1,4 @@
+include ../../import/import
 doctype html
 html(lang="en")
     head
@@ -6,3 +7,39 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Search room
     body 
+        +header
+        .search-room__container
+            .search-tools__container
+                .button-smallscr.close
+                    i.material-icons keyboard_arrow_right
+                p.header Даты пребывания в отеле
+                +date-dropdown-filter
+                +select('гости','guests',false,[3,0,1])
+                +range-slider
+                .text Стоимость за сутки пребывания в номере
+                +checkbox-buttons('правила дома',[0,1,1])
+                p.header доступность
+                +rich-checkbox-buttons
+                +select('удобства номера','rooms',false,[2,2,0])
+                +checkbox-list('дополнительные удобства',false,[0,1,1,1,0,0])
+            .room__container
+                span 
+                    .button-smallscr
+                        i.material-icons settings
+                    p.container__header Номера, которые мы для вас подобрали
+                .room-cards__container
+                    +card-hotel-room("888","room-888.jpg",true,5,"9 990","145 ")
+                    +card-hotel-room("840","room-840.jpg",false,4,"9 990","65 ")
+                    +card-hotel-room("980","room-980.jpg",true,3,"8 500","35 ")
+                    +card-hotel-room("856","room-856.jpg",false,5,"7 300","19 ")
+                    +card-hotel-room("740","room-740.jpg",false,4,"6 000","44 ")
+                    +card-hotel-room("982","room-982.jpg",false,3,"5 800","56 ")
+                    +card-hotel-room("678","room-678.jpg",false,5,"5 500","45 ")
+                    +card-hotel-room("450","room-450.jpg",false,4,"5 300","39 ")
+                    +card-hotel-room("350","room-350.jpg",false,3,"5 000","77 ")
+                    +card-hotel-room("666","room-666.jpg",false,5,"5 000","25 ")
+                    +card-hotel-room("444","room-444.jpg",false,4,"5 000","15 ")
+                    +card-hotel-room("352","room-352.jpg",false,3,"5 000","55 ")
+                .pagination-container
+                    +pagination
+        +footer

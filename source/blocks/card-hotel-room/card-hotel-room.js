@@ -1,4 +1,6 @@
+import { data } from 'jquery';
 import './slick';
+
 jQuery(function($){
     const imageSlider = this.querySelectorAll('.card__image-slider');
     $(imageSlider).slick({
@@ -10,4 +12,13 @@ jQuery(function($){
             return '<div class="slick-dot custom"></div>';
         },
     });
+    $(imageSlider).each(function(index,element){
+        let dataImg=$(element).data('img');
+        let cardSlide = $(element).find('.slick-slide div');
+        $(cardSlide).each(function(i,elem){
+            let img = document.createElement("img");
+            img.src = "../../assets/pictures/"+dataImg;
+            elem.appendChild(img);
+        });
+     });
 });

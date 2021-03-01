@@ -32,8 +32,10 @@ mixin header(authorization = false,userName="юлий цезарь")
                 
                     else
                         li.entry-bar
-                            +button-border('войти')
-                            +button-filled('зарегистрироваться')
+                            a(href="sign-in.html")
+                                +button-border('войти')
+                            a(href="registration.html")
+                                +button-filled('зарегистрироваться')
                 if authorization 
                         .bar-smallscr
                             .entry-bar 
@@ -49,10 +51,10 @@ mixin header(authorization = false,userName="юлий цезарь")
                             .header__list.smallscr
                                 span
                             span.entry-bar.smallscr.login
-                                a(href="")
+                                a(href="sign-in.html")
                                     i.material-icons input
                             span.entry-bar.smallscr.register 
-                                a(href="" )
+                                a(href="registration.html")
                                     i.material-icons person_add
                             
             

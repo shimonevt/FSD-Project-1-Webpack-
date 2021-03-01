@@ -7,6 +7,7 @@
     display: inline-block;
     padding: 9px 20px 10px 20px;
     border-radius: 22px;
+    cursor: pointer;
     p {
         color : #FFFFFF;
         margin: 0px;
@@ -14,9 +15,11 @@
         font-family: "Montserrat_Bold";
         font-size: 12px;
         line-height: 15px;
+        cursor: pointer;
     }
     
 }
  button.button-filled:hover {
+    cursor: pointer;
     opacity: 0.5;
 }

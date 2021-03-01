@@ -3029,136 +3029,16 @@ span.entry-bar.smallscr {
     color: rgba(31, 32, 65, 0.75);
     font-family: "Montserrat_Regular"; }
 
-.search-room__container {
+.sign-in__container {
+  width: 100%;
   display: flex;
+  margin: 70px 0px 0px;
   justify-content: center;
-  max-width: 1160px;
-  margin: 100px auto;
-  font-family: 'Montserrat_Regular'; }
+  align-items: center;
+  background: url(/assets/pictures/sign-in__reg.jpg) no-repeat center center;
+  background-size: cover; }
 
-.search-tools__container .button-smallscr.close {
-  display: none; }
-
-.search-tools__container .date-dropdown-filter {
-  margin-bottom: 21px; }
-
-.search-tools__container .select {
-  max-width: 266px; }
-
-.search-tools__container .select[data-type=guests] {
-  margin-bottom: 30px; }
-
-.search-tools__container .select[data-type=rooms] {
-  margin-bottom: 16px; }
-
-.search-tools__container .checkbox-buttons {
-  margin-bottom: 30px; }
-
-.search-tools__container .checkbox-buttons-rich {
-  margin-bottom: 30px; }
-
-.search-tools__container .checkbox-list .list__options.active > .options__item {
-  margin-bottom: 0px; }
-
-.text {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-bottom: 30px; }
-
-p.container__header {
-  display: inline-block;
-  margin: 0px 0px 20px;
-  font-family: 'Montserrat_Bold';
-  font-size: 24px;
-  line-height: 29px;
-  color: #1F2041; }
-
-.room__container {
-  margin-left: 60px; }
-  .room__container > span {
-    display: flex;
-    justify-content: space-between; }
-  .room__container .button-smallscr {
-    display: none; }
-  .room__container .pagination-container {
-    display: flex;
-    justify-content: center; }
-
-.room-cards__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 12px; }
-
-@media (max-width: 1200px) {
-  .room-cards__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (max-width: 980px) {
-  .search-tools__container {
-    max-width: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 70px;
-    left: -300px;
-    transition-duration: 500ms; }
-    .search-tools__container .checkbox-buttons span.check__box, .search-tools__container .checkbox-buttons-rich span.check__box, .search-tools__container .checkbox-list span.check__box {
-      width: 0;
-      border: none; }
-  .search-tools__container.active {
-    max-width: 266px;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    z-index: 2;
-    background-color: #FFFFFF;
-    padding: 15px 15px 60px;
-    box-shadow: 0 0 25px #1f2041;
-    border-radius: 0px 0px 30px 0px;
-    transition-duration: 500ms; }
-    .search-tools__container.active .checkbox-buttons .check__box, .search-tools__container.active .checkbox-buttons-rich .check__box, .search-tools__container.active .checkbox-list .list__options.active .check__box {
-      width: 18px;
-      height: 18px;
-      border: 1px solid rgba(31, 32, 65, 0.25); }
-    .search-tools__container.active .button-smallscr.close {
-      display: inline-block;
-      height: 24px;
-      padding: 4px;
-      border: 2px solid rgba(31, 32, 65, 0.5);
-      border-radius: 24px;
-      cursor: pointer; }
-  .room__container {
-    margin: 0px auto; }
-    .room__container .button-smallscr {
-      display: inline-flex;
-      font-size: 24px;
-      position: relative;
-      width: 24px;
-      height: 24px;
-      top: -5px;
-      left: -4px;
-      border: 2px solid rgba(31, 32, 65, 0.5);
-      padding: 4px;
-      border-radius: 24px;
-      cursor: pointer; }
-      .room__container .button-smallscr i.material-icons {
-        position: relative;
-        top: -1px; } }
-
-@media (max-width: 650px) {
-  .room__container {
-    margin: 0px 5px; }
-  .search-tools__container.active {
-    padding: 10px 5px 60px; }
-  .room-cards__container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center; } }
-
-@media (max-width: 650px) {
-  .room__container > span {
-    padding: 0px 5px; }
-    .room__container > span p.container__header {
-      font-size: 22px; } }
+.card-container {
+  width: 380px;
+  margin: 172px auto; }
 
