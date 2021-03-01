@@ -1049,14 +1049,14 @@ template {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  src: url(./assets/fonts/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+  src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat_Regular';
-  src: url(/assets/fonts/Montserrat-Regular.eot);
-  src: url(/assets/fonts/Montserrat-Regular.woff) format("woff"), url(/assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(/assets/fonts/Montserrat-Regular.otf) format("otf");
+  src: url(./assets/fonts/Montserrat-Regular.eot);
+  src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -1064,17 +1064,17 @@ template {
   font-family: 'Montserrat_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Montserrat-Bold.eot);
+  src: url(./assets/fonts/Montserrat-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Montserrat-Bold.otf) format("otf"), url(/assets/fonts/Montserrat-Bold.woff) format("woff"), url(/assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Quicksand_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Quicksand-Bold.eot);
+  src: url(./assets/fonts/Quicksand-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Quicksand-Bold.otf) format("otf"), url(/assets/fonts/Quicksand-Bold.woff) format("woff"), url(/assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Quicksand-Bold.otf) format("otf"), url(./assets/fonts/Quicksand-Bold.woff) format("woff"), url(./assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
 
 .bullet__list {
   max-width: 292px;
@@ -1844,7 +1844,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -1875,7 +1875,7 @@ button.button-filled:hover {
       top: 3.5px;
       width: 9.9px;
       height: 9px;
-      background: url(/assets/pictures/vector.svg) no-repeat center center; }
+      background: url(./assets/pictures/vector.svg) no-repeat center center; }
     .checkbox-buttons-rich .checkbox__options-item .check__box {
       position: absolute;
       width: 18px;
@@ -1924,7 +1924,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -2110,13 +2110,13 @@ button.button-filled:hover {
   height: 24px; }
 
 .tweet {
-  background: url(/assets/pictures/tweet.svg) no-repeat center center; }
+  background: url(./assets/pictures/tweet.svg) no-repeat center center; }
 
 .fb {
-  background: url(/assets/pictures/fb.svg) no-repeat center center; }
+  background: url(./assets/pictures/fb.svg) no-repeat center center; }
 
 .inst {
-  background: url(/assets/pictures/inst.svg) no-repeat center center; }
+  background: url(./assets/pictures/inst.svg) no-repeat center center; }
 
 .footer__body {
   padding: 0px 20px; }
@@ -2241,7 +2241,7 @@ header.header {
   height: 40px;
   position: relative;
   z-index: 3;
-  background: url(/assets/pictures/toxin.svg) no-repeat center center; }
+  background: url(./assets/pictures/toxin.svg) no-repeat center center; }
 
 .header__menu {
   display: flex;
@@ -2515,7 +2515,7 @@ span.entry-bar.smallscr {
   margin: 30px 0px 0px 30px;
   height: 48px;
   width: 48px;
-  background: url(/assets/pictures/logo.png) no-repeat center center; }
+  background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
   font-family: "Montserrat_Regular"; }
@@ -2681,18 +2681,18 @@ span.entry-bar.smallscr {
     margin: 0;
     padding: 0; }
     .rating__star:checked ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+      background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
   .rating label {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+    background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating label:hover {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
 
 .select[data-type='guests'] {
   max-width: 320px; }
@@ -3353,14 +3353,14 @@ template {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  src: url(./assets/fonts/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+  src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat_Regular';
-  src: url(/assets/fonts/Montserrat-Regular.eot);
-  src: url(/assets/fonts/Montserrat-Regular.woff) format("woff"), url(/assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(/assets/fonts/Montserrat-Regular.otf) format("otf");
+  src: url(./assets/fonts/Montserrat-Regular.eot);
+  src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -3368,17 +3368,17 @@ template {
   font-family: 'Montserrat_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Montserrat-Bold.eot);
+  src: url(./assets/fonts/Montserrat-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Montserrat-Bold.otf) format("otf"), url(/assets/fonts/Montserrat-Bold.woff) format("woff"), url(/assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Quicksand_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Quicksand-Bold.eot);
+  src: url(./assets/fonts/Quicksand-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Quicksand-Bold.otf) format("otf"), url(/assets/fonts/Quicksand-Bold.woff) format("woff"), url(/assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Quicksand-Bold.otf) format("otf"), url(./assets/fonts/Quicksand-Bold.woff) format("woff"), url(./assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
 
 .bullet__list {
   max-width: 292px;
@@ -4148,7 +4148,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -4179,7 +4179,7 @@ button.button-filled:hover {
       top: 3.5px;
       width: 9.9px;
       height: 9px;
-      background: url(/assets/pictures/vector.svg) no-repeat center center; }
+      background: url(./assets/pictures/vector.svg) no-repeat center center; }
     .checkbox-buttons-rich .checkbox__options-item .check__box {
       position: absolute;
       width: 18px;
@@ -4228,7 +4228,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -4414,13 +4414,13 @@ button.button-filled:hover {
   height: 24px; }
 
 .tweet {
-  background: url(/assets/pictures/tweet.svg) no-repeat center center; }
+  background: url(./assets/pictures/tweet.svg) no-repeat center center; }
 
 .fb {
-  background: url(/assets/pictures/fb.svg) no-repeat center center; }
+  background: url(./assets/pictures/fb.svg) no-repeat center center; }
 
 .inst {
-  background: url(/assets/pictures/inst.svg) no-repeat center center; }
+  background: url(./assets/pictures/inst.svg) no-repeat center center; }
 
 .footer__body {
   padding: 0px 20px; }
@@ -4545,7 +4545,7 @@ header.header {
   height: 40px;
   position: relative;
   z-index: 3;
-  background: url(/assets/pictures/toxin.svg) no-repeat center center; }
+  background: url(./assets/pictures/toxin.svg) no-repeat center center; }
 
 .header__menu {
   display: flex;
@@ -4819,7 +4819,7 @@ span.entry-bar.smallscr {
   margin: 30px 0px 0px 30px;
   height: 48px;
   width: 48px;
-  background: url(/assets/pictures/logo.png) no-repeat center center; }
+  background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
   font-family: "Montserrat_Regular"; }
@@ -4985,18 +4985,18 @@ span.entry-bar.smallscr {
     margin: 0;
     padding: 0; }
     .rating__star:checked ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+      background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
   .rating label {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+    background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating label:hover {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
 
 .select[data-type='guests'] {
   max-width: 320px; }
@@ -5656,14 +5656,14 @@ template {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  src: url(./assets/fonts/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+  src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat_Regular';
-  src: url(/assets/fonts/Montserrat-Regular.eot);
-  src: url(/assets/fonts/Montserrat-Regular.woff) format("woff"), url(/assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(/assets/fonts/Montserrat-Regular.otf) format("otf");
+  src: url(./assets/fonts/Montserrat-Regular.eot);
+  src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -5671,17 +5671,17 @@ template {
   font-family: 'Montserrat_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Montserrat-Bold.eot);
+  src: url(./assets/fonts/Montserrat-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Montserrat-Bold.otf) format("otf"), url(/assets/fonts/Montserrat-Bold.woff) format("woff"), url(/assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Quicksand_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Quicksand-Bold.eot);
+  src: url(./assets/fonts/Quicksand-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Quicksand-Bold.otf) format("otf"), url(/assets/fonts/Quicksand-Bold.woff) format("woff"), url(/assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Quicksand-Bold.otf) format("otf"), url(./assets/fonts/Quicksand-Bold.woff) format("woff"), url(./assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
 
 .bullet__list {
   max-width: 292px;
@@ -6451,7 +6451,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -6482,7 +6482,7 @@ button.button-filled:hover {
       top: 3.5px;
       width: 9.9px;
       height: 9px;
-      background: url(/assets/pictures/vector.svg) no-repeat center center; }
+      background: url(./assets/pictures/vector.svg) no-repeat center center; }
     .checkbox-buttons-rich .checkbox__options-item .check__box {
       position: absolute;
       width: 18px;
@@ -6531,7 +6531,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -6717,13 +6717,13 @@ button.button-filled:hover {
   height: 24px; }
 
 .tweet {
-  background: url(/assets/pictures/tweet.svg) no-repeat center center; }
+  background: url(./assets/pictures/tweet.svg) no-repeat center center; }
 
 .fb {
-  background: url(/assets/pictures/fb.svg) no-repeat center center; }
+  background: url(./assets/pictures/fb.svg) no-repeat center center; }
 
 .inst {
-  background: url(/assets/pictures/inst.svg) no-repeat center center; }
+  background: url(./assets/pictures/inst.svg) no-repeat center center; }
 
 .footer__body {
   padding: 0px 20px; }
@@ -6848,7 +6848,7 @@ header.header {
   height: 40px;
   position: relative;
   z-index: 3;
-  background: url(/assets/pictures/toxin.svg) no-repeat center center; }
+  background: url(./assets/pictures/toxin.svg) no-repeat center center; }
 
 .header__menu {
   display: flex;
@@ -7122,7 +7122,7 @@ span.entry-bar.smallscr {
   margin: 30px 0px 0px 30px;
   height: 48px;
   width: 48px;
-  background: url(/assets/pictures/logo.png) no-repeat center center; }
+  background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
   font-family: "Montserrat_Regular"; }
@@ -7288,18 +7288,18 @@ span.entry-bar.smallscr {
     margin: 0;
     padding: 0; }
     .rating__star:checked ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+      background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
   .rating label {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+    background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating label:hover {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
 
 .select[data-type='guests'] {
   max-width: 320px; }
@@ -7956,14 +7956,14 @@ template {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  src: url(./assets/fonts/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+  src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat_Regular';
-  src: url(/assets/fonts/Montserrat-Regular.eot);
-  src: url(/assets/fonts/Montserrat-Regular.woff) format("woff"), url(/assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(/assets/fonts/Montserrat-Regular.otf) format("otf");
+  src: url(./assets/fonts/Montserrat-Regular.eot);
+  src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -7971,17 +7971,17 @@ template {
   font-family: 'Montserrat_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Montserrat-Bold.eot);
+  src: url(./assets/fonts/Montserrat-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Montserrat-Bold.otf) format("otf"), url(/assets/fonts/Montserrat-Bold.woff) format("woff"), url(/assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Quicksand_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Quicksand-Bold.eot);
+  src: url(./assets/fonts/Quicksand-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Quicksand-Bold.otf) format("otf"), url(/assets/fonts/Quicksand-Bold.woff) format("woff"), url(/assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Quicksand-Bold.otf) format("otf"), url(./assets/fonts/Quicksand-Bold.woff) format("woff"), url(./assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
 
 .bullet__list {
   max-width: 292px;
@@ -8751,7 +8751,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -8782,7 +8782,7 @@ button.button-filled:hover {
       top: 3.5px;
       width: 9.9px;
       height: 9px;
-      background: url(/assets/pictures/vector.svg) no-repeat center center; }
+      background: url(./assets/pictures/vector.svg) no-repeat center center; }
     .checkbox-buttons-rich .checkbox__options-item .check__box {
       position: absolute;
       width: 18px;
@@ -8831,7 +8831,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -9017,13 +9017,13 @@ button.button-filled:hover {
   height: 24px; }
 
 .tweet {
-  background: url(/assets/pictures/tweet.svg) no-repeat center center; }
+  background: url(./assets/pictures/tweet.svg) no-repeat center center; }
 
 .fb {
-  background: url(/assets/pictures/fb.svg) no-repeat center center; }
+  background: url(./assets/pictures/fb.svg) no-repeat center center; }
 
 .inst {
-  background: url(/assets/pictures/inst.svg) no-repeat center center; }
+  background: url(./assets/pictures/inst.svg) no-repeat center center; }
 
 .footer__body {
   padding: 0px 20px; }
@@ -9148,7 +9148,7 @@ header.header {
   height: 40px;
   position: relative;
   z-index: 3;
-  background: url(/assets/pictures/toxin.svg) no-repeat center center; }
+  background: url(./assets/pictures/toxin.svg) no-repeat center center; }
 
 .header__menu {
   display: flex;
@@ -9422,7 +9422,7 @@ span.entry-bar.smallscr {
   margin: 30px 0px 0px 30px;
   height: 48px;
   width: 48px;
-  background: url(/assets/pictures/logo.png) no-repeat center center; }
+  background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
   font-family: "Montserrat_Regular"; }
@@ -9588,18 +9588,18 @@ span.entry-bar.smallscr {
     margin: 0;
     padding: 0; }
     .rating__star:checked ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+      background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
   .rating label {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+    background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating label:hover {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
 
 .select[data-type='guests'] {
   max-width: 320px; }
@@ -10300,14 +10300,14 @@ template {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  src: url(./assets/fonts/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+  src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat_Regular';
-  src: url(/assets/fonts/Montserrat-Regular.eot);
-  src: url(/assets/fonts/Montserrat-Regular.woff) format("woff"), url(/assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(/assets/fonts/Montserrat-Regular.otf) format("otf");
+  src: url(./assets/fonts/Montserrat-Regular.eot);
+  src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -10315,17 +10315,17 @@ template {
   font-family: 'Montserrat_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Montserrat-Bold.eot);
+  src: url(./assets/fonts/Montserrat-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Montserrat-Bold.otf) format("otf"), url(/assets/fonts/Montserrat-Bold.woff) format("woff"), url(/assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Quicksand_Bold';
   font-style: normal;
   font-weight: bold;
-  src: url(/assets/fonts/Quicksand-Bold.eot);
+  src: url(./assets/fonts/Quicksand-Bold.eot);
   /* For IE6-8 */
-  src: url(/assets/fonts/Quicksand-Bold.otf) format("otf"), url(/assets/fonts/Quicksand-Bold.woff) format("woff"), url(/assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
+  src: url(./assets/fonts/Quicksand-Bold.otf) format("otf"), url(./assets/fonts/Quicksand-Bold.woff) format("woff"), url(./assets/fonts/Quicksand-Bold.ttf) format("truetype"); }
 
 .bullet__list {
   max-width: 292px;
@@ -11095,7 +11095,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -11126,7 +11126,7 @@ button.button-filled:hover {
       top: 3.5px;
       width: 9.9px;
       height: 9px;
-      background: url(/assets/pictures/vector.svg) no-repeat center center; }
+      background: url(./assets/pictures/vector.svg) no-repeat center center; }
     .checkbox-buttons-rich .checkbox__options-item .check__box {
       position: absolute;
       width: 18px;
@@ -11175,7 +11175,7 @@ button.button-filled:hover {
   top: 3.5px;
   width: 9.9px;
   height: 9px;
-  background: url(/assets/pictures/vector.svg) no-repeat center center; }
+  background: url(./assets/pictures/vector.svg) no-repeat center center; }
 
 .options__item > .item__input {
   position: absolute;
@@ -11361,13 +11361,13 @@ button.button-filled:hover {
   height: 24px; }
 
 .tweet {
-  background: url(/assets/pictures/tweet.svg) no-repeat center center; }
+  background: url(./assets/pictures/tweet.svg) no-repeat center center; }
 
 .fb {
-  background: url(/assets/pictures/fb.svg) no-repeat center center; }
+  background: url(./assets/pictures/fb.svg) no-repeat center center; }
 
 .inst {
-  background: url(/assets/pictures/inst.svg) no-repeat center center; }
+  background: url(./assets/pictures/inst.svg) no-repeat center center; }
 
 .footer__body {
   padding: 0px 20px; }
@@ -11492,7 +11492,7 @@ header.header {
   height: 40px;
   position: relative;
   z-index: 3;
-  background: url(/assets/pictures/toxin.svg) no-repeat center center; }
+  background: url(./assets/pictures/toxin.svg) no-repeat center center; }
 
 .header__menu {
   display: flex;
@@ -11766,7 +11766,7 @@ span.entry-bar.smallscr {
   margin: 30px 0px 0px 30px;
   height: 48px;
   width: 48px;
-  background: url(/assets/pictures/logo.png) no-repeat center center; }
+  background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
   font-family: "Montserrat_Regular"; }
@@ -11932,18 +11932,18 @@ span.entry-bar.smallscr {
     margin: 0;
     padding: 0; }
     .rating__star:checked ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+      background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating__star:not(:checked) ~ label:hover ~ label {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
   .rating label {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: no-repeat center center url(/assets/pictures/rating-border.svg); }
+    background: no-repeat center center url(./assets/pictures/rating-border.svg); }
     .rating label:hover {
-      background: no-repeat center center url(/assets/pictures/rating.svg); }
+      background: no-repeat center center url(./assets/pictures/rating.svg); }
 
 .select[data-type='guests'] {
   max-width: 320px; }
