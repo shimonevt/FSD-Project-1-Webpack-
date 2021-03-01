@@ -2,9 +2,9 @@ mixin card-hotel-room(number="888",roomImg="room-888.jpg",isLuxe=true,starNum=5,
     .card-hotel-room.card
         .card__image-slider(data-img=roomImg)
                 img(src=require("assets/pictures/"+roomImg))
-                div(class ="room-"+number)
-                div(class ="room-"+number)
-                div(class ="room-"+number)
+                img(src=require("assets/pictures/"+roomImg))
+                img(src=require("assets/pictures/"+roomImg))
+                img(src=require("assets/pictures/"+roomImg))
         .hotel-room__info
             .info-row
                 .info__room

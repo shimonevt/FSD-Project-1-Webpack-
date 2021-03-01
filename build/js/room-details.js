@@ -102,16 +102,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cal
 
 /***/ }),
 
-/***/ "./blocks/card-comment/card-comment.js":
-/*!*********************************************!*\
-  !*** ./blocks/card-comment/card-comment.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("/* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\njQuery(function($){\r\n    const cardComment= document.querySelectorAll('.card-comment');\r\n    $(cardComment).each(function(index,element){\r\n        let avatar = $(element).find('.profile__avatar');\r\n        console.log(avatar);\r\n        let avatarData = $(avatar).data(\"img\");\r\n        let avatarImg = document.createElement(\"img\");\r\n        $(avatar).each(function(i,elem){\r\n            avatarImg.src = \"../../assets/pictures/\"+avatarData;\r\n            elem.appendChild(avatarImg);\r\n        });\r\n        \r\n    });\r\n});\n\n//# sourceURL=webpack:///./blocks/card-comment/card-comment.js?");
-
-/***/ }),
-
 /***/ "./blocks/header/header.js":
 /*!*********************************!*\
   !*** ./blocks/header/header.js ***!
@@ -149,7 +139,7 @@ eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"../n
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _room_details_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room-details.scss */ \"./pages/room-details/room-details.scss\");\n/* harmony import */ var _blocks_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../blocks/header/header */ \"./blocks/header/header.js\");\n/* harmony import */ var _blocks_header_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_header_header__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _blocks_select_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../blocks/select/select */ \"./blocks/select/select.js\");\n/* harmony import */ var _blocks_select_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_select_select__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _blocks_card_booking_card_booking__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../blocks/card-booking/card-booking */ \"./blocks/card-booking/card-booking.js\");\n/* harmony import */ var _blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../blocks/like-button/like-button */ \"./blocks/like-button/like-button.js\");\n/* harmony import */ var _blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _blocks_card_comment_card_comment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../blocks/card-comment/card-comment */ \"./blocks/card-comment/card-comment.js\");\n/* harmony import */ var _blocks_card_comment_card_comment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_card_comment_card_comment__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/room-details/room-details.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _room_details_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room-details.scss */ \"./pages/room-details/room-details.scss\");\n/* harmony import */ var _blocks_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../blocks/header/header */ \"./blocks/header/header.js\");\n/* harmony import */ var _blocks_header_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_header_header__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _blocks_select_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../blocks/select/select */ \"./blocks/select/select.js\");\n/* harmony import */ var _blocks_select_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_select_select__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _blocks_card_booking_card_booking__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../blocks/card-booking/card-booking */ \"./blocks/card-booking/card-booking.js\");\n/* harmony import */ var _blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../blocks/like-button/like-button */ \"./blocks/like-button/like-button.js\");\n/* harmony import */ var _blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/room-details/room-details.js?");
 
 /***/ })
 

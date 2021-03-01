@@ -1,6 +1,5 @@
 import './calendar/calendar';
 import './card-booking/card-booking';
-import './card-comment/card-comment';
 import './checkbox-list/checkbox-list';
 import './date-dropdown/date-dropdown';
 import './date-dropdown-filter/date-dropdown-filter';
