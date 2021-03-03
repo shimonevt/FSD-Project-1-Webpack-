@@ -1536,8 +1536,7 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
+   
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -3046,7 +3045,8 @@ span.entry-bar.smallscr i.material-icons {
   display: grid;
   grid-template-columns: 66% 33%;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "f s" " f th"; }
+  grid-template-areas: "f s"
+ " f th"; }
 
 .image-container.first {
   grid-area: f; }
@@ -3065,7 +3065,9 @@ span.entry-bar.smallscr i.material-icons {
 .room-details__container {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "room-info statistics card-booking" "card-comment card-comment card-booking" "rules cancel row";
+  grid-template-areas: "room-info statistics card-booking"
+ "card-comment card-comment card-booking"
+ "rules cancel row";
   grid-gap: 30px 10px;
   max-width: 1160px;
   margin: 70px auto 70px;
@@ -3135,7 +3137,8 @@ p.container-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "orange purple" "orange green";
+    grid-template-areas: "orange purple"
+ "orange green";
     grid-gap: 2px; }
   .statistics-diagram .orange {
     grid-area: orange;
@@ -3197,7 +3200,10 @@ p.cancel__text {
     max-width: 800px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-areas: "card-booking card-booking"  "room-info statistics" "card-comment card-comment" "rules cancel"; } }
+    grid-template-areas: "card-booking card-booking" 
+ "room-info statistics"
+ "card-comment card-comment"
+ "rules cancel"; } }
 
 @media (max-width: 560px) {
   .room-details__container {
@@ -3207,7 +3213,8 @@ p.cancel__text {
   .room-images__container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
-    grid-template-areas: "f f" " s th"; } }
+    grid-template-areas: "f f"
+ " s th"; } }
 
 @media (max-width: 450px) {
   .card-booking.card {
