@@ -1,6 +1,7 @@
 import 'air-datepicker';
+
 jQuery(function($){
-    var calendar = document.querySelector('.calendar');
+    const calendar = document.querySelector('.calendar');
     $.fn.datepicker.language['my-lang'] = {
         
         days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],

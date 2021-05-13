@@ -3,8 +3,8 @@
     margin: 0px 0px 20px 0px;
     font-size: 14px;
     line-height: 18px;
-    font-family: 'Montserrat_Regular';
-    
+    font-family: 'Montserrat';
+    font-weight: normal;
         p {
             margin : 0px 0px 5px 0px;
             text-transform: uppercase;
@@ -13,10 +13,9 @@
             color: #1F2041;
         }
         .info__type {
-            font-family: "Montserrat_Bold";
+            font-family: 'Montserrat';
             font-weight: bold;                    
         }
-    
 }
 .text-field__body {
         height: 44px;
@@ -54,7 +53,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
 }
 .text-field-masked{
     input {

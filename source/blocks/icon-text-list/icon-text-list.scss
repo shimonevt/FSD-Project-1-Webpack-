@@ -6,7 +6,8 @@
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             width: 46px;
             height: 46px;
-            font-family: "Montserrat_Regular";
+            font-family: 'Montserrat';
+            font-weight: normal;
             i {
                 background: #FFFFFF;
                 mix-blend-mode: screen;
@@ -24,10 +25,12 @@
                 margin : 0px;
                 line-height: 24px;
                 color: rgba(31, 32, 65, 0.75);
-                font-family: "Montserrat_Regular";
+                font-family: 'Montserrat';
+                font-weight: normal;
             }
             .text__header {
-                font-family: 'Montserrat_Bold';
+                font-family: 'Montserrat';
+                font-weight: bold;
                 margin-top : 0px;
                 
             }

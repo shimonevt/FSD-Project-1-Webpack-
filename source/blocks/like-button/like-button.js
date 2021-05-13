@@ -1,20 +1,17 @@
-jQuery(document).ready(function($){
-    $(".like-button").click(function(){		
-        var likeButton = $(this);
-        if ($(likeButton).hasClass('active')) {
-            let thisNum = $(likeButton).children('.like-button__body').children('.body__like-nmbr');
-            let thisHeart = $(likeButton).children('.like-button__body').children('.body__like-img').children('.heart');
-            thisHeart.text('favorite_border');
-            thisNum.text(parseInt(thisNum.text())-1);
-            $(likeButton).removeClass("active");
-        } else {				
-            $(likeButton).addClass("active");
-            let thisNum = $(likeButton).children('.like-button__body').children('.body__like-nmbr');
-            let thisHeart = $(likeButton).children('.like-button__body').children('.body__like-img').children('.heart');
-            thisNum.text(parseInt(thisNum.text())+1);
-            thisHeart.text('favorite');
-
-        }
-        
+jQuery(document).ready(($) => {
+  $('.like-button').click((ev) => {
+    const likeButton = ev.currentTarget;
+    const $thisNum = $(likeButton).children('.js-like-button__body').children('.js-body__like-nmbr');
+    console.log($thisNum);
+    const $thisHeart = $(likeButton).children('.js-like-button__body').children('.js-body__like-img').children('.js-heart');
+    if ($(likeButton).hasClass('active')) {
+      $thisHeart.text('favorite_border');
+      $thisNum.text(parseInt($thisNum.text(), 10) - 1);
+      $(likeButton).removeClass('active');
+    } else {
+      $thisHeart.text('favorite');
+      $thisNum.text(parseInt($thisNum.text(), 10) + 1);
+      $(likeButton).addClass('active');
+    }
+  });
 });
-})

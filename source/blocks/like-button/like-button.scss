@@ -8,7 +8,9 @@
     background : #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     transition-duration: 500ms;
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer;
     &__body {
         display: flex;
         align-items:center;
@@ -21,7 +23,7 @@
             display: flex; 
             justify-content: center;            
             i.material-icons.md-10{
-                font-family: "Material Icons";
+                font-family: 'Material Icons';
                 font-size: 10px;
                 color :  #BC9CFF;
             }
@@ -29,11 +31,10 @@
     }
 }
 .like-button.active {
-        border: 1px solid  #BC9CFF;
-        transition-duration: 500ms;
-        .like-button__body {
-            color: #BC9CFF;
-            transition-duration: 500ms;
-           
-        }         
+    border: 1px solid  #BC9CFF;
+    transition-duration: 500ms;
+    .like-button__body {
+        color: #BC9CFF;
+        transition-duration: 500ms;          
+    }         
 }

@@ -2,14 +2,16 @@
     max-width: 267px;
     margin-top: 10px;
     .type__info{
-        font-family: "Montserrat_Bold";
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: uppercase;
         color: #1F2041;
         font-size: 12px;
         margin: 0px 0px 5px 0px;
     }
     .text-field__body {
-        font-family: "Montserrat_Regular";
+        font-family: 'Montserrat';
+        font-weight: normal;
          height: 44px;
         display : flex;
         justify-content: space-between;
@@ -42,5 +44,4 @@
                 }
             }
     }
-    
 }

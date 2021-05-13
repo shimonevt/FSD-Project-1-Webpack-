@@ -1,5 +1,5 @@
 .info__type {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;                    
@@ -33,7 +33,8 @@
 }
 .checkbox-list {
     max-width: 266px;
-    font-family : "Montserrat_Regular";
+    font-family : 'Montserrat';
+    font-weight: normal;
     p {
         margin : 0px;
     }
@@ -61,11 +62,9 @@
 }  
 .list__info.active {
     .info__arrow {
-            
                 -webkit-transform: rotate(180deg);
                 transform: rotate(180deg);
-                transition-duration: 500ms;
-            
+                transition-duration: 500ms;       
         }
 }
 .list__options.active{ 
@@ -88,7 +87,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        cursor : default;
+        cursor: pointer;
         .info__arrow {
             padding : 10px 16px 16px 16px;
             transition-duration: 500ms;

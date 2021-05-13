@@ -1,7 +1,8 @@
 .checkbox-buttons {
     min-height: 129px;
     p.title {
-        font-family: "Montserrat_Bold";
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 12px;
         text-transform: uppercase;
         margin-top: 0px;
@@ -26,7 +27,8 @@
     .item__text { 
         max-width: 192px;
         p{
-            font-family: "Montserrat_Regular";
+            font-family: 'Montserrat';
+            font-weight: normal;
             font-size: 14px;
             color: rgba(31, 32, 65, 0.5);
             position: relative;
@@ -41,6 +43,7 @@
     padding-left: 30px;
     height : 20px;               
     pointer-events: auto;
+    cursor: pointer;
 }
 .check__box {
     position: absolute;

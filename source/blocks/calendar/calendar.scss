@@ -1,6 +1,7 @@
-@import "../../blocks/calendar/datepicker.css";
+@import '../../blocks/calendar/datepicker.css';
+
 .datepicker {
-    width: 318px !important;
+    width: 318px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         .datepicker--content {
             padding : 0px 20px 20px 20px;
@@ -10,7 +11,8 @@
         }
         .datepicker--days-names {
             margin: 30px 0px 0px 0px ;
-            font-family: 'Montserrat_bold';
+            font-family: 'Montserrat';
+            font-weight: bold;
             .datepicker--day-name {
                 width: 30px;
                 height: 40px;
@@ -28,7 +30,8 @@
             color: #FFFFFF;
         }
         >.datepicker--nav {
-            font-family: 'Quicksand_bold';
+            font-family: 'Quicksand';
+	        font-weight: bold;
             font-size: 19px;
             line-height: 24px;
             padding : 20px 20px 0px 20px;
@@ -40,18 +43,17 @@
                 height: 24px;
             }
             .datepicker--nav-title  {
-              
                 width: 155px;
                 height: 24px;
                 padding: 0px;
                 .nav-title-text {
-                    font-family: 'Montserrat_bold';
-                    
+                    font-family: 'Montserrat';
+                    font-weight: bold;
                     font-size: 19px;
                     line-height: 24px;
                 }
             }
-            i{
+            i.material-icons{
                 color: #BC9CFF;
             }
         }
@@ -177,7 +179,7 @@
             text-align: center;
             color: rgba(31, 32, 65, 0.5);
             font-size: 12px;
-            font-family: 'Montserrat_regular';
+            font-family: 'Montserrat';
             align-items: center;
             text-align: center;
         }
@@ -190,7 +192,8 @@
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         }
        .datepicker--buttons {
-           font-family: 'Montserrat_bold';
+           font-family: 'Montserrat';
+           font-weight: bold;
            font-size: 12px;
            height: 15px;
            text-transform: uppercase;

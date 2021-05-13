@@ -4,12 +4,12 @@ mixin checkbox-list(text='дополнительные удобства',isActiv
         else
             -listClass =''
         -let items = ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']
-        .checkbox-list
-            div(class="list__info "+listClass)
+        .checkbox-list.js-checkbox-list
+            div.js-list__info(class="list__info "+listClass)
                 .info__type=text
                 .info__arrow
                     i.material-icons.md-24 expand_more
-            div(class="list__options "+listClass)
+            div.js-list__options(class="list__options "+listClass)
                 -let i =0
                 each name in items
                     if isChecked[i]

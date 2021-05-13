@@ -1,8 +1,8 @@
-jQuery(document).ready(function($){
-    $(".checkbox-list").children(".list__info").click(function(){
-        let listInfo = $(this);
-        let listOptions = $(listInfo).parent(".checkbox-list").find('.list__options');
-        $(listOptions).toggleClass("active");
-        $(listInfo).toggleClass("active");
-    });
-})
+jQuery(document).ready(($) => {
+  $('.js-checkbox-list .js-list__info').click((ev) => {
+    const listInfo = $(ev.currentTarget);
+    const $listOptions = $(listInfo).parent('.js-checkbox-list').find('.js-list__options');
+    $($listOptions).toggleClass('active');
+    $(listInfo).toggleClass('active');
+  });
+});

@@ -1054,14 +1054,14 @@ template {
   src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
   src: url(./assets/fonts/Montserrat-Regular.eot);
   src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Montserrat-Bold.eot);
@@ -1069,7 +1069,7 @@ template {
   src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Quicksand_Bold';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Quicksand-Bold.eot);
@@ -1078,7 +1078,8 @@ template {
 
 .bullet__list {
   max-width: 292px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .bullet__list .bullet__header {
     font-size: 14px;
     text-transform: uppercase;
@@ -1121,17 +1122,19 @@ template {
   border-radius: 22px;
   outline: none;
   border: none;
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 14px;
   font-size: 12px;
   line-height: 15px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .button-arrow::after {
   content: 'arrow_forward';
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   color: #FFFFFF;
   text-transform: lowercase;
   position: absolute;
@@ -1154,7 +1157,8 @@ template {
     border-radius: 100px;
     background: #FFFFFF;
     color: #BC9CFF;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -1179,7 +1183,8 @@ button.button-filled {
     color: #FFFFFF;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     cursor: pointer; }
@@ -1193,18 +1198,20 @@ button.button-filled:hover {
   background: #FFFFFF;
   outline: none;
   border: none;
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 14.63px;
-  color: #BC9CFF; }
+  color: #BC9CFF;
+  cursor: pointer; }
   .button-icon:hover {
     opacity: 0.5; }
   .button-icon.gray {
     color: rgba(31, 32, 65, 0.5); }
 
 .datepicker {
-  width: 318px !important;
+  width: 318px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
   .datepicker .datepicker--content {
     padding: 0px 20px 20px 20px;
@@ -1213,7 +1220,8 @@ button.button-filled:hover {
     width: 279.4px; }
   .datepicker .datepicker--days-names {
     margin: 30px 0px 0px 0px;
-    font-family: 'Montserrat_bold'; }
+    font-family: 'Montserrat';
+    font-weight: bold; }
     .datepicker .datepicker--days-names .datepicker--day-name {
       width: 30px;
       height: 40px;
@@ -1227,7 +1235,8 @@ button.button-filled:hover {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #FFFFFF; }
   .datepicker > .datepicker--nav {
-    font-family: 'Quicksand_bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     padding: 20px 20px 0px 20px;
@@ -1242,10 +1251,11 @@ button.button-filled:hover {
       height: 24px;
       padding: 0px; }
       .datepicker > .datepicker--nav .datepicker--nav-title .nav-title-text {
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 19px;
         line-height: 24px; }
-    .datepicker > .datepicker--nav i {
+    .datepicker > .datepicker--nav i.material-icons {
       color: #BC9CFF; }
   .datepicker i.datepicker--pointer {
     display: none; }
@@ -1350,7 +1360,7 @@ button.button-filled:hover {
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
-    font-family: 'Montserrat_regular';
+    font-family: 'Montserrat';
     align-items: center;
     text-align: center; }
   .datepicker .datepicker--cell-day.-other-month- {
@@ -1360,7 +1370,8 @@ button.button-filled:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker .datepicker--buttons {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     height: 15px;
     text-transform: uppercase;
@@ -1397,19 +1408,22 @@ button.button-filled:hover {
   .card-booking.card .select {
     margin: 20px 0px; }
   .card-booking.card .info__price {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     top: 10px; }
     .card-booking.card .info__price p {
       display: inline;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       margin: 0px;
       font-size: 14px;
       line-height: 18px; }
     .card-booking.card .info__price p:nth-child(2) {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 12px; }
       .card-booking.card .info__price p:nth-child(2) > b {
         font-size: 14px; }
@@ -1419,18 +1433,22 @@ button.button-filled:hover {
     margin: 0px;
     color: #1F2041; }
   .card-booking.card .info__room p:first-child {
-    font-family: 'Quicksand_Bold'; }
+    font-family: 'Quicksand';
+    font-weight: bold; }
   .card-booking.card .info__room .room__number {
-    font-family: 'Quicksand_Bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 24px;
     color: #1F2041; }
   .card-booking.card .info__room .room__class {
     margin-left: 8px;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 14px;
     color: #BC9CFF; }
   .card-booking.card .booking__costs {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -1465,26 +1483,30 @@ button.button-filled:hover {
       flex-wrap: wrap;
       flex-shrink: 0; }
     .card-booking.card .booking__costs .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       top: 2px; }
       .card-booking.card .booking__costs .info__guest b {
-        font-family: 'Montserrat_Bold'; }
+        font-family: 'Montserrat';
+        font-weight: bold; }
     .card-booking.card .booking__costs .costs__discount, .card-booking.card .booking__costs .costs__room {
       margin-bottom: 10px; }
     .card-booking.card .booking__costs .costs__additional {
       line-height: 18px; }
     .card-booking.card .booking__costs .costs__total {
-      font-family: 'Quicksand_bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       color: #1F2041;
       font-size: 19px;
       margin-top: 21px;
       margin-bottom: 20px; }
       .card-booking.card .booking__costs .costs__total p {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         font-size: 19px; }
       .card-booking.card .booking__costs .costs__total .total-divider {
@@ -1494,7 +1516,7 @@ button.button-filled:hover {
         margin: 0px 5px;
         max-width: 182px; }
     .card-booking.card .booking__costs > .button__arrow {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0px; }
 
 .card-comment {
   max-width: 711px;
@@ -1514,14 +1536,17 @@ button.button-filled:hover {
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75); }
       .card-comment .card__review-group .info .info__name {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: capitalize; }
       .card-comment .card__review-group .info .info__date {
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .card-comment .card__review-group .info p {
         margin: 0px; }
     .card-comment .card__review-group .review__text {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: rgba(31, 32, 65, 0.75);
       font-size: 14px;
       line-height: 24px;
@@ -1536,8 +1561,6 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -1630,19 +1653,23 @@ button.button-filled:hover {
       margin: 0px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room p:first-child {
-      font-family: 'Quicksand_Bold'; }
+      font-family: 'Quicksand';
+      font-weight: bold; }
     .card-hotel-room.card .hotel-room__info .info__room .room__number {
-      font-family: 'Quicksand_Bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       font-size: 20px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room .room__class {
       margin-left: 1px;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       font-size: 14px;
       line-height: 14.63px;
       color: #BC9CFF; }
     .card-hotel-room.card .hotel-room__info .info-row {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -1652,7 +1679,8 @@ button.button-filled:hover {
       line-height: 17.5px; }
       .card-hotel-room.card .hotel-room__info .info-row p {
         display: inline;
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         line-height: 18px; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price {
@@ -1660,16 +1688,19 @@ button.button-filled:hover {
         align-items: center; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price p:nth-child(3) {
         margin-left: 2px;
-        font-family: 'Montserrat_Regular'; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
     .card-hotel-room.card .hotel-room__info .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       display: flex;
       align-items: center; }
       .card-hotel-room.card .hotel-room__info .info__guest b {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-right: 4px; }
     .card-hotel-room.card .hotel-room__info .rating {
       line-height: 20,4px; }
@@ -1685,7 +1716,8 @@ button.button-filled:hover {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
   .card-login.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
@@ -1703,7 +1735,8 @@ button.button-filled:hover {
     justify-content: space-between;
     margin-top: 30px; }
     .card-login.card .login__info p.info__text {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: #000000;
       margin-top: 12px;
       margin-bottom: 0px;
@@ -1721,15 +1754,18 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .card-registration.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .card-registration.card p.card__subtitle {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     line-height: 15px;
@@ -1766,17 +1802,20 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .room-search.card .card__body {
     display: block; }
   .room-search.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .room-search.card input, .room-search.card body .card p {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     color: rgba(31, 32, 65, 0.75); }
   .room-search.card .select {
     margin: 21px 0px 0px 0px; }
@@ -1791,7 +1830,8 @@ button.button-filled:hover {
 .checkbox-buttons {
   min-height: 129px; }
   .checkbox-buttons p.title {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 0px;
@@ -1813,7 +1853,8 @@ button.button-filled:hover {
   .checkbox-buttons .item__text {
     max-width: 192px; }
     .checkbox-buttons .item__text p {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -1825,7 +1866,8 @@ button.button-filled:hover {
   max-width: 70%;
   padding-left: 30px;
   height: 20px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  cursor: pointer; }
 
 .check__box {
   position: absolute;
@@ -1857,7 +1899,8 @@ button.button-filled:hover {
   max-width: 266px; }
   .checkbox-buttons-rich .checkbox__options-item {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    cursor: pointer; }
     .checkbox-buttons-rich .checkbox__options-item > .item-input {
       position: absolute;
       width: 1px;
@@ -1888,7 +1931,8 @@ button.button-filled:hover {
       left: 30px;
       max-width: 236px; }
       .checkbox-buttons-rich .checkbox__options-item .item__text p.text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
@@ -1899,10 +1943,11 @@ button.button-filled:hover {
         line-height: 14px;
         color: rgba(31, 32, 65, 0.5);
         margin: 0px;
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
 
 .info__type {
-  font-family: 'Montserrat_bold';
+  font-family: 'Montserrat';
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase; }
@@ -1935,7 +1980,8 @@ button.button-filled:hover {
 
 .checkbox-list {
   max-width: 266px;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .checkbox-list p {
     margin: 0px; }
   .checkbox-list .info__arrow i {
@@ -1979,7 +2025,7 @@ button.button-filled:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: default; }
+    cursor: pointer; }
     .checkbox-list .list__info .info__arrow {
       padding: 10px 16px 16px 16px;
       transition-duration: 500ms; }
@@ -1995,7 +2041,8 @@ button.button-filled:hover {
 .date-dropdown {
   max-width: 100%;
   height: 65px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .date__bar {
   max-width: 320px;
@@ -2017,10 +2064,11 @@ button.button-filled:hover {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
   .date__bar .date__item::before {
     content: 'expand_more';
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     text-transform: lowercase;
     font-style: normal;
     font-size: 24px;
@@ -2030,14 +2078,15 @@ button.button-filled:hover {
     color: rgba(31, 32, 65, 0.5); }
 
 .date__item > .item__name {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   margin: 0px 0px 5px 0px;
   color: #1F2041; }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5); }
@@ -2049,11 +2098,14 @@ button.button-filled:hover {
     color: #1F2041; }
   .date-dropdown-filter .dropdown-filter {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .date-dropdown-filter .dropdown-filter form {
       max-width: 80%;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .date-dropdown-filter .dropdown-filter form input {
+        cursor: pointer;
         color: rgba(31, 32, 65, 0.75); }
     .date-dropdown-filter .dropdown-filter button {
       outline: none;
@@ -2063,9 +2115,10 @@ button.button-filled:hover {
       position: relative;
       left: -2px;
       width: 42px;
-      height: 42px; }
+      height: 42px;
+      cursor: pointer; }
     .date-dropdown-filter .dropdown-filter i.material-icons {
-      font-family: "Material Icons";
+      font-family: 'Material Icons';
       color: rgba(31, 32, 65, 0.5);
       position: relative;
       top: 2px;
@@ -2073,7 +2126,8 @@ button.button-filled:hover {
       width: 24px; }
 
 .footer {
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   background: #FFFFFF; }
 
 .footer.small {
@@ -2159,7 +2213,8 @@ ul.bar__item:last-child {
     line-height: 24px; }
 
 li.item__header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -2254,13 +2309,15 @@ a {
 .header__list {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
+  font-weight: normal;
   line-height: 17px; }
   .header__list .material-icons {
     display: inline; }
   .header__list li:first-child a {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: none; }
   .header__list li {
     text-transform: capitalize;
@@ -2269,7 +2326,7 @@ a {
     display: inline-block;
     cursor: pointer; }
   .header__list li.list__agree span.arrow, .header__list .list__options span.arrow {
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 24px;
     text-transform: lowercase;
     cursor: pointer;
@@ -2369,7 +2426,8 @@ a {
     margin-left: 20px;
     display: inline-block; }
   .entry-bar p.login {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     text-transform: capitalize;
     display: inline;
     position: relative;
@@ -2451,7 +2509,8 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       width: 46px;
       height: 46px;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .icon-text-list__group .group__icon i {
         background: #FFFFFF;
         mix-blend-mode: screen;
@@ -2467,9 +2526,11 @@ span.entry-bar.smallscr {
         margin: 0px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .icon-text-list__group .group__text .text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-top: 0px; }
   .icon-text-list .group__divider {
     background: rgba(31, 32, 65, 0.1);
@@ -2487,7 +2548,9 @@ span.entry-bar.smallscr {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   transition-duration: 500ms;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal;
+  cursor: pointer; }
   .like-button__body {
     display: flex;
     align-items: center;
@@ -2500,7 +2563,7 @@ span.entry-bar.smallscr {
       display: flex;
       justify-content: center; }
       .like-button__body .body__like-img i.material-icons.md-10 {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 10px;
         color: #BC9CFF; }
 
@@ -2518,7 +2581,8 @@ span.entry-bar.smallscr {
   background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .pagination .pagination__body ul {
     list-style: none;
     display: flex;
@@ -2546,7 +2610,7 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border-radius: 22px; }
       .pagination .pagination__body ul li:last-child .next {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 24px;
         color: #FFFFFF;
         display: inline; }
@@ -2557,7 +2621,8 @@ span.entry-bar.smallscr {
     text-align: center; }
 
 .header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   color: #1F2041;
   text-transform: uppercase;
   font-size: 12px; }
@@ -2568,9 +2633,12 @@ span.entry-bar.smallscr {
   width: 220px;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   margin: 16px 0px 16px 0px; }
-  .radio-button .radio-button__option {
+  .radio-button label.radio__option {
+    cursor: pointer; }
+  .radio-button .radio__option-button {
     background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2582,10 +2650,10 @@ span.entry-bar.smallscr {
     outline: none;
     margin: 0px;
     margin-right: 10px; }
-    .radio-button .radio-button__option + span {
+    .radio-button .radio__option-button + span {
       position: relative;
       top: 2px; }
-  .radio-button .radio-button__option::after {
+  .radio-button .radio__option-button::after {
     content: '';
     display: inline-block;
     box-sizing: border-box;
@@ -2596,11 +2664,11 @@ span.entry-bar.smallscr {
     border-radius: 10px;
     left: 3px;
     top: 2px; }
-  .radio-button .radio-button__option:checked {
+  .radio-button .radio__option-button:checked {
     border: 1px solid #BC9CFF; }
-    .radio-button .radio-button__option:checked + span {
+    .radio-button .radio__option-button:checked + span {
       color: rgba(31, 32, 65, 0.75); }
-  .radio-button .radio-button__option:checked::after {
+  .radio-button .radio__option-button:checked::after {
     content: '';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px; }
@@ -2616,12 +2684,14 @@ span.entry-bar.smallscr {
     height: 15px;
     margin-bottom: 23.44px; }
   .range-slider .slider__info-text {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 12px; }
   .range-slider .slider__values {
     display: flex;
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal; }
     .range-slider .slider__values input {
       width: 35px;
       border: none;
@@ -2643,7 +2713,8 @@ span.entry-bar.smallscr {
     display: none; }
   .range-slider .irs {
     position: relative;
-    width: 266px; }
+    width: 266px;
+    cursor: pointer; }
   .range-slider .irs-line, .range-slider .irs-bar {
     top: 0px; }
   .range-slider .irs-single {
@@ -2666,7 +2737,8 @@ span.entry-bar.smallscr {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    top: -5px; }
+    top: -5px;
+    cursor: pointer; }
     .range-slider .irs-handle i {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .range-slider .irs--flat .irs-handle > i:first-child {
@@ -2711,7 +2783,8 @@ span.entry-bar.smallscr {
     height: 44px;
     box-sizing: border-box; }
   .select .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     text-transform: uppercase;
@@ -2719,7 +2792,8 @@ span.entry-bar.smallscr {
   .select .select__text {
     display: inline;
     box-sizing: border-box;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
     border: none;
     display: flex;
@@ -2730,10 +2804,11 @@ span.entry-bar.smallscr {
     border-radius: 4px;
     line-height: 24px;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    cursor: pointer; }
   .select .select__text::after {
-    font-family: "Material Icons";
-    content: "expand_more";
+    font-family: 'Material Icons';
+    content: 'expand_more';
     color: rgba(31, 32, 65, 0.5);
     font-size: 24px;
     position: absolute;
@@ -2755,8 +2830,8 @@ span.entry-bar.smallscr {
     .select ul li.list__item {
       list-style: none;
       padding: 10px 0px 11px 15px;
-      font-family: '';
-      font-family: "Montserrat_Bold";
+      font-family: 'Montserrat';
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
       color: #1F2041; }
@@ -2805,9 +2880,10 @@ span.entry-bar.smallscr {
       justify-content: space-between; }
       .select.active .select__list .list__group .buttons__group .item__count {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px; }
-      .select.active .select__list .list__group .buttons__group button {
+      .select.active .select__list .list__group .buttons__group .button {
         border-radius: 15px;
         width: 30px;
         height: 30px;
@@ -2817,7 +2893,8 @@ span.entry-bar.smallscr {
         background-color: #FFFFFF;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
       .select.active .select__list .list__group .buttons__group .button__minus {
         border: 1px solid rgba(31, 32, 65, 0.25);
         color: rgba(31, 32, 65, 0.25); }
@@ -2855,7 +2932,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field p.text-field__info {
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -2864,7 +2942,7 @@ span.entry-bar.smallscr {
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -2901,7 +2979,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field-masked p {
     margin: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -2909,7 +2988,7 @@ span.entry-bar.smallscr {
     line-height: 15px;
     color: #1F2041; }
   .text-field-masked .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -2944,7 +3023,8 @@ span.entry-bar.smallscr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .text-field-masked input {
   padding-top: 10px; }
@@ -2953,13 +3033,15 @@ span.entry-bar.smallscr {
   max-width: 267px;
   margin-top: 10px; }
   .text-field.subscription .type__info {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color: #1F2041;
     font-size: 12px;
     margin: 0px 0px 5px 0px; }
   .text-field.subscription .text-field__body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -2990,7 +3072,8 @@ span.entry-bar.smallscr {
         top: 1px; }
 
 .toggle {
-  width: 260px; }
+  width: 260px;
+  cursor: pointer; }
   .toggle .toggle-button {
     width: 40px;
     height: 20px;
@@ -3002,7 +3085,8 @@ span.entry-bar.smallscr {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2); }
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    cursor: pointer; }
   .toggle .toggle-button::after {
     content: '';
     display: inline-block;
@@ -3027,7 +3111,9 @@ span.entry-bar.smallscr {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer; }
 
 body {
   width: 100%; }
@@ -3042,6 +3128,8 @@ body {
       body .index__container ul p.header {
         font-size: 20px; }
       body .index__container ul li {
+        font-family: 'Montserrat';
+        font-weight: normal;
         margin: 10px 0px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -3358,14 +3446,14 @@ template {
   src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
   src: url(./assets/fonts/Montserrat-Regular.eot);
   src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Montserrat-Bold.eot);
@@ -3373,7 +3461,7 @@ template {
   src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Quicksand_Bold';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Quicksand-Bold.eot);
@@ -3382,7 +3470,8 @@ template {
 
 .bullet__list {
   max-width: 292px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .bullet__list .bullet__header {
     font-size: 14px;
     text-transform: uppercase;
@@ -3425,17 +3514,19 @@ template {
   border-radius: 22px;
   outline: none;
   border: none;
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 14px;
   font-size: 12px;
   line-height: 15px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .button-arrow::after {
   content: 'arrow_forward';
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   color: #FFFFFF;
   text-transform: lowercase;
   position: absolute;
@@ -3458,7 +3549,8 @@ template {
     border-radius: 100px;
     background: #FFFFFF;
     color: #BC9CFF;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -3483,7 +3575,8 @@ button.button-filled {
     color: #FFFFFF;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     cursor: pointer; }
@@ -3497,18 +3590,20 @@ button.button-filled:hover {
   background: #FFFFFF;
   outline: none;
   border: none;
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 14.63px;
-  color: #BC9CFF; }
+  color: #BC9CFF;
+  cursor: pointer; }
   .button-icon:hover {
     opacity: 0.5; }
   .button-icon.gray {
     color: rgba(31, 32, 65, 0.5); }
 
 .datepicker {
-  width: 318px !important;
+  width: 318px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
   .datepicker .datepicker--content {
     padding: 0px 20px 20px 20px;
@@ -3517,7 +3612,8 @@ button.button-filled:hover {
     width: 279.4px; }
   .datepicker .datepicker--days-names {
     margin: 30px 0px 0px 0px;
-    font-family: 'Montserrat_bold'; }
+    font-family: 'Montserrat';
+    font-weight: bold; }
     .datepicker .datepicker--days-names .datepicker--day-name {
       width: 30px;
       height: 40px;
@@ -3531,7 +3627,8 @@ button.button-filled:hover {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #FFFFFF; }
   .datepicker > .datepicker--nav {
-    font-family: 'Quicksand_bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     padding: 20px 20px 0px 20px;
@@ -3546,10 +3643,11 @@ button.button-filled:hover {
       height: 24px;
       padding: 0px; }
       .datepicker > .datepicker--nav .datepicker--nav-title .nav-title-text {
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 19px;
         line-height: 24px; }
-    .datepicker > .datepicker--nav i {
+    .datepicker > .datepicker--nav i.material-icons {
       color: #BC9CFF; }
   .datepicker i.datepicker--pointer {
     display: none; }
@@ -3654,7 +3752,7 @@ button.button-filled:hover {
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
-    font-family: 'Montserrat_regular';
+    font-family: 'Montserrat';
     align-items: center;
     text-align: center; }
   .datepicker .datepicker--cell-day.-other-month- {
@@ -3664,7 +3762,8 @@ button.button-filled:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker .datepicker--buttons {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     height: 15px;
     text-transform: uppercase;
@@ -3701,19 +3800,22 @@ button.button-filled:hover {
   .card-booking.card .select {
     margin: 20px 0px; }
   .card-booking.card .info__price {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     top: 10px; }
     .card-booking.card .info__price p {
       display: inline;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       margin: 0px;
       font-size: 14px;
       line-height: 18px; }
     .card-booking.card .info__price p:nth-child(2) {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 12px; }
       .card-booking.card .info__price p:nth-child(2) > b {
         font-size: 14px; }
@@ -3723,18 +3825,22 @@ button.button-filled:hover {
     margin: 0px;
     color: #1F2041; }
   .card-booking.card .info__room p:first-child {
-    font-family: 'Quicksand_Bold'; }
+    font-family: 'Quicksand';
+    font-weight: bold; }
   .card-booking.card .info__room .room__number {
-    font-family: 'Quicksand_Bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 24px;
     color: #1F2041; }
   .card-booking.card .info__room .room__class {
     margin-left: 8px;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 14px;
     color: #BC9CFF; }
   .card-booking.card .booking__costs {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -3769,26 +3875,30 @@ button.button-filled:hover {
       flex-wrap: wrap;
       flex-shrink: 0; }
     .card-booking.card .booking__costs .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       top: 2px; }
       .card-booking.card .booking__costs .info__guest b {
-        font-family: 'Montserrat_Bold'; }
+        font-family: 'Montserrat';
+        font-weight: bold; }
     .card-booking.card .booking__costs .costs__discount, .card-booking.card .booking__costs .costs__room {
       margin-bottom: 10px; }
     .card-booking.card .booking__costs .costs__additional {
       line-height: 18px; }
     .card-booking.card .booking__costs .costs__total {
-      font-family: 'Quicksand_bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       color: #1F2041;
       font-size: 19px;
       margin-top: 21px;
       margin-bottom: 20px; }
       .card-booking.card .booking__costs .costs__total p {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         font-size: 19px; }
       .card-booking.card .booking__costs .costs__total .total-divider {
@@ -3798,7 +3908,7 @@ button.button-filled:hover {
         margin: 0px 5px;
         max-width: 182px; }
     .card-booking.card .booking__costs > .button__arrow {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0px; }
 
 .card-comment {
   max-width: 711px;
@@ -3818,14 +3928,17 @@ button.button-filled:hover {
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75); }
       .card-comment .card__review-group .info .info__name {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: capitalize; }
       .card-comment .card__review-group .info .info__date {
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .card-comment .card__review-group .info p {
         margin: 0px; }
     .card-comment .card__review-group .review__text {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: rgba(31, 32, 65, 0.75);
       font-size: 14px;
       line-height: 24px;
@@ -3840,8 +3953,6 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -3934,19 +4045,23 @@ button.button-filled:hover {
       margin: 0px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room p:first-child {
-      font-family: 'Quicksand_Bold'; }
+      font-family: 'Quicksand';
+      font-weight: bold; }
     .card-hotel-room.card .hotel-room__info .info__room .room__number {
-      font-family: 'Quicksand_Bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       font-size: 20px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room .room__class {
       margin-left: 1px;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       font-size: 14px;
       line-height: 14.63px;
       color: #BC9CFF; }
     .card-hotel-room.card .hotel-room__info .info-row {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -3956,7 +4071,8 @@ button.button-filled:hover {
       line-height: 17.5px; }
       .card-hotel-room.card .hotel-room__info .info-row p {
         display: inline;
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         line-height: 18px; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price {
@@ -3964,16 +4080,19 @@ button.button-filled:hover {
         align-items: center; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price p:nth-child(3) {
         margin-left: 2px;
-        font-family: 'Montserrat_Regular'; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
     .card-hotel-room.card .hotel-room__info .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       display: flex;
       align-items: center; }
       .card-hotel-room.card .hotel-room__info .info__guest b {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-right: 4px; }
     .card-hotel-room.card .hotel-room__info .rating {
       line-height: 20,4px; }
@@ -3989,7 +4108,8 @@ button.button-filled:hover {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
   .card-login.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
@@ -4007,7 +4127,8 @@ button.button-filled:hover {
     justify-content: space-between;
     margin-top: 30px; }
     .card-login.card .login__info p.info__text {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: #000000;
       margin-top: 12px;
       margin-bottom: 0px;
@@ -4025,15 +4146,18 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .card-registration.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .card-registration.card p.card__subtitle {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     line-height: 15px;
@@ -4070,17 +4194,20 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .room-search.card .card__body {
     display: block; }
   .room-search.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .room-search.card input, .room-search.card body .card p {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     color: rgba(31, 32, 65, 0.75); }
   .room-search.card .select {
     margin: 21px 0px 0px 0px; }
@@ -4095,7 +4222,8 @@ button.button-filled:hover {
 .checkbox-buttons {
   min-height: 129px; }
   .checkbox-buttons p.title {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 0px;
@@ -4117,7 +4245,8 @@ button.button-filled:hover {
   .checkbox-buttons .item__text {
     max-width: 192px; }
     .checkbox-buttons .item__text p {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -4129,7 +4258,8 @@ button.button-filled:hover {
   max-width: 70%;
   padding-left: 30px;
   height: 20px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  cursor: pointer; }
 
 .check__box {
   position: absolute;
@@ -4161,7 +4291,8 @@ button.button-filled:hover {
   max-width: 266px; }
   .checkbox-buttons-rich .checkbox__options-item {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    cursor: pointer; }
     .checkbox-buttons-rich .checkbox__options-item > .item-input {
       position: absolute;
       width: 1px;
@@ -4192,7 +4323,8 @@ button.button-filled:hover {
       left: 30px;
       max-width: 236px; }
       .checkbox-buttons-rich .checkbox__options-item .item__text p.text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
@@ -4203,10 +4335,11 @@ button.button-filled:hover {
         line-height: 14px;
         color: rgba(31, 32, 65, 0.5);
         margin: 0px;
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
 
 .info__type {
-  font-family: 'Montserrat_bold';
+  font-family: 'Montserrat';
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase; }
@@ -4239,7 +4372,8 @@ button.button-filled:hover {
 
 .checkbox-list {
   max-width: 266px;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .checkbox-list p {
     margin: 0px; }
   .checkbox-list .info__arrow i {
@@ -4283,7 +4417,7 @@ button.button-filled:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: default; }
+    cursor: pointer; }
     .checkbox-list .list__info .info__arrow {
       padding: 10px 16px 16px 16px;
       transition-duration: 500ms; }
@@ -4299,7 +4433,8 @@ button.button-filled:hover {
 .date-dropdown {
   max-width: 100%;
   height: 65px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .date__bar {
   max-width: 320px;
@@ -4321,10 +4456,11 @@ button.button-filled:hover {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
   .date__bar .date__item::before {
     content: 'expand_more';
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     text-transform: lowercase;
     font-style: normal;
     font-size: 24px;
@@ -4334,14 +4470,15 @@ button.button-filled:hover {
     color: rgba(31, 32, 65, 0.5); }
 
 .date__item > .item__name {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   margin: 0px 0px 5px 0px;
   color: #1F2041; }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5); }
@@ -4353,11 +4490,14 @@ button.button-filled:hover {
     color: #1F2041; }
   .date-dropdown-filter .dropdown-filter {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .date-dropdown-filter .dropdown-filter form {
       max-width: 80%;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .date-dropdown-filter .dropdown-filter form input {
+        cursor: pointer;
         color: rgba(31, 32, 65, 0.75); }
     .date-dropdown-filter .dropdown-filter button {
       outline: none;
@@ -4367,9 +4507,10 @@ button.button-filled:hover {
       position: relative;
       left: -2px;
       width: 42px;
-      height: 42px; }
+      height: 42px;
+      cursor: pointer; }
     .date-dropdown-filter .dropdown-filter i.material-icons {
-      font-family: "Material Icons";
+      font-family: 'Material Icons';
       color: rgba(31, 32, 65, 0.5);
       position: relative;
       top: 2px;
@@ -4377,7 +4518,8 @@ button.button-filled:hover {
       width: 24px; }
 
 .footer {
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   background: #FFFFFF; }
 
 .footer.small {
@@ -4463,7 +4605,8 @@ ul.bar__item:last-child {
     line-height: 24px; }
 
 li.item__header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -4558,13 +4701,15 @@ a {
 .header__list {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
+  font-weight: normal;
   line-height: 17px; }
   .header__list .material-icons {
     display: inline; }
   .header__list li:first-child a {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: none; }
   .header__list li {
     text-transform: capitalize;
@@ -4573,7 +4718,7 @@ a {
     display: inline-block;
     cursor: pointer; }
   .header__list li.list__agree span.arrow, .header__list .list__options span.arrow {
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 24px;
     text-transform: lowercase;
     cursor: pointer;
@@ -4673,7 +4818,8 @@ a {
     margin-left: 20px;
     display: inline-block; }
   .entry-bar p.login {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     text-transform: capitalize;
     display: inline;
     position: relative;
@@ -4755,7 +4901,8 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       width: 46px;
       height: 46px;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .icon-text-list__group .group__icon i {
         background: #FFFFFF;
         mix-blend-mode: screen;
@@ -4771,9 +4918,11 @@ span.entry-bar.smallscr {
         margin: 0px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .icon-text-list__group .group__text .text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-top: 0px; }
   .icon-text-list .group__divider {
     background: rgba(31, 32, 65, 0.1);
@@ -4791,7 +4940,9 @@ span.entry-bar.smallscr {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   transition-duration: 500ms;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal;
+  cursor: pointer; }
   .like-button__body {
     display: flex;
     align-items: center;
@@ -4804,7 +4955,7 @@ span.entry-bar.smallscr {
       display: flex;
       justify-content: center; }
       .like-button__body .body__like-img i.material-icons.md-10 {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 10px;
         color: #BC9CFF; }
 
@@ -4822,7 +4973,8 @@ span.entry-bar.smallscr {
   background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .pagination .pagination__body ul {
     list-style: none;
     display: flex;
@@ -4850,7 +5002,7 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border-radius: 22px; }
       .pagination .pagination__body ul li:last-child .next {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 24px;
         color: #FFFFFF;
         display: inline; }
@@ -4861,7 +5013,8 @@ span.entry-bar.smallscr {
     text-align: center; }
 
 .header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   color: #1F2041;
   text-transform: uppercase;
   font-size: 12px; }
@@ -4872,9 +5025,12 @@ span.entry-bar.smallscr {
   width: 220px;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   margin: 16px 0px 16px 0px; }
-  .radio-button .radio-button__option {
+  .radio-button label.radio__option {
+    cursor: pointer; }
+  .radio-button .radio__option-button {
     background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -4886,10 +5042,10 @@ span.entry-bar.smallscr {
     outline: none;
     margin: 0px;
     margin-right: 10px; }
-    .radio-button .radio-button__option + span {
+    .radio-button .radio__option-button + span {
       position: relative;
       top: 2px; }
-  .radio-button .radio-button__option::after {
+  .radio-button .radio__option-button::after {
     content: '';
     display: inline-block;
     box-sizing: border-box;
@@ -4900,11 +5056,11 @@ span.entry-bar.smallscr {
     border-radius: 10px;
     left: 3px;
     top: 2px; }
-  .radio-button .radio-button__option:checked {
+  .radio-button .radio__option-button:checked {
     border: 1px solid #BC9CFF; }
-    .radio-button .radio-button__option:checked + span {
+    .radio-button .radio__option-button:checked + span {
       color: rgba(31, 32, 65, 0.75); }
-  .radio-button .radio-button__option:checked::after {
+  .radio-button .radio__option-button:checked::after {
     content: '';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px; }
@@ -4920,12 +5076,14 @@ span.entry-bar.smallscr {
     height: 15px;
     margin-bottom: 23.44px; }
   .range-slider .slider__info-text {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 12px; }
   .range-slider .slider__values {
     display: flex;
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal; }
     .range-slider .slider__values input {
       width: 35px;
       border: none;
@@ -4947,7 +5105,8 @@ span.entry-bar.smallscr {
     display: none; }
   .range-slider .irs {
     position: relative;
-    width: 266px; }
+    width: 266px;
+    cursor: pointer; }
   .range-slider .irs-line, .range-slider .irs-bar {
     top: 0px; }
   .range-slider .irs-single {
@@ -4970,7 +5129,8 @@ span.entry-bar.smallscr {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    top: -5px; }
+    top: -5px;
+    cursor: pointer; }
     .range-slider .irs-handle i {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .range-slider .irs--flat .irs-handle > i:first-child {
@@ -5015,7 +5175,8 @@ span.entry-bar.smallscr {
     height: 44px;
     box-sizing: border-box; }
   .select .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     text-transform: uppercase;
@@ -5023,7 +5184,8 @@ span.entry-bar.smallscr {
   .select .select__text {
     display: inline;
     box-sizing: border-box;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
     border: none;
     display: flex;
@@ -5034,10 +5196,11 @@ span.entry-bar.smallscr {
     border-radius: 4px;
     line-height: 24px;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    cursor: pointer; }
   .select .select__text::after {
-    font-family: "Material Icons";
-    content: "expand_more";
+    font-family: 'Material Icons';
+    content: 'expand_more';
     color: rgba(31, 32, 65, 0.5);
     font-size: 24px;
     position: absolute;
@@ -5059,8 +5222,8 @@ span.entry-bar.smallscr {
     .select ul li.list__item {
       list-style: none;
       padding: 10px 0px 11px 15px;
-      font-family: '';
-      font-family: "Montserrat_Bold";
+      font-family: 'Montserrat';
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
       color: #1F2041; }
@@ -5109,9 +5272,10 @@ span.entry-bar.smallscr {
       justify-content: space-between; }
       .select.active .select__list .list__group .buttons__group .item__count {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px; }
-      .select.active .select__list .list__group .buttons__group button {
+      .select.active .select__list .list__group .buttons__group .button {
         border-radius: 15px;
         width: 30px;
         height: 30px;
@@ -5121,7 +5285,8 @@ span.entry-bar.smallscr {
         background-color: #FFFFFF;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
       .select.active .select__list .list__group .buttons__group .button__minus {
         border: 1px solid rgba(31, 32, 65, 0.25);
         color: rgba(31, 32, 65, 0.25); }
@@ -5159,7 +5324,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field p.text-field__info {
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -5168,7 +5334,7 @@ span.entry-bar.smallscr {
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -5205,7 +5371,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field-masked p {
     margin: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -5213,7 +5380,7 @@ span.entry-bar.smallscr {
     line-height: 15px;
     color: #1F2041; }
   .text-field-masked .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -5248,7 +5415,8 @@ span.entry-bar.smallscr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .text-field-masked input {
   padding-top: 10px; }
@@ -5257,13 +5425,15 @@ span.entry-bar.smallscr {
   max-width: 267px;
   margin-top: 10px; }
   .text-field.subscription .type__info {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color: #1F2041;
     font-size: 12px;
     margin: 0px 0px 5px 0px; }
   .text-field.subscription .text-field__body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -5294,7 +5464,8 @@ span.entry-bar.smallscr {
         top: 1px; }
 
 .toggle {
-  width: 260px; }
+  width: 260px;
+  cursor: pointer; }
   .toggle .toggle-button {
     width: 40px;
     height: 20px;
@@ -5306,7 +5477,8 @@ span.entry-bar.smallscr {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2); }
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    cursor: pointer; }
   .toggle .toggle-button::after {
     content: '';
     display: inline-block;
@@ -5331,7 +5503,9 @@ span.entry-bar.smallscr {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer; }
 
 body {
   background: #F4F4F6;
@@ -5661,14 +5835,14 @@ template {
   src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
   src: url(./assets/fonts/Montserrat-Regular.eot);
   src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Montserrat-Bold.eot);
@@ -5676,7 +5850,7 @@ template {
   src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Quicksand_Bold';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Quicksand-Bold.eot);
@@ -5685,7 +5859,8 @@ template {
 
 .bullet__list {
   max-width: 292px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .bullet__list .bullet__header {
     font-size: 14px;
     text-transform: uppercase;
@@ -5728,17 +5903,19 @@ template {
   border-radius: 22px;
   outline: none;
   border: none;
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 14px;
   font-size: 12px;
   line-height: 15px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .button-arrow::after {
   content: 'arrow_forward';
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   color: #FFFFFF;
   text-transform: lowercase;
   position: absolute;
@@ -5761,7 +5938,8 @@ template {
     border-radius: 100px;
     background: #FFFFFF;
     color: #BC9CFF;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -5786,7 +5964,8 @@ button.button-filled {
     color: #FFFFFF;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     cursor: pointer; }
@@ -5800,18 +5979,20 @@ button.button-filled:hover {
   background: #FFFFFF;
   outline: none;
   border: none;
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 14.63px;
-  color: #BC9CFF; }
+  color: #BC9CFF;
+  cursor: pointer; }
   .button-icon:hover {
     opacity: 0.5; }
   .button-icon.gray {
     color: rgba(31, 32, 65, 0.5); }
 
 .datepicker {
-  width: 318px !important;
+  width: 318px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
   .datepicker .datepicker--content {
     padding: 0px 20px 20px 20px;
@@ -5820,7 +6001,8 @@ button.button-filled:hover {
     width: 279.4px; }
   .datepicker .datepicker--days-names {
     margin: 30px 0px 0px 0px;
-    font-family: 'Montserrat_bold'; }
+    font-family: 'Montserrat';
+    font-weight: bold; }
     .datepicker .datepicker--days-names .datepicker--day-name {
       width: 30px;
       height: 40px;
@@ -5834,7 +6016,8 @@ button.button-filled:hover {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #FFFFFF; }
   .datepicker > .datepicker--nav {
-    font-family: 'Quicksand_bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     padding: 20px 20px 0px 20px;
@@ -5849,10 +6032,11 @@ button.button-filled:hover {
       height: 24px;
       padding: 0px; }
       .datepicker > .datepicker--nav .datepicker--nav-title .nav-title-text {
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 19px;
         line-height: 24px; }
-    .datepicker > .datepicker--nav i {
+    .datepicker > .datepicker--nav i.material-icons {
       color: #BC9CFF; }
   .datepicker i.datepicker--pointer {
     display: none; }
@@ -5957,7 +6141,7 @@ button.button-filled:hover {
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
-    font-family: 'Montserrat_regular';
+    font-family: 'Montserrat';
     align-items: center;
     text-align: center; }
   .datepicker .datepicker--cell-day.-other-month- {
@@ -5967,7 +6151,8 @@ button.button-filled:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker .datepicker--buttons {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     height: 15px;
     text-transform: uppercase;
@@ -6004,19 +6189,22 @@ button.button-filled:hover {
   .card-booking.card .select {
     margin: 20px 0px; }
   .card-booking.card .info__price {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     top: 10px; }
     .card-booking.card .info__price p {
       display: inline;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       margin: 0px;
       font-size: 14px;
       line-height: 18px; }
     .card-booking.card .info__price p:nth-child(2) {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 12px; }
       .card-booking.card .info__price p:nth-child(2) > b {
         font-size: 14px; }
@@ -6026,18 +6214,22 @@ button.button-filled:hover {
     margin: 0px;
     color: #1F2041; }
   .card-booking.card .info__room p:first-child {
-    font-family: 'Quicksand_Bold'; }
+    font-family: 'Quicksand';
+    font-weight: bold; }
   .card-booking.card .info__room .room__number {
-    font-family: 'Quicksand_Bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 24px;
     color: #1F2041; }
   .card-booking.card .info__room .room__class {
     margin-left: 8px;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 14px;
     color: #BC9CFF; }
   .card-booking.card .booking__costs {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -6072,26 +6264,30 @@ button.button-filled:hover {
       flex-wrap: wrap;
       flex-shrink: 0; }
     .card-booking.card .booking__costs .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       top: 2px; }
       .card-booking.card .booking__costs .info__guest b {
-        font-family: 'Montserrat_Bold'; }
+        font-family: 'Montserrat';
+        font-weight: bold; }
     .card-booking.card .booking__costs .costs__discount, .card-booking.card .booking__costs .costs__room {
       margin-bottom: 10px; }
     .card-booking.card .booking__costs .costs__additional {
       line-height: 18px; }
     .card-booking.card .booking__costs .costs__total {
-      font-family: 'Quicksand_bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       color: #1F2041;
       font-size: 19px;
       margin-top: 21px;
       margin-bottom: 20px; }
       .card-booking.card .booking__costs .costs__total p {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         font-size: 19px; }
       .card-booking.card .booking__costs .costs__total .total-divider {
@@ -6101,7 +6297,7 @@ button.button-filled:hover {
         margin: 0px 5px;
         max-width: 182px; }
     .card-booking.card .booking__costs > .button__arrow {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0px; }
 
 .card-comment {
   max-width: 711px;
@@ -6121,14 +6317,17 @@ button.button-filled:hover {
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75); }
       .card-comment .card__review-group .info .info__name {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: capitalize; }
       .card-comment .card__review-group .info .info__date {
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .card-comment .card__review-group .info p {
         margin: 0px; }
     .card-comment .card__review-group .review__text {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: rgba(31, 32, 65, 0.75);
       font-size: 14px;
       line-height: 24px;
@@ -6143,8 +6342,6 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -6237,19 +6434,23 @@ button.button-filled:hover {
       margin: 0px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room p:first-child {
-      font-family: 'Quicksand_Bold'; }
+      font-family: 'Quicksand';
+      font-weight: bold; }
     .card-hotel-room.card .hotel-room__info .info__room .room__number {
-      font-family: 'Quicksand_Bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       font-size: 20px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room .room__class {
       margin-left: 1px;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       font-size: 14px;
       line-height: 14.63px;
       color: #BC9CFF; }
     .card-hotel-room.card .hotel-room__info .info-row {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -6259,7 +6460,8 @@ button.button-filled:hover {
       line-height: 17.5px; }
       .card-hotel-room.card .hotel-room__info .info-row p {
         display: inline;
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         line-height: 18px; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price {
@@ -6267,16 +6469,19 @@ button.button-filled:hover {
         align-items: center; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price p:nth-child(3) {
         margin-left: 2px;
-        font-family: 'Montserrat_Regular'; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
     .card-hotel-room.card .hotel-room__info .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       display: flex;
       align-items: center; }
       .card-hotel-room.card .hotel-room__info .info__guest b {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-right: 4px; }
     .card-hotel-room.card .hotel-room__info .rating {
       line-height: 20,4px; }
@@ -6292,7 +6497,8 @@ button.button-filled:hover {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
   .card-login.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
@@ -6310,7 +6516,8 @@ button.button-filled:hover {
     justify-content: space-between;
     margin-top: 30px; }
     .card-login.card .login__info p.info__text {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: #000000;
       margin-top: 12px;
       margin-bottom: 0px;
@@ -6328,15 +6535,18 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .card-registration.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .card-registration.card p.card__subtitle {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     line-height: 15px;
@@ -6373,17 +6583,20 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .room-search.card .card__body {
     display: block; }
   .room-search.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .room-search.card input, .room-search.card body .card p {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     color: rgba(31, 32, 65, 0.75); }
   .room-search.card .select {
     margin: 21px 0px 0px 0px; }
@@ -6398,7 +6611,8 @@ button.button-filled:hover {
 .checkbox-buttons {
   min-height: 129px; }
   .checkbox-buttons p.title {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 0px;
@@ -6420,7 +6634,8 @@ button.button-filled:hover {
   .checkbox-buttons .item__text {
     max-width: 192px; }
     .checkbox-buttons .item__text p {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -6432,7 +6647,8 @@ button.button-filled:hover {
   max-width: 70%;
   padding-left: 30px;
   height: 20px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  cursor: pointer; }
 
 .check__box {
   position: absolute;
@@ -6464,7 +6680,8 @@ button.button-filled:hover {
   max-width: 266px; }
   .checkbox-buttons-rich .checkbox__options-item {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    cursor: pointer; }
     .checkbox-buttons-rich .checkbox__options-item > .item-input {
       position: absolute;
       width: 1px;
@@ -6495,7 +6712,8 @@ button.button-filled:hover {
       left: 30px;
       max-width: 236px; }
       .checkbox-buttons-rich .checkbox__options-item .item__text p.text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
@@ -6506,10 +6724,11 @@ button.button-filled:hover {
         line-height: 14px;
         color: rgba(31, 32, 65, 0.5);
         margin: 0px;
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
 
 .info__type {
-  font-family: 'Montserrat_bold';
+  font-family: 'Montserrat';
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase; }
@@ -6542,7 +6761,8 @@ button.button-filled:hover {
 
 .checkbox-list {
   max-width: 266px;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .checkbox-list p {
     margin: 0px; }
   .checkbox-list .info__arrow i {
@@ -6586,7 +6806,7 @@ button.button-filled:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: default; }
+    cursor: pointer; }
     .checkbox-list .list__info .info__arrow {
       padding: 10px 16px 16px 16px;
       transition-duration: 500ms; }
@@ -6602,7 +6822,8 @@ button.button-filled:hover {
 .date-dropdown {
   max-width: 100%;
   height: 65px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .date__bar {
   max-width: 320px;
@@ -6624,10 +6845,11 @@ button.button-filled:hover {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
   .date__bar .date__item::before {
     content: 'expand_more';
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     text-transform: lowercase;
     font-style: normal;
     font-size: 24px;
@@ -6637,14 +6859,15 @@ button.button-filled:hover {
     color: rgba(31, 32, 65, 0.5); }
 
 .date__item > .item__name {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   margin: 0px 0px 5px 0px;
   color: #1F2041; }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5); }
@@ -6656,11 +6879,14 @@ button.button-filled:hover {
     color: #1F2041; }
   .date-dropdown-filter .dropdown-filter {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .date-dropdown-filter .dropdown-filter form {
       max-width: 80%;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .date-dropdown-filter .dropdown-filter form input {
+        cursor: pointer;
         color: rgba(31, 32, 65, 0.75); }
     .date-dropdown-filter .dropdown-filter button {
       outline: none;
@@ -6670,9 +6896,10 @@ button.button-filled:hover {
       position: relative;
       left: -2px;
       width: 42px;
-      height: 42px; }
+      height: 42px;
+      cursor: pointer; }
     .date-dropdown-filter .dropdown-filter i.material-icons {
-      font-family: "Material Icons";
+      font-family: 'Material Icons';
       color: rgba(31, 32, 65, 0.5);
       position: relative;
       top: 2px;
@@ -6680,7 +6907,8 @@ button.button-filled:hover {
       width: 24px; }
 
 .footer {
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   background: #FFFFFF; }
 
 .footer.small {
@@ -6766,7 +6994,8 @@ ul.bar__item:last-child {
     line-height: 24px; }
 
 li.item__header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -6861,13 +7090,15 @@ a {
 .header__list {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
+  font-weight: normal;
   line-height: 17px; }
   .header__list .material-icons {
     display: inline; }
   .header__list li:first-child a {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: none; }
   .header__list li {
     text-transform: capitalize;
@@ -6876,7 +7107,7 @@ a {
     display: inline-block;
     cursor: pointer; }
   .header__list li.list__agree span.arrow, .header__list .list__options span.arrow {
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 24px;
     text-transform: lowercase;
     cursor: pointer;
@@ -6976,7 +7207,8 @@ a {
     margin-left: 20px;
     display: inline-block; }
   .entry-bar p.login {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     text-transform: capitalize;
     display: inline;
     position: relative;
@@ -7058,7 +7290,8 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       width: 46px;
       height: 46px;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .icon-text-list__group .group__icon i {
         background: #FFFFFF;
         mix-blend-mode: screen;
@@ -7074,9 +7307,11 @@ span.entry-bar.smallscr {
         margin: 0px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .icon-text-list__group .group__text .text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-top: 0px; }
   .icon-text-list .group__divider {
     background: rgba(31, 32, 65, 0.1);
@@ -7094,7 +7329,9 @@ span.entry-bar.smallscr {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   transition-duration: 500ms;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal;
+  cursor: pointer; }
   .like-button__body {
     display: flex;
     align-items: center;
@@ -7107,7 +7344,7 @@ span.entry-bar.smallscr {
       display: flex;
       justify-content: center; }
       .like-button__body .body__like-img i.material-icons.md-10 {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 10px;
         color: #BC9CFF; }
 
@@ -7125,7 +7362,8 @@ span.entry-bar.smallscr {
   background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .pagination .pagination__body ul {
     list-style: none;
     display: flex;
@@ -7153,7 +7391,7 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border-radius: 22px; }
       .pagination .pagination__body ul li:last-child .next {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 24px;
         color: #FFFFFF;
         display: inline; }
@@ -7164,7 +7402,8 @@ span.entry-bar.smallscr {
     text-align: center; }
 
 .header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   color: #1F2041;
   text-transform: uppercase;
   font-size: 12px; }
@@ -7175,9 +7414,12 @@ span.entry-bar.smallscr {
   width: 220px;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   margin: 16px 0px 16px 0px; }
-  .radio-button .radio-button__option {
+  .radio-button label.radio__option {
+    cursor: pointer; }
+  .radio-button .radio__option-button {
     background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -7189,10 +7431,10 @@ span.entry-bar.smallscr {
     outline: none;
     margin: 0px;
     margin-right: 10px; }
-    .radio-button .radio-button__option + span {
+    .radio-button .radio__option-button + span {
       position: relative;
       top: 2px; }
-  .radio-button .radio-button__option::after {
+  .radio-button .radio__option-button::after {
     content: '';
     display: inline-block;
     box-sizing: border-box;
@@ -7203,11 +7445,11 @@ span.entry-bar.smallscr {
     border-radius: 10px;
     left: 3px;
     top: 2px; }
-  .radio-button .radio-button__option:checked {
+  .radio-button .radio__option-button:checked {
     border: 1px solid #BC9CFF; }
-    .radio-button .radio-button__option:checked + span {
+    .radio-button .radio__option-button:checked + span {
       color: rgba(31, 32, 65, 0.75); }
-  .radio-button .radio-button__option:checked::after {
+  .radio-button .radio__option-button:checked::after {
     content: '';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px; }
@@ -7223,12 +7465,14 @@ span.entry-bar.smallscr {
     height: 15px;
     margin-bottom: 23.44px; }
   .range-slider .slider__info-text {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 12px; }
   .range-slider .slider__values {
     display: flex;
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal; }
     .range-slider .slider__values input {
       width: 35px;
       border: none;
@@ -7250,7 +7494,8 @@ span.entry-bar.smallscr {
     display: none; }
   .range-slider .irs {
     position: relative;
-    width: 266px; }
+    width: 266px;
+    cursor: pointer; }
   .range-slider .irs-line, .range-slider .irs-bar {
     top: 0px; }
   .range-slider .irs-single {
@@ -7273,7 +7518,8 @@ span.entry-bar.smallscr {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    top: -5px; }
+    top: -5px;
+    cursor: pointer; }
     .range-slider .irs-handle i {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .range-slider .irs--flat .irs-handle > i:first-child {
@@ -7318,7 +7564,8 @@ span.entry-bar.smallscr {
     height: 44px;
     box-sizing: border-box; }
   .select .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     text-transform: uppercase;
@@ -7326,7 +7573,8 @@ span.entry-bar.smallscr {
   .select .select__text {
     display: inline;
     box-sizing: border-box;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
     border: none;
     display: flex;
@@ -7337,10 +7585,11 @@ span.entry-bar.smallscr {
     border-radius: 4px;
     line-height: 24px;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    cursor: pointer; }
   .select .select__text::after {
-    font-family: "Material Icons";
-    content: "expand_more";
+    font-family: 'Material Icons';
+    content: 'expand_more';
     color: rgba(31, 32, 65, 0.5);
     font-size: 24px;
     position: absolute;
@@ -7362,8 +7611,8 @@ span.entry-bar.smallscr {
     .select ul li.list__item {
       list-style: none;
       padding: 10px 0px 11px 15px;
-      font-family: '';
-      font-family: "Montserrat_Bold";
+      font-family: 'Montserrat';
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
       color: #1F2041; }
@@ -7412,9 +7661,10 @@ span.entry-bar.smallscr {
       justify-content: space-between; }
       .select.active .select__list .list__group .buttons__group .item__count {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px; }
-      .select.active .select__list .list__group .buttons__group button {
+      .select.active .select__list .list__group .buttons__group .button {
         border-radius: 15px;
         width: 30px;
         height: 30px;
@@ -7424,7 +7674,8 @@ span.entry-bar.smallscr {
         background-color: #FFFFFF;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
       .select.active .select__list .list__group .buttons__group .button__minus {
         border: 1px solid rgba(31, 32, 65, 0.25);
         color: rgba(31, 32, 65, 0.25); }
@@ -7462,7 +7713,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field p.text-field__info {
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -7471,7 +7723,7 @@ span.entry-bar.smallscr {
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -7508,7 +7760,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field-masked p {
     margin: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -7516,7 +7769,7 @@ span.entry-bar.smallscr {
     line-height: 15px;
     color: #1F2041; }
   .text-field-masked .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -7551,7 +7804,8 @@ span.entry-bar.smallscr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .text-field-masked input {
   padding-top: 10px; }
@@ -7560,13 +7814,15 @@ span.entry-bar.smallscr {
   max-width: 267px;
   margin-top: 10px; }
   .text-field.subscription .type__info {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color: #1F2041;
     font-size: 12px;
     margin: 0px 0px 5px 0px; }
   .text-field.subscription .text-field__body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -7597,7 +7853,8 @@ span.entry-bar.smallscr {
         top: 1px; }
 
 .toggle {
-  width: 260px; }
+  width: 260px;
+  cursor: pointer; }
   .toggle .toggle-button {
     width: 40px;
     height: 20px;
@@ -7609,7 +7866,8 @@ span.entry-bar.smallscr {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2); }
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    cursor: pointer; }
   .toggle .toggle-button::after {
     content: '';
     display: inline-block;
@@ -7634,7 +7892,9 @@ span.entry-bar.smallscr {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer; }
 
 body {
   margin: 0px;
@@ -7961,14 +8221,14 @@ template {
   src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
   src: url(./assets/fonts/Montserrat-Regular.eot);
   src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Montserrat-Bold.eot);
@@ -7976,7 +8236,7 @@ template {
   src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Quicksand_Bold';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Quicksand-Bold.eot);
@@ -7985,7 +8245,8 @@ template {
 
 .bullet__list {
   max-width: 292px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .bullet__list .bullet__header {
     font-size: 14px;
     text-transform: uppercase;
@@ -8028,17 +8289,19 @@ template {
   border-radius: 22px;
   outline: none;
   border: none;
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 14px;
   font-size: 12px;
   line-height: 15px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .button-arrow::after {
   content: 'arrow_forward';
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   color: #FFFFFF;
   text-transform: lowercase;
   position: absolute;
@@ -8061,7 +8324,8 @@ template {
     border-radius: 100px;
     background: #FFFFFF;
     color: #BC9CFF;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -8086,7 +8350,8 @@ button.button-filled {
     color: #FFFFFF;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     cursor: pointer; }
@@ -8100,18 +8365,20 @@ button.button-filled:hover {
   background: #FFFFFF;
   outline: none;
   border: none;
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 14.63px;
-  color: #BC9CFF; }
+  color: #BC9CFF;
+  cursor: pointer; }
   .button-icon:hover {
     opacity: 0.5; }
   .button-icon.gray {
     color: rgba(31, 32, 65, 0.5); }
 
 .datepicker {
-  width: 318px !important;
+  width: 318px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
   .datepicker .datepicker--content {
     padding: 0px 20px 20px 20px;
@@ -8120,7 +8387,8 @@ button.button-filled:hover {
     width: 279.4px; }
   .datepicker .datepicker--days-names {
     margin: 30px 0px 0px 0px;
-    font-family: 'Montserrat_bold'; }
+    font-family: 'Montserrat';
+    font-weight: bold; }
     .datepicker .datepicker--days-names .datepicker--day-name {
       width: 30px;
       height: 40px;
@@ -8134,7 +8402,8 @@ button.button-filled:hover {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #FFFFFF; }
   .datepicker > .datepicker--nav {
-    font-family: 'Quicksand_bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     padding: 20px 20px 0px 20px;
@@ -8149,10 +8418,11 @@ button.button-filled:hover {
       height: 24px;
       padding: 0px; }
       .datepicker > .datepicker--nav .datepicker--nav-title .nav-title-text {
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 19px;
         line-height: 24px; }
-    .datepicker > .datepicker--nav i {
+    .datepicker > .datepicker--nav i.material-icons {
       color: #BC9CFF; }
   .datepicker i.datepicker--pointer {
     display: none; }
@@ -8257,7 +8527,7 @@ button.button-filled:hover {
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
-    font-family: 'Montserrat_regular';
+    font-family: 'Montserrat';
     align-items: center;
     text-align: center; }
   .datepicker .datepicker--cell-day.-other-month- {
@@ -8267,7 +8537,8 @@ button.button-filled:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker .datepicker--buttons {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     height: 15px;
     text-transform: uppercase;
@@ -8304,19 +8575,22 @@ button.button-filled:hover {
   .card-booking.card .select {
     margin: 20px 0px; }
   .card-booking.card .info__price {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     top: 10px; }
     .card-booking.card .info__price p {
       display: inline;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       margin: 0px;
       font-size: 14px;
       line-height: 18px; }
     .card-booking.card .info__price p:nth-child(2) {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 12px; }
       .card-booking.card .info__price p:nth-child(2) > b {
         font-size: 14px; }
@@ -8326,18 +8600,22 @@ button.button-filled:hover {
     margin: 0px;
     color: #1F2041; }
   .card-booking.card .info__room p:first-child {
-    font-family: 'Quicksand_Bold'; }
+    font-family: 'Quicksand';
+    font-weight: bold; }
   .card-booking.card .info__room .room__number {
-    font-family: 'Quicksand_Bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 24px;
     color: #1F2041; }
   .card-booking.card .info__room .room__class {
     margin-left: 8px;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 14px;
     color: #BC9CFF; }
   .card-booking.card .booking__costs {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -8372,26 +8650,30 @@ button.button-filled:hover {
       flex-wrap: wrap;
       flex-shrink: 0; }
     .card-booking.card .booking__costs .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       top: 2px; }
       .card-booking.card .booking__costs .info__guest b {
-        font-family: 'Montserrat_Bold'; }
+        font-family: 'Montserrat';
+        font-weight: bold; }
     .card-booking.card .booking__costs .costs__discount, .card-booking.card .booking__costs .costs__room {
       margin-bottom: 10px; }
     .card-booking.card .booking__costs .costs__additional {
       line-height: 18px; }
     .card-booking.card .booking__costs .costs__total {
-      font-family: 'Quicksand_bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       color: #1F2041;
       font-size: 19px;
       margin-top: 21px;
       margin-bottom: 20px; }
       .card-booking.card .booking__costs .costs__total p {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         font-size: 19px; }
       .card-booking.card .booking__costs .costs__total .total-divider {
@@ -8401,7 +8683,7 @@ button.button-filled:hover {
         margin: 0px 5px;
         max-width: 182px; }
     .card-booking.card .booking__costs > .button__arrow {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0px; }
 
 .card-comment {
   max-width: 711px;
@@ -8421,14 +8703,17 @@ button.button-filled:hover {
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75); }
       .card-comment .card__review-group .info .info__name {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: capitalize; }
       .card-comment .card__review-group .info .info__date {
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .card-comment .card__review-group .info p {
         margin: 0px; }
     .card-comment .card__review-group .review__text {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: rgba(31, 32, 65, 0.75);
       font-size: 14px;
       line-height: 24px;
@@ -8443,8 +8728,6 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -8537,19 +8820,23 @@ button.button-filled:hover {
       margin: 0px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room p:first-child {
-      font-family: 'Quicksand_Bold'; }
+      font-family: 'Quicksand';
+      font-weight: bold; }
     .card-hotel-room.card .hotel-room__info .info__room .room__number {
-      font-family: 'Quicksand_Bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       font-size: 20px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room .room__class {
       margin-left: 1px;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       font-size: 14px;
       line-height: 14.63px;
       color: #BC9CFF; }
     .card-hotel-room.card .hotel-room__info .info-row {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -8559,7 +8846,8 @@ button.button-filled:hover {
       line-height: 17.5px; }
       .card-hotel-room.card .hotel-room__info .info-row p {
         display: inline;
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         line-height: 18px; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price {
@@ -8567,16 +8855,19 @@ button.button-filled:hover {
         align-items: center; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price p:nth-child(3) {
         margin-left: 2px;
-        font-family: 'Montserrat_Regular'; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
     .card-hotel-room.card .hotel-room__info .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       display: flex;
       align-items: center; }
       .card-hotel-room.card .hotel-room__info .info__guest b {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-right: 4px; }
     .card-hotel-room.card .hotel-room__info .rating {
       line-height: 20,4px; }
@@ -8592,7 +8883,8 @@ button.button-filled:hover {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
   .card-login.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
@@ -8610,7 +8902,8 @@ button.button-filled:hover {
     justify-content: space-between;
     margin-top: 30px; }
     .card-login.card .login__info p.info__text {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: #000000;
       margin-top: 12px;
       margin-bottom: 0px;
@@ -8628,15 +8921,18 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .card-registration.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .card-registration.card p.card__subtitle {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     line-height: 15px;
@@ -8673,17 +8969,20 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .room-search.card .card__body {
     display: block; }
   .room-search.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .room-search.card input, .room-search.card body .card p {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     color: rgba(31, 32, 65, 0.75); }
   .room-search.card .select {
     margin: 21px 0px 0px 0px; }
@@ -8698,7 +8997,8 @@ button.button-filled:hover {
 .checkbox-buttons {
   min-height: 129px; }
   .checkbox-buttons p.title {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 0px;
@@ -8720,7 +9020,8 @@ button.button-filled:hover {
   .checkbox-buttons .item__text {
     max-width: 192px; }
     .checkbox-buttons .item__text p {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -8732,7 +9033,8 @@ button.button-filled:hover {
   max-width: 70%;
   padding-left: 30px;
   height: 20px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  cursor: pointer; }
 
 .check__box {
   position: absolute;
@@ -8764,7 +9066,8 @@ button.button-filled:hover {
   max-width: 266px; }
   .checkbox-buttons-rich .checkbox__options-item {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    cursor: pointer; }
     .checkbox-buttons-rich .checkbox__options-item > .item-input {
       position: absolute;
       width: 1px;
@@ -8795,7 +9098,8 @@ button.button-filled:hover {
       left: 30px;
       max-width: 236px; }
       .checkbox-buttons-rich .checkbox__options-item .item__text p.text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
@@ -8806,10 +9110,11 @@ button.button-filled:hover {
         line-height: 14px;
         color: rgba(31, 32, 65, 0.5);
         margin: 0px;
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
 
 .info__type {
-  font-family: 'Montserrat_bold';
+  font-family: 'Montserrat';
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase; }
@@ -8842,7 +9147,8 @@ button.button-filled:hover {
 
 .checkbox-list {
   max-width: 266px;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .checkbox-list p {
     margin: 0px; }
   .checkbox-list .info__arrow i {
@@ -8886,7 +9192,7 @@ button.button-filled:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: default; }
+    cursor: pointer; }
     .checkbox-list .list__info .info__arrow {
       padding: 10px 16px 16px 16px;
       transition-duration: 500ms; }
@@ -8902,7 +9208,8 @@ button.button-filled:hover {
 .date-dropdown {
   max-width: 100%;
   height: 65px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .date__bar {
   max-width: 320px;
@@ -8924,10 +9231,11 @@ button.button-filled:hover {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
   .date__bar .date__item::before {
     content: 'expand_more';
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     text-transform: lowercase;
     font-style: normal;
     font-size: 24px;
@@ -8937,14 +9245,15 @@ button.button-filled:hover {
     color: rgba(31, 32, 65, 0.5); }
 
 .date__item > .item__name {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   margin: 0px 0px 5px 0px;
   color: #1F2041; }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5); }
@@ -8956,11 +9265,14 @@ button.button-filled:hover {
     color: #1F2041; }
   .date-dropdown-filter .dropdown-filter {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .date-dropdown-filter .dropdown-filter form {
       max-width: 80%;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .date-dropdown-filter .dropdown-filter form input {
+        cursor: pointer;
         color: rgba(31, 32, 65, 0.75); }
     .date-dropdown-filter .dropdown-filter button {
       outline: none;
@@ -8970,9 +9282,10 @@ button.button-filled:hover {
       position: relative;
       left: -2px;
       width: 42px;
-      height: 42px; }
+      height: 42px;
+      cursor: pointer; }
     .date-dropdown-filter .dropdown-filter i.material-icons {
-      font-family: "Material Icons";
+      font-family: 'Material Icons';
       color: rgba(31, 32, 65, 0.5);
       position: relative;
       top: 2px;
@@ -8980,7 +9293,8 @@ button.button-filled:hover {
       width: 24px; }
 
 .footer {
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   background: #FFFFFF; }
 
 .footer.small {
@@ -9066,7 +9380,8 @@ ul.bar__item:last-child {
     line-height: 24px; }
 
 li.item__header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -9161,13 +9476,15 @@ a {
 .header__list {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
+  font-weight: normal;
   line-height: 17px; }
   .header__list .material-icons {
     display: inline; }
   .header__list li:first-child a {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: none; }
   .header__list li {
     text-transform: capitalize;
@@ -9176,7 +9493,7 @@ a {
     display: inline-block;
     cursor: pointer; }
   .header__list li.list__agree span.arrow, .header__list .list__options span.arrow {
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 24px;
     text-transform: lowercase;
     cursor: pointer;
@@ -9276,7 +9593,8 @@ a {
     margin-left: 20px;
     display: inline-block; }
   .entry-bar p.login {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     text-transform: capitalize;
     display: inline;
     position: relative;
@@ -9358,7 +9676,8 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       width: 46px;
       height: 46px;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .icon-text-list__group .group__icon i {
         background: #FFFFFF;
         mix-blend-mode: screen;
@@ -9374,9 +9693,11 @@ span.entry-bar.smallscr {
         margin: 0px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .icon-text-list__group .group__text .text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-top: 0px; }
   .icon-text-list .group__divider {
     background: rgba(31, 32, 65, 0.1);
@@ -9394,7 +9715,9 @@ span.entry-bar.smallscr {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   transition-duration: 500ms;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal;
+  cursor: pointer; }
   .like-button__body {
     display: flex;
     align-items: center;
@@ -9407,7 +9730,7 @@ span.entry-bar.smallscr {
       display: flex;
       justify-content: center; }
       .like-button__body .body__like-img i.material-icons.md-10 {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 10px;
         color: #BC9CFF; }
 
@@ -9425,7 +9748,8 @@ span.entry-bar.smallscr {
   background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .pagination .pagination__body ul {
     list-style: none;
     display: flex;
@@ -9453,7 +9777,7 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border-radius: 22px; }
       .pagination .pagination__body ul li:last-child .next {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 24px;
         color: #FFFFFF;
         display: inline; }
@@ -9464,7 +9788,8 @@ span.entry-bar.smallscr {
     text-align: center; }
 
 .header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   color: #1F2041;
   text-transform: uppercase;
   font-size: 12px; }
@@ -9475,9 +9800,12 @@ span.entry-bar.smallscr {
   width: 220px;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   margin: 16px 0px 16px 0px; }
-  .radio-button .radio-button__option {
+  .radio-button label.radio__option {
+    cursor: pointer; }
+  .radio-button .radio__option-button {
     background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9489,10 +9817,10 @@ span.entry-bar.smallscr {
     outline: none;
     margin: 0px;
     margin-right: 10px; }
-    .radio-button .radio-button__option + span {
+    .radio-button .radio__option-button + span {
       position: relative;
       top: 2px; }
-  .radio-button .radio-button__option::after {
+  .radio-button .radio__option-button::after {
     content: '';
     display: inline-block;
     box-sizing: border-box;
@@ -9503,11 +9831,11 @@ span.entry-bar.smallscr {
     border-radius: 10px;
     left: 3px;
     top: 2px; }
-  .radio-button .radio-button__option:checked {
+  .radio-button .radio__option-button:checked {
     border: 1px solid #BC9CFF; }
-    .radio-button .radio-button__option:checked + span {
+    .radio-button .radio__option-button:checked + span {
       color: rgba(31, 32, 65, 0.75); }
-  .radio-button .radio-button__option:checked::after {
+  .radio-button .radio__option-button:checked::after {
     content: '';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px; }
@@ -9523,12 +9851,14 @@ span.entry-bar.smallscr {
     height: 15px;
     margin-bottom: 23.44px; }
   .range-slider .slider__info-text {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 12px; }
   .range-slider .slider__values {
     display: flex;
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal; }
     .range-slider .slider__values input {
       width: 35px;
       border: none;
@@ -9550,7 +9880,8 @@ span.entry-bar.smallscr {
     display: none; }
   .range-slider .irs {
     position: relative;
-    width: 266px; }
+    width: 266px;
+    cursor: pointer; }
   .range-slider .irs-line, .range-slider .irs-bar {
     top: 0px; }
   .range-slider .irs-single {
@@ -9573,7 +9904,8 @@ span.entry-bar.smallscr {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    top: -5px; }
+    top: -5px;
+    cursor: pointer; }
     .range-slider .irs-handle i {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .range-slider .irs--flat .irs-handle > i:first-child {
@@ -9618,7 +9950,8 @@ span.entry-bar.smallscr {
     height: 44px;
     box-sizing: border-box; }
   .select .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     text-transform: uppercase;
@@ -9626,7 +9959,8 @@ span.entry-bar.smallscr {
   .select .select__text {
     display: inline;
     box-sizing: border-box;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
     border: none;
     display: flex;
@@ -9637,10 +9971,11 @@ span.entry-bar.smallscr {
     border-radius: 4px;
     line-height: 24px;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    cursor: pointer; }
   .select .select__text::after {
-    font-family: "Material Icons";
-    content: "expand_more";
+    font-family: 'Material Icons';
+    content: 'expand_more';
     color: rgba(31, 32, 65, 0.5);
     font-size: 24px;
     position: absolute;
@@ -9662,8 +9997,8 @@ span.entry-bar.smallscr {
     .select ul li.list__item {
       list-style: none;
       padding: 10px 0px 11px 15px;
-      font-family: '';
-      font-family: "Montserrat_Bold";
+      font-family: 'Montserrat';
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
       color: #1F2041; }
@@ -9712,9 +10047,10 @@ span.entry-bar.smallscr {
       justify-content: space-between; }
       .select.active .select__list .list__group .buttons__group .item__count {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px; }
-      .select.active .select__list .list__group .buttons__group button {
+      .select.active .select__list .list__group .buttons__group .button {
         border-radius: 15px;
         width: 30px;
         height: 30px;
@@ -9724,7 +10060,8 @@ span.entry-bar.smallscr {
         background-color: #FFFFFF;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
       .select.active .select__list .list__group .buttons__group .button__minus {
         border: 1px solid rgba(31, 32, 65, 0.25);
         color: rgba(31, 32, 65, 0.25); }
@@ -9762,7 +10099,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field p.text-field__info {
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -9771,7 +10109,7 @@ span.entry-bar.smallscr {
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -9808,7 +10146,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field-masked p {
     margin: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -9816,7 +10155,7 @@ span.entry-bar.smallscr {
     line-height: 15px;
     color: #1F2041; }
   .text-field-masked .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -9851,7 +10190,8 @@ span.entry-bar.smallscr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .text-field-masked input {
   padding-top: 10px; }
@@ -9860,13 +10200,15 @@ span.entry-bar.smallscr {
   max-width: 267px;
   margin-top: 10px; }
   .text-field.subscription .type__info {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color: #1F2041;
     font-size: 12px;
     margin: 0px 0px 5px 0px; }
   .text-field.subscription .text-field__body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -9897,7 +10239,8 @@ span.entry-bar.smallscr {
         top: 1px; }
 
 .toggle {
-  width: 260px; }
+  width: 260px;
+  cursor: pointer; }
   .toggle .toggle-button {
     width: 40px;
     height: 20px;
@@ -9909,7 +10252,8 @@ span.entry-bar.smallscr {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2); }
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    cursor: pointer; }
   .toggle .toggle-button::after {
     content: '';
     display: inline-block;
@@ -9934,7 +10278,9 @@ span.entry-bar.smallscr {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer; }
 
 body {
   background: #ffffff;
@@ -10305,14 +10651,14 @@ template {
   src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(./assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(./assets/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
   src: url(./assets/fonts/Montserrat-Regular.eot);
   src: url(./assets/fonts/Montserrat-Regular.woff) format("woff"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"), url(./assets/fonts/Montserrat-Regular.otf) format("otf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Montserrat-Bold.eot);
@@ -10320,7 +10666,7 @@ template {
   src: url(./assets/fonts/Montserrat-Bold.otf) format("otf"), url(./assets/fonts/Montserrat-Bold.woff) format("woff"), url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Quicksand_Bold';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: bold;
   src: url(./assets/fonts/Quicksand-Bold.eot);
@@ -10329,7 +10675,8 @@ template {
 
 .bullet__list {
   max-width: 292px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .bullet__list .bullet__header {
     font-size: 14px;
     text-transform: uppercase;
@@ -10372,17 +10719,19 @@ template {
   border-radius: 22px;
   outline: none;
   border: none;
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 14px;
   font-size: 12px;
   line-height: 15px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .button-arrow::after {
   content: 'arrow_forward';
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   color: #FFFFFF;
   text-transform: lowercase;
   position: absolute;
@@ -10405,7 +10754,8 @@ template {
     border-radius: 100px;
     background: #FFFFFF;
     color: #BC9CFF;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -10430,7 +10780,8 @@ button.button-filled {
     color: #FFFFFF;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     cursor: pointer; }
@@ -10444,18 +10795,20 @@ button.button-filled:hover {
   background: #FFFFFF;
   outline: none;
   border: none;
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 14.63px;
-  color: #BC9CFF; }
+  color: #BC9CFF;
+  cursor: pointer; }
   .button-icon:hover {
     opacity: 0.5; }
   .button-icon.gray {
     color: rgba(31, 32, 65, 0.5); }
 
 .datepicker {
-  width: 318px !important;
+  width: 318px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
   .datepicker .datepicker--content {
     padding: 0px 20px 20px 20px;
@@ -10464,7 +10817,8 @@ button.button-filled:hover {
     width: 279.4px; }
   .datepicker .datepicker--days-names {
     margin: 30px 0px 0px 0px;
-    font-family: 'Montserrat_bold'; }
+    font-family: 'Montserrat';
+    font-weight: bold; }
     .datepicker .datepicker--days-names .datepicker--day-name {
       width: 30px;
       height: 40px;
@@ -10478,7 +10832,8 @@ button.button-filled:hover {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #FFFFFF; }
   .datepicker > .datepicker--nav {
-    font-family: 'Quicksand_bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     padding: 20px 20px 0px 20px;
@@ -10493,10 +10848,11 @@ button.button-filled:hover {
       height: 24px;
       padding: 0px; }
       .datepicker > .datepicker--nav .datepicker--nav-title .nav-title-text {
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 19px;
         line-height: 24px; }
-    .datepicker > .datepicker--nav i {
+    .datepicker > .datepicker--nav i.material-icons {
       color: #BC9CFF; }
   .datepicker i.datepicker--pointer {
     display: none; }
@@ -10601,7 +10957,7 @@ button.button-filled:hover {
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
-    font-family: 'Montserrat_regular';
+    font-family: 'Montserrat';
     align-items: center;
     text-align: center; }
   .datepicker .datepicker--cell-day.-other-month- {
@@ -10611,7 +10967,8 @@ button.button-filled:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
   .datepicker .datepicker--buttons {
-    font-family: 'Montserrat_bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     height: 15px;
     text-transform: uppercase;
@@ -10648,19 +11005,22 @@ button.button-filled:hover {
   .card-booking.card .select {
     margin: 20px 0px; }
   .card-booking.card .info__price {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     top: 10px; }
     .card-booking.card .info__price p {
       display: inline;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       margin: 0px;
       font-size: 14px;
       line-height: 18px; }
     .card-booking.card .info__price p:nth-child(2) {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 12px; }
       .card-booking.card .info__price p:nth-child(2) > b {
         font-size: 14px; }
@@ -10670,18 +11030,22 @@ button.button-filled:hover {
     margin: 0px;
     color: #1F2041; }
   .card-booking.card .info__room p:first-child {
-    font-family: 'Quicksand_Bold'; }
+    font-family: 'Quicksand';
+    font-weight: bold; }
   .card-booking.card .info__room .room__number {
-    font-family: 'Quicksand_Bold';
+    font-family: 'Quicksand';
+    font-weight: bold;
     font-size: 24px;
     color: #1F2041; }
   .card-booking.card .info__room .room__class {
     margin-left: 8px;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 14px;
     color: #BC9CFF; }
   .card-booking.card .booking__costs {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -10716,26 +11080,30 @@ button.button-filled:hover {
       flex-wrap: wrap;
       flex-shrink: 0; }
     .card-booking.card .booking__costs .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       top: 2px; }
       .card-booking.card .booking__costs .info__guest b {
-        font-family: 'Montserrat_Bold'; }
+        font-family: 'Montserrat';
+        font-weight: bold; }
     .card-booking.card .booking__costs .costs__discount, .card-booking.card .booking__costs .costs__room {
       margin-bottom: 10px; }
     .card-booking.card .booking__costs .costs__additional {
       line-height: 18px; }
     .card-booking.card .booking__costs .costs__total {
-      font-family: 'Quicksand_bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       color: #1F2041;
       font-size: 19px;
       margin-top: 21px;
       margin-bottom: 20px; }
       .card-booking.card .booking__costs .costs__total p {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         font-size: 19px; }
       .card-booking.card .booking__costs .costs__total .total-divider {
@@ -10745,7 +11113,7 @@ button.button-filled:hover {
         margin: 0px 5px;
         max-width: 182px; }
     .card-booking.card .booking__costs > .button__arrow {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0px; }
 
 .card-comment {
   max-width: 711px;
@@ -10765,14 +11133,17 @@ button.button-filled:hover {
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75); }
       .card-comment .card__review-group .info .info__name {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: capitalize; }
       .card-comment .card__review-group .info .info__date {
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .card-comment .card__review-group .info p {
         margin: 0px; }
     .card-comment .card__review-group .review__text {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: rgba(31, 32, 65, 0.75);
       font-size: 14px;
       line-height: 24px;
@@ -10787,8 +11158,6 @@ button.button-filled:hover {
       border-radius: 32px;
       filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
       border: 2px solid #FFFFFF; }
-    .card-comment .card__profile .profile__avatar img:last-child {
-      display: none; }
   .card-comment .card__profile .like-button {
     margin: 12px auto;
     cursor: pointer; }
@@ -10881,19 +11250,23 @@ button.button-filled:hover {
       margin: 0px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room p:first-child {
-      font-family: 'Quicksand_Bold'; }
+      font-family: 'Quicksand';
+      font-weight: bold; }
     .card-hotel-room.card .hotel-room__info .info__room .room__number {
-      font-family: 'Quicksand_Bold';
+      font-family: 'Quicksand';
+      font-weight: bold;
       font-size: 20px;
       color: #1F2041; }
     .card-hotel-room.card .hotel-room__info .info__room .room__class {
       margin-left: 1px;
-      font-family: 'Montserrat_Bold';
+      font-family: 'Montserrat';
+      font-weight: bold;
       font-size: 14px;
       line-height: 14.63px;
       color: #BC9CFF; }
     .card-hotel-room.card .hotel-room__info .info-row {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -10903,7 +11276,8 @@ button.button-filled:hover {
       line-height: 17.5px; }
       .card-hotel-room.card .hotel-room__info .info-row p {
         display: inline;
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px;
         line-height: 18px; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price {
@@ -10911,16 +11285,19 @@ button.button-filled:hover {
         align-items: center; }
       .card-hotel-room.card .hotel-room__info .info-row .info__price p:nth-child(3) {
         margin-left: 2px;
-        font-family: 'Montserrat_Regular'; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
     .card-hotel-room.card .hotel-room__info .info__guest {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       text-transform: capitalize;
       position: relative;
       line-height: 18px;
       display: flex;
       align-items: center; }
       .card-hotel-room.card .hotel-room__info .info__guest b {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-right: 4px; }
     .card-hotel-room.card .hotel-room__info .rating {
       line-height: 20,4px; }
@@ -10936,7 +11313,8 @@ button.button-filled:hover {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
   .card-login.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
@@ -10954,7 +11332,8 @@ button.button-filled:hover {
     justify-content: space-between;
     margin-top: 30px; }
     .card-login.card .login__info p.info__text {
-      font-family: 'Montserrat_Regular';
+      font-family: 'Montserrat';
+      font-weight: normal;
       color: #000000;
       margin-top: 12px;
       margin-bottom: 0px;
@@ -10972,15 +11351,18 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .card-registration.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .card-registration.card p.card__subtitle {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     line-height: 15px;
@@ -11017,17 +11399,20 @@ button.button-filled:hover {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .room-search.card .card__body {
     display: block; }
   .room-search.card p.card__title {
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #1F2041;
     margin: 0px 0px 21px 0px; }
   .room-search.card input, .room-search.card body .card p {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     color: rgba(31, 32, 65, 0.75); }
   .room-search.card .select {
     margin: 21px 0px 0px 0px; }
@@ -11042,7 +11427,8 @@ button.button-filled:hover {
 .checkbox-buttons {
   min-height: 129px; }
   .checkbox-buttons p.title {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     margin-top: 0px;
@@ -11064,7 +11450,8 @@ button.button-filled:hover {
   .checkbox-buttons .item__text {
     max-width: 192px; }
     .checkbox-buttons .item__text p {
-      font-family: "Montserrat_Regular";
+      font-family: 'Montserrat';
+      font-weight: normal;
       font-size: 14px;
       color: rgba(31, 32, 65, 0.5);
       position: relative;
@@ -11076,7 +11463,8 @@ button.button-filled:hover {
   max-width: 70%;
   padding-left: 30px;
   height: 20px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  cursor: pointer; }
 
 .check__box {
   position: absolute;
@@ -11108,7 +11496,8 @@ button.button-filled:hover {
   max-width: 266px; }
   .checkbox-buttons-rich .checkbox__options-item {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    cursor: pointer; }
     .checkbox-buttons-rich .checkbox__options-item > .item-input {
       position: absolute;
       width: 1px;
@@ -11139,7 +11528,8 @@ button.button-filled:hover {
       left: 30px;
       max-width: 236px; }
       .checkbox-buttons-rich .checkbox__options-item .item__text p.text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
@@ -11150,10 +11540,11 @@ button.button-filled:hover {
         line-height: 14px;
         color: rgba(31, 32, 65, 0.5);
         margin: 0px;
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
 
 .info__type {
-  font-family: 'Montserrat_bold';
+  font-family: 'Montserrat';
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase; }
@@ -11186,7 +11577,8 @@ button.button-filled:hover {
 
 .checkbox-list {
   max-width: 266px;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .checkbox-list p {
     margin: 0px; }
   .checkbox-list .info__arrow i {
@@ -11230,7 +11622,7 @@ button.button-filled:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: default; }
+    cursor: pointer; }
     .checkbox-list .list__info .info__arrow {
       padding: 10px 16px 16px 16px;
       transition-duration: 500ms; }
@@ -11246,7 +11638,8 @@ button.button-filled:hover {
 .date-dropdown {
   max-width: 100%;
   height: 65px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .date__bar {
   max-width: 320px;
@@ -11268,10 +11661,11 @@ button.button-filled:hover {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
   .date__bar .date__item::before {
     content: 'expand_more';
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     text-transform: lowercase;
     font-style: normal;
     font-size: 24px;
@@ -11281,14 +11675,15 @@ button.button-filled:hover {
     color: rgba(31, 32, 65, 0.5); }
 
 .date__item > .item__name {
-  font-family: 'Montserrat_Bold';
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   margin: 0px 0px 5px 0px;
   color: #1F2041; }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5); }
@@ -11300,11 +11695,14 @@ button.button-filled:hover {
     color: #1F2041; }
   .date-dropdown-filter .dropdown-filter {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .date-dropdown-filter .dropdown-filter form {
       max-width: 80%;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .date-dropdown-filter .dropdown-filter form input {
+        cursor: pointer;
         color: rgba(31, 32, 65, 0.75); }
     .date-dropdown-filter .dropdown-filter button {
       outline: none;
@@ -11314,9 +11712,10 @@ button.button-filled:hover {
       position: relative;
       left: -2px;
       width: 42px;
-      height: 42px; }
+      height: 42px;
+      cursor: pointer; }
     .date-dropdown-filter .dropdown-filter i.material-icons {
-      font-family: "Material Icons";
+      font-family: 'Material Icons';
       color: rgba(31, 32, 65, 0.5);
       position: relative;
       top: 2px;
@@ -11324,7 +11723,8 @@ button.button-filled:hover {
       width: 24px; }
 
 .footer {
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   background: #FFFFFF; }
 
 .footer.small {
@@ -11410,7 +11810,8 @@ ul.bar__item:last-child {
     line-height: 24px; }
 
 li.item__header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -11505,13 +11906,15 @@ a {
 .header__list {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat_Regular';
+  font-family: 'Montserrat';
+  font-weight: normal;
   line-height: 17px; }
   .header__list .material-icons {
     display: inline; }
   .header__list li:first-child a {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: none; }
   .header__list li {
     text-transform: capitalize;
@@ -11520,7 +11923,7 @@ a {
     display: inline-block;
     cursor: pointer; }
   .header__list li.list__agree span.arrow, .header__list .list__options span.arrow {
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 24px;
     text-transform: lowercase;
     cursor: pointer;
@@ -11620,7 +12023,8 @@ a {
     margin-left: 20px;
     display: inline-block; }
   .entry-bar p.login {
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     text-transform: capitalize;
     display: inline;
     position: relative;
@@ -11702,7 +12106,8 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       width: 46px;
       height: 46px;
-      font-family: "Montserrat_Regular"; }
+      font-family: 'Montserrat';
+      font-weight: normal; }
       .icon-text-list__group .group__icon i {
         background: #FFFFFF;
         mix-blend-mode: screen;
@@ -11718,9 +12123,11 @@ span.entry-bar.smallscr {
         margin: 0px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular"; }
+        font-family: 'Montserrat';
+        font-weight: normal; }
       .icon-text-list__group .group__text .text__header {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin-top: 0px; }
   .icon-text-list .group__divider {
     background: rgba(31, 32, 65, 0.1);
@@ -11738,7 +12145,9 @@ span.entry-bar.smallscr {
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   transition-duration: 500ms;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal;
+  cursor: pointer; }
   .like-button__body {
     display: flex;
     align-items: center;
@@ -11751,7 +12160,7 @@ span.entry-bar.smallscr {
       display: flex;
       justify-content: center; }
       .like-button__body .body__like-img i.material-icons.md-10 {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 10px;
         color: #BC9CFF; }
 
@@ -11769,7 +12178,8 @@ span.entry-bar.smallscr {
   background: url(./assets/pictures/logo.png) no-repeat center center; }
 
 .pagination {
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .pagination .pagination__body ul {
     list-style: none;
     display: flex;
@@ -11797,7 +12207,7 @@ span.entry-bar.smallscr {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border-radius: 22px; }
       .pagination .pagination__body ul li:last-child .next {
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         font-size: 24px;
         color: #FFFFFF;
         display: inline; }
@@ -11808,7 +12218,8 @@ span.entry-bar.smallscr {
     text-align: center; }
 
 .header {
-  font-family: "Montserrat_Bold";
+  font-family: 'Montserrat';
+  font-weight: bold;
   color: #1F2041;
   text-transform: uppercase;
   font-size: 12px; }
@@ -11819,9 +12230,12 @@ span.entry-bar.smallscr {
   width: 220px;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat_Regular";
+  font-family: 'Montserrat';
+  font-weight: normal;
   margin: 16px 0px 16px 0px; }
-  .radio-button .radio-button__option {
+  .radio-button label.radio__option {
+    cursor: pointer; }
+  .radio-button .radio__option-button {
     background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -11833,10 +12247,10 @@ span.entry-bar.smallscr {
     outline: none;
     margin: 0px;
     margin-right: 10px; }
-    .radio-button .radio-button__option + span {
+    .radio-button .radio__option-button + span {
       position: relative;
       top: 2px; }
-  .radio-button .radio-button__option::after {
+  .radio-button .radio__option-button::after {
     content: '';
     display: inline-block;
     box-sizing: border-box;
@@ -11847,11 +12261,11 @@ span.entry-bar.smallscr {
     border-radius: 10px;
     left: 3px;
     top: 2px; }
-  .radio-button .radio-button__option:checked {
+  .radio-button .radio__option-button:checked {
     border: 1px solid #BC9CFF; }
-    .radio-button .radio-button__option:checked + span {
+    .radio-button .radio__option-button:checked + span {
       color: rgba(31, 32, 65, 0.75); }
-  .radio-button .radio-button__option:checked::after {
+  .radio-button .radio__option-button:checked::after {
     content: '';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px; }
@@ -11867,12 +12281,14 @@ span.entry-bar.smallscr {
     height: 15px;
     margin-bottom: 23.44px; }
   .range-slider .slider__info-text {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 12px; }
   .range-slider .slider__values {
     display: flex;
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal; }
     .range-slider .slider__values input {
       width: 35px;
       border: none;
@@ -11894,7 +12310,8 @@ span.entry-bar.smallscr {
     display: none; }
   .range-slider .irs {
     position: relative;
-    width: 266px; }
+    width: 266px;
+    cursor: pointer; }
   .range-slider .irs-line, .range-slider .irs-bar {
     top: 0px; }
   .range-slider .irs-single {
@@ -11917,7 +12334,8 @@ span.entry-bar.smallscr {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    top: -5px; }
+    top: -5px;
+    cursor: pointer; }
     .range-slider .irs-handle i {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .range-slider .irs--flat .irs-handle > i:first-child {
@@ -11962,7 +12380,8 @@ span.entry-bar.smallscr {
     height: 44px;
     box-sizing: border-box; }
   .select .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     margin: 0px 0px 5px 0px;
     font-size: 12px;
     text-transform: uppercase;
@@ -11970,7 +12389,8 @@ span.entry-bar.smallscr {
   .select .select__text {
     display: inline;
     box-sizing: border-box;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
     border: none;
     display: flex;
@@ -11981,10 +12401,11 @@ span.entry-bar.smallscr {
     border-radius: 4px;
     line-height: 24px;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    cursor: pointer; }
   .select .select__text::after {
-    font-family: "Material Icons";
-    content: "expand_more";
+    font-family: 'Material Icons';
+    content: 'expand_more';
     color: rgba(31, 32, 65, 0.5);
     font-size: 24px;
     position: absolute;
@@ -12006,8 +12427,8 @@ span.entry-bar.smallscr {
     .select ul li.list__item {
       list-style: none;
       padding: 10px 0px 11px 15px;
-      font-family: '';
-      font-family: "Montserrat_Bold";
+      font-family: 'Montserrat';
+      font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
       color: #1F2041; }
@@ -12056,9 +12477,10 @@ span.entry-bar.smallscr {
       justify-content: space-between; }
       .select.active .select__list .list__group .buttons__group .item__count {
         color: #1F2041;
-        font-family: 'Montserrat_bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         margin: 0px; }
-      .select.active .select__list .list__group .buttons__group button {
+      .select.active .select__list .list__group .buttons__group .button {
         border-radius: 15px;
         width: 30px;
         height: 30px;
@@ -12068,7 +12490,8 @@ span.entry-bar.smallscr {
         background-color: #FFFFFF;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
       .select.active .select__list .list__group .buttons__group .button__minus {
         border: 1px solid rgba(31, 32, 65, 0.25);
         color: rgba(31, 32, 65, 0.25); }
@@ -12106,7 +12529,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field p.text-field__info {
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -12115,7 +12539,7 @@ span.entry-bar.smallscr {
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -12152,7 +12576,8 @@ span.entry-bar.smallscr {
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Montserrat_Regular'; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
   .text-field-masked p {
     margin: 0px 0px 5px 0px;
     text-transform: uppercase;
@@ -12160,7 +12585,7 @@ span.entry-bar.smallscr {
     line-height: 15px;
     color: #1F2041; }
   .text-field-masked .info__type {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
     font-weight: bold; }
 
 .text-field__body {
@@ -12195,7 +12620,8 @@ span.entry-bar.smallscr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat_Regular"; }
+  font-family: 'Montserrat';
+  font-weight: normal; }
 
 .text-field-masked input {
   padding-top: 10px; }
@@ -12204,13 +12630,15 @@ span.entry-bar.smallscr {
   max-width: 267px;
   margin-top: 10px; }
   .text-field.subscription .type__info {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color: #1F2041;
     font-size: 12px;
     margin: 0px 0px 5px 0px; }
   .text-field.subscription .text-field__body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -12241,7 +12669,8 @@ span.entry-bar.smallscr {
         top: 1px; }
 
 .toggle {
-  width: 260px; }
+  width: 260px;
+  cursor: pointer; }
   .toggle .toggle-button {
     width: 40px;
     height: 20px;
@@ -12253,7 +12682,8 @@ span.entry-bar.smallscr {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2); }
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    cursor: pointer; }
   .toggle .toggle-button::after {
     content: '';
     display: inline-block;
@@ -12278,7 +12708,9 @@ span.entry-bar.smallscr {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    font-family: "Montserrat_Regular"; }
+    font-family: 'Montserrat';
+    font-weight: normal;
+    cursor: pointer; }
 
 body {
   margin: 0px; }

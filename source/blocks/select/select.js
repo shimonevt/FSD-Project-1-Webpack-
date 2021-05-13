@@ -1,226 +1,191 @@
-$(document).ready(function() {
-	const minValue = 0;
-	var selectGueststext = [];
-	var selectRoomstext = [];
-	const itemGuests = [
-	{
-		item: 'guests',
-		words: ['',' гость',' гостя', ' гостей']
-	},
-	
-	{
-		item:'babies',
-		words: ['',' младенец',' младенца',' младенцев']
-	}	
-]
-	
-	const itemsRooms = [
-		{
-			item: 'bedrooms',
-			words: ['',' спальня',' спальни',' спален'] 
-		},
-		{
-			item: 'beds',
-			words: ['',' кровать',' кровати',' кроватей']
-		},
-		{
-			item: 'bathrooms',
-			words: ['',' ванная комната',' ванные комнаты',' кроватей']
-		}
-	]
-
-	$('.select').each(function(index,element){ //инициализация select при загрузке страницы
-		const select = $(this);
-		selectInit(select);
-	});
-
-	function selectInit(select){
-		var selectType = $(select).data('type');
-		var selectText = $(select).find('.select__text');
-		let sum=0;
-		let notBabies=0;
-		if(selectType == 'guests') {
-			$(select).find('.list__group').each(function(index,element){
-				let listGroup = $(element);
-				let listType = $(listGroup).data('item');
-				let value = $(listGroup).find('.item__count').text();
-				if(listType == 'guests'){
-					sum +=+ value;
-					writeSelectText(selectType,listType,selectText,sum,selectGueststext);
-				}else if(listType == 'babies') {
-					notBabies +=+ value;
-					writeSelectText(selectType,listType,selectText,notBabies,selectGueststext);
-				}
-			})
-		}else if(selectType == 'rooms') {
-			$(select).find('.list__group').each(function(index,element){
-				let listGroup = $(element);
-				let listType = $(listGroup).data('item');
-				let value = $(listGroup).find('.item__count').text();
-
-				writeSelectText(selectType,listType,selectText,value,selectRoomstext);
-			})
-		}
-	};
-			
-
-	function writeSelectText(selectType,listType,selectText,value,stringSelectText) {
-		if(selectType == 'guests'){
-			let editButtons= $(selectText).parent('.select__body').find('.edit-buttons');
-			if(value>minValue){
-				$(editButtons).addClass('active');
-			}
-			for( let i =0; i< itemGuests.length;i++){
-				if(itemGuests[i].item == listType){
-					var temp1;
-					if(value==0){
-						temp1=itemGuests[i].words[0];
-					}else if(value==1){
-						temp1=value  + itemGuests[i].words[1];
-					}else if(value<=4){
-						temp1=value  + itemGuests[i].words[2];
-					}else {
-						temp1 =value  + itemGuests[i].words[3];
-					}
-					stringSelectText[i] = temp1;
-					break;
-				}
-				
-			}
-			let text='';
-			for (let i=0; i<stringSelectText.length; i++) {
-				if (text.length+stringSelectText.length>=19){
-				  text+='...'
-				  break
-				}
-				if (i!=0&&text!=''&&stringSelectText[i]!=''){
-				  text+=', ';
-				};
-				text+=stringSelectText[i];
-			  }
-			  if (text=='') text='Сколько гостей'; 
-			  $(selectText).text(text);
-				
-		} else if(selectType == 'rooms') {
-			for( let i =0; i< itemsRooms.length;i++){	
-				if(itemsRooms[i].item == listType){
-					var temp2;
-					if(value==0){
-						temp2 = itemsRooms[i].words[0];
-					}else if(value==1){
-						temp2 = value  + itemsRooms[i].words[1];
-					}else if(value<=4){
-						temp2 = value  + itemsRooms[i].words[2];
-					}else {
-						temp2 = value   + itemsRooms[i].words[3];
-					}
-					stringSelectText[i] = temp2;
-					break;
-				}
-			}
-			let text='';
-			for (let i=0; i<stringSelectText.length; i++) {
-				if (text.length+stringSelectText.length>=19){
-				  text+='...'
-				  break
-				}
-				if (i!=0&&text!=''&&stringSelectText[i]!=''){
-				  text+=', ';
-				};
-				text+=stringSelectText[i];
-			  }
-			  if (text=='') text='Выберите комнаты'; 
-			  $(selectText).text(text);
-		}		
-	};
-
-	$('.select .select__text').click(function (event){
-		var selectDropdown = $(this).parent('.select__body').parent('.select');
-		selectDropdown.toggleClass('active');
-	});
-	$('.edit__clear').click(function (event){
-		var clearButton = $(this);
-		var editButtons = $(clearButton).parent('.edit-buttons');
-		var selectBar = $(this).parent('.edit-buttons').parent('.select__bar');
-		var selectText = $(selectBar).parent('.select__body').find('.select__text');
-		var select = $(selectText).parent('.select__body').parent('.select');
-		var selectType = $(select).data('type');
-		if( selectType =='guests'){
-			let text = 'Сколько гостей';
-			$(selectText).text(text);
-		} 
-		$(select).find('.button__minus').each(function(){
-			$(this).removeClass('active');
-		});
-		$(select).find('.item__count').each(function(){
-			$(this).text(minValue);
-		});
-		$(editButtons).removeClass('active');
-	});
-	$('.edit__accept').click(function(event){
-		var acceptButton = $(this);
-		var selectClose = $(acceptButton).parent('.edit-buttons').parent('.select__bar').parent('.select__body').parent('.select');
-		$(selectClose).toggleClass('active');
-	});
-
-	$('.select .buttons__group button').click(function (event) {
-		var buttonsGroup = $(this).parent('.buttons__group');
-		var itemsCount = $(buttonsGroup).find('.item__count');
-		var listGroup = $(buttonsGroup).parent('.list__group');
-		var listType = $(listGroup).data('item');
-		var menuSelect = $(buttonsGroup).parent('.list__group').parent('.select__list').parent('.select__bar');
-		var select = $(menuSelect).parent('.select__body').parent('.select');
-		var selectText = $(select).find('.select__text');
-		var selectType = $(select).data('type');
-		var editButtons = $(menuSelect).find('.edit-buttons');
-		let val = $(itemsCount).text();
-		let numberOfGuests=0;
-		let notBabies = 0;
-		if (this.innerHTML=='+'){
-		  val++;
-		  $(itemsCount).text(val);
-		  $(editButtons).addClass('active');
-		   if(val==minValue+1) {
-			$(buttonsGroup).find('.button__minus').addClass('active'); 
-		  }
-		}else {
-			val--;
-			if (val<=minValue) {
-				$(itemsCount).text(minValue); 
-				$(buttonsGroup).find('.button__minus').removeClass('active'); 				
-			}else { 
-				$(itemsCount).text(val); 	  
-			}
-		}
-		if(selectType == 'rooms') {
-			$(select).find('.list__group').each(function(index,element){
-				let listGroup = $(element);
-				let listType = $(listGroup).data('item');
-				let value = $(listGroup).find('.item__count').text();
-
-				writeSelectText(selectType,listType,selectText,value,selectRoomstext);
-			})	
-		}else {
-			$(select).find('.list__group').each(function(index,element){
-				let listGroup = $(element);
-				let listType = $(listGroup).data('item');
-				let value = $(listGroup).find('.item__count').text();
-				if(listType == 'guests'){
-					numberOfGuests +=+ value;
-					writeSelectText(selectType,listType,selectText,numberOfGuests,selectGueststext);
-				}else if(listType == 'babies') {
-					notBabies +=+ value;
-					writeSelectText(selectType,listType,selectText,notBabies,selectGueststext);
-				}
-			})
-		}
-				if(numberOfGuests + notBabies == 0) {
-					$(editButtons).removeClass('active');
-				}else{
-					$(editButtons).addClass('active');
-				}
-	  });
-	});
-	
-
-	
+$(document).ready(() => {
+  const minValue = 0;
+  let selectGueststext = [];
+  let selectRoomstext = [];
+  const type = {
+    guests: 'guests',
+    rooms: 'rooms',
+  };
+  const itemGuests = [
+    {
+      item: 'guests',
+      words: ['', ' гость', ' гостя', ' гостей'],
+    },
+    {
+      item: 'babies',
+      words: ['', ' младенец', ' младенца', ' младенцев'],
+    },
+  ];
+  const itemsRooms = [
+    {
+      item: 'bedrooms',
+      words: ['', ' спальня', ' спальни', ' спален'],
+    },
+    {
+      item: 'beds',
+      words: ['', ' кровать', ' кровати', ' кроватей'],
+    },
+    {
+      item: 'bathrooms',
+      words: ['', ' ванная комната', ' ванные комнаты', ' кроватей'],
+    },
+  ];
+  function writeListGroupText(itemArray, listType, value, stringSelectText) {
+    for (let i = 0; i < itemArray.length; i += 1) {
+      const { words } = itemArray[i];
+      if (itemArray[i].item === listType) {
+        let currentText;
+        if (value === 0) {
+          currentText = words[0];
+        } else if (value === 1) {
+          currentText = value + words[1];
+        } else if (value <= 4) {
+          currentText = value + words[2];
+        } else {
+          currentText = value + words[3];
+        }
+        stringSelectText[i] = currentText;
+        break;
+      }
+    }
+    return stringSelectText;
+  }
+  function writeSelectText(selectType, listType, selectText, value, stringSelectText) {
+    if (selectType === type.guests) {
+      const $editButtons = $(selectText).parent('.js-select__body').find('.js-edit-buttons');
+      if (value > minValue) {
+        $($editButtons).addClass('active');
+      }
+      stringSelectText = writeListGroupText(itemGuests, listType, value, stringSelectText);
+    } else {
+      stringSelectText = writeListGroupText(itemsRooms, listType, value, stringSelectText);
+    }
+    let fullSelectText = '';
+    for (let i = 0; i < stringSelectText.length; i += 1) {
+      if (fullSelectText.length + stringSelectText.length >= 21) {
+        fullSelectText += '...';
+        break;
+      }
+      const condition = i !== 0 && fullSelectText !== '' && stringSelectText[i] !== '';
+      if (condition) {
+        fullSelectText += ', ';
+      }
+      fullSelectText += stringSelectText[i];
+    }
+    if (selectType === type.guests && fullSelectText === '') {
+      fullSelectText = 'Сколько гостей';
+    } else if( selectType === type.rooms && fullSelectText === '') {
+      fullSelectText = 'Выберите комнаты';
+    }
+    $(selectText).text(fullSelectText);
+  }
+  function selectInit(index, select) {
+    const $selectType = $(select).data('type');
+    const $selectText = $(select).find('.js-select__text');
+    let sum = 0;
+    let notBabies = 0;
+    if ($selectType === type.guests) {
+      $(select).find('.js-list__group').each((index, listGroup) => {
+        const $listType = $(listGroup).data('item');
+        const value = parseInt($(listGroup).find('.js-item__count').text(), 10);
+        if ($listType === itemGuests[0].item) {
+          sum += value;
+          writeSelectText($selectType, $listType, $selectText, sum, selectGueststext);
+        } else if ($listType === itemGuests[1].item) {
+          notBabies += value;
+          writeSelectText($selectType, $listType, $selectText, notBabies, selectGueststext);
+        }
+      });
+    } else {
+      $(select).find('.js-list__group').each((index, listGroup) => {
+        const $listType = $(listGroup).data('item');
+        const $value = $(listGroup).find('.js-item__count').text();
+        writeSelectText($selectType, $listType, $selectText, $value, selectRoomstext);
+      });
+    }
+  }
+  function hideSelectText(event) {
+    const $selectDropdown = $(event.target).parent('.js-select__body').parent('.js-select');
+    $selectDropdown.toggleClass('active');
+  }
+  function clickOnEditClear(event) {
+    const editButtons = event.target.closest('.js-edit-buttons');
+    const $selectBar = $(editButtons).parent('.js-select__bar');
+    const $selectText = $($selectBar).parent('.js-select__body').find('.js-select__text');
+    const $select = $($selectText).parent('.js-select__body').parent('.js-select');
+    const $selectType = $($select).data('type');
+    if ($selectType === type.guests) {
+      const text = 'Сколько гостей';
+      $($selectText).text(text);
+    }
+    $($select).find('.js-button__minus').each((index, elem) => {
+      $(elem).removeClass('active');
+    });
+    $($select).find('.js-item__count').each((index, elem) => {
+      $(elem).text(minValue);
+    });
+    $(editButtons).removeClass('active');
+  }
+  function clickOnEditAccept(event) {
+    const editAccept = event.target;
+    const $selectClose = editAccept.closest('.js-select');
+    $selectClose.classList.toggle('active');
+  }
+  function clickOnButtonsGroup(event) {
+    const $buttonsGroup = $(event.target).parent('.js-buttons__group');
+    const $itemsCount = $($buttonsGroup).find('.js-item__count');
+    const $menuSelect = $($buttonsGroup).parent('.js-list__group').parent('.js-select__list').parent('.js-select__bar');
+    const $select = $($menuSelect).parent('.js-select__body').parent('.js-select');
+    const $selectText = $($select).find('.js-select__text');
+    const $selectType = $($select).data('type');
+    const $editButtons = $($menuSelect).children('.js-edit-buttons');
+    let $itemValue = parseInt($($itemsCount).text(), 10);
+    let numberOfGuests = 0;
+    let notBabies = 0;
+    if (event.target.classList.contains('js-button__plus')) {
+      $itemValue += 1;
+      $($itemsCount).text($itemValue);
+      $($editButtons).addClass('active');
+      if ($itemValue === minValue + 1) {
+        $($buttonsGroup).find('.js-button__minus').addClass('active');
+      }
+    } else {
+      $itemValue -= 1;
+      if ($itemValue <= minValue) {
+        $($itemsCount).text(minValue);
+        $($buttonsGroup).find('.js-button__minus').removeClass('active');
+      } else {
+        $($itemsCount).text($itemValue);
+      }
+    }
+    if ($selectType === type.rooms) {
+      $($select).find('.js-list__group').each((index, listGroup) => {
+        const $listType = $(listGroup).data('item');
+        const $value = parseInt($(listGroup).find('.js-item__count').text(), 10);
+        writeSelectText($selectType, $listType, $selectText, $value, selectRoomstext);
+      });
+    } else {
+      $($select).find('.js-list__group').each((index, listGroup) => {
+        const $listType = $(listGroup).data('item');
+        const $value = $(listGroup).find('.js-item__count').text();
+        if ($listType === type.guests) {
+          numberOfGuests += +$value;
+          writeSelectText($selectType, $listType, $selectText, numberOfGuests, selectGueststext);
+        } else {
+          notBabies += +$value;
+          writeSelectText($selectType, $listType, $selectText, notBabies, selectGueststext);
+        }
+      });
+    }
+    if (numberOfGuests + notBabies === 0) {
+      $($editButtons).removeClass('active');
+    } else {
+      $($editButtons).addClass('active');
+    }
+  }
+  $('.js-select').each(selectInit);
+  $('.js-select .js-select__text').click(hideSelectText);
+  $('.js-edit__clear').click(clickOnEditClear);
+  $('.js-edit__accept').click(clickOnEditAccept);
+  $('.js-select .js-buttons__group .js-button').click(clickOnButtonsGroup);
+});

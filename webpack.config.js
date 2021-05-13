@@ -2,6 +2,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -96,7 +97,10 @@ module.exports = {
         $: 'jquery',
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
-    })
+    }),
+    new CopyWebpackPlugin({ patterns:[
+      {from: path.resolve(__dirname, "source/assets/favicons"), to:  path.resolve(__dirname, "build/assets/favicons")}
+    ]}),
     ],
   module: {
     rules: [

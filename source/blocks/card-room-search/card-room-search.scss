@@ -7,19 +7,22 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px 30px 30px 30px;
-    font-family: 'Montserrat_Regular';
+    font-family: 'Montserrat';
+    font-weight: normal;
     .card__body{
         display: block;
     }
     p.card__title {
-        font-family: 'Montserrat_Bold';
+        font-family: 'Montserrat';
+        font-weight: bold;
         font-size: 24px;
         line-height: 29px;
         color: #1F2041;
         margin: 0px 0px 21px 0px;
       }
     input, body .card p {
-        font-family: 'Montserrat_Regular';
+        font-family: 'Montserrat';
+        font-weight: normal;
         color: rgba(31, 32, 65, 0.75);
     }
     .select{

@@ -11,20 +11,23 @@
         margin: 20px 0px;
     }
     .info__price {     
-        font-family: 'Montserrat_Regular';
+        font-family: 'Montserrat';
+        font-weight: normal;
         font-size: 14px;
         color: rgba(31, 32, 65, 0.5);
         position: relative;
         top : 10px;
         p {
             display: inline;
-            font-family: 'Montserrat_Bold';
+            font-family: 'Montserrat';
+            font-weight: bold;
             margin : 0px;
             font-size: 14px;
             line-height: 18px;
         }
         p:nth-child(2) {
-            font-family: 'Montserrat_Regular';
+            font-family: 'Montserrat';
+            font-weight: normal;
             font-size: 12px;
             >b {
                 font-size: 14px;
@@ -39,22 +42,26 @@
             color: #1F2041;
         }
         p:first-child {
-            font-family: 'Quicksand_Bold';
+            font-family: 'Quicksand';
+            font-weight: bold;
         }
         .room__number {
-            font-family: 'Quicksand_Bold';
+            font-family: 'Quicksand';
+            font-weight: bold;
             font-size: 24px;
             color: #1F2041;
         }
         .room__class {
             margin-left: 8px;
-            font-family: 'Montserrat_Bold';
+            font-family: 'Montserrat';
+            font-weight: bold;
             font-size: 14px;
             color: #BC9CFF;
         }   
     }
     .booking__costs{
-        font-family: 'Montserrat_Regular';
+        font-family: 'Montserrat';
+        font-weight: normal;
         font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
@@ -94,13 +101,15 @@
             flex-shrink: 0;
         }
         .info__guest {
-            font-family: 'Montserrat_Regular';
+            font-family: 'Montserrat';
+            font-weight: normal;
             text-transform: capitalize;
             position: relative;
             line-height: 18px;
             top:2px;
             b {
-            font-family: 'Montserrat_Bold';
+            font-family: 'Montserrat';
+            font-weight: bold;
             }
         }
         .costs__discount,.costs__room {
@@ -110,14 +119,16 @@
             line-height: 18px;
         }
         .costs__total {
-            font-family: 'Quicksand_bold';
+            font-family: 'Quicksand';
+            font-weight: bold;
             color: #1F2041;
             font-size: 19px;
             margin-top : 21px;
             margin-bottom: 20px;
             p { 
                 color: #1F2041;
-                font-family: 'Montserrat_bold';
+                font-family: 'Montserrat';
+                font-weight: bold;
                 margin : 0px;
                 font-size: 19px;
             }
@@ -130,7 +141,7 @@
             }
         }
         >.button__arrow {
-            margin-bottom: 0px !important;
+            margin-bottom: 0px;
         }
     }  
 }

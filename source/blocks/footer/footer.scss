@@ -1,5 +1,6 @@
 .footer{
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     background: #FFFFFF;
 }
 .footer.small {
@@ -22,16 +23,16 @@
         }
     }
     .copyright__bar{
-            max-width: 768px;
-            background: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-bottom: 120px;
-            .bar__media{
-                margin-top: 25px;
-            }
+        max-width: 768px;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 120px;
+        .bar__media{
+            margin-top: 25px;
         }
+    }
 }
     
 .bar__media{
@@ -41,15 +42,15 @@
         width: 24px;
         height: 24px;
     }
-        .tweet {
-            background: url(../../assets/pictures/tweet.svg)no-repeat center center;
-            }
-        .fb {
-            background: url(../../assets/pictures/fb.svg) no-repeat center center;
-        }
-        .inst {
-            background: url(../../assets/pictures/inst.svg) no-repeat center center;
-        }
+    .tweet {
+        background: url(../../assets/pictures/tweet.svg)no-repeat center center;
+    }
+    .fb {
+        background: url(../../assets/pictures/fb.svg) no-repeat center center;
+    }
+    .inst {
+        background: url(../../assets/pictures/inst.svg) no-repeat center center;
+    }
 .footer__body{
     padding: 0px 20px;
 }
@@ -58,8 +59,7 @@
     justify-content: space-between;
     max-width: 1160px;
     margin: 0px auto;
-    padding: 100px 0px;   
-    
+    padding: 100px 0px;      
 }
 .logo__bar {
     flex-grow: 3;
@@ -97,7 +97,8 @@ ul.bar__item:last-child{
     color: rgba(31, 32, 65, 0.75);
 }
 li.item__header {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
@@ -148,18 +149,17 @@ li.item__header {
                 flex-basis: unset;
             }
         }
-        
     }
     .copyright__bar{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-bottom: 120px;
-            p {
-                text-align: center;
-            }
-            .bar__media {
-                margin-top: 25px;
-            }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 120px;
+        p {
+            text-align: center;
         }
+        .bar__media {
+            margin-top: 25px;
+        }
+    }
 }

@@ -3,21 +3,19 @@
     display: flex;
     flex-direction: row-reverse;
     &__star {
-    display: none;
-    margin: 0;
-    padding: 0;
-    &:checked ~ label {
+        display: none;
+        margin: 0;
+        padding: 0;
+        &:checked ~ label {
+                background: no-repeat center center  url(../../assets/pictures/rating.svg);
+        }
+        &:not(:checked) ~ label:hover ~ label {
+            background: no-repeat center center  url(../../assets/pictures/rating-border.svg);
+        }              
+        &:not(:checked) ~ label:hover ~ label {
             background: no-repeat center center  url(../../assets/pictures/rating.svg);
-    }
-    &:not(:checked) ~ label:hover ~ label {
-        background: no-repeat center center  url(../../assets/pictures/rating-border.svg);
-    }              
-    &:not(:checked) ~ label:hover ~ label {
-        background: no-repeat center center  url(../../assets/pictures/rating.svg);
-    }
-    }
-    
-    
+        }  
+    }    
     label {
         cursor: pointer;
         width: 24px;
@@ -27,5 +25,4 @@
             background: no-repeat center center  url(../../assets/pictures/rating.svg);
             }
     }
-    
 }

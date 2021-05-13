@@ -1,19 +1,23 @@
 .header{
-        font-family: "Montserrat_Bold";
+        font-family: 'Montserrat';
+        font-weight: bold;
         color: #1F2041;
         text-transform: uppercase;
         font-size: 12px;
-    }
+}
 .radio-button {
     color: rgba(31, 32, 65, 0.5);
     font-size: 14px;
     width : 220px;
     display: flex;
     justify-content: space-between;
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     margin : 16px 0px 16px 0px;
-    
-    .radio-button__option {
+    label.radio__option {
+        cursor: pointer;
+    }
+    .radio__option-button {
         background: #FFFFFF;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -28,10 +32,9 @@
         + span {
             position: relative;
             top : 2px;
-        }
-        
+        }       
     }
-    .radio-button__option::after {
+    .radio__option-button::after {
         content: '';
         display: inline-block;
         box-sizing: border-box;    
@@ -42,14 +45,14 @@
         border-radius: 10px;
         left: 3px;
         top : 2px;
-        }
-    .radio-button__option:checked{
+    }
+    .radio__option-button:checked{
         border: 1px solid #BC9CFF;
         + span {
             color: rgba(31, 32, 65, 0.75);
-            }
         }
-    .radio-button__option:checked::after {
+    }
+    .radio__option-button:checked::after {
         content: ''; 
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 10px;

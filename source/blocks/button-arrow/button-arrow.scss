@@ -8,17 +8,19 @@
     border-radius: 22px;
     outline: none;
     border : none;
-    font-family: 'Montserrat_Bold';
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: uppercase;
     color : #FFFFFF;    
     margin-top: 14px;    
     font-size: 12px;
     line-height: 15px;       
     position: relative;
+    cursor: pointer;
 }
 .button-arrow::after {
         content: 'arrow_forward';
-        font-family: "Material Icons";
+        font-family: 'Material Icons';
         color : #FFFFFF;
         text-transform: lowercase;
         position: absolute;

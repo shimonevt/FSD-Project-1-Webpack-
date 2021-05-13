@@ -3,6 +3,7 @@
     .checkbox__options-item {
         display: block;
         margin-bottom: 10px;
+        cursor: pointer;
         > .item-input {
             position : absolute;
             width: 1px;
@@ -38,7 +39,8 @@
             left:30px;
             max-width: 236px;
             p.text__header {
-                font-family: 'Montserrat_Bold';
+                font-family: 'Montserrat';
+                font-weight: bold;
                 font-size: 14px;
                 line-height: 18px;
                 color: rgba(31, 32, 65, 0.75);
@@ -50,7 +52,8 @@
                 line-height: 14px;
                 color: rgba(31, 32, 65, 0.5);
                 margin : 0px;
-                font-family: "Montserrat_Regular";
+                font-family: 'Montserrat';
+                font-weight: normal;
             }
         }
     }

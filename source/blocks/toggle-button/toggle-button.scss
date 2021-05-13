@@ -1,5 +1,6 @@
 .toggle {   
     width: 260px;
+    cursor: pointer;
     .toggle-button {       
         width: 40px;
         height: 20px;
@@ -12,6 +13,7 @@
         appearance: none;
         outline: none;
         transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+        cursor: pointer;
     }
     .toggle-button::after {
         content: '';
@@ -40,6 +42,8 @@
         font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
-        font-family: "Montserrat_Regular";
+        font-family: 'Montserrat';
+        font-weight: normal;
+        cursor: pointer;
     }
 }

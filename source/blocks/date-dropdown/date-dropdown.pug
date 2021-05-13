@@ -7,10 +7,10 @@ mixin date-dropdown(isUIelem=false)
             -fName="прибытие";
             -sName="выезд";
         .date-dropdown
-            .date__bar
-                .date__item
+            .date__bar.js-date__bar
+                .js-date__item.date__item
                     p.item__name=fName
-                    input.first-date(type="text", placeholder="ДД.ММ.ГГГГ")
+                    input.js-first-date.first-date(type="text", placeholder="ДД.ММ.ГГГГ")
                 .date__item
                     p.item__name=sName
-                    input.second-date(type="text", placeholder="ДД.ММ.ГГГГ")
+                    input.js-second-date.second-date(type="text", placeholder="ДД.ММ.ГГГГ")

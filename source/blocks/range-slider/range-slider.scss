@@ -12,13 +12,15 @@
         margin-bottom: 23.44px;
     }
     .slider__info-text{
-        font-family: "Montserrat_Bold";
+        font-family: 'Montserrat';
+        font-weight: bold;
         text-transform: uppercase;
         font-size: 12px;
     }
     .slider__values {
         display: flex;
-        font-family: "Montserrat_Regular";
+        font-family: 'Montserrat';
+        font-weight: normal;
         input {
             width: 35px;
             border: none;
@@ -47,6 +49,7 @@
     .irs {
         position: relative;   
         width: 266px;
+        cursor: pointer;
     }
     .irs-line,.irs-bar {
         top : 0px;
@@ -76,6 +79,7 @@
         border-radius: 10px;
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         top : -5px;
+        cursor: pointer;
         i {
             background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         }
