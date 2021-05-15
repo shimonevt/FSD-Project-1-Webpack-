@@ -8,7 +8,8 @@ body{
     margin: 145px 158px;
 }
 .color-column{
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     text-transform: capitalize;
     font-size: 19px;
     line-height: 28px;
@@ -27,7 +28,8 @@ body{
             position: relative;
             top: 7px;
             .text__color-name{
-                font-family: "Montserrat_Regular";
+                font-family: 'Montserrat';
+                font-weight: normal;
             }
         }
     }     
@@ -35,7 +37,8 @@ body{
 .type-column{
     width: 436px;
     .type-set-H1,.type-set-H2,.type-set-H3{
-        font-family: "Montserrat_Bold";
+        font-family: 'Montserrat';
+        font-weight: bold;
     }
     .type-set-H1{
         position: relative;
@@ -51,7 +54,8 @@ body{
         left: 20px;
     }
     .type-set-Body{
-        font-family: "Montserrat_Regular";
+        font-family: 'Montserrat';
+        font-weight: normal;
         color: rgba(31, 32, 65, 0.75);
         line-height: 24px;
     }
@@ -60,7 +64,7 @@ body{
         margin-bottom: 50px;
     }
     .type__header {
-        font-family: "Montserrat_Regular";
+        font-family: 'Montserrat';
         color: rgba(31, 32, 65, 0.25);
         margin: 0px 30px 0px 0px;
     }

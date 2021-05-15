@@ -11,14 +11,18 @@
                 color: rgba(31, 32, 65, 0.5);
             }
             li {
-                width: 40px;
+                min-width: 40px;
                 height: 40px; 
                 text-align: center;
-                line-height: 40px;                           
+                line-height: 40px;    
+                cursor: pointer;                       
                 a {
                     text-decoration: none;
                     color: rgba(31, 32, 65, 0.5);
                 }
+            }
+            li.disabled {
+                cursor: default;
             }
             li:first-child {
                 display: none;
@@ -26,15 +30,15 @@
             li.active {
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
                 border-radius: 22px;
-                .current {
-                    color : #FFFFFF;
+                >a {
+                    color : #FFFFFF;    
                     mix-blend-mode: screen;
                 }
             }
             li:last-child {
                 background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
                 border-radius: 22px;
-                .next {
+                >a {
                     font-family: 'Material Icons';
                     font-size: 24px;
                     color : #FFFFFF;

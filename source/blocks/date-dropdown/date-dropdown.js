@@ -1,9 +1,8 @@
 import 'air-datepicker';
 
 jQuery(($) => {
-  const $start = $('.js-first-date');
-  const $end = $('.js-second-date');
-
+  const $start = $(' .js-first-date');
+  const $end = $(' .js-second-date');
   const RangeDatePicker = $($start).datepicker({
     language: 'my-lang',
     range: true,

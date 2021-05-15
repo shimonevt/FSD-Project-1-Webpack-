@@ -1,31 +1,31 @@
 mixin card-booking(number='888',roomClass='люкс',costPerDay='9 990',selecTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
-            .card-booking.card
+            .card-booking.card.js-card-booking
                 .booking__info
                     .info__room
                         p №
                         p.room__number=' '+number
                         p.room__class=roomClass
-                    .info__price
-                        p.cost=costPerDay
+                    .info__price.js-info__price
+                        p.js-cost.cost=costPerDay
                         p <b>₽</b> в сутки
                 include ../../blocks/date-dropdown/date-dropdown
                 +date-dropdown()
                 +select(selecTitle,selectType,isActive,selectNum)
                 .booking__costs
                     .costs__room
-                        .room__description.description Стоимость номера
+                        .js-room__description.room__description.description Стоимость номера
                         .room__price.price 
-                            <div>0</div> ₽
+                            <div class="js-room__price__value room__price__value">0</div> ₽
                     .costs__discount
-                        .discount__description.description Сбор за услуги: скидка <div>2 179₽</div> <div class="info">i</div>
+                        .js-discount__description.discount__description.description Сбор за услуги: скидка <div class="js-discount__description__value discount__description__value">2 179₽</div> <div class="info">i</div>
                         .discount__price.price 
-                            <div>0</div> ₽
+                            <div class="js-discount__price__value discount__price__value">0</div> ₽
                     .costs__additional
                         .additional__description.description Сбор за дополнительные услуги<div class="info">i</div>
-                        .additional__price.price <div>0</div> ₽
+                        .additional__price.price <div class="js-additional__price__value additional__price__value">0</div> ₽
                     .costs__total
                         p Итого
                         .total-divider
-                        .total__price 0₽
+                        .js-total__price.total__price 0₽
                     +button-arrow('забронировать')
                     

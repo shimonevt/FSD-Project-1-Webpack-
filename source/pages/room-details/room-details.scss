@@ -1,17 +1,16 @@
 @import "../../import/import.scss";
 body {
-    font-family: "Montserrat_Regular";
+    font-family: 'Montserrat';
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
-    
 }
 span.entry-bar.smallscr i.material-icons {
     position: relative;
     top:4px;
     }
 .room-images__container {
-    
     height: 485px;
     max-width: 1440px;
     margin: 70px auto 67px;
@@ -26,13 +25,10 @@ span.entry-bar.smallscr i.material-icons {
     grid-area: f;
 }
 .image-container.second {
-   
     grid-area: s;
 }
 .image-container.third {
-    
     grid-area: th;
-    
 }
 .image-container {
     img {
@@ -96,10 +92,10 @@ span.entry-bar.smallscr i.material-icons {
     p.comment-number {
         margin: 0px;
     }
-    
 }
 p.container-header {
-    font-family: "Montserrat_Bold";
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 19px;
     line-height: 23px;
     margin: 0px 0px 20px 0px;
@@ -152,7 +148,8 @@ p.container-header {
         background: #FFFFFF;
         color: #BC9CFF;
         .number{
-            font-family: "Montserrat_Bold";
+            font-family: 'Montserrat';
+            font-weight: bold;
             font-size: 24px;
             line-height: 29px;
         }
@@ -204,8 +201,7 @@ p.cancel__text {
                             "rules cancel";
     }
 }
-@media(max-width: 560px) {
-    
+@media(max-width: 560px) {   
     .room-details__container {
         display: flex;
         flex-direction: column;
@@ -227,4 +223,3 @@ p.cancel__text {
         padding:0px 10px;
     }
 }
-
