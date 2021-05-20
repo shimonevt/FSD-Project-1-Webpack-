@@ -1,5 +1,5 @@
 jQuery(($) => {
-  const $filterDate = $('.js-dropdown-filter__input');
+  const $filterDate = $('.js-date-dropdown-filter__input');
   const DatePickerFilter = $filterDate.datepicker({
     language: 'my-lang',
     autoClose: false,
@@ -22,8 +22,7 @@ jQuery(($) => {
   $('.js-date-range-picker-filter .datepicker--button[data-action="today"]').click(() => {
     DatePickerFilter.hide();
   });
-  $('.js-dropdown-filter').click((ev) => {
-	  console.log('ok');
+  $('.js-date-dropdown-filter').click((ev) => {
     DatePickerFilter.show();
   });
   $($filterDate).datepicker().data('datepicker').selectDate(new Date(2019, 7, 19));

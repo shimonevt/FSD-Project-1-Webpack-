@@ -2,89 +2,67 @@
 .range-slider {
     width: 266px;
     margin-bottom: 10px;
-    .title { 
-        margin: 0px;
-    }
-    .slider__info {
+    &__info {
         display: flex;
         justify-content: space-between;
         height: 15px;
         margin-bottom: 23.44px;
     }
-    .slider__info-text{
-        font-family: 'Montserrat';
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 12px;
+    &__info_text{
+        @extend %label-text;
     }
-    .slider__values {
+    &__values {
+        @extend %regular-text;
         display: flex;
-        font-family: 'Montserrat';
-        font-weight: normal;
-        input {
-            width: 35px;
-            border: none;
-            margin: 0px;
-            outline : none;
-            font-size: 12px;
-            line-height: 14.63px;
-            color: rgba(31, 32, 65, 0.5);
-            padding : 0px;
-        }
+        align-items: center;
         p {
-            color: rgba(31, 32, 65, 0.5);
+            color: $dark-50;
             font-size: 12px;
             margin : 0px;
         }
-        .values-to {
+        &_to {
             margin-left: 2px;
         }
-    }
-    .irs--flat {
-        height: 6px;
-    }
-    .irs-to,.irs-from {
-        display: none;
     }
     .irs {
         position: relative;   
         width: 266px;
         cursor: pointer;
-    }
-    .irs-line,.irs-bar {
-        top : 0px;
-    }
-    .irs-single {
-        display: none;
-    }
-    .irs-line {
-        width: 266px;
-        height: 6px;
-        background: #FFFFFF;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-    }
-    .irs-max, .irs-min {
-        display: none;
-    }
-        .irs-bar {
-            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        &--flat {
+            height: 6px;
+        }
+        &-line,&-bar {
+            top : 0px;
+        }
+        &-single,&-max,&-min, &-to,&-from {
+            display: none;
+        }
+        &-line {
+            width: 266px;
+            height: 6px;
+            background: $white;
+            border: 1px solid $dark-25;
+            box-sizing: border-box;
+        }
+        &-bar {
+            background: $green-gradient;
             height: 6px;
             box-sizing: border-box;
         }
-    .irs-handle {
-        width: 16px;
-        height: 16px;
-        border: 2px solid #FFFFFF;
-        border-radius: 10px;
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        top : -5px;
-        cursor: pointer;
-        i {
-            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        &-handle {
+            width: 16px;
+            height: 16px;
+            border: 2px solid $white;
+            border-radius: 10px;
+            background: $green-gradient;
+            top : -5px;
+            cursor: pointer;
+            i {
+                background: $green-gradient;
+            }
         }
-    }
-    .irs--flat .irs-handle>i:first-child {
-        width: 0px;
+        &--flat &-handle>i:first-child {
+            width: 0px;
+        }
     }   
 }

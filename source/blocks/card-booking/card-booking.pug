@@ -1,31 +1,32 @@
-mixin card-booking(number='888',roomClass='люкс',costPerDay='9 990',selecTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
+mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽',selectTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
             .card-booking.card.js-card-booking
-                .booking__info
-                    .info__room
-                        p №
-                        p.room__number=' '+number
-                        p.room__class=roomClass
-                    .info__price.js-info__price
-                        p.js-cost.cost=costPerDay
-                        p <b>₽</b> в сутки
+                .card-booking__info
+                    .card-booking__room-info
+                        p.card-booking__number-symbol='№ '
+                        p.card-booking__number-value=number
+                        p.card-booking__room-class=roomClass
+                    .card-booking__price-info.js-card-booking__price-info
+                        p.card-booking__price-value.js-card-booking__price-value=cost+currency
+                        p.card-booking__price-interval в сутки
                 include ../../blocks/date-dropdown/date-dropdown
-                +date-dropdown()
-                +select(selecTitle,selectType,isActive,selectNum)
-                .booking__costs
-                    .costs__room
-                        .js-room__description.room__description.description Стоимость номера
-                        .room__price.price 
-                            <div class="js-room__price__value room__price__value">0</div> ₽
-                    .costs__discount
-                        .js-discount__description.discount__description.description Сбор за услуги: скидка <div class="js-discount__description__value discount__description__value">2 179₽</div> <div class="info">i</div>
-                        .discount__price.price 
-                            <div class="js-discount__price__value discount__price__value">0</div> ₽
-                    .costs__additional
-                        .additional__description.description Сбор за дополнительные услуги<div class="info">i</div>
-                        .additional__price.price <div class="js-additional__price__value additional__price__value">0</div> ₽
-                    .costs__total
-                        p Итого
-                        .total-divider
-                        .js-total__price.total__price 0₽
+                +date-dropdown
+                p.card-booking__subtitle=selectTitle
+                +select(selectType,isActive,selectNum)
+                .card-booking__costs
+                    .card-booking__room.card-booking__item
+                        .js-card-booking__room-description.card-booking__room-description.card-booking__description Стоимость номера
+                        .js-card-booking__room-price.card-booking__room-price 0₽
+                    .card-booking__discount.card-booking__item.js-card-booking__discount
+                        .card-booking__discount-description.js-card-booking__discount-description.card-booking__description Сбор за услуги: скидка 2 179₽
+                            .card-booking__info-icon i
+                        .card-booking__discount-price.card-booking__price 0₽
+                    .card-booking__additional.card-booking__item
+                        .card-booking__additional-description.card-booking__description Сбор за дополнительные услуги
+                            .card-booking__info-icon i
+                        .card-booking__additional-price.card-booking__price 0₽
+                    .card-booking__total.card-booking__item
+                        .card-booking__total-description Итого
+                        .card-booking__total-divider
+                        .js-card-booking__total-price.card-booking__total-price 0₽
                     +button-arrow('забронировать')
                     

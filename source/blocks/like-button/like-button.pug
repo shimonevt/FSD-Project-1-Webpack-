@@ -7,6 +7,6 @@ mixin like-button(num="2",isActive=false)
             -heartText="favorite_border"
         div(class="like-button"+buttonClass)
             .js-like-button__body.like-button__body
-                .body__like-img.js-body__like-img
-                    i.material-icons.md-10.js-heart.heart=heartText
-                .js-body__like-nmbr.body__like-nmbr=num
+                .like-button__img.js-like-button__img
+                    i.material-icons.md-10.js-like-button__img_heart.like-button__img_heart=heartText
+                .js-like-button__nmbr.like-button__nmbr=num

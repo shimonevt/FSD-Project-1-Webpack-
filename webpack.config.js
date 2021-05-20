@@ -23,6 +23,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      source: path.resolve(__dirname,"source"),
       assets: path.resolve(__dirname, "source/assets"),
       pictures: path.resolve(__dirname,"source/assets/pictures")
     }

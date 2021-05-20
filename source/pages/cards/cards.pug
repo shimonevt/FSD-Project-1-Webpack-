@@ -16,13 +16,13 @@ html(lang="en")
     body 
         +logo
         .cards__container
-            .col
+            .cards__col
                 +card-room-search()
-                +card-registration()
-            .col
-                +card-booking('888','люкс','9 990','гости','guests',false,[1,2,0])
+                +card-registration('перейти к оплате')
+            .cards__col
+                +card-booking('888','люкс','9 990','₽','гости','guests',false,[1,2,0])
                 +card-login
-            .col
+            .cards__col
                 +calendar()
                 +card-hotel-room()
                 +card-hotel-room("840","room-840.jpg",false,4,"9 990","145 ")

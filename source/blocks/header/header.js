@@ -5,7 +5,7 @@ jQuery(document).ready(($) => {
     $($headerList).toggleClass('active');
     $(listButton).toggleClass('active');
   });
-  $('.js-list__options .js-options-header').click((ev) => {
+  $('.js-header__item_options .js-options-header').click((ev) => {
     const optionsHeader = ev.target;
     const $listOptions = optionsHeader.closest('.js-list__options');
     $($listOptions).toggleClass('active');

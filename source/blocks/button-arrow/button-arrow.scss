@@ -1,32 +1,28 @@
 .button-arrow {
+    @extend %label-text;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background : $purple-gradient;
     height:44px; 
     border-radius: 22px;
     outline: none;
     border : none;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    text-transform: uppercase;
-    color : #FFFFFF;    
-    margin-top: 14px;    
-    font-size: 12px;
-    line-height: 15px;       
+    color : $white;    
+    margin-top: 14px;        
     position: relative;
     cursor: pointer;
-}
-.button-arrow::after {
+    &::after {
         content: 'arrow_forward';
         font-family: 'Material Icons';
-        color : #FFFFFF;
+        color : $white;
         text-transform: lowercase;
         position: absolute;
         font-size: 24px;
         right: 10px;
     }
-    .button-arrow:hover{
+    &:hover{
         opacity: 0.5;
     }
+}

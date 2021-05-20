@@ -1,5 +1,7 @@
 @import "../styles/normalise.scss";
 @import "../fonts.scss";
+@import "../styles/colors.scss";
+@import "../styles/mixins.scss";
 @import "../blocks/bullet-list/bullet-list.scss";
 @import "../blocks/button-arrow/button-arrow.scss";
 @import "../blocks/button-border/button-border.scss";
@@ -28,6 +30,5 @@
 @import "../blocks/rating/rating.scss";
 @import "../blocks/select/select.scss";
 @import "../blocks/text-field/text-field.scss";
-@import "../blocks/text-field-masked/text-field-masked.scss";
 @import "../blocks/text-field-subscription/text-field-subscription.scss";
 @import "../blocks/toggle-button/toggle-button.scss";

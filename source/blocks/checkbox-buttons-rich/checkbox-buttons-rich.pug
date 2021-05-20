@@ -1,15 +1,12 @@
-mixin rich-checkbox-buttons()
-        .checkbox-buttons-rich
-            label.checkbox__options-item
-                input.item-input(type="checkbox")
-                span.check__box
-                .item__text
-                    p.text__header Широкий коридор
-                    p Ширина коридоров в номере не менее 91 см.
-            label.checkbox__options-item
-                input.item-input(type="checkbox")
-                span.check__box
-                .item__text
-                    p.text__header Помощник для инвалидов
-                    p На 1 этаже вас встретит специалист и проводит до номера.        
+mixin rich-checkbox-buttons(props={})
+    -let { items } = props
+        .rich-checkbox-buttons
+            each item in items
+                -let { header, mainText } = item
+                label.rich-checkbox-buttons__item
+                    input.rich-checkbox-buttons__input(type="checkbox")
+                    span.rich-checkbox-buttons__check-box
+                    .rich-checkbox-buttons__text
+                        p.rich-checkbox-buttons__text_header=header
+                        p.rich-checkbox-buttons__text_main=mainText      
             

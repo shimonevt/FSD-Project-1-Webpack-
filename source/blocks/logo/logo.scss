@@ -2,5 +2,11 @@
     margin : 30px 0px 0px 30px;
     height: 48px;
     width: 48px;
-    background: url(../../assets/pictures/logo.png) no-repeat center center;
+    background: url(./pictures/logo.png) no-repeat center center;
+}
+.logo.colored {
+    margin: 0px;
+    width: 105.69px;
+    height: 40px;
+    background: url(./pictures/toxin.svg) no-repeat center center;
 }

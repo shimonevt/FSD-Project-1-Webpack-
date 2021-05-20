@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-mixin card-registration(name='',fullname='',buttonArrowText)
-        .card-registration.card
+mixin card-registration(buttonArrowText)
+        .card-registration
             p.card__title Регистрация аккаунта
-            +text-field(name,'Имя','text')
-            +text-field(fullname,'Фамилия', 'text')
+            +text-field('Имя','text')
+            +text-field('Фамилия', 'text')
             +radio-button
             p.card__subtitle дата рождения
-            +text-field-masked()
+            +text-field('ДД.ММ.ГГГГ','email',true)
             p.card__subtitle данные для входа в сервис
-            +text-field('','Email','email')
-            +text-field('','Пароль','password')
+            +text-field('Email','email')
+            +text-field('Пароль','password')
             +toggle
             +button-arrow(buttonArrowText)
             .log-in

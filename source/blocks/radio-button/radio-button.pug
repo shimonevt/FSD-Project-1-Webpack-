@@ -1,23 +1,20 @@
 mixin radio-button(header="",gender="man")
-        p.header=header
-        if gender="man"
-            .radio-button
+        .radio-button
+            if gender="man"
                 label.radio__option
                     input.radio__option-button(type="radio", name="gender" checked)
                     span Мужчина
                 label.radio__option
                     input.radio__option-button(type="radio", name="gender")
                     span Женщина
-        else if gender="woman"
-            .radio-button
+            else if gender="woman"
                 label.radio__option
                     input.radio__option-button(type="radio", name="gender")
                     span Мужчина
                 label.radio__option
                     input.radio__option-button(type="radio", name="gender" checked)
                     span Женщина
-        else
-            .radio-button
+            else
                 label.radio__option
                     input.radio__option-button(type="radio", name="gender")
                     span Мужчина

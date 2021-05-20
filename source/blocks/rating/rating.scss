@@ -7,22 +7,22 @@
         margin: 0;
         padding: 0;
         &:checked ~ label {
-                background: no-repeat center center  url(../../assets/pictures/rating.svg);
+            background: no-repeat center center  url(./pictures/rating.svg);
         }
         &:not(:checked) ~ label:hover ~ label {
-            background: no-repeat center center  url(../../assets/pictures/rating-border.svg);
+            background: no-repeat center center  url(./pictures/rating-border.svg);
         }              
         &:not(:checked) ~ label:hover ~ label {
-            background: no-repeat center center  url(../../assets/pictures/rating.svg);
+            background: no-repeat center center  url(./pictures/rating.svg);
         }  
     }    
-    label {
+    &__label {
         cursor: pointer;
         width: 24px;
         height: 24px;
-        background: no-repeat center center url(../../assets/pictures/rating-border.svg);
+        background: no-repeat center center url(./pictures/rating-border.svg);
         &:hover {
-            background: no-repeat center center  url(../../assets/pictures/rating.svg);
+            background: no-repeat center center  url(./pictures/rating.svg);
             }
     }
 }

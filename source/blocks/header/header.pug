@@ -1,43 +1,53 @@
 mixin header(authorization = false,userName="юлий цезарь")
+    -const listItems =['О нас','Услуги','Вакансии','Новости', 'Соглашения'];
+    -const agreeList = ['Соглашение 1','Соглашение 2'];
+    -const optionsList = ['Услуга 1','Услуга 2'];
     header.header
         .header__body 
-            .header__logo 
+            .header__logo
+                +logo(true) 
             nav.header__menu.js-header__menu
-                ul.header__list.js-header__list 
-                    li
-                        a(href="") О нас 
-                    li.list__options.js-list__options
-                        .options-header.js-options-header 
-                            a Услуги
-                            span.arrow expand_more
-                        .options-bar 
-                            p.options-bar__item 
-                                a(href="") Услуга 1
-                            p.options-bar__item 
-                                a(href="") Услуга 2
-                    li
-                        a(href="") Вакансии
-                    li 
-                        a(href="") Новости
-                    li.list__agree.js-list__agree 
-                        .agree-header.js-agree-header
-                            a Соглашения
-                            span.arrow expand_more
-                        .agree-bar 
-                            p.agree-bar__option
-                                a(href="") Соглашение 1 
-                            p.agree-bar__option
-                                a(href="") Соглашение 2
-                    if authorization 
+                ul.header__list.js-header__list
+                    -let i = 0
+                    each item in listItems 
+                        if i == 0
+                            li.header__item_about
+                                a.header__item_href(href="")=listItems[i] 
+                        else if i == 1
+                            li.header__item_options.js-header__item_options.header__item
+                                .options-header.js-options-header 
+                                    a.header__item_href=listItems[i]
+                                    span.arrow expand_more
+                                .options-bar 
+                                    p.options-bar__item 
+                                        a(href="") Услуга 1
+                                    p.options-bar__item 
+                                        a(href="") Услуга 2
+                        else if i == 4
+                            li.list__agree.js-list__agree 
+                                .agree-header.js-agree-header
+                                    a Соглашения
+                                    span.arrow expand_more
+                                .agree-bar 
+                                    p.agree-bar__option
+                                        a(href="") Соглашение 1 
+                                    p.agree-bar__option
+                                        a(href="") Соглашение 2
+                        else if i == 5
+                            if authorization 
                 
-                    else
-                        li.entry-bar
-                            a(href="sign-in.html")
-                                +button-border('войти')
-                            a(href="registration.html")
-                                +button-filled('зарегистрироваться')
-                if authorization 
-                        .bar-smallscr.js-bar-smallscr
+                            else
+                                li.entry-bar
+                                    a(href="sign-in.html")
+                                        +button-border('войти')
+                                    a(href="registration.html")
+                                        +button-filled('зарегистрироваться')
+                        else
+                            li.header__item
+                                a.header__item_href(href="")=listItems[i] 
+                        -i++                 
+                .bar-smallscr.js-bar-smallscr
+                    if authorization
                             .entry-bar 
                                     .divider
                                     p.login=userName
@@ -46,8 +56,7 @@ mixin header(authorization = false,userName="юлий цезарь")
                             span.entry-bar.smallscr.id 
                                 a(href="")
                                     i.material-icons person
-                else
-                        .bar-smallscr.js-bar-smallscr
+                    else
                             .header__list.smallscr.js-header__list
                                 span
                             span.entry-bar.smallscr.login
@@ -55,7 +64,4 @@ mixin header(authorization = false,userName="юлий цезарь")
                                     i.material-icons input
                             span.entry-bar.smallscr.register 
                                 a(href="registration.html")
-                                    i.material-icons person_add
-                            
-            
-            
+                                    i.material-icons person_add                           

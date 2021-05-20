@@ -1,4 +1,4 @@
-mixin select(infoType='dropdown',selectType='guests',isActive=false,values=[0,0,0])
+mixin select(selectType='guests',isActive=false,values=[0,0,0])
             -let minValue = 0;
             -let names, listData;
             -let selectClass;
@@ -13,7 +13,6 @@ mixin select(infoType='dropdown',selectType='guests',isActive=false,values=[0,0,
                 -names = ['взрослые', 'дети', 'младенцы']
                 -listData = ['guests', 'guests', 'babies']
             div(class=selectClass,data-type=selectType)
-                p.info__type=infoType
                 .select__body.js-select__body
                     if selectType =='guests'
                         .js-select__text.select__text(type='guests') Сколько гостей
@@ -21,25 +20,25 @@ mixin select(infoType='dropdown',selectType='guests',isActive=false,values=[0,0,
                         .js-select__text.select__text(type='rooms') Выберите комнаты                            
                     .select__bar.js-select__bar
                         ul.select__list.js-select__list
-                                -let i =0
+                                -let i = 0
                                 each name in names
                                     if values[i]<0
                                         -vals[i]=minValue
-                                    .js-list__group.list__group(data-item=listData[i])
-                                        li.list__item=names[i]
-                                        .buttons__group.js-buttons__group
+                                    .js-select__group.select__group(data-item=listData[i])
+                                        li.select__item.js-select__item=names[i]
+                                        .select__buttons.js-select__buttons
                                             if values[i]==minValue
-                                                .button__minus.js-button__minus.js-button.button -
+                                                .js-select__button-minus.select__button-minus.js-select__button.select__button -
                                             else
-                                                .button__minus.js-button__minus.js-button.button.active -
-                                            p.js-item__count.item__count=values[i]
-                                            .js-button__plus.js-button.button__plus.button +
+                                                .js-select__button-minus.select__button-minus.js-select__button.select__button.active -
+                                            p.js-select__count.select__count=values[i]
+                                            .js-select__button-plus.select__button-plus.js-select__button.select__button +
                                     -i++
                         if selectType =='guests'
-                            .edit-buttons.js-edit-buttons
-                                .edit__clear.edit-btn.js-edit__clear
+                            .select__edit-buttons.js-select__edit-buttons
+                                .select__button-clear.select__edit-button.js-select__button-clear
                                     include ../button-icon/button-icon
                                     +button-icon('очистить',1)
-                                .edit__accept.edit-btn.js-edit__accept
+                                .select__button-accept.select__edit-button.js-select__button-accept
                                     include ../button-icon/button-icon
                                     +button-icon('применить',0)

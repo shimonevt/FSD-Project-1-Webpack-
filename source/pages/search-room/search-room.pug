@@ -21,14 +21,24 @@ html(lang="en")
                     i.material-icons keyboard_arrow_right
                 p.header Даты пребывания в отеле
                 +date-dropdown-filter
-                +select('гости','guests',false,[3,0,1])
+                +select('guests',false,[3,0,1])
                 +range-slider
                 .text Стоимость за сутки пребывания в номере
-                +checkbox-buttons('правила дома',[0,1,1])
+                +checkbox-buttons([0,1,1],'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
                 p.header доступность
-                +rich-checkbox-buttons
-                +select('удобства номера','rooms',false,[2,2,0])
-                +checkbox-list('дополнительные удобства',false,[0,1,1,1,0,0])
+                +rich-checkbox-buttons({
+                    items: [
+                        {
+                            header: 'Широкий коридор',
+                            mainText: 'Ширина коридоров в номере не менее 91 см.'
+                        },
+                        {
+                            header: 'Помощник для инвалидов',
+                            mainText: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                        }
+                        ]})
+                +select('rooms',false,[2,2,0])
+                +checkbox-list('дополнительные удобства',true,[0,1,1,1,0,0],'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
             .room__container
                 span 
                     .button-smallscr

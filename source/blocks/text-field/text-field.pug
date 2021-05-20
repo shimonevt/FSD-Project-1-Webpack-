@@ -1,6 +1,9 @@
-mixin text-field(header="text field",text="Email",text_type="email") 
-            .text-field
-                p.text-field__info=header
-                .text-field__body
-                    form(action="", method="post")
-                        input(type=text_type, placeholder=text)
+mixin text-field(text='Email',text_type='email',masked=false)
+    -let textClass;
+    if masked
+        -textClass = 'text-field-masked'
+    else 
+        -textClass = '' 
+    div(class='text-field '+textClass)
+        div(class='text-field__body '+textClass+'__body')
+            input.text-field__input(class='text-field__input '+textClass+'__input',type=text_type, placeholder=text)

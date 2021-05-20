@@ -8,5 +8,5 @@ import './card-hotel-room/card-hotel-room';
 import './range-slider/range-slider';
 import './like-button/like-button';
 import './pagination/pagination';
-import './text-field-masked/text-field-masked';
+import './text-field/text-field';
 import './select/select';

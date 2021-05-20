@@ -1,19 +1,14 @@
 @import "../../import/import.scss";
 body{
-    background: #F4F4F6;
+    background: $white;
     display: flex;
     .cards__container{
         padding : 150px 140px 140px 140px;
         display: flex;
     }
-    .col {
+    .cards__col {
         display: inline-block;
         margin: 0px 40px 0px 0px;
-        .card{
-            margin-bottom: 40px;
-        }
-        .calendar {
-            margin-bottom: 40px;
-        }
+        width: 380px;
     }
 }

@@ -1,13 +1,4 @@
 mixin date-dropdown-filter(isUIelem=false)
-        -let name;
-        if isUIelem
-            -name="date dropdown filter";
-        else
-
-        .date-dropdown-filter
-            p.info__type=name
-            .text-field__body.dropdown-filter.js-dropdown-filter
-                form(method="post")
-                    input.js-dropdown-filter__input.dropdown-filter__input(type="text" placeholder="")
-                button
-                    i.material-icons.md-24 expand_more
+    .date-dropdown-filter.js-date-dropdown-filter
+        .date-dropdown-filter__body.js-date-dropdown-filter__body
+            input.js-date-dropdown-filter__input.date-dropdown-filter__input(type="text" placeholder="")

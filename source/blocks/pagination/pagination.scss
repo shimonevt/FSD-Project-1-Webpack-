@@ -1,14 +1,14 @@
 .pagination {
     font-family: 'Montserrat';
     font-weight: normal;
-    .pagination__body {
+    &__body {
         ul {
             list-style: none;
             display: flex;          
             padding-left: 0px;
             font-size: 12px;
             .ellipse.clickable {
-                color: rgba(31, 32, 65, 0.5);
+                color: $dark-50;
             }
             li {
                 min-width: 40px;
@@ -18,7 +18,7 @@
                 cursor: pointer;                       
                 a {
                     text-decoration: none;
-                    color: rgba(31, 32, 65, 0.5);
+                    color: $dark-50;
                 }
             }
             li.disabled {
@@ -28,20 +28,20 @@
                 display: none;
             }
             li.active {
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                background: $purple-gradient;
                 border-radius: 22px;
                 >a {
-                    color : #FFFFFF;    
+                    color : $white;    
                     mix-blend-mode: screen;
                 }
             }
             li:last-child {
-                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                background: $green-gradient;
                 border-radius: 22px;
                 >a {
                     font-family: 'Material Icons';
                     font-size: 24px;
-                    color : #FFFFFF;
+                    color : $white;
                     display: inline;
                 }
             }
@@ -49,7 +49,7 @@
     }
     .pagination__count {
         margin: 10px 0px 0px;
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
         font-size: 14px;
         text-align: center;
     }

@@ -1,26 +1,13 @@
-mixin checkbox-list(text='дополнительные удобства',isActive=false,isChecked=[0,0,0,0,0,0])
+mixin checkbox-list(text='дополнительные удобства',isActive=false,values,...items)
         if isActive
             -listClass ='active'
         else
             -listClass =''
-        -let items = ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']
         .checkbox-list.js-checkbox-list
-            div.js-list__info(class="list__info "+listClass)
-                .info__type=text
-                .info__arrow
+            div.js-checkbox-list__info(class="checkbox-list__info "+listClass)
+                .checkbox-list__info_title=text
+                .checkbox-list__info_arrow
                     i.material-icons.md-24 expand_more
-            div.js-list__options(class="list__options "+listClass)
-                -let i =0
-                each name in items
-                    if isChecked[i]
-                        label.options__item
-                            input.item__input(type="checkbox" checked)
-                            span.check__box 
-                            p=items[i]
-                    else
-                        label.options__item
-                            input.item__input(type="checkbox")
-                            span.check__box 
-                            p=items[i]
-                    -i++
+            div.js-checkbox-list__options(class="checkbox-list__options "+listClass)
+                +checkbox-buttons(values,...items)
                 

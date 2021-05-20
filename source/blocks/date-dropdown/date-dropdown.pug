@@ -1,4 +1,4 @@
-mixin date-dropdown(isUIelem=false)
+mixin date-dropdown
         -let fName,sName;
         if isUIelem
             -fName="date dropdown";
@@ -7,10 +7,10 @@ mixin date-dropdown(isUIelem=false)
             -fName="прибытие";
             -sName="выезд";
         .date-dropdown
-            .date__bar.js-date__bar
-                .js-date__item.date__item
-                    p.item__name=fName
-                    input.js-first-date.first-date(type="text", placeholder="ДД.ММ.ГГГГ")
-                .date__item
-                    p.item__name=sName
-                    input.js-second-date.second-date(type="text", placeholder="ДД.ММ.ГГГГ")
+            .date-dropdown__bar.js-date-dropdown__bar
+                .js-date-dropdown__item.date-dropdown__item
+                    p.date-dropdown__name=fName
+                    input.js-date-dropdown__first-date.date-dropdown__first-date(type="text", placeholder="ДД.ММ.ГГГГ")
+                .js-date-dropdown__item.date-dropdown__item
+                    p.date-dropdown__name=sName
+                    input.js-date-dropdown__second-date.date-dropdown__second-date(type="text", placeholder="ДД.ММ.ГГГГ")

@@ -1,53 +1,34 @@
-.text-field {
+.text-field,.text-field-masked {
+    @extend %regular-text;
     max-width: 320px;
     margin: 0px 0px 20px 0px;
-    font-size: 14px;
     line-height: 18px;
-    font-family: 'Montserrat';
-    font-weight: normal;
-        p.text-field__info { 
-            margin : 0px 0px 5px 0px;
-            display: flex;
-            justify-content: space-between;
-            text-transform: uppercase;
-            font-size: 12px;
-            line-height: 15px;
-            color: #1F2041;
-            font-family: 'Montserrat';
-            font-weight: bold;                    
-        }
-}
-.text-field__body {
+    &__body {
         height: 44px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
+        border: 1px solid  $dark-25;
         border-radius: 4px;
         box-sizing: border-box;
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
         display: flex;
-        form {
-            font-size: 14px; 
-            width: 99%;
-        }
-        form >input {
-            width: 90%;
-            padding : 12px 0px 12px 15px;
-            position: relative;
-            top: 1px;
-            outline : none;
-            border: none;
-            border-radius: 4px;
-            color: rgba(31, 32, 65, 0.75);
-        } 
-        input::placeholder {
-            color: rgba(31, 32, 65, 0.25);
-        }     
-        .text-field__body:hover,.text-field__body:focus {
-        border: 1px solid rgba(31, 32, 65, 0.5);
-        }    
+        padding-bottom: 1px;
     }
-.text-field__body:hover {
-        border: 1px solid rgba(31, 32, 65, 0.5);
-        input::placeholder {
-            color:rgba(31, 32, 65, 0.75);
+    &__input {
+        width: 90%;
+        padding : 12px 0px 12px 15px;
+        position: relative;
+        top: 1px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        color: $dark-75;
+    } 
+    &__input::placeholder {
+        color: $dark-25;
+    }     
+    &__body:hover {
+        border: 1px solid $dark-50;
+        .text-field__input::placeholder {
+            color: $dark-75;
         }
+    }
 } 

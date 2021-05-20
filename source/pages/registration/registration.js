@@ -1,3 +1,3 @@
 import './registration.scss';
 import '../../blocks/header/header';
-import '../../blocks/text-field-masked/text-field-masked';
+import '../../blocks/text-field/text-field';

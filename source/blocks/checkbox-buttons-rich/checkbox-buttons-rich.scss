@@ -1,60 +1,59 @@
-.checkbox-buttons-rich {
+.rich-checkbox-buttons {
     max-width: 266px;
-    .checkbox__options-item {
+    &__item {
         display: block;
         margin-bottom: 10px;
         cursor: pointer;
-        > .item-input {
-            position : absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0 );
+        position: relative;
+    }
+    &__input {
+        position : absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0 );
+    }
+    &__check-box {
+        margin-left: 0px;
+    }
+    &__input:checked  + &__check-box {
+        border : 1px solid $purple;        
+    }
+    &__input:checked  + &__check-box:before {
+        content : '';
+        position : absolute;
+        left: 4px;
+        top : 3.5px;
+        width: 9.9px;
+        height: 9px;
+        background: url(../../assets/pictures/vector.svg) no-repeat center center;
+    } 
+    &__check-box {
+        position: absolute;
+        top: -2px;
+        width: 18px;
+        height: 18px;
+        background-color: $white;
+        border:  1px solid $dark-25;
+        border-radius: 4px;
+    }
+    &__text {
+        position: relative;
+        left:30px;
+        max-width: 236px;
+        &_header {
+            @extend %label-text;
+            line-height: 18px;
+            color: $dark-75;
+            margin-top: 0px;
+            margin-bottom: 5px;
         }
-        .check__box {
-            margin-left: 0px;
-        }
-        .item-input:checked  + .check__box {
-            border : 1px solid #BC9CFF;        
-        }
-        .item-input:checked  + .check__box:before {
-                content : '';
-                position : absolute;
-                left: 4px;
-                top : 3.5px;
-                width: 9.9px;
-                height: 9px;
-                background: url(../../assets/pictures/vector.svg) no-repeat center center;
-        } 
-        .check__box {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            background-color: #FFFFFF;
-            border:  1px solid rgba(31, 32, 65, 0.25);
-            border-radius: 4px;
-        }
-        .item__text {
-            position: relative;
-            left:30px;
-            max-width: 236px;
-            p.text__header {
-                font-family: 'Montserrat';
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 18px;
-                color: rgba(31, 32, 65, 0.75);
-                margin-top: 0px;
-                margin-bottom: 5px;
-            }
-            p {
-                font-size: 12px;
-                line-height: 14px;
-                color: rgba(31, 32, 65, 0.5);
-                margin : 0px;
-                font-family: 'Montserrat';
-                font-weight: normal;
-            }
+        &_main {
+            @extend %regular-text;
+            font-size: 12px;
+            line-height: 14px;
+            color: $dark-50;
+            margin : 0px;
         }
     }
 }

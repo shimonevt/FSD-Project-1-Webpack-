@@ -1,18 +1,9 @@
-.header{
-        font-family: 'Montserrat';
-        font-weight: bold;
-        color: #1F2041;
-        text-transform: uppercase;
-        font-size: 12px;
-}
 .radio-button {
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 14px;
+    @extend %regular-text;
+    color: $dark-50;
     width : 220px;
     display: flex;
     justify-content: space-between;
-    font-family: 'Montserrat';
-    font-weight: normal;
     margin : 16px 0px 16px 0px;
     label.radio__option {
         cursor: pointer;

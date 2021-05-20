@@ -1,2 +1,5 @@
-mixin logo()
-    .logo 
+mixin logo(isColored=false)
+    if isColored 
+        .logo.colored 
+    else
+        .logo 

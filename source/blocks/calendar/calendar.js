@@ -24,7 +24,7 @@ jQuery(($) => {
     clearButton: true,
     todayButton: true,
     monthsField: 'monthsShort',
-    classes: 'date-range-picker',
+    classes: 'calendar-date-range-picker',
     prevHtml: '<i class="material-icons md-24">arrow_back</i>',
     nextHtml: '<i class="material-icons md-24">arrow_forward</i>',
     navTitles: {
