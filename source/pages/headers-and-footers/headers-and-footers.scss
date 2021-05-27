@@ -1,16 +1,15 @@
 @import "../../import/import.scss";
 body{
     margin: 0px;
-    background: #e5e5e5;
-    .container {
+    background: $gray;
+}
+    .headers-and-footers__container {
         margin: 40px 0px;
     }
-    .header.container{
+    .headers-and-footers__container.header{
         height: 70px;
         position: relative;       
     }
-    header.header{
+    .header{
         position: relative;
     }
-
-}

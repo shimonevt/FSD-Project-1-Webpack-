@@ -85,9 +85,9 @@
         }
     }
 }    
-@media(max-width:750px){
+@media(max-width:768px){
     .footer {
-        &__footer__body {
+        &__body {
             max-width: 768px;
             margin: 0px auto;
             padding: 120px 104px 0px;
@@ -119,4 +119,9 @@
             margin-top: 25px;
         }
     }   
+}
+@media (max-width:  320px) {
+    .footer__body {
+        padding: 120px 10px 0px;
+    }
 }

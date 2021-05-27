@@ -17,16 +17,16 @@ html(lang="en")
             .color-set
                 .color-set__color-box(style="background: " + color + "; opacity: " + opacity)
                 .color-set__text-box
-                    .text__header=name+' '+ opacity
-                    .text__color-name=color
+                    .color-set__text-header=name+' '+ opacity
+                    .color-set__color-name=color
         mixin type-set(header,text,size)
             div(class="type-set type-set-"+header style="font-size: " +size)
-                p.type__header=header 
-                .type__text=text   
+                p.type-set__header=header 
+                .type-set__text=text   
         include ../../blocks/logo/logo
         +logo()
-        .colors-type-container
-            .color-column 
+        .colors-and-type__container
+            .colors-and-type__column-color 
                 +color-set('dark shade','#1F2041','100%') 
                 +color-set('dark shade','#1F2041','75%')
                 +color-set('dark shade','#1F2041','50%')
@@ -34,8 +34,8 @@ html(lang="en")
                 +color-set('dark shade','#1F2041','5%')
                 +color-set('purple','#BC9CFF')  
                 +color-set('green','#6FC97F')  
-            .type-column  
+            .colors-and-type__column-type   
                 +type-set('H1','This one is the sub-section or widget title','24px')
                 +type-set('H2','Next one is the item title inside widgets','19px')
                 +type-set('H3','This is a label or CTA text','12px')
-                +type-set('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.','14px')
+                +type-set('body','This is the body text which is used for most of the design, like paragraphs, lists, etc.','14px')

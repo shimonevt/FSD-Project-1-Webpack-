@@ -1,32 +1,31 @@
-mixin card-hotel-room(number="888",roomImg="room-888.jpg",isLuxe=true,starNum=5,roomCost="9 990",revNum="145 ")
-    .card-hotel-room.card
-        .card__image-slider(data-img=roomImg)
-                img(src=require("assets/pictures/"+roomImg))
-                img(src=require("assets/pictures/"+roomImg))
-                img(src=require("assets/pictures/"+roomImg))
-                img(src=require("assets/pictures/"+roomImg))
-        .hotel-room__info
-            .info-row
-                .info__room
-                    p № 
-                    p.room__number=number
+mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,roomCost='9 990',currency='₽ ', revNum='145 ')
+    .card-hotel-room
+        .card-hotel-room__image-slider.js-card-hotel-room__image-slider(data-img=roomImg)
+                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
+                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
+                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
+                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
+        .card-hotel-room__info
+            .card-hotel-room__info-row
+                .card-hotel-room__info-room
+                    p.card-hotel-room__number-symbol № 
+                    p.card-hotel-room__room-number=number
                     if isLuxe
-                        p.room__class="люкс"
+                        p.card-hotel-room__room-class="люкс"
                     else
-                .info__price
-                    p.cost=roomCost
-                    p ₽ 
-                    p  в сутки
-            span.divider
-            .info-row
+                .card-hotel-room__info-price
+                    p.card-hotel-room__room-cost=roomCost
+                    p.card-hotel-room__cost-currency=currency 
+                    p.card-hotel-room__duration в сутки
+            span.card-hotel-room__info-divider
+            .card-hotel-room__info-row
                 include ../../blocks/rating/rating
                 if isLuxe
                     +rating(starNum,number+"-room")
                 else
                     +rating(starNum,number+"-room")
-                <div class="info__guest">
-                    b.reviewNumber=revNum 
-                    span Отзывов
-                </div>
+                .card-hotel-room__info-guest
+                    b.card-hotel-room__review-number=revNum 
+                    .card-hotel-room__review-text Отзывов
                              
                     

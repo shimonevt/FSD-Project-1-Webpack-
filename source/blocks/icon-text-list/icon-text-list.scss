@@ -2,45 +2,46 @@
     max-width : 291px;
     &__group {
         display: flex;
-        .group__icon {
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            width: 46px;
-            height: 46px;
-            font-family: 'Montserrat';
-            font-weight: normal;
-            i {
-                background: #FFFFFF;
-                mix-blend-mode: screen;
-                font-size : 48px;
-                position: relative;
-                top:-5px;
-                left: -1px;
-                color:rgba(31, 32, 65, 1);
-            }
-        }
-        .group__text {
-            margin-left: 10px;
-            p {
-                font-size: 14px;
-                margin : 0px;
-                line-height: 24px;
-                color: rgba(31, 32, 65, 0.75);
-                font-family: 'Montserrat';
-                font-weight: normal;
-            }
-            .text__header {
-                font-family: 'Montserrat';
-                font-weight: bold;
-                margin-top : 0px;
-                
-            }
-        }
-        
     }
-    .group__divider {
-            background: rgba(31, 32, 65, 0.1);
-            height: 1px;
-            width: 100%;
-            margin : 20px 11px 20px 0px;
-            }
+    &__icon {
+        background: $purple-gradient;
+        width: 46px;
+        height: 46px;
+        i {
+            background: $white;
+            mix-blend-mode: screen;
+            font-size : 48px;
+            position: relative;
+            top:-5px;
+            left: -1px;
+            color:$dark-100;
+        }
+    }
+    &__text {
+        margin: 3px 0px 0px 10px;
+        line-height: 24px;
+    }
+    &__main-text {
+        @extend %regular-text;    
+        margin : 0px;
+        color: $dark-75;
+    }
+    &__header {
+        @extend %label-text;
+        color: $dark-75;
+        font-style: 14px;
+        margin : 0px;
+        text-transform: capitalize;
+    }
+    &__divider{
+        background: $dark-10;
+        height: 1px;
+        width: 100%;
+        margin : 20px 11px 20px 0px;
+    }
+}
+.room-details__container-info {
+    .icon-text-list__icon i {
+        top: 10px;
+    }
 }

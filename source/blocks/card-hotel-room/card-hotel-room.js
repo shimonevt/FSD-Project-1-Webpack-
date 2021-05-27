@@ -1,16 +1,18 @@
-import { data } from 'jquery';
-import './slick';
+import 'slick-carousel';
 
-jQuery(function($){
-    const imageSlider = this.querySelectorAll('.card__image-slider');
-    $(imageSlider).slick({
-        prevArrow: '<div class="slick-prev"><i class="material-icons">expand_more</i></div>',
-        nextArrow: '<div class="slick-next"><i class="material-icons">expand_more</i></div>',
-        dots: true,
-        dotsClass : 'slick-dots',
-        customPaging : function(slider, i) {
-            return '<div class="slick-dot custom"></div>';
-        },
+jQuery(function ($) {
+  const imageSlider = this.querySelectorAll('.js-card-hotel-room__image-slider');
+  function sliderInit(index, elem) {
+    $(elem).slick({
+      prevArrow: '<div class="slick-prev"><i class="material-icons">expand_more</i></div>',
+      nextArrow: '<div class="slick-next"><i class="material-icons">expand_more</i></div>',
+      dots: true,
+      dotsClass: 'slick-dots',
+      customPaging(slider, i) {
+        return '<div class="slick-dot custom"></div>';
+      },
     });
-    
+  }
+
+  $(imageSlider).each(sliderInit);
 });

@@ -5,7 +5,7 @@ mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽'
                         p.card-booking__number-symbol='№ '
                         p.card-booking__number-value=number
                         p.card-booking__room-class=roomClass
-                    .card-booking__price-info.js-card-booking__price-info
+                    .card-booking__price-info.js-card-booking__price-info(data-currency=currency)
                         p.card-booking__price-value.js-card-booking__price-value=cost+currency
                         p.card-booking__price-interval в сутки
                 include ../../blocks/date-dropdown/date-dropdown
@@ -23,7 +23,7 @@ mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽'
                     .card-booking__additional.card-booking__item
                         .card-booking__additional-description.card-booking__description Сбор за дополнительные услуги
                             .card-booking__info-icon i
-                        .card-booking__additional-price.card-booking__price 0₽
+                        .js-card-booking__additional-price.card-booking__additional-price.card-booking__price 0₽
                     .card-booking__total.card-booking__item
                         .card-booking__total-description Итого
                         .card-booking__total-divider

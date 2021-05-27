@@ -1,18 +1,21 @@
 jQuery(document).ready(($) => {
-  $('.js-header__list.smallscr').click((ev) => {
+  function headerListClick(ev) {
     const listButton = ev.target;
-    const $headerList = $(listButton).parent('.js-bar-smallscr').parent('.js-header__menu').children('.js-header__list');
+    const $headerList = $(listButton).parent('.js-header__bar-smallscr').parent('.js-header__menu').children('.js-header__list');
     $($headerList).toggleClass('active');
     $(listButton).toggleClass('active');
-  });
-  $('.js-header__item_options .js-options-header').click((ev) => {
+  }
+  function headerOptionsClick(ev) {
     const optionsHeader = ev.target;
-    const $listOptions = optionsHeader.closest('.js-list__options');
-    $($listOptions).toggleClass('active');
-  });
-  $('.js-list__agree .js-agree-header').click((ev) => {
+    const listOptions = optionsHeader.closest('.js-header__options');
+    $(listOptions).toggleClass('active');
+  }
+  function headerAgreeClick(ev) {
     const agreeHeader = ev.target;
-    const listAgree = agreeHeader.closest('.js-list__agree');
+    const listAgree = agreeHeader.closest('.js-header__agree');
     $(listAgree).toggleClass('active');
-  });
+  }
+  $('.js-header__list-smallscr').click(headerListClick);
+  $('.js-header__options').click(headerOptionsClick);
+  $('.js-header__agree').click(headerAgreeClick);
 });

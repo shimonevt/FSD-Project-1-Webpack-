@@ -54,7 +54,7 @@
     }
     &__price-interval {
         @extend %regular-text;
-        margin: 0px;
+        margin: 0px 0px 0px 4px;
         font-size: 12px;
         line-height: 18px;
         color: $dark-50;

@@ -2,8 +2,6 @@ import * as $ from 'jquery';
 
 $(document).ready(() => {
   const minValue = 0;
-  const selectGueststext = [];
-  const selectRoomstext = [];
   const type = {
     guests: 'guests',
     rooms: 'rooms',
@@ -32,79 +30,81 @@ $(document).ready(() => {
       words: ['', ' ванная комната', ' ванные комнаты', ' кроватей'],
     },
   ];
-  function writeListGroupText(itemArray, listType, value, stringSelectText) {
-    for (let i = 0; i < itemArray.length; i += 1) {
-      const { words } = itemArray[i];
-      if (itemArray[i].item === listType) {
-        let currentText;
-        if (value === 0) {
-          currentText = words[0];
-        } else if (value === 1) {
-          currentText = value + words[1];
-        } else if (value <= 4) {
-          currentText = value + words[2];
-        } else {
-          currentText = value + words[3];
-        }
-        stringSelectText[i] = currentText;
-        break;
+  function writeListGroupsText(itemsArray, totalCount) {
+    const stringSelectArray = [];
+    for (let i = 0; i < itemsArray.length; i += 1) {
+      let currentText;
+      const { words } = itemsArray[i];
+      if (totalCount[i] === 0) {
+        currentText = '';
+      } else if (totalCount[i] === 1) {
+        currentText = totalCount[i] + words[1];
+      } else if (totalCount[i] <= 4) {
+        currentText = totalCount[i] + words[2];
+      } else {
+        currentText = totalCount[i] + words[3];
       }
+      stringSelectArray.push(currentText);
     }
-    return stringSelectText;
+    return stringSelectArray;
   }
-  function writeSelectText(selectType, listType, selectText, value, stringSelectText) {
-    console.log(typeof stringSelectText);
-    if (selectType === type.guests) {
-      const $editButtons = $(selectText).parent('.js-select__body').find('.js-select__edit-buttons');
-      if (value > minValue) {
-        $($editButtons).addClass('active');
+  function writeSelectText($select, totalCount) {
+    const $selectType = $($select).data('type');
+    const $selectText = $($select).find('.js-select__text');
+    let selectTextArray = [];
+    if ($selectType === type.guests) {
+      const $editButtons = $($selectText).parent('.js-select__body').find('.js-select__edit-buttons');
+      for (let i = 0; i < totalCount.length; i += 1) {
+        if (totalCount[i] > minValue) {
+          $($editButtons).addClass('active');
+        }
       }
-      stringSelectText = writeListGroupText(itemGuests, listType, value, stringSelectText);
+      selectTextArray = writeListGroupsText(itemGuests, totalCount);
     } else {
-      stringSelectText = writeListGroupText(itemsRooms, listType, value, stringSelectText);
+      selectTextArray = writeListGroupsText(itemsRooms, totalCount);
     }
     let fullSelectText = '';
-    for (let i = 0; i < stringSelectText.length; i += 1) {
-      if (fullSelectText.length + stringSelectText.length >= 23) {
+    for (let i = 0; i < selectTextArray.length; i += 1) {
+      if (fullSelectText.length + selectTextArray.length >= 23) {
         fullSelectText += '...';
         break;
       }
-      const condition = i !== 0 && fullSelectText !== '' && stringSelectText[i] !== '';
+      const condition = i !== 0 && fullSelectText !== '' && selectTextArray[i] !== '';
       if (condition) {
         fullSelectText += ', ';
       }
-      fullSelectText += stringSelectText[i];
+      fullSelectText += selectTextArray[i];
     }
-    if (selectType === type.guests && fullSelectText === '') {
+    if ($selectType === type.guests && fullSelectText === '') {
       fullSelectText = 'Сколько гостей';
-    } else if (selectType === type.rooms && fullSelectText === '') {
+    } else if ($selectType === type.rooms && fullSelectText === '') {
       fullSelectText = 'Выберите комнаты';
     }
-    $(selectText).text(fullSelectText);
+    $($selectText).text(fullSelectText);
   }
-  function selectInit(_index, select) {
-    const $selectType = $(select).data('type');
-    const $selectText = $(select).find('.js-select__text');
+  function selectInit(_index, $select) {
+    const $selectType = $($select).data('type');
     let sum = 0;
     let notBabies = 0;
     if ($selectType === type.guests) {
-      $(select).find('.js-select__group').each((__index, listGroup) => {
+      $($select).find('.js-select__group').each((__index, listGroup) => {
         const $listType = $(listGroup).data('item');
         const value = parseInt($(listGroup).find('.js-select__count').text(), 10);
         if ($listType === itemGuests[0].item) {
           sum += value;
-          writeSelectText($selectType, $listType, $selectText, sum, selectGueststext);
         } else if ($listType === itemGuests[1].item) {
           notBabies += value;
-          writeSelectText($selectType, $listType, $selectText, notBabies, selectGueststext);
         }
       });
+      const totalCount = [sum, notBabies];
+      writeSelectText($select, totalCount);
     } else {
-      $(select).find('.js-select__group').each((__index, listGroup) => {
-        const $listType = $(listGroup).data('item');
-        const $value = $(listGroup).find('.js-select__count').text();
-        writeSelectText($selectType, $listType, $selectText, $value, selectRoomstext);
+      const totalCount = [];
+      $($select).find('.js-select__group').each((__index, listGroup) => {
+        const $value = parseInt($(listGroup).find('.js-select__count').text(), 10);
+        totalCount.push($value);
       });
+      writeSelectText($select, totalCount);
     }
   }
   function hideSelectText(event) {
@@ -134,12 +134,13 @@ $(document).ready(() => {
     const $selectClose = editAccept.closest('.js-select');
     $selectClose.classList.toggle('active');
   }
-  function selectRoomsCountTreatment($selectType, $select, $selectText) {
+  function selectRoomsCountTreatment($selectType, $select) {
+    const totalCount = [];
     $($select).find('.js-select__group').each((_index, listGroup) => {
-      const $listType = $(listGroup).data('item');
       const $value = parseInt($(listGroup).find('.js-select__count').text(), 10);
-      writeSelectText($selectType, $listType, $selectText, $value, selectRoomstext);
+      totalCount.push($value);
     });
+    writeSelectText($select, totalCount);
   }
   function selectGuestsCountTreatment($selectType, $select, $selectText, $editButtons) {
     let numberOfGuests = 0;
@@ -149,12 +150,12 @@ $(document).ready(() => {
       const $value = $(listGroup).find('.js-select__count').text();
       if ($listType === type.guests) {
         numberOfGuests += +$value;
-        writeSelectText($selectType, $listType, $selectText, numberOfGuests, selectGueststext);
       } else {
         notBabies += +$value;
-        writeSelectText($selectType, $listType, $selectText, notBabies, selectGueststext);
       }
     });
+    const totalCount = [numberOfGuests, notBabies];
+    writeSelectText($select, totalCount);
     if (numberOfGuests + notBabies === 0) {
       $($editButtons).removeClass('active');
     } else {
@@ -187,7 +188,7 @@ $(document).ready(() => {
       }
     }
     if ($selectType === type.rooms) {
-      selectRoomsCountTreatment($selectType, $select, $selectText);
+      selectRoomsCountTreatment($selectType, $select);
     } else {
       selectGuestsCountTreatment($selectType, $select, $selectText, $editButtons);
     }

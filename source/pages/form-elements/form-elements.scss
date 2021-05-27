@@ -1,45 +1,51 @@
 @import "../../import/import.scss";
 body{
-   background: #ffffff;
-   font-family: "Montserrat_Regular";
+   background: $white;
 }
-.form-elements__container {
-    padding: 140px 141px 130px 140px;    
-    .col-container {
+.form-elements {
+    padding: 140px 141px 130px 140px;
+    display: flex;
+    max-width: 1400px;
+    flex-wrap: wrap;
+    &__col{
         display: flex;
-    }
-    .col {
         margin-right: 126px;
         min-width: 320px;
+        flex-direction: column;
     }
-    .col.sec{
+    &__col-second{
         margin-right: 72px;
-        p.header {
-            margin-bottom: 16px;
-        }
     }
-    .col.third{
+    &__header {
+        @extend %label-text;
+        color: $dark-100;
+        margin: 0px 0px 5px 0px;
+    }
+    &__col-third{
         .slct-container {
             margin-top: 260px;
         }
     }
-    .container{
+    &__container{
         margin-bottom: 20px;
     }
-    .container.double-margin{
+    &__container.double-margin{
         
         margin-bottom: 40px;
     }
-    .container-select {
+    &__container-select {
         margin-top: 100px;
     }
-    .container-checkbox{
+    &__container-checkbox{
         margin-top: 158px;
     }
     .toggle-divider{
         height: 10px;
     }
-    .flex-container{
+    &__container-pagination{
+        margin-bottom: 122px;
+    }
+    &__container_flexible{
         display: flex;
         justify-content: space-between;
         max-width: 260px;
@@ -54,27 +60,29 @@ body{
         display: flex;
         margin-bottom: 40px;
     }
-    .btn-container {
+    &__container-button {
         margin-bottom: 30px;
+        max-width: 320px;
     }
-    .slct-container.first {
+    &__container-select.first {
         margin-top: 196px;
     }
-    .slct-container.second{
+    &__container-select.second{
         margin-top: 180px;
     }
-    .lst-container{
+    &__container-list{
         margin-top: 256px;
     }
-    .low-container{
+    &__container_low{
         display: flex;
         margin-top: 100px;
-        .icon-text-container{
-            display: block;
-            margin-right: 167px; 
-            .icon-text-list{
-                width: 291px;
-            }
-        }        
     }
-}
+    &__container-icon-text{
+        display: block;
+        margin-right: 167px; 
+        .icon-text-list{
+            width: 291px;
+        }
+    }        
+}   
+   

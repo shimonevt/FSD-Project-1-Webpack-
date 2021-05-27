@@ -1,4 +1,4 @@
-import 'air-datepicker';
+import '../calendar/calendar';
 
 jQuery(($) => {
   const $start = $('.js-date-dropdown__first-date');
@@ -25,6 +25,7 @@ jQuery(($) => {
       onShow(dp, animationCompleted) {
         if (animationCompleted) {
           dp.$datepicker.find('.datepicker--button[data-action="today"]').click((event) => {
+            $start.trigger('change');
             dp.hide();
           });
         }

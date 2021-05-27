@@ -39,6 +39,7 @@
     "cleave.js": "^1.6.0",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
-    "paginationjs": "^2.1.5"
+    "paginationjs": "^2.1.5",
+    "slick-carousel": "^1.8.1"
   }
 }

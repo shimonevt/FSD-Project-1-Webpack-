@@ -1,6 +1,6 @@
 @import '../../blocks/card-hotel-room/slick.css';
 
-.card-hotel-room.card {
+.card-hotel-room {
     width: 270px;
     height: 257px;
     padding : 0px;
@@ -9,173 +9,171 @@
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    .card__image-slider{
-                width: 270px;
-                height: 150px;
-                div {
-                    background-size: cover;
-                    height: 100%;
-                    >img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-    }
-        .slick-slider {
-            width: 270px;
-            height: 150px;
-            .slick-list.draggable{
-                border-radius: 4px 4px 0px 0px;
-            }
-            
-            .slick-arrow {
-                width: 150px;
-                height: 42px;
-                position : relative;
-                z-index : 1; 
-                align-items: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                opacity: 0;
-                transition-duration: 500ms;
-                cursor: pointer;
-            i.material-icons {
-                color : #ffffff; 
-                display: inline;
-            }
+    &__image-slider{
+        width: 270px;
+        height: 150px;
+        .slick-slide {
+            background-size: cover;
+            height: 100%;
         }
-        .slick-prev{
-                transform: rotate(90deg);
-                top: 53px;
-                left : -54px;
-                border-radius: 0px 0px 0px 4px;   
-            }
-            .slick-list {
-                height: 100%;
-                top:-43px;
-                width: 100%;
-                border-radius: 4px;
-            }
-            .slick-next {
-                transform: rotate(-90deg);
-                top : -139px;
-                left: 174px;
-                border-radius: 0px 0px 4px 0px; 
-            }
-            .slick-dots {
-            display: flex;
-            list-style: none;
-            margin : 0px;
-            position: relative;
-            top:-115px;
-            left: 213.75px;
-            width: 41.25px;
-            padding: 0px;
-            justify-content: space-between;
-            cursor:pointer;
-            li .slick-dot.custom{
-                width: 7.5px;
-                height: 7.49px;
-                background: none;
-                box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-                border-radius: 7.5px;
-                border: 1px solid #FFFFFF;
-                box-sizing: border-box;
-            }
-            li.slick-active .slick-dot.custom {
-                background: #FFFFFF;
-            }
-        }     
     }
-   .card__image-slider:hover {
-       .slick-arrow {
+    .slick-track {
+        height: 100%;
+    }
+    .slick-slide > div {
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    .slick-slider {
+        width: 270px;
+        height: 150px;
+    }
+    .slick-list.draggable{
+        border-radius: 4px 4px 0px 0px;
+    }
+    .slick-arrow {
+        width: 150px;
+        height: 42px;
+        position : relative;
+        z-index : 1; 
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition-duration: 500ms;
+        cursor: pointer;
+        i.material-icons {
+            color : $white; 
+            display: inline;
+        }
+    }
+    .slick-prev{
+        transform: rotate(90deg);
+        top: 53px;
+        left : -54px;
+        border-radius: 0px 0px 0px 4px;   
+    }
+    .slick-list {
+        height: 100%;
+        top:-43px;
+        width: 100%;
+        border-radius: 4px;
+    }
+    .slick-next {
+        transform: rotate(-90deg);
+        top : -139px;
+        left: 174px;
+        border-radius: 0px 0px 4px 0px; 
+    }
+    .slick-dots {
+        display: flex;
+        list-style: none;
+        margin : 0px;
+        position: relative;
+        top: -107px;
+        left: 213.75px;
+        width: 41.25px;
+        padding: 0px;
+        justify-content: space-between;
+        cursor:pointer;
+    }
+    .slick-dot.custom{
+        width: 7.5px;
+        height: 7.49px;
+        background: none;
+        box-shadow: 0px 5px 5px $dark-30;
+        border-radius: 7.5px;
+        border: 1px solid $white;
+        box-sizing: border-box;
+    }
+    .slick-active .slick-dot.custom {
+        background: $white;
+    }         
+    &__image-slider:hover {
+        .slick-arrow {
            opacity: 1;
            transition-duration: 500ms;
-       }
-   }
-   .slick-next:hover, .slick-prev:hover {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-            transition-duration: 500ms;
         }
-    .hotel-room__info{
-        padding : 20px 17px 19px 18px;
-        .info__room {
-            p {
-               font-size: 14px;
-               display: inline;
-               margin: 0px;
-               color: #1F2041;
-               }
-               p:first-child {
-                   font-family: 'Quicksand';
-                   font-weight: bold;
-               }
-           .room__number {
-               font-family: 'Quicksand';
-               font-weight: bold;
-               font-size: 20px;
-               color: #1F2041;
-               }
-           .room__class {
-               margin-left: 1px;
-               font-family: 'Montserrat';
-               font-weight: bold;
-               font-size: 14px;
-               line-height: 14.63px;
-               color: #BC9CFF;
-               }
-       }
-        .info-row {
-            font-family: 'Montserrat';
-            font-weight: normal;
-            font-size: 14px;
-            color: rgba(31, 32, 65, 0.5);
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            color: rgba(31, 32, 65, 0.5);
-            line-height: 17.5px;
-            p {
-                display: inline;
-                font-family: 'Montserrat';
-                font-weight: bold;
-                margin : 0px;
-                line-height: 18px;
-            }
-            .info__price{
-                display: flex;
-                align-items: center;
-            }
-            .info__price p:nth-child(3) {
-                margin-left: 2px;
-                font-family: 'Montserrat';
-                font-weight: normal;
-            }
-        }
-            .info__guest {
-                font-family: 'Montserrat';
-                font-weight: normal;
-                text-transform: capitalize;
-                position: relative;
-                line-height: 18px;
-                display: flex;
-                align-items: center;
-                b {
-                font-family: 'Montserrat';
-                font-weight: bold;
-                margin-right: 4px;
-                }
-            }
-            .rating{
-                line-height: 20,4px;
-            }       
-        }
-        span.divider{
-            display: block;
-            background: rgba(31, 32, 65, 0.1);
-            height: 1px;
-            margin-top: 10px;
-            margin-bottom: 8px;
-        }   
     }
+    .slick-next:hover, .slick-prev:hover {
+        background: $slick-buttons-gradient;
+        transition-duration: 500ms;
+    }
+    &__info{
+        padding : 20px 17px 19px 18px;
+    }
+    &__number-symbol {
+        font-family: 'Quicksand';
+        font-weight: bold;
+        color: $dark-100;
+    }
+    &__room-number {
+        font-family: 'Quicksand';
+        font-weight: bold;
+        font-size: 20px;
+        color: $dark-100;
+    }
+    
+    &__info-row {
+        @extend %regular-text;
+        color: $dark-50;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        line-height: 17.5px;
+        p {
+            margin: 0px;
+            display: inline;
+        }
+    }
+    .card-hotel-room__room-class {
+        @extend %label-text;
+        margin-left: 4px;
+        font-size: 14px;
+        line-height: 14.63px;
+        color: $purple;
+    }
+    &__info-price{
+        display: flex;
+        align-items: center;
+    }
+    .card-hotel-room__duration {
+        margin-left: 2px;
+        font-family: 'Montserrat';
+        font-weight: normal;
+    }
+    &__info-guest {
+        font-family: 'Montserrat';
+        font-weight: normal;
+        text-transform: capitalize;
+        position: relative;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+    }
+    &__review-number {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        margin-right: 4px;
+    }    
+    .rating{
+        line-height: 20.4px;
+    }     
+    &__info-divider {
+        display: block;
+        background: $dark-10;
+        height: 1px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+    &__room-cost,&__cost-currency {
+        @extend %label-text;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-50;
+    }
+}
+           

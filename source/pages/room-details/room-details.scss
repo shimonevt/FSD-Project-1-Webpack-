@@ -1,137 +1,123 @@
 @import "../../import/import.scss";
 body {
-    font-family: 'Montserrat';
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+    @extend %regular-text;
+    color: $dark-75;
 }
-span.entry-bar.smallscr i.material-icons {
+.header__entry-bar-smallscr i.material-icons {
     position: relative;
     top:4px;
+}
+.room-details {
+    &__container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "room-info statistics card-booking"
+                            "card-comment card-comment card-booking"
+                            "rules cancel row";
+        grid-gap: 30px 10px;
+        max-width: 1160px;
+        margin : 70px auto 70px;
+        padding: 0px 20px; 
     }
-.room-images__container {
-    height: 485px;
-    max-width: 1440px;
-    margin: 70px auto 67px;
-    display: grid;
-    grid-template-columns: 66% 33%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "f s"
-        " f th";
-}
-.image-container.first{
-    grid-area: f;
-}
-.image-container.second {
-    grid-area: s;
-}
-.image-container.third {
-    grid-area: th;
-}
-.image-container {
-    img {
+    &__container-images {
+        height: 485px;
+        max-width: 1440px;
+        margin: 70px auto 67px;
+        display: grid;
+        grid-template-columns: 66% 33%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "first second"
+            "first third"; 
+    }
+    &__container_first-image { 
+        grid-area: first;
+    }
+    &__container_second-image {
+        grid-area: second;
+    }
+    &__container_third-image {
+        grid-area: third;
+    }
+    &__container-image img{
         object-fit: cover;
         width: 100%;
         height: 100%;
     }
-}
-.room-details__container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: "room-info statistics card-booking"
-                        "card-comment card-comment card-booking"
-                        "rules cancel row";
-    grid-gap: 30px 10px;
-    max-width: 1160px;
-    margin : 70px auto 70px;
-    padding: 0px 20px;
-}
-.details__info-container{
-    grid-area: room-info;
-    margin: 0px auto;
-}
-.icon-text-list__group .group__icon i {
-    position: relative;
-    top: 11px;
-}
-.statistics__info-container{
-    grid-area: statistics;
-    margin: 0px auto;
-}
-.card-container {
-    grid-area: card-booking;
-    max-width: 380px;
-    margin: 0px auto;
-    .card-booking.card .date__bar .date__item::before {
-        top: 40px;
+    &__container-info {
+        grid-area: room-info;
+        margin: 0px auto;
     }
-}
-.comment-container {
-    grid-area: card-comment;
-    margin: 0px auto;
-    .card-comment{
-        margin: 0px 0px 20px 0px;
+    &__container-statistics {
+        grid-area: statistics;
+        margin: 0px auto;
     }
-}
-.rules-container{
-    grid-area: rules;
-    margin: 0px auto;
-}
-.cancel-container {
-    grid-area: cancel;
-    margin: 0px auto;
-}
-.comment__info {
-    display: flex;
-    justify-content: space-between;
-    p.comment-number {
+    &__container-card {
+        grid-area: card-booking;
+        max-width: 380px;
+        margin: 0px auto;
+    }
+    &__container-comment {
+        grid-area: card-comment;
+        margin: 0px auto;
+        .card-comment{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    &__container-rules {
+        grid-area: rules;
+        margin: 0px auto;
+    }
+    &__container-cancel {
+        grid-area: cancel;
+        margin: 0px auto;
+    }
+    &__comment-info {
+        display: flex;
+        justify-content: space-between;    
+    }
+    &__comment-number {
         margin: 0px;
     }
-}
-p.container-header {
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 23px;
-    margin: 0px 0px 20px 0px;
-    color: #1F2041;
-}
-.statistics-container{
-    display: flex;
-}
-.statistics-diagram {
-    max-width: 121px;
-    min-width: 121px;
-    max-height: 121px;
-    min-height: 121px;
-    border-radius: 60.5px;
-    overflow: hidden;
-    .diagram__circle{
+    &__container-header {
+        @extend %item-title;
+        margin: 0px 0px 20px 0px;
+        color: $dark-100;
+    }
+    &__statistics-container {
+        display: flex;
+    }
+    &__statistics-diagram {
+        max-width: 121px;
+        min-width: 121px;
+        max-height: 121px;
+        min-height: 121px;
+        border-radius: 60.5px;
+        overflow: hidden;
+    }
+    &__diagram {
         width: 100%;
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "orange purple"
-                                "orange green";
+                             "orange green";
         grid-gap: 2px;
-    }
-    
-    .orange {
-        grid-area: orange;
-        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-    }
-    .purple {
-        grid-area: purple;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    }
-    .green{
-        grid-area: green;
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    }
-    .statistics-text {
+        &_orange{
+            grid-area: orange;
+            background: $orange-gradient;
+        }
+        &_purple {
+            grid-area: purple;
+            background: $purple-gradient;
+        }
+        &_green{
+            grid-area: green;
+            background: $green-gradient;
+        }
+    }    
+    &__statistics-text {
         position: relative;
         width: 75px;
         height: 75px;
@@ -142,50 +128,48 @@ p.container-header {
         display: flex;
         text-align: center;
         flex-direction: column;
-        background: #FFFFFF;
-        color: #BC9CFF;
-        .number{
-            font-family: 'Montserrat';
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 29px;
+        background: $white;
+        color: $purple;
+    }
+    &__statistics-number{
+        @extend %subsection-title;
+    }
+    &__statistics-voices {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    &__statistics-number,&__statistics-voices {
+        position: relative;
+        top:13px;
+        color: $purple;
+    }
+    &__statistics-info {
+        list-style: none;
+        padding-left: 30px;
+        li::before{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            margin-right: 5px;
         }
-        .text{
-            font-size: 12px;
-            line-height: 15px;
+        &_excellent::before{
+            background: $orange-gradient;
         }
-        .number,.text{
-            position: relative;
-            top:13px;
+        &_good::before{
+            background: $green-gradient;
+        }
+        &_alright::before{
+            background: $purple;
+        }
+        &_bad::before{
+            background: $gray-gradient;
         }
     }
-}
-.statistics-info {
-    list-style: none;
-    padding-left: 30px;
-    li::before{
-        content: '';
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        margin-right: 5px;
+    &__cancel-text {
+        margin: 0px;
     }
-    li:first-child::before{
-        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-    }
-    li:nth-child(2):before{
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    }
-    li:nth-child(3):before{
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    }
-    li:nth-child(4):before{
-        background: linear-gradient(180deg, #919191 0%, #3D4975 100%)
-    }
-}
-p.cancel__text {
-    margin: 0px;
 }
 @media(max-width: 1110px){
     .room-details__container {
@@ -204,19 +188,19 @@ p.cancel__text {
         flex-direction: column;
         padding: 0px 5px;
     }
-    .room-images__container {
+    .room-details__container-images {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr;
         grid-template-areas:
-        "f f"
-        " s th";
+        "first first"
+        "second third";
     }
 }
 @media(max-width: 450px) {
-    .card-booking.card{
+    .card-booking {
         padding: 20px 10px;
     }
-    .statistics-info{
+    .room-details__statistics-info {
         padding:0px 10px;
     }
 }
