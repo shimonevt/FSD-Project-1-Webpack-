@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import 'paginationjs';
 
 jQuery(document).ready(($) => {

@@ -1,5 +1,4 @@
 import '../date-dropdown/date-dropdown';
-import * as $ from 'jquery';
 
 jQuery(($) => {
   function getValueFromElement($element) {
@@ -32,7 +31,7 @@ jQuery(($) => {
     const $roomPrice = $($card).find('.js-card-booking__room-price');
     const roomCost = getValueFromElement($costPerDay) * daysDiffer;
     const $currency = $($card).find('.js-card-booking__price-info').data('currency');
-    const roomCostText = convertValueToCost(roomCost, $currency);
+    const roomCostText = convertValueToCost(roomCost, $currency); 
     $($roomPrice).text(roomCostText);
     return roomCost;
   }

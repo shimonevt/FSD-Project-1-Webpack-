@@ -1,3 +1,5 @@
+import * as $ from 'jquery';
+
 jQuery(document).ready(($) => {
   function likeButtonClick(ev) {
     const likeButton = ev.currentTarget;

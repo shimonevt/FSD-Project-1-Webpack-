@@ -1,3 +1,5 @@
+import * as $ from 'jquery';
+
 jQuery(document).ready(($) => {
   function checkboxListClick(ev) {
     const listInfo = $(ev.currentTarget);

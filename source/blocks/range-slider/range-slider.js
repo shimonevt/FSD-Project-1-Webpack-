@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import 'ion-rangeslider';
 
 jQuery(document).ready(($) => {

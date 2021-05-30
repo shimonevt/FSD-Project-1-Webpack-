@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import 'air-datepicker';
 
 jQuery(($) => {

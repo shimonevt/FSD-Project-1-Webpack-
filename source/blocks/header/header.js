@@ -1,3 +1,5 @@
+import * as $ from 'jquery';
+
 jQuery(document).ready(($) => {
   function headerListClick(ev) {
     const listButton = ev.target;

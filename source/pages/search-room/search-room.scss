@@ -42,7 +42,7 @@
         }
     }
     &__container-header {
-        display: inline-block;
+        display: inline;
         margin: 0px 0px 20px;
         font-family: 'Montserrat';
         font-weight: bold;
@@ -152,10 +152,12 @@
             display: grid;
             grid-template-columns: repeat(1,1fr);
             justify-items: center;
+            padding: 20px 0px;
+        }
+        &__container-header {
+            display: inline;
         }
     }    
-}
-@media(max-width: 650px){
     span.search-room__button  {
         padding: 0px 5px;
         .search-room__container-header {

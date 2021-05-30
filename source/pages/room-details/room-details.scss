@@ -46,7 +46,6 @@ body {
     }
     &__container-info {
         grid-area: room-info;
-        margin: 0px auto;
     }
     &__container-statistics {
         grid-area: statistics;
@@ -59,7 +58,7 @@ body {
     }
     &__container-comment {
         grid-area: card-comment;
-        margin: 0px auto;
+        margin: 0px 70px 0px 0px;
         .card-comment{
             margin: 0px 0px 20px 0px;
         }
@@ -70,7 +69,7 @@ body {
     }
     &__container-cancel {
         grid-area: cancel;
-        margin: 0px auto;
+        margin: 0px 105px 0px 0px;
     }
     &__comment-info {
         display: flex;
@@ -175,11 +174,21 @@ body {
     .room-details__container {
         max-width: 800px;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns:  repeat(2,1fr);
         grid-template-areas:    "card-booking card-booking" 
                             "room-info statistics"
                             "card-comment card-comment"
                             "rules cancel";
+        padding: 0px 20px;
+    }
+    .room-details__container-statistics,.room-details__container-info {
+        margin: 0px auto;
+    }
+    .room-details__container-cancel{
+        margin: 0px auto;
+    }
+    .room-details__container-comment {
+        margin: 0px auto;
     }
 }
 @media(max-width: 560px) {   
@@ -194,6 +203,9 @@ body {
         grid-template-areas:
         "first first"
         "second third";
+    }
+    .room-details__container-comment{
+        padding: 0px 10px;
     }
 }
 @media(max-width: 450px) {
