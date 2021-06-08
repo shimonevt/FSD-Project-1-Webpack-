@@ -8,21 +8,20 @@
         height: 15px;
         margin-bottom: 23.44px;
     }
-    &__info_text{
+    &__info-text{
         @extend %label-text;
     }
     &__values {
         @extend %regular-text;
         display: flex;
         align-items: center;
-        p {
-            color: $dark-50;
-            font-size: 12px;
-            margin : 0px;
-        }
-        &_to {
-            margin-left: 2px;
-        }
+        max-width: 103px;
+        color: $dark-50;
+        font-size: 12px;
+        margin : 0px;
+        border: none;
+        background: none;
+        padding: 0px;
     }
     .irs {
         position: relative;   

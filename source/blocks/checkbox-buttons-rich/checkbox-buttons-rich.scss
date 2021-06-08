@@ -6,7 +6,7 @@
         cursor: pointer;
         position: relative;
     }
-    &__input {
+    &__button {
         position : absolute;
         width: 1px;
         height: 1px;
@@ -16,10 +16,10 @@
     &__check-box {
         margin-left: 0px;
     }
-    &__input:checked  + &__check-box {
+    &__button:checked  + &__check-box {
         border : 1px solid $purple;        
     }
-    &__input:checked  + &__check-box:before {
+    &__button:checked  + &__check-box:before {
         content : '';
         position : absolute;
         left: 4px;
@@ -41,7 +41,7 @@
         position: relative;
         left:30px;
         max-width: 236px;
-        &_header {
+        &-header {
             @extend %label-text;
             line-height: 18px;
             color: $dark-75;

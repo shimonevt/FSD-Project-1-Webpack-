@@ -1,33 +1,26 @@
 .bullet-list {
     max-width: 292px;
-    &__ul {
-        padding: 0px;
-        list-style: none;
-    }
-    &__li{
+    padding: 0px;
+    list-style: none;
+    &__item{
         @extend %regular-text;
         list-style-type: none;
-        padding-left: 0px;
+        margin-left: 20px;
         display: flex;
         align-items: center;
         margin-bottom:10px;
-        .li__bullet {
-            background: rgba(31, 32, 65, 0.25);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background: $dark-25;
             max-width: 10px;
             min-width: 10px;
             max-height: 10px;
             min-height: 10px;
             border-radius: 5px;
-        }
-        .li__text {
-                margin : 0px 0px 0px 10px;
-                
-        }
-        &:last-child{
-            .li__bullet {
-                top:-12px;
-                position: relative;
-            }
+            left: -20px;
+            top: 0.5em;
         }
     }       
 }

@@ -5,7 +5,7 @@
     .card__body{
         display: block;
     }
-    p.card__title {
+    &__title {
         @extend %subsection-title;
         color: $dark-100;
         margin: 0px 0px 21px 0px;

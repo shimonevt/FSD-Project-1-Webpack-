@@ -53,7 +53,7 @@ html(lang="en")
                         +checkbox-buttons([0,1,1],'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
                     .form-elements__container.double-margin 
                         p.form-elements__header radio buttons
-                        +radio-button('radio button','man')
+                        +radio-buttons('radio button','man')
                     .form-elements__container.double-margin
                         p.form-elements__header toggle
                         +toggle(true)
@@ -91,13 +91,13 @@ html(lang="en")
                     .form-elements__container
                         p.form-elements__header buttons
                         .form-elements__container-button
-                            +button-filled
+                            +button('button-filled','click me')
                         .form-elements__container-button
-                            +button-border
+                            +button('button-border','click me')
                         .form-elements__container-button
-                            +button-icon
+                            +button('button-icon','click me',false)
                         .form-elements__container-button
-                            +button-arrow('перейти к оплате')
+                            +button('button-arrow','перейти к оплате')
                     .form-elements__container.form-elements__container-pagination
                         p.form-elements__header pagination
                         +pagination
@@ -106,7 +106,7 @@ html(lang="en")
                         +select('guests',true,[2,1,0])
                     .form-elements__container.form-elements__container-list
                         p.form-elements__header bullet list
-                        +bullet-list
+                        +bullet-list(['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
             .form-elements__container_low
                     .form-elements__container.form-elements__container-icon-text
                         +icon-text-list({

@@ -1,65 +1,43 @@
-mixin header(authorization = false,userName='юлий цезарь')
-    -const listItems =['О нас','Услуги','Вакансии','Новости', 'Соглашения','Кнопки'];
-    -const agreeList = ['Соглашение 1','Соглашение 2'];
-    -const optionsList = ['Услуга 1','Услуга 2'];
+mixin header(authorization = false,userName='юлий цезарь',headerItems={})
     header.header
         .header__body 
             .header__logo
                 +logo(true) 
             nav.header__menu.js-header__menu
-                ul.header__list.js-header__list
-                    -let i = 0
-                    each item in listItems 
-                        if i == 0
-                            li.header__about.header__item
-                                a.header__item-href(href="")=listItems[i] 
-                        else if i == 1
+                ul.header__nav.js-header__nav
+                    -const { items } = headerItems
+                    each el in items
+                        if el.item.length > 1
                             li.header__item.js-header__options.header__options 
-                                a.header__options-href=listItems[i]
-                                .header__options-bar 
-                                    -let j = 0
-                                    each option in optionsList
-                                        p.header__options-bar-item
-                                            a(href="")=optionsList[j]
-                                        -j++
-                        else if i == 4
-                            li.header__item.header__agree.js-header__agree 
-                                a.header__agree-href=listItems[i]
-                                .header__agree-bar
-                                    -let k = 0
-                                    each agree in agreeList 
-                                        p.header__agree-bar-item
-                                            a(href="")=agreeList[k]
-                                        -k++ 
-                        else if i == 5
-                            if authorization 
-                
-                            else
-                                li.header__entry-bar
-                                    a.header__sign-in-href(href="sign-in.html")
-                                        +button-border('войти')
-                                    a.header__registration-href(href="registration.html")
-                                        +button-filled('зарегистрироваться')
-                        else
+                                span.header__options-heading=el.item[0]
+                                .header__options-bar
+                                    a.header__options-item(href="")=el.item[1]
+                                    a.header__options-item(href="")=el.item[2]
+                        else 
                             li.header__item
-                                a.header__item-href(href="")=listItems[i] 
-                        -i++                 
-                .header__bar-smallscr.js-header__bar-smallscr
-                    if authorization
-                            .header__entry-bar 
-                                    .header__divider
-                                    p.header__login=userName
-                            .header__list-smallscr.js-header__list-smallscr
-                                span
-                            .header__entry-bar-smallscr.header__entry-bar-id 
-                                a(href="")
-                                    i.material-icons person
-                    else
-                            .header__list-smallscr.js-header__list-smallscr
-                                span
-                            .header__entry-bar-smallscr.header__entry-bar-login.smallscr
-                                a(href="sign-in.html")
-                                    i.material-icons input
-                            .header__entry-bar-smallscr.header__entry-bar-register.smallscr 
-                                a(href="registration.html")
-                                    i.material-icons person_add                           
+                                a.header__item-href(href="")=el.item         
+                    if authorization != true
+                        li.header__entry-bar
+                            a.header__sign-in-href(href="sign-in.html")
+                                +button('button-border','войти')
+                            a.header__registration-href(href="registration.html")
+                                +button('button-filled','зарегистрироваться')
+                if authorization
+                    .header__menu-smallscr.js-header__menu-smallscr
+                        .header__entry-bar 
+                            span.header__login=userName
+                        .header__nav-smallscr.js-header__nav-smallscr
+                            span
+                        .header__entry-bar-smallscr
+                            a(href="")
+                                i.material-icons person
+                else
+                    .header__menu-smallscr.js-header__menu-smallscr    
+                        .header__nav-smallscr.js-header__nav-smallscr
+                            span
+                        .header__entry-bar-smallscr.header__entry-bar-login.smallscr
+                            a(href="sign-in.html")
+                                i.material-icons input
+                        .header__entry-bar-smallscr.header__entry-bar-register.smallscr 
+                            a(href="registration.html")
+                                i.material-icons person_add                           

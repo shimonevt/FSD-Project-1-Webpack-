@@ -1,17 +1,15 @@
 .text-field-subscription {
+    @extend %regular-text;
     max-width: 267px;
     margin-top: 10px;    
     box-sizing: border-box;
     border: 1px solid $dark-25;
-    border-radius: 4px;
-    &__body {
-        @extend %regular-text;
-        display : flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 44px;
-    }
-    &__input {
+    border-radius: 4px;  
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    &__write-field {
         display: flex;
         justify-content: space-between;
         color: rgba(31, 32, 65, 0.75);
@@ -46,7 +44,7 @@
     }
     &:hover {
         border: 1px solid $dark-50;
-        .text-field__input::placeholder {
+        .text-field__write-field::placeholder {
             color: $dark-75;
         }
     }

@@ -1,5 +1,5 @@
 jQuery(($) => {
-  const $filterDate = $('.js-date-dropdown-filter__input');
+  const $filterDate = $('.js-date-dropdown-filter__dates');
   const DatePickerFilter = $filterDate.datepicker({
     language: 'my-lang',
     autoClose: false,

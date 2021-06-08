@@ -4,9 +4,9 @@ mixin rich-checkbox-buttons(props={})
             each item in items
                 -let { header, mainText } = item
                 label.rich-checkbox-buttons__item
-                    input.rich-checkbox-buttons__input(type="checkbox")
+                    input.rich-checkbox-buttons__button(type="checkbox")
                     span.rich-checkbox-buttons__check-box
                     .rich-checkbox-buttons__text
-                        p.rich-checkbox-buttons__text_header=header
+                        p.rich-checkbox-buttons__text-header=header
                         p.rich-checkbox-buttons__text_main=mainText      
             

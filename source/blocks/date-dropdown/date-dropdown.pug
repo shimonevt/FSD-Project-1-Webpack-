@@ -6,11 +6,10 @@ mixin date-dropdown
         else 
             -fName="прибытие";
             -sName="выезд";
-        .date-dropdown
-            .date-dropdown__bar.js-date-dropdown__bar
-                .js-date-dropdown__item.date-dropdown__item
-                    p.date-dropdown__name=fName
-                    input.js-date-dropdown__first-date.date-dropdown__first-date(type="text", placeholder="ДД.ММ.ГГГГ")
-                .js-date-dropdown__item.date-dropdown__item
-                    p.date-dropdown__name=sName
-                    input.js-date-dropdown__second-date.date-dropdown__second-date(type="text", placeholder="ДД.ММ.ГГГГ")
+        form.date-dropdown.js-date-dropdown
+            .js-date-dropdown__item.date-dropdown__item
+                p.date-dropdown__name=fName
+                input.js-date-dropdown__first-date.date-dropdown__first-date(type="text", placeholder="ДД.ММ.ГГГГ")
+            .js-date-dropdown__item.date-dropdown__item
+                p.date-dropdown__name=sName
+                input.js-date-dropdown__second-date.date-dropdown__second-date(type="text", placeholder="ДД.ММ.ГГГГ")

@@ -1,10 +1,6 @@
-mixin bullet-list(listItems=items)
-        -let items = ['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']
-        .bullet-list    
-            ul.bullet-list__ul
+mixin bullet-list(items)   
+            ul.bullet-list
                 -let i = 0
                 each item in items
-                    li.bullet-list__li
-                        .li__bullet
-                        .li__text=items[i]
+                    li.bullet-list__item=items[i]
                     -i++               

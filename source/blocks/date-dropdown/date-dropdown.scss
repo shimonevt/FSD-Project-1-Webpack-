@@ -1,14 +1,11 @@
 .date-dropdown{
-    max-width:  100%;  
     height: 65px; 
-    &__bar{
-        max-width: 320px;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 20px;
-        grid-auto-flow: column;  
-        margin : 0px 0px 27px 0px;
-    }
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    grid-auto-flow: column;  
+    margin : 0px 0px 27px 0px;
     &__item {
         position: relative;
     }

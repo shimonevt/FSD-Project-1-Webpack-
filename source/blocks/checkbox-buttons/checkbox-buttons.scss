@@ -1,12 +1,12 @@
 .checkbox-buttons {
     &__item {        
-    display: block;
-    padding-bottom : 10.56px;
-    max-width: 70%;
-    padding-left: 30px;
-    height : 20px;               
-    pointer-events: auto;
-    cursor: pointer;
+        display: block;
+        padding-bottom : 10.56px;
+        max-width: 70%;
+        padding-left: 30px;
+        height : 20px;               
+        pointer-events: auto;
+        cursor: pointer;
     }
     &__check-box {
         position: absolute;
@@ -18,14 +18,14 @@
         margin-left: -30px;
         margin-top: 0px;
     } 
-    &__input {
+    &__button {
         position : absolute;
         width: 1px;
         height: 1px;
         overflow: hidden;
         clip: rect(0 0 0 0 );
     }
-    &__input:checked  + &__check-box:before {
+    &__button:checked  + &__check-box:before {
         content : '';
         position : absolute;
         left: 4px;

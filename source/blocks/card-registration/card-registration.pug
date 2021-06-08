@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 mixin card-registration(buttonArrowText)
         .card-registration
-            p.card__title Регистрация аккаунта
+            p.card-registration__title Регистрация аккаунта
             +text-field('Имя','text')
             +text-field('Фамилия', 'text')
-            +radio-button
-            p.card__subtitle дата рождения
+            +radio-buttons
+            p.card-registration__subtitle дата рождения
             +text-field('ДД.ММ.ГГГГ','email',true)
-            p.card__subtitle данные для входа в сервис
+            p.card-registration__subtitle данные для входа в сервис
             +text-field('Email','email')
             +text-field('Пароль','password')
             +toggle
-            +button-arrow(buttonArrowText)
+            +button('button-arrow',buttonArrowText)
             .log-in
-                p.log-in__info Уже есть аккаунт на Toxin
+                span.log-in__info Уже есть аккаунт на Toxin
                 a(href="sign-in.html")
-                    +button-border('войти')
+                    +button('button-border','войти')
 
             

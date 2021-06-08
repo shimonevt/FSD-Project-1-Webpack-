@@ -14,11 +14,24 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Landing page
     body 
-        +header
-        .landing-page__body
+        +header( false,'юлий цезарь',{
+            items: [
+                {item: ['О нас']},
+                {item:['Услуги','Услуга 1','Услуга 2']},
+                {item: ['Вакансии']},
+                {item: ['Новости']},
+                {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+            ]})
+        main.landing-page__body
             .landing-page__container 
                 .landing-page__container-card
                     +card-room-search
                 .landing-page__container-text
                     p.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-        +footer
+        +footer({
+            header :  ['Навигация','О нас','Служба поддержки','Подписка'],
+            item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
+            item2 : ['Новости','Наша команда','Сообщества'],
+            item3 : ['Служба поддержки','Вакансии','Связь с нами'],
+            item4 : ['Услуги','Инвесторы']
+            })

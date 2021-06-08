@@ -1,38 +1,34 @@
-mixin footer
-    -const header = ['Навигация','О нас','Служба поддержки','Подписка'];
-    -const item1 = ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'];
-    -const item2 = ['Новости','Наша команда','Сообщества'];
-    -const item3 = ['Служба поддержки','Вакансии','Связь с нами'];
-    -const item4 = ['Услуги','Инвесторы'];
-
-        footer.footer
+mixin footer(footerItems={})
+    footer.footer
             .footer__body 
                 .footer__info-bar 
                     .footer__logo-bar 
                         +logo(true)
                         p.footer__logo-bar_info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                     -let i=0
-                    each item in header
-                        ul.footer__nav-bar
-                            li.footer__item_header=header[i]
-                            li.footer__item
-                                a(href="")=item1[i]
-                            if i==2
+                    -const { header, item1, item2, item3, item4 } = footerItems
+                    each item in footerItems
+                        while i <= 3
+                            ul.footer__nav-bar
+                                li.footer__item-header=header[i]
                                 li.footer__item
-                                    a(href="")=item2[i]
-                                li.footer__item
-                                    a(href="")=item3[i]
-                            else if i==3
-                                li.footer__item
-                                    +text-field-subscription
-                            else
-                                li.footer__item
-                                    a(href="")=item2[i]
-                                li.footer__item
-                                    a(href="")=item3[i]
-                                li.footer__item
-                                    a(href="")=item4[i]
-                            -i++      
+                                    a(href="")=item1[i]
+                                if i==2
+                                    li.footer__item
+                                        a(href="")=item2[i]
+                                    li.footer__item
+                                        a(href="")=item3[i]
+                                else if i==3
+                                    li.footer__item
+                                        +text-field-subscription
+                                else
+                                    li.footer__item
+                                        a(href="")=item2[i]
+                                    li.footer__item
+                                        a(href="")=item3[i]
+                                    li.footer__item
+                                        a(href="")=item4[i]
+                                -i++      
             .footer__border
             .footer__copyright-bar 
                 p.footer__copyright-bar_info Copyright © 2018 Toxin отель. Все права зачищены.

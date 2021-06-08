@@ -5,6 +5,7 @@
         justify-content: space-between;
         margin-bottom: 20px;   
         align-items: baseline;
+        height: 30px;
     }
     .date-dropdown {
         margin-bottom: 20px;
@@ -102,5 +103,11 @@
         height: 18px;
         flex-grow: 1;
         margin : 0px 5px;
+    }
+    .card-booking__additional-description{
+        line-height: 18px;
+    }
+    .button-arrow {
+        margin-top: 20px;
     }
 }  

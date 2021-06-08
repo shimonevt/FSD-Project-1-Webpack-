@@ -7,6 +7,6 @@ mixin card-comment(num='2',isActive=false,profileName='Мурад Сарафан
                 +like-button(num,isActive)
             .card-comment__review
                 .card-comment__info
-                    p.card-comment__info-name=profileName
-                    p.card-comment__info-date=commentDate
-                .card-comment__text=commentText
+                    span.card-comment__info-name=profileName
+                    span.card-comment__info-date=commentDate
+                p.card-comment__text=commentText

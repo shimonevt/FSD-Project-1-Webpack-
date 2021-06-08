@@ -1,8 +1,6 @@
-mixin range-slider(text="диапазон цен")
+mixin range-slider(text='диапазон цен')
         .range-slider
             .range-slider__info
-                .range-slider__info_text=text
-                .range-slider__values
-                    p.range-slider__values_from.js-range-slider__values_from
-                    p.range-slider__values_to.js-range-slider__values_to
+                .range-slider__info-text=text
+                input(class='range-slider__values js-range-slider__values' disabled)
             input.range-slider__body.js-range-slider__body

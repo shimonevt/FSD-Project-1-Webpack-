@@ -1,14 +1,14 @@
-.radio-button {
+.radio-buttons {
     @extend %regular-text;
     color: $dark-50;
     width : 220px;
     display: flex;
     justify-content: space-between;
     margin : 16px 0px 16px 0px;
-    label.radio__option {
+    &__option {
         cursor: pointer;
     }
-    .radio__option-button {
+    &__option-button {
         background: #FFFFFF;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -20,12 +20,12 @@
         outline: none;
         margin: 0px;
         margin-right: 10px;
-        + span {
+        + .radio-buttons__option-description {
             position: relative;
             top : 2px;
         }       
     }
-    .radio__option-button::after {
+    &__option-button::after {
         content: '';
         display: inline-block;
         box-sizing: border-box;    
@@ -37,13 +37,13 @@
         left: 3px;
         top : 2px;
     }
-    .radio__option-button:checked{
+    &__option-button:checked{
         border: 1px solid #BC9CFF;
-        + span {
+        + .radio-buttons__option-description {
             color: rgba(31, 32, 65, 0.75);
         }
     }
-    .radio__option-button:checked::after {
+    &__option-button:checked::after {
         content: ''; 
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 10px;

@@ -1,32 +1,32 @@
 mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽',selectTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
-            .card-booking.card.js-card-booking
+            .card-booking.js-card-booking
                 .card-booking__info
                     .card-booking__room-info
-                        p.card-booking__number-symbol='№ '
-                        p.card-booking__number-value=number
-                        p.card-booking__room-class=roomClass
+                        span.card-booking__number-symbol='№ '
+                        span.card-booking__number-value=number
+                        span.card-booking__room-class=roomClass
                     .card-booking__price-info.js-card-booking__price-info(data-currency=currency)
-                        p.card-booking__price-value.js-card-booking__price-value=cost+currency
-                        p.card-booking__price-interval в сутки
+                        span.card-booking__price-value.js-card-booking__price-value=cost+currency
+                        span.card-booking__price-interval в сутки
                 include ../../blocks/date-dropdown/date-dropdown
                 +date-dropdown
                 p.card-booking__subtitle=selectTitle
                 +select(selectType,isActive,selectNum)
                 .card-booking__costs
                     .card-booking__room.card-booking__item
-                        .js-card-booking__room-description.card-booking__room-description.card-booking__description Стоимость номера
-                        .js-card-booking__room-price.card-booking__room-price 0₽
+                        span.js-card-booking__room-description.card-booking__room-description.card-booking__description Стоимость номера
+                        span.js-card-booking__room-price.card-booking__room-price 0₽
                     .card-booking__discount.card-booking__item.js-card-booking__discount
-                        .card-booking__discount-description.js-card-booking__discount-description.card-booking__description Сбор за услуги: скидка 2 179₽
-                            .card-booking__info-icon i
-                        .card-booking__discount-price.card-booking__price 0₽
+                        span.card-booking__discount-description.js-card-booking__discount-description.card-booking__description Сбор за услуги: скидка 2 179₽
+                            span.card-booking__info-icon i
+                        span.card-booking__discount-price 0₽
                     .card-booking__additional.card-booking__item
-                        .card-booking__additional-description.card-booking__description Сбор за дополнительные услуги
-                            .card-booking__info-icon i
-                        .js-card-booking__additional-price.card-booking__additional-price.card-booking__price 0₽
+                        span.card-booking__additional-description.card-booking__description Сбор за дополнительные услуги
+                            span.card-booking__info-icon i
+                        span.js-card-booking__additional-price.card-booking__additional-price 0₽
                     .card-booking__total.card-booking__item
-                        .card-booking__total-description Итого
-                        .card-booking__total-divider
-                        .js-card-booking__total-price.card-booking__total-price 0₽
-                    +button-arrow('забронировать')
+                        span.card-booking__total-description Итого
+                        span.card-booking__total-divider
+                        span.js-card-booking__total-price.card-booking__total-price 0₽
+                    +button('button-arrow','забронировать')
                     

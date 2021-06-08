@@ -35,7 +35,7 @@
         text-decoration: none;
         color: $dark-50;
     }
-    &__item_header {
+    &__item-header {
         @extend %label-text;
         line-height: 14px;
         color: $dark-100;
@@ -46,7 +46,7 @@
         color: $dark-75;
         flex-grow: 3;
         flex-basis: 22%;
-        .footer__item_header {
+        .footer__item-header {
             line-height: 14px;
         }
         .footer__item{

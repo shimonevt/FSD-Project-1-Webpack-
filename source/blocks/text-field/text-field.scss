@@ -1,17 +1,15 @@
 .text-field,.text-field-masked {
     @extend %regular-text;
     max-width: 320px;
-    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
     line-height: 18px;
-    &__body {
-        height: 44px;
-        border: 1px solid  $dark-25;
-        border-radius: 4px;
-        box-sizing: border-box;
-        color: $dark-75;
-        display: flex;
-        padding-bottom: 1px;
-    }
+    height: 44px;
+    border: 1px solid  $dark-25;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: $dark-75;
+    display: flex;
+    padding-bottom: 1px;
     &__input {
         width: 90%;
         padding : 12px 0px 12px 15px;
@@ -25,9 +23,9 @@
     &__input::placeholder {
         color: $dark-25;
     }     
-    &__body:hover {
+    &:hover {
         border: 1px solid $dark-50;
-        .text-field__input::placeholder {
+        .text-field__write-field::placeholder {
             color: $dark-75;
         }
     }

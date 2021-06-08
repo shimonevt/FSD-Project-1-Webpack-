@@ -4,9 +4,9 @@ mixin checkbox-buttons(values,...items)
             each item in items
                 label.checkbox-buttons__item
                     if values[i]
-                        input.checkbox-buttons__input(type="checkbox" checked)
+                        input.checkbox-buttons__button(type="checkbox" checked)
                     else
-                        input.checkbox-buttons__input(type="checkbox")
-                    span.checkbox-buttons__check-box
-                    p.checkbox-buttons__text=item
+                        input.checkbox-buttons__button(type="checkbox")
+                    .checkbox-buttons__check-box
+                    span.checkbox-buttons__text=item
                 -i++

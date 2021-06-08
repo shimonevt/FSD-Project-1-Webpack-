@@ -13,10 +13,17 @@ html(lang="en")
         link(rel="manifest" href="./assets/favicons/site.webmanifest")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Search room
-    body 
-        +header
-        .search-room__container
-            .search-room__search-tools.js-search-room__search-tools
+    body
+        +header( false,'юлий цезарь',{
+            items: [
+                {item: ['О нас']},
+                {item:['Услуги','Услуга 1','Услуга 2']},
+                {item: ['Вакансии']},
+                {item: ['Новости']},
+                {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+            ]}) 
+        main.search-room__container
+            section.search-room__search-tools.js-search-room__search-tools
                 .search-room__button-close.js-search-room__button-close.search-room__button
                     i.material-icons keyboard_arrow_right
                 p.search-room__header Даты пребывания в отеле
@@ -39,11 +46,11 @@ html(lang="en")
                         ]})
                 +select('rooms',false,[2,2,0])
                 +checkbox-list('дополнительные удобства',true,[0,1,1,1,0,0],'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
-            .search-room__container-room
+            section.search-room__container-room
                 .search-room__button-open.search-room__button.js-search-room__button-open 
                     i.material-icons settings
-                p.search-room__container-header Номера, которые мы для вас подобрали
-                .search-room__container-cards
+                h1.search-room__container-header Номера, которые мы для вас подобрали
+                section.search-room__container-cards
                     +card-hotel-room('888','room-888.jpg',true,5,'9 990','₽ ','145 ')
                     +card-hotel-room('840','room-840.jpg',false,4,'9 990','₽ ','65 ')
                     +card-hotel-room('980','room-980.jpg',true,3,'8 500','₽ ','35 ')
@@ -56,6 +63,12 @@ html(lang="en")
                     +card-hotel-room('666','room-666.jpg',false,5,'5 000','₽ ','25 ')
                     +card-hotel-room('444','room-444.jpg',false,4,'5 000','₽ ','15 ')
                     +card-hotel-room('352','room-352.jpg',false,3,'5 000','₽ ','55 ')
-                .search-room__container-pagination
+                section.search-room__container-pagination
                     +pagination
-        +footer
+        +footer({
+            header :  ['Навигация','О нас','Служба поддержки','Подписка'],
+            item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
+            item2 : ['Новости','Наша команда','Сообщества'],
+            item3 : ['Служба поддержки','Вакансии','Связь с нами'],
+            item4 : ['Услуги','Инвесторы']
+            })

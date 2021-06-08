@@ -3,12 +3,12 @@
     display: block;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px $dark-20;
-    p.card__title {
+    &__title {
       @extend %subsection-title;
       color: $dark-100;
       margin: 0px 0px 21px 0px;
     }
-    p.card__subtitle {
+    &__subtitle {
       @extend %label-text;
       margin : 0px 0px 5px 0px;
       color: $dark-100;
@@ -29,15 +29,14 @@
       display: flex;
       text-align: center;
       justify-content: space-between;
-      p.log-in__info{
+      .log-in__info{
         @extend %regular-text;
         line-height: 18px;
-        color: $dark-100;
+        color: #000000;
         margin-top: 12px;
       }
     } 
     .button-border {
-      height: 40px;
       .button-border__text{
         padding: 12px 24px 13px;
       }

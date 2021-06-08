@@ -7,14 +7,12 @@
 .select { 
     position: relative;
     margin: 0px 0px 20px 0px;
-    &__body{
-        border : 1px solid $dark-25;
-        border-radius: 4px;
-        max-width: 320px;
-        height: 44px;
-        box-sizing: border-box;
-    }
-    &__body:hover {
+    border : 1px solid $dark-25;
+    border-radius: 4px;
+    max-width: 320px;
+    height: 44px;
+    box-sizing: border-box;
+    &:hover {
         border: 1px solid $dark-50;  
         outline: none;  
         border-radius: 4px;  
@@ -64,12 +62,9 @@
     }
 }
 .select.active {
-    .select__body{
-        border: 1px solid $dark-50;
-        box-shadow: $shadow-5;
-        border-radius: 4px 4px 0px 0px;
-        overflow: hidden;
-    }
+    border: 1px solid $dark-50;
+    box-shadow: $shadow-5;
+    border-radius: 4px 4px 0px 0px;
     .select__bar {
         border: 1px solid $dark-50;
         border-top: none;
@@ -77,12 +72,12 @@
         display : block;
         justify-content: space-between;
         position: absolute;
-        top : 100%;
-        left : 0;
+        top : 102%;
+        left : -1px;
         right : 0;
-        box-sizing: border-box;
         background-color: $white;
         z-index: 4;
+        width: 100%;
     }
     .select__list {
         position: relative;

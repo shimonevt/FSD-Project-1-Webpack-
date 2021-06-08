@@ -2,21 +2,21 @@
     width: 120px;
     display: flex;
     flex-direction: row-reverse;
-    &__star {
+    &__button {
         display: none;
         margin: 0;
         padding: 0;
-        &:checked ~ label {
+        &:checked ~ .rating__img {
             background: no-repeat center center  url(./pictures/rating.svg);
         }
-        &:not(:checked) ~ label:hover ~ label {
+        &:not(:checked) ~ .rating__img:hover ~ .rating__img {
             background: no-repeat center center  url(./pictures/rating-border.svg);
         }              
-        &:not(:checked) ~ label:hover ~ label {
+        &:not(:checked) ~ .rating__img:hover ~ .rating__img {
             background: no-repeat center center  url(./pictures/rating.svg);
         }  
     }    
-    &__label {
+    &__img {
         cursor: pointer;
         width: 24px;
         height: 24px;

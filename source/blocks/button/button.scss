@@ -1,0 +1,82 @@
+.button-arrow {
+    @extend %label-text;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : $purple-gradient;
+    height:44px; 
+    border-radius: 22px;
+    outline: none;
+    border : none;
+    color : $white;    
+    margin-top: 14px;        
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: 'arrow_forward';
+        font-family: 'Material Icons';
+        color : $white;
+        text-transform: lowercase;
+        position: absolute;
+        font-size: 24px;
+        right: 10px;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
+.button-border  {
+    display: inline-block;
+    background: $purple-gradient;
+    padding: 2px;
+    border-radius: 100px;
+    border:none;
+    cursor: pointer;
+    &__text{
+        @extend %label-text;
+        display: inline-block;
+        padding: 12px 18px 13px 18px;
+        border-radius: 100px;
+        background: $white;
+        color: $purple;
+        outline: none;
+    }
+    &:hover{
+        opacity: 0.5;
+    }                    
+}
+.button-filled {
+    border: none;
+    background: $purple-gradient;
+    opacity: 1;
+    outline: none;
+    border : none;
+    display: inline-block;
+    padding: 14px 21px 15px 19px;
+    border-radius: 22px;
+    cursor: pointer;
+    color : #FFFFFF;
+    @extend %label-text;
+    margin: 0px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
+.button-icon{
+    padding : 0px;
+    @extend %label-text;
+    outline: none;
+    border: none;
+    background: $white;
+    line-height: 14.63px;
+    color: $purple;
+    cursor: pointer;
+    &:hover {
+        opacity:0.5;
+    }
+    &.gray {
+        color: $dark-50;
+    }
+}

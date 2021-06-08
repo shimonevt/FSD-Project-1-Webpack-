@@ -53,7 +53,7 @@ $(document).ready(() => {
     const $selectText = $($select).find('.js-select__text');
     let selectTextArray = [];
     if ($selectType === type.guests) {
-      const $editButtons = $($selectText).parent('.js-select__body').find('.js-select__edit-buttons');
+      const $editButtons = $($selectText).parent('.js-select').find('.js-select__edit-buttons');
       for (let i = 0; i < totalCount.length; i += 1) {
         if (totalCount[i] > minValue) {
           $($editButtons).addClass('active');
@@ -108,14 +108,14 @@ $(document).ready(() => {
     }
   }
   function hideSelectText(event) {
-    const $selectDropdown = $(event.target).parent('.js-select__body').parent('.js-select');
+    const $selectDropdown = $(event.target).parent('.js-select');
     $selectDropdown.toggleClass('active');
   }
   function clickOnEditClear(event) {
     const editButtons = event.target.closest('.js-select__edit-buttons');
     const $selectBar = $(editButtons).parent('.js-select__bar');
-    const $selectText = $($selectBar).parent('.js-select__body').find('.js-select__text');
-    const $select = $($selectText).parent('.js-select__body').parent('.js-select');
+    const $selectText = $($selectBar).parent('.js-select').find('.js-select__text');
+    const $select = $($selectText).parent('.js-select');
     const $selectType = $($select).data('type');
     if ($selectType === type.guests) {
       const text = 'Сколько гостей';
@@ -166,7 +166,7 @@ $(document).ready(() => {
     const $buttonsGroup = $(event.target).parent('.js-select__buttons');
     const $itemsCount = $($buttonsGroup).find('.js-select__count');
     const $menuSelect = $($buttonsGroup).parent('.js-select__group').parent('.js-select__list').parent('.js-select__bar');
-    const $select = $($menuSelect).parent('.js-select__body').parent('.js-select');
+    const $select = $($menuSelect).parent('.js-select');
     const $selectText = $($select).find('.js-select__text');
     const $selectType = $($select).data('type');
     const $editButtons = $($menuSelect).children('.js-select__edit-buttons');

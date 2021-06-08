@@ -1,28 +1,24 @@
 .like-button {
     @extend %regular-text;
     display: flex; 
-    cursor: default;
+    align-items:center;
     width: 40px;
     height: 20px;
     box-sizing: border-box;
     border-radius: 10px;
     background : $white;
     border: 1px solid $dark-25;
-    transition-duration: 500ms;
     cursor: pointer;
-    &__body {
-        display: flex;
-        align-items:center;
-        font-size: 10px;
-        position: relative;
-        color: $dark-25;
-        transition-duration: 500ms;
-    }
+    font-size: 10px;
+    position: relative;
+    color: $dark-25;
+    transition-duration: 500ms;
+    padding: 0px 6px 0px 0px;
     &__img {
         width: 20px;
         display: flex; 
         justify-content: center;            
-        &_heart{
+        i.material-icons.md-10{
             font-family: 'Material Icons';
             font-size: 10px;
             color : $purple;

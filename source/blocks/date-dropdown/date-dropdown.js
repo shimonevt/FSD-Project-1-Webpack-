@@ -4,7 +4,7 @@ jQuery(($) => {
   const $start = $('.js-date-dropdown__first-date');
   const $end = $('.js-date-dropdown__second-date');
   function secondDateClick(ev) {
-    const dateBar = ev.target.closest('.js-date-dropdown__bar');
+    const dateBar = ev.target.closest('.js-date-dropdown');
     $(dateBar).find($start).focus();
   }
   function datePickerInit(index, elem) {

@@ -5,8 +5,8 @@ mixin checkbox-list(text='дополнительные удобства',isActiv
             -listClass =''
         .checkbox-list.js-checkbox-list
             div.js-checkbox-list__info(class="checkbox-list__info "+listClass)
-                .checkbox-list__info_title=text
-                .checkbox-list__info_arrow
+                .checkbox-list__info-title=text
+                .checkbox-list__info-arrow
                     i.material-icons.md-24 expand_more
             div.js-checkbox-list__options(class="checkbox-list__options "+listClass)
                 +checkbox-buttons(values,...items)

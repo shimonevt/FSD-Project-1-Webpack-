@@ -1,6 +1,5 @@
-mixin text-field-subscription()
+mixin text-field-subscription(fieldType='email',textFieldPlaceholder='Email')
     .text-field-subscription
-        .text-field-subscription__body
-                input.text-field-subscription__input(type='email', placeholder='Email')
-                button.text-field-subscription__button
-                    i.material-icons.md-24 arrow_forward
+        input.text-field-subscription__write-field(type=fieldType, placeholder=textFieldPlaceholder)
+        button.text-field-subscription__button
+            i.material-icons.md-24 arrow_forward

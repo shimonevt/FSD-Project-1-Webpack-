@@ -14,67 +14,81 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Room details
     body
-            +header 
-            .room-details__container-images
-                .room-details__container-image.room-details__container_first-image
-                    img(src=require('source/pages/room-details/pictures/room-888.jpg'))
-                .room-details__container-image.room-details__container_second-image
-                    img(src=require('source/pages/room-details/pictures/room-888-2.jpg'))
-                .room-details__container-image.room-details__container_third-image 
-                    img(src=require('source/pages/room-details/pictures/room-888-3.jpg'))
-            .room-details__container 
-                .room-details__container-card 
-                        +card-booking('888','люкс','9 990','₽','гости','guests',false,[3,0,0])
-                .room-details__container-info
-                    p.room-details__container-header Сведения о номере 
-                    +icon-text-list({
-                            items:[
-                            {
-                            header:'Комфорт',
-                            text:'Шумопоглощающие стены',
-                            icon: 'insert_emoticon'
-                            },
-                            {
-                            header: 'Удобство',
-                            text: 'Окно в каждой из спален',
-                            icon: 'location_city'
-                            },
-                            {
-                            header: 'Уют',
-                            text: 'Номер оснащён камином',
-                            icon: 'whatshot'
-                            }
-                            ]})
-                .room-details__container-statistics
-                    p.room-details__container-header Впечатления от номера
-                    .room-details__statistics-container
-                        .room-details__statistics-diagram
-                            .room-details__diagram                               
-                                .room-details__diagram_orange
-                                .room-details__diagram_purple
-                                .room-details__diagram_green
-                            .room-details__statistics-text 
-                                .room-details__statistics-number 260 
-                                .room-details__statistics-voices голосов 
-                        ul.room-details__statistics-info 
-                            li.room-details__statistics-info_excellent Великолепно
-                            li.room-details__statistics-info_good Хорошо
-                            li.room-details__statistics-info_alright Удовлетворительно
-                            li.room-details__statistics-info_bad Разочарован
-                .room-details__container-comment
-                    .room-details__comment-info
-                        p.room-details__container-header Отзывы посетителей номера
-                        p.room-details__comment-number 2 отзыва 
-                    +card-comment(12,true)
-                    +card-comment(2,false,
-                            'Патрисия Стёклышкова',
-                            'avatar-2.jpg',
-                            'Неделю назад',
-                            'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-                .room-details__container-rules 
-                   p.room-details__container-header Правила
-                    +bullet-list
-                .room-details__container-cancel 
-                    p.room-details__container-header  Отмена
-                    p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-            +footer
+            +header( false,'юлий цезарь',{
+                items: [
+                    {item: ['О нас']},
+                    {item:['Услуги','Услуга 1','Услуга 2']},
+                    {item: ['Вакансии']},
+                    {item: ['Новости']},
+                    {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+                ]})
+            main
+                section.room-details__container-images
+                    .room-details__container-image.room-details__container_first-image
+                        img(src=require('source/pages/room-details/pictures/room-888.jpg'))
+                    .room-details__container-image.room-details__container_second-image
+                        img(src=require('source/pages/room-details/pictures/room-888-2.jpg'))
+                    .room-details__container-image.room-details__container_third-image 
+                        img(src=require('source/pages/room-details/pictures/room-888-3.jpg'))
+                section.room-details__container 
+                    article.room-details__container-card 
+                            +card-booking('888','люкс','9 990','₽','гости','guests',false,[3,0,0])
+                    section.room-details__container-info
+                        h1.room-details__container-header Сведения о номере 
+                        +icon-text-list({
+                                items:[
+                                {
+                                header:'Комфорт',
+                                text:'Шумопоглощающие стены',
+                                icon: 'insert_emoticon'
+                                },
+                                {
+                                header: 'Удобство',
+                                text: 'Окно в каждой из спален',
+                                icon: 'location_city'
+                                },
+                                {
+                                header: 'Уют',
+                                text: 'Номер оснащён камином',
+                                icon: 'whatshot'
+                                }
+                                ]})
+                    section.room-details__container-statistics
+                        h1.room-details__container-header Впечатления от номера
+                        .room-details__statistics-container
+                            .room-details__statistics-diagram
+                                .room-details__diagram                               
+                                    .room-details__diagram_orange
+                                    .room-details__diagram_purple
+                                    .room-details__diagram_green
+                                .room-details__statistics-text 
+                                    .room-details__statistics-number 260 
+                                    .room-details__statistics-voices голосов 
+                            ul.room-details__statistics-info 
+                                li.room-details__statistics-info_excellent Великолепно
+                                li.room-details__statistics-info_good Хорошо
+                                li.room-details__statistics-info_alright Удовлетворительно
+                                li.room-details__statistics-info_bad Разочарован
+                    article.room-details__container-comment
+                        .room-details__comment-info
+                            h1.room-details__container-header Отзывы посетителей номера
+                            span.room-details__comment-number 2 отзыва 
+                        +card-comment(12,true)
+                        +card-comment(2,false,
+                                'Патрисия Стёклышкова',
+                                'avatar-2.jpg',
+                                'Неделю назад',
+                                'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                    article.room-details__container-rules 
+                        h1.room-details__container-header Правила
+                            +bullet-list(['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                    article.room-details__container-cancel 
+                        h1.room-details__container-header  Отмена
+                        p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            +footer({
+                header :  ['Навигация','О нас','Служба поддержки','Подписка'],
+                item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
+                item2 : ['Новости','Наша команда','Сообщества'],
+                item3 : ['Служба поддержки','Вакансии','Связь с нами'],
+                item4 : ['Услуги','Инвесторы']
+                })

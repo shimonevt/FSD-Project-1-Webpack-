@@ -5,8 +5,7 @@ mixin like-button(num="2",isActive=false)
         else
             -buttonClass=" "
             -heartText="favorite_border"
-        div(class="like-button"+buttonClass)
-            .js-like-button__body.like-button__body
-                .like-button__img.js-like-button__img
-                    i.material-icons.md-10.js-like-button__img_heart.like-button__img_heart=heartText
-                .js-like-button__nmbr.like-button__nmbr=num
+        button(class="js-like-button like-button"+buttonClass)
+            .like-button__img.js-like-button__img
+                i.material-icons.md-10.js-like-button__heart.like-button__heart=heartText
+            .js-like-button__nmbr.like-button__nmbr=num

@@ -36,7 +36,7 @@
         background: $white;
         border: 1px solid $purple;
     }  
-    &__label {
+    &__info {
         @extend %regular-text;
         position: relative;
         left : 10px;

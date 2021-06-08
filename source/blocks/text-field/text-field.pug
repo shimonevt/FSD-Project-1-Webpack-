@@ -5,5 +5,4 @@ mixin text-field(text='Email',text_type='email',masked=false)
     else 
         -textClass = '' 
     div(class='text-field '+textClass)
-        div(class='text-field__body '+textClass+'__body')
-            input.text-field__input(class='text-field__input '+textClass+'__input',type=text_type, placeholder=text)
+        input.text-field__write-field(class='text-field__input '+textClass+'__input',type=text_type, placeholder=text)

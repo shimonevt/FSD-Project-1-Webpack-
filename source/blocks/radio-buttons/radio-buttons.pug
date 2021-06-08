@@ -1,0 +1,23 @@
+mixin radio-buttons(gender="man")
+        .radio-buttons
+            if gender="man"
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender" checked)
+                    span.radio-button__option-description Мужчина
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender")
+                    span.radio-buttons__option-description Женщина
+            else if gender="woman"
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender")
+                    span.radio-buttons__option-description Мужчина
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender" checked)
+                    span.radio-buttons__option-description Женщина
+            else
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender")
+                    span.radio-buttons__option-description Мужчина
+                label.radio-buttons__option
+                    input.radio-buttons__option-button(type="radio", name="gender")
+                    span.radio-buttons__option-description Женщина 

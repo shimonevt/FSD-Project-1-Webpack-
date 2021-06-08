@@ -14,8 +14,21 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Registration
     body 
-        +header 
-        .registration__container
+        +header(false,'юлий цезарь',{
+            items: [
+                {item: ['О нас']},
+                {item:['Услуги','Услуга 1','Услуга 2']},
+                {item: ['Вакансии']},
+                {item: ['Новости']},
+                {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+            ]})
+        main.registration__container
             .registration__container-card
                 +card-registration('зарегистрироваться')
-        +footer 
+        +footer({
+                header :  ['Навигация','О нас','Служба поддержки','Подписка'],
+                item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
+                item2 : ['Новости','Наша команда','Сообщества'],
+                item3 : ['Служба поддержки','Вакансии','Связь с нами'],
+                item4 : ['Услуги','Инвесторы']
+                })

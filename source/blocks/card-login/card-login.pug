@@ -3,11 +3,8 @@ mixin card-login
             p.card-login__title Войти
             +text-field('Email','email')
             +text-field('Пароль','password')
-            +button-arrow('войти')
+            +button('button-arrow','войти')
             .card-login__info
-                p.card-login__info_text Нет аккаунта на Toxin?
-                a.card-login__info_href(href="registration.html")
-                    +button-border('создать')
-                
-
-
+                span.card-login__info-text Нет аккаунта на Toxin?
+                a.card-login__info-href(href="registration.html")
+                    +button('button-border','создать')

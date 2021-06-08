@@ -1,23 +1,21 @@
 .date-dropdown-filter {
     @extend %text-field;
     max-width: 266px;
-    &__body{
-        position: relative;
-        padding: 10px 20px 0px 0px;
-        cursor: pointer;
-    }
-    &__input {
+    position: relative;
+    padding: 10px 20px 0px 0px;
+    cursor: pointer;
+    &__dates {
         @extend %regular-text;
         display: flex;
         justify-content: space-between;  
         color: $dark-75;
         border: none;
         outline: none;
-        width: 100%;
+        width: 70%;
         cursor: pointer;
         padding-left: 15px;
     }
-    &__body::after{
+    &::after{
         font-family: 'Material Icons';
         content: 'expand_more';
         color: $dark-50;

@@ -8,15 +8,15 @@ mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,
         .card-hotel-room__info
             .card-hotel-room__info-row
                 .card-hotel-room__info-room
-                    p.card-hotel-room__number-symbol № 
-                    p.card-hotel-room__room-number=number
+                    span.card-hotel-room__number-symbol № 
+                    span.card-hotel-room__room-number=number
                     if isLuxe
-                        p.card-hotel-room__room-class="люкс"
+                        span.card-hotel-room__room-class="люкс"
                     else
                 .card-hotel-room__info-price
-                    p.card-hotel-room__room-cost=roomCost
-                    p.card-hotel-room__cost-currency=currency 
-                    p.card-hotel-room__duration в сутки
+                    span.card-hotel-room__room-cost=roomCost
+                    span.card-hotel-room__cost-currency=currency 
+                    span.card-hotel-room__duration в сутки
             span.card-hotel-room__info-divider
             .card-hotel-room__info-row
                 include ../../blocks/rating/rating
@@ -25,7 +25,7 @@ mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,
                 else
                     +rating(starNum,number+"-room")
                 .card-hotel-room__info-guest
-                    b.card-hotel-room__review-number=revNum 
+                    span.card-hotel-room__review-number=revNum 
                     .card-hotel-room__review-text Отзывов
                              
                     
