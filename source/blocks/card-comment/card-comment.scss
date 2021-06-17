@@ -24,6 +24,8 @@
     &__info {
         @extend %regular-text;
         color: $dark-75;
+        display: flex;
+        flex-direction: column;
     }
     &__info-name {
         font-family: 'Montserrat';
