@@ -1,0 +1,30 @@
+.type-set{
+    display: flex;
+    margin-bottom: 50px;
+    &-H1, &-H2, &-H3{
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: normal;
+    }
+    &-H1{
+        position: relative;
+        left: 7px;
+    }
+    &-H2{
+        position: relative;
+        left: 10px;
+    }
+    &-H3 {
+        text-transform: uppercase;
+        position: relative;
+        left: 20px;
+    }
+    &-body{
+        @extend %regular-text;
+        color: $dark-75;
+    }
+    &__header {
+        font-family: 'Montserrat', Arial, sans-serif;
+        color: $dark-25;
+        margin: 0px 30px 0px 0px;
+    }
+}

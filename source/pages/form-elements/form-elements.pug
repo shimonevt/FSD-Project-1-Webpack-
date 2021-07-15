@@ -14,21 +14,23 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Form elements
     body 
-        +logo
+        +logo({
+            isColored: false
+        })
         .form-elements
             .form-elements__col
                     .form-elements__container
                         p.form-elements__header text field
-                        +text-field()
+                        +text-field({placeholderText:'Email',textType: 'email',isMasked: false})
                     .form-elements__container
                         p.form-elements__header text field
-                        +text-field('This is pretty awesome','email')
+                        +text-field({placeholderText: "This is pretty awesome",textType: "email",isMasked: false})
                     .form-elements__container
                         p.form-elements__header dropdown
-                        +select() 
+                        +select({selectType: "guests",isActive : false, selectValues: [0,0,0] }) 
                     .form-elements__container.double-margin
                         p.form-elements__header masked text field
-                        +text-field('ДД.ММ.ГГГГ','text',true)
+                        +text-field({placeholderText: "ДД.ММ.ГГГГ",isActive: "text",isMasked: true})
                     .form-elements__container.double-margin
                         +date-dropdown(true)
                     .form-elements__container.double-margin
@@ -36,42 +38,63 @@ html(lang="en")
                         +date-dropdown-filter(true)
                     .form-elements__container.double-margin
                         p.form-elements__header text field subscription
-                        +text-field-subscription(true)
+                        +text-field-subscription({ fieldType: "email", placeholderText: "Email"})
                     .form-elements__container.form-elements__container-select 
                         p.form-elements__header dropdown
-                        +select('rooms',false,[2,2,0])
+                        +select({selectType: "rooms",isActive: false,selectValues: [2,2,0]})
                     .form-elements__container 
                         p.form-elements__header dropdown
-                        +select('rooms',true,[2,2,0])
+                        +select({selectType: "rooms",isActive: true,selectValues: [2,2,0]})
                     .form-elements__container.form-elements__container-checkbox
-                        +checkbox-list('expendable checkbox list',false,[0,1,1,1,0,0],'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+                        +checkbox-list({
+                            listHeader: "expendable checkbox list",
+                            isActive: false,
+                            listValues: [0,1,1,1,0,0],
+                            listItems: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
+                        })
                     .form-elements__container
-                        +checkbox-list('expendable checkbox list',true,[0,1,1,1,0,0],'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+                        +checkbox-list({
+                            listHeader: "expendable checkbox list",
+                            isActive: true,
+                            listValues: [0,1,1,1,0,0],
+                            listItems: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
+                        })
             .form-elements__col.form-elements__col-second
                     .form-elements__container.double-margin 
                         p.form-elements__header checkbox buttons
-                        +checkbox-buttons([0,1,1],'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+                        +checkbox-buttons({
+                            values: [0,1,1],
+                            items: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
+                        })
                     .form-elements__container.double-margin 
                         p.form-elements__header radio buttons
-                        +radio-buttons('radio button','man')
+                        +radio-buttons({
+                            radioBtnName: "man"
+                        })
                     .form-elements__container.double-margin
                         p.form-elements__header toggle
-                        +toggle(true)
+                        +toggle({ isChecked: true })
                         .toggle-divider
-                        +toggle() 
+                        +toggle({ isChecked: false }) 
                     .form-elements__container.double-margin
                         p.form-elements__header like button
                         .form-elements__container_flexible
-                            +like-button()
-                            +like-button('12',true)
+                            +like-button({
+                                likesNum: 2,
+                                isLikeBtnActive: false
+                            })
+                            +like-button({
+                                likeNum: 12,
+                                isLikeBtnActive: true
+                            })
                     .form-elements__container 
                         p.form-elements__header rate button
                         .form-elements__container_flexible
-                            +rating(4,'rating-4')
-                            +rating(5,'rating-5')
+                            +rating({rate: 4,ratingName: 'rating-4'})
+                            +rating({rate: 5,ratingName: 'rating-5'})
                     .form-elements__container.form-elements__container-select.first 
                         p.form-elements__header dropdown
-                        +select('guests',true,[0,0,0])
+                        +select({selectType: 'guests',isActive: true,selectValues: [0,0,0]})
                     .form-elements__container.container-rich-checkbox
                         p.form-elements__header rich checkbox buttons
                         +rich-checkbox-buttons({
@@ -87,26 +110,26 @@ html(lang="en")
                                 ]})
             .form-elements__col.form-elements__col-third
                     .form-elements__container.container-slider 
-                        +range-slider('range slider')
+                        +range-slider({sliderText: 'range slider'})
                     .form-elements__container
                         p.form-elements__header buttons
                         .form-elements__container-button
-                            +button('button-filled','click me')
+                            +button({buttonType: 'button-filled',text: 'click me'})
                         .form-elements__container-button
-                            +button('button-border','click me')
+                            +button({buttonType: 'button-border',text: 'click me'})
                         .form-elements__container-button
-                            +button('button-icon','click me',false)
+                            +button({buttonType: 'button-icon',text: 'click me',isGray: false})
                         .form-elements__container-button
-                            +button('button-arrow','перейти к оплате')
+                            +button({buttonType: 'button-arrow',text: 'перейти к оплате'})
                     .form-elements__container.form-elements__container-pagination
                         p.form-elements__header pagination
                         +pagination
                     .form-elements__container.form-elements__container-select
                         .form-elements__header dropdown
-                        +select('guests',true,[2,1,0])
+                        +select({selectType: 'guests',isActive: true,selectValues: [2,1,0]})
                     .form-elements__container.form-elements__container-list
                         p.form-elements__header bullet list
-                        +bullet-list(['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                        +bullet-list({listItems: ['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
             .form-elements__container_low
                     .form-elements__container.form-elements__container-icon-text
                         +icon-text-list({
@@ -122,4 +145,11 @@ html(lang="en")
                             icon: 'location_city'
                             }
                             ]})
-                    +card-comment(12,true,'Мурад Сарафанов','avatar.svg','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                    +card-comment({
+                        likesNum: 12,
+                        isActiveLikeBtn: true,
+                        profileName: 'Мурад Сарафанов',
+                        image: 'avatar.svg',
+                        commentDate: '5 дней назад',
+                        commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                        })

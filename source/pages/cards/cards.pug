@@ -14,16 +14,18 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Cards
     body 
-        +logo
+        +logo({
+            isColored: false
+        })
         .cards__container
             .cards__col
                 +card-room-search()
-                +card-registration('перейти к оплате')
+                +card-registration({ buttonArrowText: 'перейти к оплате' })
             .cards__col
-                +card-booking('888','люкс','9 990','₽','гости','guests',false,[1,2,0])
+                +card-booking({number: '888', roomClass: 'люкс',cost: '9 990',currency: '₽',selectTitle: 'гости',selectType: 'guests',isActive: false,selectNum: [1,2,0]})
                 +card-login
             .cards__col
                 +calendar()
-                +card-hotel-room()
-                +card-hotel-room('840','room-840.jpg',false,4,'9 990','₽ ','145 ')
+                +card-hotel-room({ roomNumber: 888, roomImg: 'room-888.jpg',isLuxe: true,starNum: 5,roomCost: '9 990',currency: '₽ ',revNum: '145 '})
+                +card-hotel-room({ roomNumber: 840, roomImg: 'room-840.jpg',isLuxe: false,starNum: 4,roomCost: '9 990',currency: '₽ ',revNum: '65 '})
                 

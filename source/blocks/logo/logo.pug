@@ -1,4 +1,5 @@
-mixin logo(isColored=false)
+mixin logo(props={})
+    -const { isColored } = props;
     if isColored 
         .logo.colored 
     else

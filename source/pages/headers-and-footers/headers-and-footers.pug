@@ -14,25 +14,35 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Headers and footers
     body 
-        +logo
+        +logo({
+            isColored: false
+        })
         .headers-and-footers__container.header 
-            +header( false,'юлий цезарь',{
+            +header({ 
+                authorization: false,
+                userName: 'юлий цезарь',
+                headerItems: {
                 items: [
                     {item: ['О нас']},
                     {item:['Услуги','Услуга 1','Услуга 2']},
                     {item: ['Вакансии']},
                     {item: ['Новости']},
                     {item: ['Соглашения','Соглашение 1','Соглашение 2']}
-                ]})
+                ]}
+                })
         .headers-and-footers__container.header
-            +header(true, 'юлий цезарь',{
+            +header({
+                authorization: true,
+                userName: 'юлий цезарь',
+                headerItems: {
                 items: [
                     {item: ['О нас']},
                     {item:['Услуги','Услуга 1','Услуга 2']},
                     {item: ['Вакансии']},
                     {item: ['Новости']},
                     {item: ['Соглашения','Соглашение 1','Соглашение 2']}
-                ]})
+                ]}
+            })
         .headers-and-footers__container 
             +footer({
                 header :  ['Навигация','О нас','Служба поддержки','Подписка'],

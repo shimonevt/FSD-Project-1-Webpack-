@@ -20,7 +20,7 @@ mixin footer(footerItems={})
                                         a(href="")=item3[i]
                                 else if i==3
                                     li.footer__item
-                                        +text-field-subscription
+                                        +text-field-subscription({ fieldType: "email", placeholderText: "Email" })
                                 else
                                     li.footer__item
                                         a(href="")=item2[i]

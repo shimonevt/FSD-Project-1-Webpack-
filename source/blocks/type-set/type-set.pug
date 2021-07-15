@@ -1,0 +1,5 @@
+mixin type-set(props={})
+    -const { setHeader, setText, setSize } = props;
+            div(class="type-set type-set-"+setHeader style="font-size: " + setSize)
+                p.type-set__header=setHeader 
+                .type-set__text=setText

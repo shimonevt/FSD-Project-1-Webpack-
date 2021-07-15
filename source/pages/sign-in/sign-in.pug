@@ -14,14 +14,18 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Sign in
     body 
-        +header( false,'юлий цезарь',{
-            items: [
-                {item: ['О нас']},
-                {item:['Услуги','Услуга 1','Услуга 2']},
-                {item: ['Вакансии']},
-                {item: ['Новости']},
-                {item: ['Соглашения','Соглашение 1','Соглашение 2']}
-            ]})
+        +header({
+                authorization: true,
+                userName: 'юлий цезарь',
+                headerItems: {
+                items: [
+                    {item: ['О нас']},
+                    {item:['Услуги','Услуга 1','Услуга 2']},
+                    {item: ['Вакансии']},
+                    {item: ['Новости']},
+                    {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+                ]}
+            })
         main.sign-in__container
             section.sign-in__container-card
                 +card-login

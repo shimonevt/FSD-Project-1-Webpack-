@@ -1,4 +1,6 @@
-jQuery(($) => {
+import * as $ from 'jquery';
+
+$(document).ready(() => {
   const $filterDate = $('.js-date-dropdown-filter__dates');
   const DatePickerFilter = $filterDate.datepicker({
     language: 'my-lang',
@@ -22,9 +24,11 @@ jQuery(($) => {
   $('.js-date-range-picker-filter .datepicker--button[data-action="today"]').click(() => {
     DatePickerFilter.hide();
   });
-  $('.js-date-dropdown-filter').click((ev) => {
+  $('.js-date-dropdown-filter').click(() => {
     DatePickerFilter.show();
   });
-  $($filterDate).datepicker().data('datepicker').selectDate(new Date(2019, 7, 19));
-  $($filterDate).datepicker().data('datepicker').selectDate(new Date(2019, 7, 23));
+  if ($filterDate.length) {
+    $($filterDate).datepicker().data('datepicker').selectDate(new Date(2019, 7, 19));
+    $($filterDate).datepicker().data('datepicker').selectDate(new Date(2019, 7, 23));
+  }
 });

@@ -10,7 +10,7 @@
     color: $dark-75;
     display: flex;
     padding-bottom: 1px;
-    &__input {
+    &__write-field {
         width: 90%;
         padding : 12px 0px 12px 15px;
         position: relative;
@@ -20,7 +20,7 @@
         border-radius: 4px;
         color: $dark-75;
     } 
-    &__input::placeholder {
+    &__write-field::placeholder {
         color: $dark-25;
     }     
     &:hover {

@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 
-jQuery(document).ready(($) => {
+$(document).ready(() => {
   function likeButtonClick(ev) {
     const likeButton = ev.currentTarget;
     const $thisNum = $(likeButton).children('.js-like-button__nmbr');

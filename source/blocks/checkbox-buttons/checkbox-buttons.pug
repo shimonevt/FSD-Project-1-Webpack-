@@ -1,4 +1,5 @@
-mixin checkbox-buttons(values,...items)
+mixin checkbox-buttons(props={})
+        -const {values, items} = props;
         .checkbox-buttons
             -let i = 0
             each item in items

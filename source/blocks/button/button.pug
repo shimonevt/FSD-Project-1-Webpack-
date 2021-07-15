@@ -1,10 +1,11 @@
-mixin button(buttonType='button-arrow',text='',gray=false)
+mixin button(props={})
+    -const {buttonType, text, isGray}=props;
     -let buttonClass;
     if buttonType == 'button-icon'
         if gray
-            -buttonClass= 'button-icon gray'
+            -buttonClass = 'button-icon gray'
         else
-            -buttonClass= 'button-icon'
+            -buttonClass = 'button-icon'
         button(class=buttonClass, type="submit")=text
     else if buttonType == 'button-border'
         button.button-border 

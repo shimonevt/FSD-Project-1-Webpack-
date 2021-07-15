@@ -1,6 +1,7 @@
-mixin bullet-list(items)   
+mixin bullet-list(props={})   
+            -const {listItems} = props;
             ul.bullet-list
                 -let i = 0
-                each item in items
-                    li.bullet-list__item=items[i]
+                each item in listItems
+                    li.bullet-list__item=listItems[i]
                     -i++               

@@ -1,0 +1,20 @@
+.color-set {
+    display: flex;
+    margin-bottom: 20px;
+    &__color-box {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+    }
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        position: relative;
+        top: 7px;
+    }
+    &__color-name{
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: normal;
+    }
+}

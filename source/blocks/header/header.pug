@@ -1,8 +1,11 @@
-mixin header(authorization = false,userName='юлий цезарь',headerItems={})
+mixin header(props={})
+    -const { headerItems, authorization, userName } = props;
     header.header
         .header__body 
             .header__logo
-                +logo(true) 
+                +logo({
+                    isColored: true
+                }) 
             nav.header__menu.js-header__menu
                 ul.header__nav.js-header__nav
                     -const { items } = headerItems
@@ -19,9 +22,9 @@ mixin header(authorization = false,userName='юлий цезарь',headerItems=
                     if authorization != true
                         li.header__entry-bar
                             a.header__sign-in-href(href="sign-in.html")
-                                +button('button-border','войти')
+                                +button({buttonType: "button-border",text: "войти"})
                             a.header__registration-href(href="registration.html")
-                                +button('button-filled','зарегистрироваться')
+                                +button({buttonType: "button-filled",text: "зарегистрироваться"})
                 if authorization
                     .header__menu-smallscr.js-header__menu-smallscr
                         .header__entry-bar 

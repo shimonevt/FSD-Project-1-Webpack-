@@ -1,13 +1,14 @@
-mixin radio-buttons(gender="man")
+mixin radio-buttons(props={})
+        -const { radioBtnName } = props;
         .radio-buttons
-            if gender="man"
+            if radioBtnName == "man"
                 label.radio-buttons__option
                     input.radio-buttons__option-button(type="radio", name="gender" checked)
                     span.radio-button__option-description Мужчина
                 label.radio-buttons__option
                     input.radio-buttons__option-button(type="radio", name="gender")
                     span.radio-buttons__option-description Женщина
-            else if gender="woman"
+            else if radioBtnName == "woman"
                 label.radio-buttons__option
                     input.radio-buttons__option-button(type="radio", name="gender")
                     span.radio-buttons__option-description Мужчина

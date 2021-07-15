@@ -1,4 +1,5 @@
-mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽',selectTitle='гости',selectType='guests',isActive=false,selectNum=[0,0,0])
+mixin card-booking(props={})
+            -const {number,roomClass, cost, currency, selectTitle, selectType, isActive, selectNum } = props;
             .card-booking.js-card-booking
                 .card-booking__info
                     .card-booking__room-info
@@ -11,7 +12,7 @@ mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽'
                 include ../../blocks/date-dropdown/date-dropdown
                 +date-dropdown
                 p.card-booking__subtitle=selectTitle
-                +select(selectType,isActive,selectNum)
+                +select({selectType: selectType,isActive: isActive,selectValues: selectNum})
                 .card-booking__costs
                     .card-booking__room.card-booking__item
                         span.js-card-booking__room-description.card-booking__room-description.card-booking__description Стоимость номера
@@ -28,5 +29,5 @@ mixin card-booking(number='888',roomClass='люкс',cost='9 990',currency='₽'
                         span.card-booking__total-description Итого
                         span.card-booking__total-divider
                         span.js-card-booking__total-price.card-booking__total-price 0₽
-                    +button('button-arrow','забронировать')
+                    +button({ buttonType:'button-arrow', text:'забронировать', isGray: false})
                     

@@ -1,6 +1,7 @@
+import * as $ from 'jquery';
 import '../date-dropdown/date-dropdown';
 
-jQuery(($) => {
+$(document).ready(() => {
   function getValueFromElement($element) {
     const text = $element.text();
     return parseInt(text.replace(/\D/g, ''), 10);
@@ -31,7 +32,7 @@ jQuery(($) => {
     const $roomPrice = $($card).find('.js-card-booking__room-price');
     const roomCost = getValueFromElement($costPerDay) * daysDiffer;
     const $currency = $($card).find('.js-card-booking__price-info').data('currency');
-    const roomCostText = convertValueToCost(roomCost, $currency); 
+    const roomCostText = convertValueToCost(roomCost, $currency);
     $($roomPrice).text(roomCostText);
     return roomCost;
   }
@@ -49,7 +50,7 @@ jQuery(($) => {
         numberOfGuests.push(parseInt($selectText[i], 10));
       }
     }
-    const selectTextValue = numberOfGuests.reduce((prevValue, currentValue) => prevValue + currentValue);
+    const selectTextValue = numberOfGuests.reduce((prevVal, currentVal) => prevVal + currentVal);
     const additionalPayValue = selectTextValue * 100;
     const $currency = $($card).find('.js-card-booking__price-info').data('currency');
     const additionalPayText = convertValueToCost(additionalPayValue, $currency);

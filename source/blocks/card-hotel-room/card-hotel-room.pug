@@ -1,4 +1,5 @@
-mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,roomCost='9 990',currency='₽ ', revNum='145 ')
+mixin card-hotel-room(props={})
+    -const { roomNumber, roomImg, isLuxe, starNum, roomCost, currency, revNum } = props;
     .card-hotel-room
         .card-hotel-room__image-slider.js-card-hotel-room__image-slider(data-img=roomImg)
                 img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
@@ -6,10 +7,11 @@ mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,
                 img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
                 img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
         .card-hotel-room__info
+            include ../../blocks/rating/rating
             .card-hotel-room__info-row
                 .card-hotel-room__info-room
                     span.card-hotel-room__number-symbol № 
-                    span.card-hotel-room__room-number=number
+                    span.card-hotel-room__room-number=roomNumber
                     if isLuxe
                         span.card-hotel-room__room-class="люкс"
                     else
@@ -19,13 +21,9 @@ mixin card-hotel-room(number='888',roomImg='room-888.jpg',isLuxe=true,starNum=5,
                     span.card-hotel-room__duration в сутки
             span.card-hotel-room__info-divider
             .card-hotel-room__info-row
-                include ../../blocks/rating/rating
-                if isLuxe
-                    +rating(starNum,number+"-room")
-                else
-                    +rating(starNum,number+"-room")
-                .card-hotel-room__info-guest
-                    span.card-hotel-room__review-number=revNum 
-                    .card-hotel-room__review-text Отзывов
+                    +rating({ rate: starNum, ratingName: roomNumber })
+                    .card-hotel-room__info-guest
+                        span.card-hotel-room__review-number=revNum 
+                        .card-hotel-room__review-text Отзывов
                              
                     

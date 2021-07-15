@@ -1,8 +1,10 @@
-import 'cleave.js';
+import * as $ from 'jquery';
+import Cleave from 'cleave.js';
 
-jQuery(($) => {
-  if ($('.text-field-masked__input').length) {
-    new Cleave('.text-field-masked__input', {
+$(document).ready(() => {
+  const cleaveSelector = document.querySelector('.js-text-field-masked__write-field');
+  if (cleaveSelector) {
+    const cleave = new Cleave(cleaveSelector, {
       date: true,
       delimiter: '.',
       datePattern: ['d', 'm', 'Y'],

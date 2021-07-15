@@ -14,24 +14,31 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Search room
     body
-        +header( false,'юлий цезарь',{
-            items: [
-                {item: ['О нас']},
-                {item:['Услуги','Услуга 1','Услуга 2']},
-                {item: ['Вакансии']},
-                {item: ['Новости']},
-                {item: ['Соглашения','Соглашение 1','Соглашение 2']}
-            ]}) 
+        +header({
+                authorization: true,
+                userName: 'юлий цезарь',
+                headerItems: {
+                items: [
+                    {item: ['О нас']},
+                    {item:['Услуги','Услуга 1','Услуга 2']},
+                    {item: ['Вакансии']},
+                    {item: ['Новости']},
+                    {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+                ]}
+            }) 
         main.search-room__container
             section.search-room__search-tools.js-search-room__search-tools
                 .search-room__button-close.js-search-room__button-close.search-room__button
                     i.material-icons keyboard_arrow_right
                 p.search-room__header Даты пребывания в отеле
                 +date-dropdown-filter
-                +select('guests',false,[3,0,1])
-                +range-slider
+                +select({selectType: 'guests',isActive: false,selectValues: [3,0,1]})
+                +range-slider({sliderText: "диапазон цен"})
                 .search-room__text Стоимость за сутки пребывания в номере
-                +checkbox-buttons([0,1,1],'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+                +checkbox-buttons({
+                    values: [0,1,1],
+                    items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+                })
                 p.search-room__header доступность
                 +rich-checkbox-buttons({
                     items: [
@@ -44,25 +51,30 @@ html(lang="en")
                             mainText: 'На 1 этаже вас встретит специалист и проводит до номера.'
                         }
                         ]})
-                +select('rooms',false,[2,2,0])
-                +checkbox-list('дополнительные удобства',true,[0,1,1,1,0,0],'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+                +select({selectType: "rooms",isActive: false,selectValues: [2,2,0]})
+                +checkbox-list({
+                    listHeader: 'дополнительные удобства',
+                    isActive: true,
+                    listValues: [0,1,1,1,0,0],
+                    listItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+                })
             section.search-room__container-room
                 .search-room__button-open.search-room__button.js-search-room__button-open 
                     i.material-icons settings
                 h1.search-room__container-header Номера, которые мы для вас подобрали
                 section.search-room__container-cards
-                    +card-hotel-room('888','room-888.jpg',true,5,'9 990','₽ ','145 ')
-                    +card-hotel-room('840','room-840.jpg',false,4,'9 990','₽ ','65 ')
-                    +card-hotel-room('980','room-980.jpg',true,3,'8 500','₽ ','35 ')
-                    +card-hotel-room('856','room-856.jpg',false,5,'7 300','₽ ','19 ')
-                    +card-hotel-room('740','room-740.jpg',false,4,'6 000','₽ ','44 ')
-                    +card-hotel-room('982','room-982.jpg',false,3,'5 800','₽ ','56 ')
-                    +card-hotel-room('678','room-678.jpg',false,5,'5 500','₽ ','45 ')
-                    +card-hotel-room('450','room-450.jpg',false,4,'5 300','₽ ','39 ')
-                    +card-hotel-room('350','room-350.jpg',false,3,'5 000','₽ ','77 ')
-                    +card-hotel-room('666','room-666.jpg',false,5,'5 000','₽ ','25 ')
-                    +card-hotel-room('444','room-444.jpg',false,4,'5 000','₽ ','15 ')
-                    +card-hotel-room('352','room-352.jpg',false,3,'5 000','₽ ','55 ')
+                    +card-hotel-room({roomNumber: '888',roomImg: 'room-888.jpg',isLuxe: true,starNum: 5,roomCost: '9 990',currency: '₽ ',revNum: '145 '})
+                    +card-hotel-room({roomNumber: '840',roomImg: 'room-840.jpg',isLuxe: false,starNum: 4,roomCost: '9 990',currency: '₽ ',revNum: '65 '})
+                    +card-hotel-room({roomNumber: '980',roomImg: 'room-980.jpg',isLuxe: true,starNum: 3,roomCost: '8 500',currency: '₽ ',revNum: '35 '})
+                    +card-hotel-room({roomNumber: '856',roomImg: 'room-856.jpg',isLuxe: false,starNum: 5,roomCost: '7 300',currency: '₽ ',revNum: '19 '})
+                    +card-hotel-room({roomNumber: '740',roomImg: 'room-740.jpg',isLuxe: false,starNum: 4,roomCost: '6 000',currency: '₽ ',revNum: '44 '})
+                    +card-hotel-room({roomNumber: '982',roomImg: 'room-982.jpg',isLuxe: false,starNum: 3,roomCost: '5 800',currency: '₽ ',revNum: '56 '})
+                    +card-hotel-room({roomNumber: '678',roomImg: 'room-678.jpg',isLuxe: false,starNum: 5,roomCost: '5 500',currency: '₽ ',revNum: '45 '})
+                    +card-hotel-room({roomNumber: '450',roomImg: 'room-450.jpg',isLuxe: false,starNum: 4,roomCost: '5 300',currency: '₽ ',revNum: '39 '})
+                    +card-hotel-room({roomNumber: '350',roomImg: 'room-350.jpg',isLuxe: false,starNum: 3,roomCost: '5 000',currency: '₽ ',revNum: '77 '})
+                    +card-hotel-room({roomNumber: '666',roomImg: 'room-666.jpg',isLuxe: false,starNum: 5,roomCost: '5 000',currency: '₽ ',revNum: '25 '})
+                    +card-hotel-room({roomNumber: '444',roomImg: 'room-444.jpg',isLuxe: false,starNum: 4,roomCost: '5 000',currency: '₽ ',revNum: '15 '})
+                    +card-hotel-room({roomNumber: '352',roomImg: 'room-352.jpg',isLuxe: false,starNum: 3,roomCost: '5 000',currency: '₽ ',revNum: '55 '})
                 section.search-room__container-pagination
                     +pagination
         +footer({

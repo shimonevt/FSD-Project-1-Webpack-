@@ -13,29 +13,23 @@ html(lang="en")
         link(rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5")
         title Colors and type
     body
-        mixin color-set(name,color,opacity="")
-            .color-set
-                .color-set__color-box(style="background: " + color + "; opacity: " + opacity)
-                .color-set__text-box
-                    .color-set__text-header=name+' '+ opacity
-                    .color-set__color-name=color
-        mixin type-set(header,text,size)
-            div(class="type-set type-set-"+header style="font-size: " +size)
-                p.type-set__header=header 
-                .type-set__text=text   
+        include ../../blocks/color-set/color-set
+        include ../../blocks/type-set/type-set   
         include ../../blocks/logo/logo
-        +logo()
+        +logo({
+            isColored: false
+        })
         .colors-and-type__container
             .colors-and-type__column-color 
-                +color-set('dark shade','#1F2041','100%') 
-                +color-set('dark shade','#1F2041','75%')
-                +color-set('dark shade','#1F2041','50%')
-                +color-set('dark shade','#1F2041','25%')
-                +color-set('dark shade','#1F2041','5%')
-                +color-set('purple','#BC9CFF')  
-                +color-set('green','#6FC97F')  
+                +color-set({ setName: 'dark shade', setColor: '#1F2041', opacity: '100%' }) 
+                +color-set({ setName: 'dark shade', setColor: '#1F2041', opacity: '75%' })
+                +color-set({ setName: 'dark shade', setColor: '#1F2041', opacity: '50%' })
+                +color-set({ setName: 'dark shade', setColor: '#1F2041', opacity: '25%' })
+                +color-set({ setName: 'dark shade', setColor: '#1F2041', opacity: '5%' })
+                +color-set({ setName: 'purple', setColor: '#BC9CFF', opacity: '' })  
+                +color-set({ setName: 'green', setColor: '#6FC97F', opacity: '' })  
             .colors-and-type__column-type   
-                +type-set('H1','This one is the sub-section or widget title','24px')
-                +type-set('H2','Next one is the item title inside widgets','19px')
-                +type-set('H3','This is a label or CTA text','12px')
-                +type-set('body','This is the body text which is used for most of the design, like paragraphs, lists, etc.','14px')
+                +type-set({ setHeader: 'H1', setText: 'This one is the sub-section or widget title', setSize: '24px' })
+                +type-set({ setHeader: 'H2', setText: 'Next one is the item title inside widgets', setSize: '19px' })
+                +type-set({ setHeader: 'H3', setText: 'This is a label or CTA text', setSize: '12px' })
+                +type-set({ setHeader: 'body', setText: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', setSize: '14px' })

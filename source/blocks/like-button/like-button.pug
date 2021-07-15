@@ -1,5 +1,6 @@
-mixin like-button(num="2",isActive=false)
-        if isActive 
+mixin like-button(props={})
+    -const { likesNum, isLikeBtnActive } = props;
+        if isLikeBtnActive 
             -buttonClass=" active"
             -heartText="favorite"
         else
@@ -8,4 +9,4 @@ mixin like-button(num="2",isActive=false)
         button(class="js-like-button like-button"+buttonClass)
             .like-button__img.js-like-button__img
                 i.material-icons.md-10.js-like-button__heart.like-button__heart=heartText
-            .js-like-button__nmbr.like-button__nmbr=num
+            .js-like-button__nmbr.like-button__nmbr=likesNum

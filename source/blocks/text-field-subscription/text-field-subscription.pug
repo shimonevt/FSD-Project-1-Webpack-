@@ -1,5 +1,6 @@
-mixin text-field-subscription(fieldType='email',textFieldPlaceholder='Email')
+mixin text-field-subscription(props={})
+    -const { fieldType, placeholderText } = props;
     .text-field-subscription
-        input.text-field-subscription__write-field(type=fieldType, placeholder=textFieldPlaceholder)
-        button.text-field-subscription__button
+        input.text-field-subscription__write-field(type=fieldType, placeholder=placeholderText)
+        button.text-field-subscription__subscribe-btn
             i.material-icons.md-24 arrow_forward

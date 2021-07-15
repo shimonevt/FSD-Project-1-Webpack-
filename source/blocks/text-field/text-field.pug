@@ -1,8 +1,9 @@
-mixin text-field(text='Email',text_type='email',masked=false)
+mixin text-field(props={})
+    -const { placeholderText, textType, isMasked } = props;
     -let textClass;
-    if masked
-        -textClass = 'text-field-masked'
+    if isMasked == true
+        -textClass = ['text-field-masked','js-text-field-masked__write-field text-field-masked__write-field']
     else 
-        -textClass = '' 
-    div(class='text-field '+textClass)
-        input.text-field__write-field(class='text-field__input '+textClass+'__input',type=text_type, placeholder=text)
+        -textClass = ['text-field','text-field__write-field'] 
+    div(class=textClass[0])
+        input(class=textClass[1], type=textType, placeholder=placeholderText)

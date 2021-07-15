@@ -1,0 +1,7 @@
+mixin color-set(props={})
+    -const { setName, setColor, opacity } = props;
+            .color-set
+                .color-set__color-box(style="background: " + setColor + "; opacity: " + opacity)
+                .color-set__text-box
+                    .color-set__text-header=setName+' '+ opacity
+                    .color-set__color-name=color

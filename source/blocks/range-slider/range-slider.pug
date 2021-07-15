@@ -1,6 +1,7 @@
-mixin range-slider(text='диапазон цен')
+mixin range-slider(props={})
+        -const { sliderText } = props;
         .range-slider
             .range-slider__info
-                .range-slider__info-text=text
+                .range-slider__info-text=sliderText
                 input(class='range-slider__values js-range-slider__values' disabled)
             input.range-slider__body.js-range-slider__body
