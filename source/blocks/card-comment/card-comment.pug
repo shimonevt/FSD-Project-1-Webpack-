@@ -3,7 +3,7 @@ mixin card-comment(props={})
         .card-comment(data-img=image)
             .card-comment__profile
                 .card-comment__avatar
-                    img.card-comment__img(src=require('source/blocks/card-comment/pictures/'+image))
+                    img.card-comment__img(src=require("source/blocks/card-comment/pictures/"+image))
                 include ../../blocks/like-button/like-button
                 +like-button({
                     isLikeBtnActive: isActiveLikeBtn,

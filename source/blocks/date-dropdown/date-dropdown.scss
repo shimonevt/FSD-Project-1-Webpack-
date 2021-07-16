@@ -23,7 +23,7 @@
     }  
     &__item::before{
         content: 'expand_more';
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         text-transform: lowercase;
         font-style: normal;
         font-size: 24px;
@@ -39,7 +39,7 @@
     }   
 }
 .material-icons {
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         font-style: normal;
         font-size: 24px;
         color: $dark-50;

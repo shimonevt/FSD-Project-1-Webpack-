@@ -1,9 +1,9 @@
 mixin checkbox-list(props={})
         -const {listHeader,isActive, listValues, listItems} = props;
         if isActive
-            -listClass ='active'
+            -listClass ="active"
         else
-            -listClass =''
+            -listClass =""
         .checkbox-list.js-checkbox-list
             div.js-checkbox-list__info(class="checkbox-list__info "+listClass)
                 .checkbox-list__info-title=listHeader

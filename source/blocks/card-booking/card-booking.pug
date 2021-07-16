@@ -3,7 +3,7 @@ mixin card-booking(props={})
             .card-booking.js-card-booking
                 .card-booking__info
                     .card-booking__room-info
-                        span.card-booking__number-symbol='№ '
+                        span.card-booking__number-symbol="№ "
                         span.card-booking__number-value=number
                         span.card-booking__room-class=roomClass
                     .card-booking__price-info.js-card-booking__price-info(data-currency=currency)
@@ -29,5 +29,5 @@ mixin card-booking(props={})
                         span.card-booking__total-description Итого
                         span.card-booking__total-divider
                         span.js-card-booking__total-price.card-booking__total-price 0₽
-                    +button({ buttonType:'button-arrow', text:'забронировать', isGray: false})
+                    +button({ buttonType:"button-arrow", text:"забронировать", isGray: false})
                     

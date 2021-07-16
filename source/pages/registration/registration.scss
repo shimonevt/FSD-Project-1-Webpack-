@@ -1,11 +1,10 @@
-@import "../../import/import.scss";
+@import '../../import/import.scss';
 .registration__container{
     display: flex;
     justify-content: center;
     background : url(./pictures/sign-in-reg.jpg) no-repeat center center;
     background-size: cover;
     margin: 70px auto 0px;
-    
 }
 .registration__container-card{
         width: 380px;

@@ -1,4 +1,4 @@
-@import "../../import/import.scss";
+@import '../../import/import.scss';
 .index {
     &__container{
         width: 100%;
@@ -6,7 +6,6 @@
         margin : 0px auto;
         padding: 140px;
         justify-content: space-between;
-
     }
     &__list{
         list-style: none;

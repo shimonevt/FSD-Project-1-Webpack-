@@ -15,7 +15,7 @@
     cursor: pointer;
     &::after {
         content: 'arrow_forward';
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         color : $white;
         text-transform: lowercase;
         position: absolute;

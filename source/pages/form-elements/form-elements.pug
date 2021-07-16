@@ -21,7 +21,7 @@ html(lang="en")
             .form-elements__col
                     .form-elements__container
                         p.form-elements__header text field
-                        +text-field({placeholderText:'Email',textType: 'email',isMasked: false})
+                        +text-field({ placeholderText: "Email", textType: "email", isMasked: false})
                     .form-elements__container
                         p.form-elements__header text field
                         +text-field({placeholderText: "This is pretty awesome",textType: "email",isMasked: false})
@@ -84,72 +84,72 @@ html(lang="en")
                                 isLikeBtnActive: false
                             })
                             +like-button({
-                                likeNum: 12,
+                                likesNum: 12,
                                 isLikeBtnActive: true
                             })
                     .form-elements__container 
                         p.form-elements__header rate button
                         .form-elements__container_flexible
-                            +rating({rate: 4,ratingName: 'rating-4'})
-                            +rating({rate: 5,ratingName: 'rating-5'})
+                            +rating({rate: 4,ratingName: "rating-4"})
+                            +rating({rate: 5,ratingName: "rating-5"})
                     .form-elements__container.form-elements__container-select.first 
                         p.form-elements__header dropdown
-                        +select({selectType: 'guests',isActive: true,selectValues: [0,0,0]})
+                        +select({selectType: "guests",isActive: true,selectValues: [0,0,0]})
                     .form-elements__container.container-rich-checkbox
                         p.form-elements__header rich checkbox buttons
                         +rich-checkbox-buttons({
                             items: [
                                 {
-                                    header: 'Широкий коридор',
-                                    mainText: 'Ширина коридоров в номере не менее 91 см.'
+                                    header: "Широкий коридор",
+                                    mainText: "Ширина коридоров в номере не менее 91 см."
                                 },
                                 {
-                                    header: 'Помощник для инвалидов',
-                                    mainText: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                                    header: "Помощник для инвалидов",
+                                    mainText: "На 1 этаже вас встретит специалист и проводит до номера."
                                 }
                                 ]})
             .form-elements__col.form-elements__col-third
                     .form-elements__container.container-slider 
-                        +range-slider({sliderText: 'range slider'})
+                        +range-slider({ sliderText: "range slider" })
                     .form-elements__container
                         p.form-elements__header buttons
                         .form-elements__container-button
-                            +button({buttonType: 'button-filled',text: 'click me'})
+                            +button({ buttonType: "button-filled", text: "click me"})
                         .form-elements__container-button
-                            +button({buttonType: 'button-border',text: 'click me'})
+                            +button({ buttonType: "button-border", text: "click me"})
                         .form-elements__container-button
-                            +button({buttonType: 'button-icon',text: 'click me',isGray: false})
+                            +button({ buttonType: "button-icon", text: "click me",isGray: false})
                         .form-elements__container-button
-                            +button({buttonType: 'button-arrow',text: 'перейти к оплате'})
+                            +button({buttonType: "button-arrow", text: "перейти к оплате"})
                     .form-elements__container.form-elements__container-pagination
                         p.form-elements__header pagination
                         +pagination
                     .form-elements__container.form-elements__container-select
                         .form-elements__header dropdown
-                        +select({selectType: 'guests',isActive: true,selectValues: [2,1,0]})
+                        +select({selectType: "guests",isActive: true,selectValues: [2,1,0]})
                     .form-elements__container.form-elements__container-list
                         p.form-elements__header bullet list
-                        +bullet-list({listItems: ['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+                        +bullet-list({listItems: ["Нельзя с питомцами","Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
             .form-elements__container_low
                     .form-elements__container.form-elements__container-icon-text
                         +icon-text-list({
                             items:[
                             {
-                            header:'Комфорт',
-                            text:'Шумопоглощающие стены',
-                            icon: 'insert_emoticon'
+                            header: "Комфорт",
+                            text:"Шумопоглощающие стены",
+                            icon: "insert_emoticon"
                             },
                             {
-                            header: 'Удобство',
-                            text: 'Окно в каждой из спален',
-                            icon: 'location_city'
+                            header: "Удобство",
+                            text: "Окно в каждой из спален",
+                            icon: "location_city"
                             }
                             ]})
                     +card-comment({
                         likesNum: 12,
                         isActiveLikeBtn: true,
-                        profileName: 'Мурад Сарафанов',
-                        image: 'avatar.svg',
-                        commentDate: '5 дней назад',
-                        commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                        profileName: "Мурад Сарафанов",
+                        image: "avatar.svg",
+                        commentDate: "5 дней назад",
+                        commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
                         })

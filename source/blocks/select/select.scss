@@ -32,7 +32,7 @@
         cursor: pointer;
     }
     &__text::after{
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         content: 'expand_more';
         color: $dark-50;
         font-size: 24px;
@@ -61,7 +61,7 @@
         color:  $dark-100;
     }
 }
-.select.active {
+.select_active {
     border: 1px solid $dark-50;
     box-shadow: $shadow-5;
     border-radius: 4px 4px 0px 0px;
@@ -122,7 +122,7 @@
         border : 1px solid $dark-25;
         color: $dark-25;
     }
-    .select__button-minus.active {
+    .select__button-minus_active {
         border: 1px solid $dark-50;
         color: $dark-50;
     }
@@ -141,7 +141,7 @@
             display: none;
         }
     }
-    .select__edit-buttons.active{
+    .select__edit-buttons_active{
         justify-content: space-between;
         .select__button-clear{
             display: block;

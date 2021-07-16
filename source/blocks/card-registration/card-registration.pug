@@ -7,15 +7,15 @@ mixin card-registration(props={})
             +text-field({ placeholderText: "Фамилия", textType: "text", isMasked: false})
             +radio-buttons({ radioBtnName: "man" })
             p.card-registration__subtitle дата рождения
-            +text-field({ placeholderText: 'ДД.ММ.ГГГГ', textType: 'email',isMasked: true})
+            +text-field({ placeholderText: "ДД.ММ.ГГГГ", textType: "email",isMasked: true})
             p.card-registration__subtitle данные для входа в сервис
-            +text-field({ placeholderText: 'Email',textType: 'email', isMasked: false})
-            +text-field({ placeholderText: 'Пароль', textType: 'password', isMasked: false})
+            +text-field({ placeholderText: "Email", textType: "email", isMasked: false})
+            +text-field({ placeholderText: "Пароль", textType: "password", isMasked: false})
             +toggle({ isChecked: false })
-            +button({ buttonType: 'button-arrow', text: buttonArrowText, isGray: false })
+            +button({ buttonType: "button-arrow", text: buttonArrowText, isGray: false })
             .log-in
                 span.log-in__info Уже есть аккаунт на Toxin
                 a(href="sign-in.html")
-                    +button({ buttonType: 'button-border', text: 'войти', isGray: false })
+                    +button({ buttonType: "button-border", text: "войти", isGray: false })
 
             

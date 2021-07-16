@@ -16,14 +16,14 @@ html(lang="en")
     body
         +header({
                 authorization: true,
-                userName: 'юлий цезарь',
+                userName: "юлий цезарь",
                 headerItems: {
                 items: [
-                    {item: ['О нас']},
-                    {item:['Услуги','Услуга 1','Услуга 2']},
-                    {item: ['Вакансии']},
-                    {item: ['Новости']},
-                    {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+                    {item: ["О нас"]},
+                    {item:["Услуги","Услуга 1","Услуга 2"]},
+                    {item: ["Вакансии"]},
+                    {item: ["Новости"]},
+                    {item: ["Соглашения","Соглашение 1","Соглашение 2"]}
                 ]}
             }) 
         main.search-room__container
@@ -32,55 +32,55 @@ html(lang="en")
                     i.material-icons keyboard_arrow_right
                 p.search-room__header Даты пребывания в отеле
                 +date-dropdown-filter
-                +select({selectType: 'guests',isActive: false,selectValues: [3,0,1]})
+                +select({selectType: "guests",isActive: false,selectValues: [3,0,1]})
                 +range-slider({sliderText: "диапазон цен"})
                 .search-room__text Стоимость за сутки пребывания в номере
                 +checkbox-buttons({
                     values: [0,1,1],
-                    items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+                    items: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
                 })
                 p.search-room__header доступность
                 +rich-checkbox-buttons({
                     items: [
                         {
-                            header: 'Широкий коридор',
-                            mainText: 'Ширина коридоров в номере не менее 91 см.'
+                            header: "Широкий коридор",
+                            mainText: "Ширина коридоров в номере не менее 91 см."
                         },
                         {
-                            header: 'Помощник для инвалидов',
-                            mainText: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                            header: "Помощник для инвалидов",
+                            mainText: "На 1 этаже вас встретит специалист и проводит до номера."
                         }
                         ]})
                 +select({selectType: "rooms",isActive: false,selectValues: [2,2,0]})
                 +checkbox-list({
-                    listHeader: 'дополнительные удобства',
+                    listHeader: "дополнительные удобства",
                     isActive: true,
                     listValues: [0,1,1,1,0,0],
-                    listItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+                    listItems: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
                 })
             section.search-room__container-room
                 .search-room__button-open.search-room__button.js-search-room__button-open 
                     i.material-icons settings
                 h1.search-room__container-header Номера, которые мы для вас подобрали
                 section.search-room__container-cards
-                    +card-hotel-room({roomNumber: '888',roomImg: 'room-888.jpg',isLuxe: true,starNum: 5,roomCost: '9 990',currency: '₽ ',revNum: '145 '})
-                    +card-hotel-room({roomNumber: '840',roomImg: 'room-840.jpg',isLuxe: false,starNum: 4,roomCost: '9 990',currency: '₽ ',revNum: '65 '})
-                    +card-hotel-room({roomNumber: '980',roomImg: 'room-980.jpg',isLuxe: true,starNum: 3,roomCost: '8 500',currency: '₽ ',revNum: '35 '})
-                    +card-hotel-room({roomNumber: '856',roomImg: 'room-856.jpg',isLuxe: false,starNum: 5,roomCost: '7 300',currency: '₽ ',revNum: '19 '})
-                    +card-hotel-room({roomNumber: '740',roomImg: 'room-740.jpg',isLuxe: false,starNum: 4,roomCost: '6 000',currency: '₽ ',revNum: '44 '})
-                    +card-hotel-room({roomNumber: '982',roomImg: 'room-982.jpg',isLuxe: false,starNum: 3,roomCost: '5 800',currency: '₽ ',revNum: '56 '})
-                    +card-hotel-room({roomNumber: '678',roomImg: 'room-678.jpg',isLuxe: false,starNum: 5,roomCost: '5 500',currency: '₽ ',revNum: '45 '})
-                    +card-hotel-room({roomNumber: '450',roomImg: 'room-450.jpg',isLuxe: false,starNum: 4,roomCost: '5 300',currency: '₽ ',revNum: '39 '})
-                    +card-hotel-room({roomNumber: '350',roomImg: 'room-350.jpg',isLuxe: false,starNum: 3,roomCost: '5 000',currency: '₽ ',revNum: '77 '})
-                    +card-hotel-room({roomNumber: '666',roomImg: 'room-666.jpg',isLuxe: false,starNum: 5,roomCost: '5 000',currency: '₽ ',revNum: '25 '})
-                    +card-hotel-room({roomNumber: '444',roomImg: 'room-444.jpg',isLuxe: false,starNum: 4,roomCost: '5 000',currency: '₽ ',revNum: '15 '})
-                    +card-hotel-room({roomNumber: '352',roomImg: 'room-352.jpg',isLuxe: false,starNum: 3,roomCost: '5 000',currency: '₽ ',revNum: '55 '})
+                    +card-hotel-room({roomNumber: "888", roomImg: "room-888.jpg", isLuxe: true, starNum: 5, roomCost: "9 990", currency: "₽ ", revNum: "145 "})
+                    +card-hotel-room({roomNumber: "840", roomImg: "room-840.jpg", isLuxe: false, starNum: 4, roomCost: "9 990", currency: "₽ ", revNum: "65 "})
+                    +card-hotel-room({roomNumber: "980", roomImg: "room-980.jpg", isLuxe: true, starNum: 3, roomCost: "8 500", currency: "₽ ", revNum: "35 "})
+                    +card-hotel-room({roomNumber: "856", roomImg: "room-856.jpg", isLuxe: false, starNum: 5, roomCost: "7 300", currency: "₽ ", revNum: "19 "})
+                    +card-hotel-room({roomNumber: "740", roomImg: "room-740.jpg", isLuxe: false, starNum: 4, roomCost: "6 000", currency: "₽ ", revNum: "44 "})
+                    +card-hotel-room({roomNumber: "982", roomImg: "room-982.jpg", isLuxe: false, starNum: 3, roomCost: "5 800", currency: "₽ ", revNum: "56 "})
+                    +card-hotel-room({roomNumber: "678", roomImg: "room-678.jpg", isLuxe: false, starNum: 5, roomCost: "5 500", currency: "₽ ", revNum: "45 "})
+                    +card-hotel-room({roomNumber: "450", roomImg: "room-450.jpg", isLuxe: false, starNum: 4, roomCost: "5 300", currency: "₽ ", revNum: "39 "})
+                    +card-hotel-room({roomNumber: "350", roomImg: "room-350.jpg", isLuxe: false, starNum: 3, roomCost: "5 000", currency: "₽ ", revNum: "77 "})
+                    +card-hotel-room({roomNumber: "666", roomImg: "room-666.jpg", isLuxe: false, starNum: 5, roomCost: "5 000", currency: "₽ ", revNum: "25 "})
+                    +card-hotel-room({roomNumber: "444", roomImg: "room-444.jpg", isLuxe: false, starNum: 4, roomCost: "5 000", currency: "₽ ", revNum: "15 "})
+                    +card-hotel-room({roomNumber: "352", roomImg: "room-352.jpg", isLuxe: false, starNum: 3, roomCost: "5 000", currency: "₽ ", revNum: "55 "})
                 section.search-room__container-pagination
                     +pagination
         +footer({
-            header :  ['Навигация','О нас','Служба поддержки','Подписка'],
-            item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
-            item2 : ['Новости','Наша команда','Сообщества'],
-            item3 : ['Служба поддержки','Вакансии','Связь с нами'],
-            item4 : ['Услуги','Инвесторы']
+            header :  ["Навигация","О нас","Служба поддержки","Подписка"],
+            item1 : ["О нас","О сервисе","Соглашения","Получайте специальные предложения и новости сервиса"],
+            item2 : ["Новости","Наша команда","Сообщества"],
+            item3 : ["Служба поддержки","Вакансии","Связь с нами"],
+            item4 : ["Услуги","Инвесторы"]
             })

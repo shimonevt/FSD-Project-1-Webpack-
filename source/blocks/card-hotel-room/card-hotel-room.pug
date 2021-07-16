@@ -2,10 +2,10 @@ mixin card-hotel-room(props={})
     -const { roomNumber, roomImg, isLuxe, starNum, roomCost, currency, revNum } = props;
     .card-hotel-room
         .card-hotel-room__image-slider.js-card-hotel-room__image-slider(data-img=roomImg)
-                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
-                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
-                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
-                img(src=require('source/blocks/card-hotel-room/pictures/'+roomImg))
+                img(src=require("source/blocks/card-hotel-room/pictures/"+roomImg))
+                img(src=require("source/blocks/card-hotel-room/pictures/"+roomImg))
+                img(src=require("source/blocks/card-hotel-room/pictures/"+roomImg))
+                img(src=require("source/blocks/card-hotel-room/pictures/"+roomImg))
         .card-hotel-room__info
             include ../../blocks/rating/rating
             .card-hotel-room__info-row

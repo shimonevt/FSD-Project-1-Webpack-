@@ -29,12 +29,12 @@
         align-items: baseline;
     }
     &__number-symbol{
-        font-family: 'Quicksand';
+        font-family: 'Quicksand', Arial, sans-serif;
         font-weight: bold;
         margin: 0px;
     }
     &__number-value {
-        font-family: 'Quicksand';
+        font-family: 'Quicksand', Arial, sans-serif;
         font-weight: bold;
         font-size: 24px;
         color: $dark-100;

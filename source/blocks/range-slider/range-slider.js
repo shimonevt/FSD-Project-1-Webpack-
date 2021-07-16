@@ -1,9 +1,9 @@
 import * as $ from 'jquery';
 import 'ion-rangeslider';
 
-jQuery(document).ready(($) => {
+$(document).ready(() => {
   const $values = $('.js-range-slider__values');
-  const track = function (data) {
+  const track = (data) => {
     $values.val(` ${data.from}₽ - ${data.to}₽`);
   };
   $('.js-range-slider__body').ionRangeSlider({

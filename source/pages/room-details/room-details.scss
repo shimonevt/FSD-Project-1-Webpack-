@@ -1,4 +1,4 @@
-@import "../../import/import.scss";
+@import '../../import/import.scss';
 body {
     @extend %regular-text;
     color: $dark-75;
@@ -11,9 +11,9 @@ body {
     &__container {
         display: grid;
         grid-template-columns: auto;
-        grid-template-areas: "room-info statistics card-booking"
-                            "card-comment card-comment card-booking"
-                            "rules cancel row";
+        grid-template-areas: 'room-info statistics card-booking'
+                            'card-comment card-comment card-booking'
+                            'rules cancel row';
         grid-gap: 30px 10px;
         max-width: 1160px;
         margin : 70px auto 70px;
@@ -27,8 +27,8 @@ body {
         grid-template-columns: 66% 33%;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            "first second"
-            "first third"; 
+            'first second'
+            'first third'; 
     }
     &__container_first-image { 
         grid-area: first;
@@ -100,8 +100,8 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "orange purple"
-                             "orange green";
+        grid-template-areas: 'orange purple'
+                             'orange green';
         grid-gap: 2px;
         &_orange{
             grid-area: orange;
@@ -174,11 +174,11 @@ body {
     .room-details__container {
         max-width: 800px;
         display: grid;
-        grid-template-columns:  repeat(2,1fr);
-        grid-template-areas:    "card-booking card-booking" 
-                            "room-info statistics"
-                            "card-comment card-comment"
-                            "rules cancel";
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 'card-booking card-booking' 
+                            'room-info statistics'
+                            'card-comment card-comment'
+                            'rules cancel';
         padding: 0px 20px;
     }
     .room-details__container-statistics,.room-details__container-info {
@@ -201,8 +201,8 @@ body {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr;
         grid-template-areas:
-        "first first"
-        "second third";
+        'first first'
+        'second third';
     }
     .room-details__container-comment{
         padding: 0px 10px;

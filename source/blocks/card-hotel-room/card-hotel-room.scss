@@ -106,12 +106,12 @@
         padding : 20px 17px 19px 18px;
     }
     &__number-symbol {
-        font-family: 'Quicksand';
+        font-family: 'Quicksand', Arial, sans-serif;
         font-weight: bold;
         color: $dark-100;
     }
     &__room-number {
-        font-family: 'Quicksand';
+        font-family: 'Quicksand', Arial, sans-serif;
         font-weight: bold;
         font-size: 20px;
         color: $dark-100;
@@ -138,11 +138,11 @@
     }
     &__duration {
         margin-left: 2px;
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', Arial, sans-serif;
         font-weight: normal;
     }
     &__info-guest {
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', Arial, sans-serif;
         font-weight: normal;
         text-transform: capitalize;
         position: relative;
@@ -151,7 +151,7 @@
         align-items: center;
     }
     &__review-number {
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', Arial, sans-serif;
         font-weight: bold;
         margin-right: 4px;
     }    

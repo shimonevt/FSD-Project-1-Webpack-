@@ -56,7 +56,7 @@ $(document).ready(() => {
       const $editButtons = $($selectText).parent('.js-select').find('.js-select__edit-buttons');
       for (let i = 0; i < totalCount.length; i += 1) {
         if (totalCount[i] > minValue) {
-          $($editButtons).addClass('active');
+          $($editButtons).addClass('select__edit-buttons_active');
         }
       }
       selectTextArray = writeListGroupsText(itemGuests, totalCount);
@@ -109,7 +109,7 @@ $(document).ready(() => {
   }
   function hideSelectText(event) {
     const $selectDropdown = $(event.target).parent('.js-select');
-    $selectDropdown.toggleClass('active');
+    $selectDropdown.toggleClass('select_active');
   }
   function clickOnEditClear(event) {
     const editButtons = event.target.closest('.js-select__edit-buttons');
@@ -122,17 +122,17 @@ $(document).ready(() => {
       $($selectText).text(text);
     }
     $($select).find('.js-select__button-minus').each((_index, elem) => {
-      $(elem).removeClass('active');
+      $(elem).removeClass('select__button-minus_active');
     });
     $($select).find('.js-select__count').each((_index, elem) => {
       $(elem).text(minValue);
     });
-    $(editButtons).removeClass('active');
+    $(editButtons).removeClass('select__edit-buttons_active');
   }
   function clickOnEditAccept(event) {
     const editAccept = event.target;
     const $selectClose = editAccept.closest('.js-select');
-    $selectClose.classList.toggle('active');
+    $selectClose.classList.toggle('select_active');
   }
   function selectRoomsCountTreatment($selectType, $select) {
     const totalCount = [];
@@ -157,9 +157,9 @@ $(document).ready(() => {
     const totalCount = [numberOfGuests, notBabies];
     writeSelectText($select, totalCount);
     if (numberOfGuests + notBabies === 0) {
-      $($editButtons).removeClass('active');
+      $($editButtons).removeClass('select__edit-buttons_active');
     } else {
-      $($editButtons).addClass('active');
+      $($editButtons).addClass('select__edit-buttons_active');
     }
   }
   function clickOnButtonsGroup(event) {
@@ -174,15 +174,15 @@ $(document).ready(() => {
     if (event.target.classList.contains('js-select__button-plus')) {
       $itemValue += 1;
       $($itemsCount).text($itemValue);
-      $($editButtons).addClass('active');
+      $($editButtons).addClass('select__edit-buttons_active');
       if ($itemValue === minValue + 1) {
-        $($buttonsGroup).find('.js-select__button-minus').addClass('active');
+        $($buttonsGroup).find('.js-select__button-minus').addClass('select__button-minus_active');
       }
     } else {
       $itemValue -= 1;
       if ($itemValue <= minValue) {
         $($itemsCount).text(minValue);
-        $($buttonsGroup).find('.js-select__button-minus').removeClass('active');
+        $($buttonsGroup).find('.js-select__button-minus').removeClass('select__button-minus_active');
       } else {
         $($itemsCount).text($itemValue);
       }

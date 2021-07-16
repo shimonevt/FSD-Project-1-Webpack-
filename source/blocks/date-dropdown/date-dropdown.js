@@ -1,14 +1,15 @@
+import $ from 'jquery';
 import '../calendar/calendar';
 
-jQuery(($) => {
+$(document).ready(() => {
   const $start = $('.js-date-dropdown__first-date');
   const $end = $('.js-date-dropdown__second-date');
   function secondDateClick(ev) {
     const dateBar = ev.target.closest('.js-date-dropdown');
     $(dateBar).find($start).focus();
   }
-  function datePickerInit(index, elem) {
-    const $rangeDatePicker = $(elem).datepicker({
+  function datePickerInit(index, $elem) {
+    $($elem).datepicker({
       language: 'my-lang',
       range: true,
       clearButton: true,
@@ -24,16 +25,16 @@ jQuery(($) => {
       },
       onShow(dp, animationCompleted) {
         if (animationCompleted) {
-          dp.$datepicker.find('.datepicker--button[data-action="today"]').click((event) => {
+          dp.$datepicker.find('.datepicker--button[data-action="today"]').click(() => {
             $start.trigger('change');
             dp.hide();
           });
         }
       },
-      onSelect(fd, date, ins) {
+      onSelect(fd, date) {
         function CheckIfStartsWithZero(num) {
-          num = num.toString();
-          return num.length === 1 ? `0${num}` : num;
+          const newNum = num.toString();
+          return newNum.length === 1 ? `0${newNum}` : newNum;
         }
         function getDateForInput(i) {
           if (date[i] !== undefined) {

@@ -2,8 +2,8 @@ mixin text-field(props={})
     -const { placeholderText, textType, isMasked } = props;
     -let textClass;
     if isMasked == true
-        -textClass = ['text-field-masked','js-text-field-masked__write-field text-field-masked__write-field']
+        -textClass = ["text-field-masked","js-text-field-masked__write-field text-field-masked__write-field"]
     else 
-        -textClass = ['text-field','text-field__write-field'] 
+        -textClass = ["text-field","text-field__write-field"] 
     div(class=textClass[0])
         input(class=textClass[1], type=textType, placeholder=placeholderText)

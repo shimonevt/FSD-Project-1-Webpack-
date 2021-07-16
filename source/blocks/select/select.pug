@@ -4,20 +4,20 @@ mixin select(props={})
     -let names, listData;
     -let selectClass;
     if isActive
-        -selectClass ='select js-select active'
+        -selectClass ="select js-select active"
     else
-        -selectClass ='select js-select'
-    if selectType =='rooms'
-        -names = ['спальни', 'кровати', 'ванные комнаты']
-        -listData = ['bedrooms', 'beds', 'bathrooms']
-    else if selectType == 'guests'
-        -names = ['взрослые', 'дети', 'младенцы']
-        -listData = ['guests', 'guests', 'babies']
+        -selectClass ="select js-select"
+    if selectType =="rooms"
+        -names = ["спальни", "кровати", "ванные комнаты"]
+        -listData = ["bedrooms", "beds", "bathrooms"]
+    else if selectType == "guests"
+        -names = ["взрослые", "дети", "младенцы"]
+        -listData = ["guests", "guests", "babies"]
     div(class=selectClass,data-type=selectType)
-        if selectType =='guests'
-            .js-select__text.select__text(data-type='guests') Сколько гостей
-        if selectType == 'rooms'
-            .js-select__text.select__text(data-type='rooms') Выберите комнаты                            
+        if selectType == "guests"
+            .js-select__text.select__text(data-type="guests") Сколько гостей
+        if selectType == "rooms"
+            .js-select__text.select__text(data-type="rooms") Выберите комнаты                            
         .select__bar.js-select__bar
             ul.select__list.js-select__list
                 -let i = 0
@@ -34,11 +34,11 @@ mixin select(props={})
                             span.js-select__count.select__count=selectValues[i]
                             button.js-select__button-plus.select__button-plus.js-select__button.select__button +
                     -i++
-            if selectType =='guests'
+            if selectType == "guests"
                 .select__edit-buttons.js-select__edit-buttons
                     .select__button-clear.select__edit-button.js-select__button-clear
                         include ../button/button
-                        +button({buttonType: 'button-icon',text: 'очистить',isGray: 1})
+                        +button({buttonType: "button-icon", text: "очистить", isGray: true })
                     .select__button-accept.select__edit-button.js-select__button-accept
                         include ../button/button
-                        +button({buttonType: 'button-icon',text: 'применить',isGray: false})
+                        +button({buttonType: "button-icon" ,text: "применить", isGray: false })

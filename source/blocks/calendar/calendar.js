@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
 import 'air-datepicker';
 
-jQuery(($) => {
-  const calendar = document.querySelector('.calendar');
+$(document).ready(() => {
+  const $calendar = document.querySelector('.js-calendar');
   $.fn.datepicker.language['my-lang'] = {
 
     days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
@@ -17,7 +17,7 @@ jQuery(($) => {
     firstDay: 1,
 
   };
-  $(calendar).datepicker({
+  $($calendar).datepicker({
     language: 'my-lang',
     autoClose: false,
     range: true,

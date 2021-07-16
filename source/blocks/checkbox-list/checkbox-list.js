@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 
-jQuery(document).ready(($) => {
+$(document).ready(() => {
   function checkboxListClick(ev) {
     const listInfo = $(ev.currentTarget);
     const $listOptions = $(listInfo).parent('.js-checkbox-list').find('.js-checkbox-list__options');

@@ -3,7 +3,7 @@ mixin footer(footerItems={})
             .footer__body 
                 .footer__info-bar 
                     .footer__logo-bar 
-                        +logo(true)
+                        +logo({isColored: true})
                         p.footer__logo-bar_info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                     -let i=0
                     -const { header, item1, item2, item3, item4 } = footerItems
@@ -12,30 +12,30 @@ mixin footer(footerItems={})
                             ul.footer__nav-bar
                                 li.footer__item-header=header[i]
                                 li.footer__item
-                                    a(href="")=item1[i]
+                                    a(href="empty")=item1[i]
                                 if i==2
                                     li.footer__item
-                                        a(href="")=item2[i]
+                                        a(href="empty")=item2[i]
                                     li.footer__item
-                                        a(href="")=item3[i]
+                                        a(href="empty")=item3[i]
                                 else if i==3
                                     li.footer__item
                                         +text-field-subscription({ fieldType: "email", placeholderText: "Email" })
                                 else
                                     li.footer__item
-                                        a(href="")=item2[i]
+                                        a(href="empty")=item2[i]
                                     li.footer__item
-                                        a(href="")=item3[i]
+                                        a(href="empty")=item3[i]
                                     li.footer__item
-                                        a(href="")=item4[i]
+                                        a(href="empty")=item4[i]
                                 -i++      
             .footer__border
             .footer__copyright-bar 
                 p.footer__copyright-bar_info Copyright © 2018 Toxin отель. Все права зачищены.
                 .footer__media-bar
                     a.footer__tweet(href="") 
-                        img.footer__img(src=require('source/blocks/footer/pictures/tweet.svg'))
+                        img.footer__img(src=require("source/blocks/footer/pictures/tweet.svg"))
                     a.footer__fb(href="") 
-                        img.footer__img(src=require('source/blocks/footer/pictures/fb.svg'))
+                        img.footer__img(src=require("source/blocks/footer/pictures/fb.svg"))
                     a.footer__inst(href="") 
                         img.footer__img(src=require('source/blocks/footer/pictures/inst.svg'))

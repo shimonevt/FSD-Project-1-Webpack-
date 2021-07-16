@@ -16,33 +16,33 @@ html(lang="en")
     body
             +header({
                 authorization: true,
-                userName: 'юлий цезарь',
+                userName: "юлий цезарь",
                 headerItems: {
                 items: [
-                    {item: ['О нас']},
-                    {item:['Услуги','Услуга 1','Услуга 2']},
-                    {item: ['Вакансии']},
-                    {item: ['Новости']},
-                    {item: ['Соглашения','Соглашение 1','Соглашение 2']}
+                    {item: ["О нас"]},
+                    {item:["Услуги","Услуга 1","Услуга 2"]},
+                    {item: ["Вакансии"]},
+                    {item: ["Новости"]},
+                    {item: ["Соглашения","Соглашение 1","Соглашение 2"]}
                 ]}
             })
             main
                 section.room-details__container-images
                     .room-details__container-image.room-details__container_first-image
-                        img(src=require('source/pages/room-details/pictures/room-888.jpg'))
+                        img(src=require("source/pages/room-details/pictures/room-888.jpg"))
                     .room-details__container-image.room-details__container_second-image
-                        img(src=require('source/pages/room-details/pictures/room-888-2.jpg'))
+                        img(src=require("source/pages/room-details/pictures/room-888-2.jpg"))
                     .room-details__container-image.room-details__container_third-image 
-                        img(src=require('source/pages/room-details/pictures/room-888-3.jpg'))
+                        img(src=require("source/pages/room-details/pictures/room-888-3.jpg"))
                 section.room-details__container 
                     article.room-details__container-card 
                             +card-booking({
-                                number: '888',
-                                roomClass: 'люкс',
-                                cost: '9 990',
-                                currency: '₽',
-                                selectTitle: 'гости',
-                                selectType: 'guests',
+                                number: "888",
+                                roomClass: "люкс",
+                                cost: "9 990",
+                                currency: "₽",
+                                selectTitle: "гости",
+                                selectType: "guests",
                                 isActive: false,
                                 selectNum: [3,0,0]
                             })
@@ -51,19 +51,19 @@ html(lang="en")
                         +icon-text-list({
                                 items:[
                                 {
-                                header:'Комфорт',
-                                text:'Шумопоглощающие стены',
-                                icon: 'insert_emoticon'
+                                header: "Комфорт",
+                                text: "Шумопоглощающие стены",
+                                icon: "insert_emoticon"
                                 },
                                 {
-                                header: 'Удобство',
-                                text: 'Окно в каждой из спален',
-                                icon: 'location_city'
+                                header: "Удобство",
+                                text: "Окно в каждой из спален",
+                                icon: "location_city"
                                 },
                                 {
-                                header: 'Уют',
-                                text: 'Номер оснащён камином',
-                                icon: 'whatshot'
+                                header: "Уют",
+                                text: "Номер оснащён камином",
+                                icon: "whatshot"
                                 }
                                 ]})
                     section.room-details__container-statistics
@@ -89,29 +89,29 @@ html(lang="en")
                         +card-comment({
                             likesNum: 12,
                             isActiveLikeBtn: true,
-                            profileName: 'Мурад Сарафанов',
-                            image: 'avatar.svg',
-                            commentDate: '5 дней назад',
-                            commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                            profileName: "Мурад Сарафанов",
+                            image: "avatar.svg",
+                            commentDate: "5 дней назад",
+                            commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
                             })
                         +card-comment({
                             likesNum: 2,
                             isActiveLikeBtn: false,
-                            profileName: 'Патрисия Стёклышкова',
-                            image: 'avatar-2.jpg',
-                            commentDate: 'Неделю назад',
-                            commentText: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                            profileName: "Патрисия Стёклышкова",
+                            image: "avatar-2.jpg",
+                            commentDate: "Неделю назад",
+                            commentText: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
                             })
                     article.room-details__container-rules 
                         h1.room-details__container-header Правила
-                            +bullet-list({listItems: ['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+                            +bullet-list({listItems: ["Нельзя с питомцами","Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
                     article.room-details__container-cancel 
                         h1.room-details__container-header  Отмена
                         p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
             +footer({
-                header :  ['Навигация','О нас','Служба поддержки','Подписка'],
-                item1 : ['О нас','О сервисе','Соглашения','Получайте специальные предложения и новости сервиса'],
-                item2 : ['Новости','Наша команда','Сообщества'],
-                item3 : ['Служба поддержки','Вакансии','Связь с нами'],
-                item4 : ['Услуги','Инвесторы']
-                })
+                header :  ["Навигация","О нас","Служба поддержки","Подписка"],
+                item1 : ["О нас","О сервисе","Соглашения","Получайте специальные предложения и новости сервиса"],
+                item2 : ["Новости","Наша команда","Сообщества"],
+                item3 : ["Служба поддержки","Вакансии","Связь с нами"],
+                item4 : ["Услуги","Инвесторы"]
+            })
