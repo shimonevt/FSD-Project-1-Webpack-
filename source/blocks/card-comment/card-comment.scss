@@ -2,19 +2,21 @@
     max-width: 711px;
     display: flex;   
     &__avatar {
-        width: 47.67px;
+        width: 48px;
         height: 48px;
         }
     &__img{
-        width: 100%;
-        height: 100%;
+        width: 46px;
+        height: 46px;
         border-radius: 32px;
         filter: $drop-shadow-10;
         border: 2px solid $white;
     }   
-    .like-button{
+    &__btn-container {
         margin: 12px auto;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
     } 
     &__review {
         margin-left : 9.93px;
@@ -32,13 +34,11 @@
         font-weight: bold;
         text-transform: capitalize;
     }
-    p{
-        margin : 0px;
-    }
     &__text {
         @extend %regular-text;
         color: $dark-75;
         text-align: left;
-        margin-top : 10px;         
+        margin-top : 10px;
+        margin : 0px;      
     }           
 }

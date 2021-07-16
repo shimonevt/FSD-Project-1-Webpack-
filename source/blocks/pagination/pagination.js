@@ -15,6 +15,11 @@ $(document).ready(() => {
       pageRange: 1,
       pageSize: 12,
       nextText: 'arrow_forward',
+      classPrefix: 'paginationjs__elem',
+      className: '',
+      activeClassName: 'paginationjs__elem_active',
+      disableClassName: 'paginationjs__elem_disabled',
+      ulClassName: 'paginationjs__list',
     });
   }
 });

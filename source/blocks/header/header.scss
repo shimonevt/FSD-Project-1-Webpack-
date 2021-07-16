@@ -167,7 +167,7 @@
         z-index: 4;
         cursor: pointer;
     }
-    &__nav-smallscr span {
+    &__nav-btn {
         position: absolute;
         background-color: $dark-100;
         height : 3px;
@@ -192,7 +192,7 @@
     &__nav-smallscr:after{
         top: 29px;
     }
-    &__nav-smallscr_active span {
+    &__nav-smallscr_active .header__nav-btn {
         transform: scale(0);
     }
     &__nav-smallscr_active:before {
@@ -263,7 +263,7 @@
         border-radius: 12px;
         height: 30px;
         padding: 4px 4px 5px;
-        a {
+        .header__entry-bar-href {
             display: block;
         }
         i.material-icons{

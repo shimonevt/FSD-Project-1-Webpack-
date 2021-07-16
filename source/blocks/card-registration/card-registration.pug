@@ -3,19 +3,26 @@ mixin card-registration(props={})
         -const {buttonArrowText} = props;
         .card-registration
             p.card-registration__title Регистрация аккаунта
-            +text-field({ placeholderText: "Имя", textType: "text", isMasked: false})
-            +text-field({ placeholderText: "Фамилия", textType: "text", isMasked: false})
-            +radio-buttons({ radioBtnName: "man" })
+            .card-registration__txt-fld-container
+                +text-field({ placeholderText: "Имя", textType: "text", isMasked: false})
+            .card-registration__txt-fld-container
+                +text-field({ placeholderText: "Фамилия", textType: "text", isMasked: false})
+            .card-registration__rd-btn-container
+                +radio-buttons({ radioBtnName: "man" })
             p.card-registration__subtitle дата рождения
             +text-field({ placeholderText: "ДД.ММ.ГГГГ", textType: "email",isMasked: true})
             p.card-registration__subtitle данные для входа в сервис
-            +text-field({ placeholderText: "Email", textType: "email", isMasked: false})
-            +text-field({ placeholderText: "Пароль", textType: "password", isMasked: false})
-            +toggle({ isChecked: false })
-            +button({ buttonType: "button-arrow", text: buttonArrowText, isGray: false })
-            .log-in
-                span.log-in__info Уже есть аккаунт на Toxin
-                a(href="sign-in.html")
+            .card-registration__txt-fld-container
+                +text-field({ placeholderText: "Email", textType: "email", isMasked: false})
+            .card-registration__txt-fld-container
+                +text-field({ placeholderText: "Пароль", textType: "password", isMasked: false})
+            .card-registration__tggl-container
+                +toggle({ isChecked: false })
+            .card-registration__btn-container
+                +button({ buttonType: "button-arrow", text: buttonArrowText, isGray: false })
+            .card-registration__log-in
+                span.card-registration__info Уже есть аккаунт на Toxin
+                a.card-registration__href(href="sign-in.html")
                     +button({ buttonType: "button-border", text: "войти", isGray: false })
 
             

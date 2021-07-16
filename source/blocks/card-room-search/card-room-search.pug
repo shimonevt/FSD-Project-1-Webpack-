@@ -1,8 +1,10 @@
 mixin card-room-search
         .card-room-search
             p.card-room-search__title Найдём номера под ваши пожелания
-            .card-room-search__body
-                include ../../blocks/date-dropdown/date-dropdown
-                +date-dropdown()
+            include ../../blocks/date-dropdown/date-dropdown
+            +date-dropdown()
+            .card-room-search__slct-container
+                p.card-room-search__subtitle гости
                 +select({ selectType: "guests", isActive: false, selectValues: [0,0,0] })    
+            .card-room-search__btn-container
                 +button({ buttonType: "button-arrow", text: "подобрать номер", isGray: false })

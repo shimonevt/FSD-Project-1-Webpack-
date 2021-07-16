@@ -19,6 +19,25 @@ body {
         margin : 70px auto 70px;
         padding: 0px 20px; 
     }
+    @media(max-width: 1110px){
+        &__container {
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 'card-booking card-booking' 
+                                'room-info statistics'
+                                'card-comment card-comment'
+                                'rules cancel';
+            padding: 0px 20px;
+        }
+    }
+    @media(max-width: 560px) {   
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 5px;
+        }
+    }
     &__container-images {
         height: 485px;
         max-width: 1440px;
@@ -30,6 +49,15 @@ body {
             'first second'
             'first third'; 
     }
+    @media(max-width: 560px) {   
+        &__container-images {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr;
+            grid-template-areas:
+            'first first'
+            'second third';
+        }
+    }
     &__container_first-image { 
         grid-area: first;
     }
@@ -39,7 +67,7 @@ body {
     &__container_third-image {
         grid-area: third;
     }
-    &__container-image img{
+    &__room-image{
         object-fit: cover;
         width: 100%;
         height: 100%;
@@ -47,20 +75,45 @@ body {
     &__container-info {
         grid-area: room-info;
     }
+    @media(max-width: 1110px){
+        &__container-info {
+            margin: 0px auto;
+        }
+    }
     &__container-statistics {
         grid-area: statistics;
         margin: 0px auto;
+    }
+    @media(max-width: 1110px){
+        &__container-statistics {
+            margin: 0px auto;
+        }
     }
     &__container-card {
         grid-area: card-booking;
         max-width: 380px;
         margin: 0px auto;
     }
+    @media(max-width: 450px) {
+        &__container-card {
+            padding: 20px 10px;
+        }
+    }
     &__container-comment {
         grid-area: card-comment;
         margin: 0px 70px 0px 0px;
         .card-comment{
             margin: 0px 0px 20px 0px;
+        }
+    }
+    @media(max-width: 1110px){
+        &__container-comment {
+            margin: 0px auto;
+        }
+    }
+    @media(max-width: 560px) {   
+        .room-details__container-comment{
+            padding: 0px 10px;
         }
     }
     &__container-rules {
@@ -70,6 +123,11 @@ body {
     &__container-cancel {
         grid-area: cancel;
         margin: 0px 105px 0px 0px;
+    }
+    @media(max-width: 1110px){
+        &__container-cancel{
+            margin: 0px auto;
+        }  
     }
     &__comment-info {
         display: flex;
@@ -166,53 +224,12 @@ body {
             background: $gray-gradient;
         }
     }
+    @media(max-width: 450px) {
+        &__statistics-info {
+            padding:0px 10px;
+        }
+    }
     &__cancel-text {
         margin: 0px;
-    }
-}
-@media(max-width: 1110px){
-    .room-details__container {
-        max-width: 800px;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-areas: 'card-booking card-booking' 
-                            'room-info statistics'
-                            'card-comment card-comment'
-                            'rules cancel';
-        padding: 0px 20px;
-    }
-    .room-details__container-statistics,.room-details__container-info {
-        margin: 0px auto;
-    }
-    .room-details__container-cancel{
-        margin: 0px auto;
-    }
-    .room-details__container-comment {
-        margin: 0px auto;
-    }
-}
-@media(max-width: 560px) {   
-    .room-details__container {
-        display: flex;
-        flex-direction: column;
-        padding: 0px 5px;
-    }
-    .room-details__container-images {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas:
-        'first first'
-        'second third';
-    }
-    .room-details__container-comment{
-        padding: 0px 10px;
-    }
-}
-@media(max-width: 450px) {
-    .card-booking {
-        padding: 20px 10px;
-    }
-    .room-details__statistics-info {
-        padding:0px 10px;
     }
 }

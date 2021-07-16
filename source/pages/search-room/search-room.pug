@@ -31,33 +31,41 @@ html(lang="en")
                 .search-room__button-close.js-search-room__button-close.search-room__button
                     i.material-icons keyboard_arrow_right
                 p.search-room__header Даты пребывания в отеле
-                +date-dropdown-filter
-                +select({selectType: "guests",isActive: false,selectValues: [3,0,1]})
-                +range-slider({sliderText: "диапазон цен"})
+                .search-room__date-container
+                    +date-dropdown-filter
+                .search-room__slct-container 
+                    +select({selectType: "guests",isActive: false,selectValues: [3,0,1]})
+                .search-room__sldr-container
+                    +range-slider({sliderText: "диапазон цен"})
                 .search-room__text Стоимость за сутки пребывания в номере
-                +checkbox-buttons({
-                    values: [0,1,1],
-                    items: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
-                })
+                .search-room__chckbx-container
+                    p.search-room__header правила дома
+                    +checkbox-buttons({
+                        values: [0,1,1],
+                        items: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
+                    })
                 p.search-room__header доступность
-                +rich-checkbox-buttons({
-                    items: [
-                        {
-                            header: "Широкий коридор",
-                            mainText: "Ширина коридоров в номере не менее 91 см."
-                        },
-                        {
-                            header: "Помощник для инвалидов",
-                            mainText: "На 1 этаже вас встретит специалист и проводит до номера."
-                        }
-                        ]})
-                +select({selectType: "rooms",isActive: false,selectValues: [2,2,0]})
-                +checkbox-list({
-                    listHeader: "дополнительные удобства",
-                    isActive: true,
-                    listValues: [0,1,1,1,0,0],
-                    listItems: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
-                })
+                .search-room__chckbx-container
+                    +rich-checkbox-buttons({
+                        items: [
+                            {
+                                header: "Широкий коридор",
+                                mainText: "Ширина коридоров в номере не менее 91 см."
+                            },
+                            {
+                                header: "Помощник для инвалидов",
+                                mainText: "На 1 этаже вас встретит специалист и проводит до номера."
+                            }
+                            ]})
+                .search-room__slct-container 
+                    +select({selectType: "rooms",isActive: false,selectValues: [2,2,0]})
+                .search-room__lst-container     
+                    +checkbox-list({
+                        listHeader: "дополнительные удобства",
+                        isActive: true,
+                        listValues: [0,1,1,1,0,0],
+                        listItems: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
+                    })
             section.search-room__container-room
                 .search-room__button-open.search-room__button.js-search-room__button-open 
                     i.material-icons settings

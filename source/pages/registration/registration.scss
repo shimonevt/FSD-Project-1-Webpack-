@@ -1,17 +1,19 @@
 @import '../../import/import.scss';
-.registration__container{
-    display: flex;
-    justify-content: center;
-    background : url(./pictures/sign-in-reg.jpg) no-repeat center center;
-    background-size: cover;
-    margin: 70px auto 0px;
-}
-.registration__container-card{
+.registration {
+    &__container {
+        display: flex;
+        justify-content: center;
+        background : url(./pictures/sign-in-reg.jpg) no-repeat center center;
+        background-size: cover;
+        margin: 70px auto 0px;
+    }
+    &__container-card{
         width: 380px;
         margin: 19px 0px;
     }
-@media(max-width:450px) {
-    .card-registration {
-        padding: 30px 20px 30px;
+    @media(max-width:450px) {
+        &__container-card {
+            padding: 30px 20px 30px;
+        }
     }
 }

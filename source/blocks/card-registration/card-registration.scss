@@ -10,31 +10,30 @@
     }
     &__subtitle {
       @extend %label-text;
-      margin : 0px 0px 5px 0px;
+      margin : 20px 0px 5px 0px;
       color: $dark-100;
     }
-    .text-field {
+    &__txt-fld-container {
       margin-bottom: 10px;
     }
-    .radio-button {
+    &__rd-btn-container {
       margin: 0px 0px 20px 0px;
     }
-    .toggle{
+    &__tggl-container {
       margin: 0px 0px 20px 0px;
     }
-    .button-arrow{
+    &__btn-container {
       margin: 0px 0px 30px 0px;
     }
-    .log-in{
+    &__log-in{
       display: flex;
-      text-align: center;
+      align-items: center;
       justify-content: space-between;
-      .log-in__info{
-        @extend %regular-text;
-        line-height: 18px;
-        color: #000000;
-        margin-top: 12px;
-      }
+    }
+    &__info{
+      @extend %regular-text;
+      line-height: 18px;
+      color: #000000;
     } 
     .button-border {
       .button-border__text{

@@ -6,21 +6,22 @@
         color: $dark-100;
         margin : 0px 0px 20px 0px;
     }
-    .text-field {
+    &__txt-fld-container {
         margin-bottom: 10px;
     }
-    .button-arrow {
+    &__btn-container {
         margin-top: 20px;
     }
-    &__info{
+    &__registration {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
         align-items: center;
-        &-text {
+    }
+    &__info {
             @extend %regular-text;
             margin: 0px;
+            line-height: 18px;
             color: #000000;
         }
-    }
 }

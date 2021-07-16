@@ -1,56 +1,54 @@
 .pagination {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: normal;
-    &__body {
-        ul {
-            list-style: none;
-            display: flex;          
-            padding-left: 0px;
-            font-size: 12px;
-            .ellipse.clickable {
-                color: $dark-50;
-            }
-            li {
-                min-width: 40px;
-                height: 40px; 
-                text-align: center;
-                line-height: 40px;    
-                cursor: pointer;                       
-                a {
-                    text-decoration: none;
-                    color: $dark-50;
-                }
-            }
-            li.disabled {
-                cursor: default;
-            }
-            li:first-child {
-                display: none;
-            }
-            li.active {
-                background: $purple-gradient;
-                border-radius: 22px;
-                >a {
-                    color : $white;    
-                    mix-blend-mode: screen;
-                }
-            }
-            li:last-child {
-                background: $green-gradient;
-                border-radius: 22px;
-                >a {
-                    font-family: "Material Icons";
-                    font-size: 24px;
-                    color : $white;
-                    display: inline;
-                }
-            }
+    &js__list {
+        list-style: none;
+        display: flex;          
+        padding-left: 0px;
+        font-size: 12px;
+        .ellipse.clickable {
+            color: $dark-50;
         }
     }
-    .pagination__count {
-        margin: 10px 0px 0px;
-        color: $dark-75;
-        font-size: 14px;
-        text-align: center;
-    }
+        &js__elem-page, &js__elem-ellipsis,&js__elem-next {
+            min-width: 40px;
+            height: 40px; 
+            text-align: center;
+            line-height: 40px;    
+            cursor: pointer;                       
+            a {
+                text-decoration: none;
+                color: $dark-50;
+            }
+        }
+        &js__elem_disabled {
+            cursor: default;
+        }
+        &js__elem-prev {
+            display: none;
+        }
+        &js__elem_active {
+            background: $purple-gradient;
+            border-radius: 22px;
+            a {
+                color : $white;    
+                mix-blend-mode: screen;
+            }
+        }
+        &js__elem-next {
+            background: $green-gradient;
+            border-radius: 22px;
+            >a {
+                font-family: "Material Icons";
+                font-size: 24px;
+                color : $white;
+                display: inline;
+            }
+        }
+        &__count {
+            margin: 10px 0px 0px;
+            color: $dark-75;
+            font-size: 14px;
+            text-align: center;
+        }
 }

@@ -21,7 +21,8 @@ mixin card-hotel-room(props={})
                     span.card-hotel-room__duration в сутки
             span.card-hotel-room__info-divider
             .card-hotel-room__info-row
-                    +rating({ rate: starNum, ratingName: roomNumber })
+                    .card-hotel-room__rtng-container
+                        +rating({ rate: starNum, ratingName: roomNumber })
                     .card-hotel-room__info-guest
                         span.card-hotel-room__review-number=revNum 
                         .card-hotel-room__review-text Отзывов

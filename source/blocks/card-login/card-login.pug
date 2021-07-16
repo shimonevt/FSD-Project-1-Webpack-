@@ -1,10 +1,13 @@
 mixin card-login
         .card-login
             p.card-login__title Войти
-            +text-field({placeholderText: "Email", textType: "email",isMasked: false})
-            +text-field({placeholderText: "Пароль", textType: "password",isMasked: false})
-            +button({buttonType:"button-arrow", text:"войти",isGray: false})
-            .card-login__info
-                span.card-login__info-text Нет аккаунта на Toxin?
+            .card-login__txt-fld-container
+                +text-field({placeholderText: "Email", textType: "email",isMasked: false})
+            .card-login__txt-fld-container
+                +text-field({placeholderText: "Пароль", textType: "password",isMasked: false})
+            .card-login__btn-container
+                +button({buttonType:"button-arrow", text:"войти",isGray: false})
+            .card-login__registration
+                span.card-login__info Нет аккаунта на Toxin?
                 a.card-login__info-href(href="registration.html")
                     +button({buttonType: "button-border", text: "создать", isGray: false})

@@ -10,9 +10,11 @@ mixin card-booking(props={})
                         span.card-booking__price-value.js-card-booking__price-value=cost+currency
                         span.card-booking__price-interval в сутки
                 include ../../blocks/date-dropdown/date-dropdown
-                +date-dropdown
-                p.card-booking__subtitle=selectTitle
-                +select({selectType: selectType,isActive: isActive,selectValues: selectNum})
+                .card-booking__date-container
+                    +date-dropdown
+                .card-booking__select-container
+                    p.card-booking__subtitle=selectTitle
+                    +select({selectType: selectType,isActive: isActive,selectValues: selectNum})
                 .card-booking__costs
                     .card-booking__room.card-booking__item
                         span.js-card-booking__room-description.card-booking__room-description.card-booking__description Стоимость номера
@@ -29,5 +31,6 @@ mixin card-booking(props={})
                         span.card-booking__total-description Итого
                         span.card-booking__total-divider
                         span.js-card-booking__total-price.card-booking__total-price 0₽
-                    +button({ buttonType:"button-arrow", text:"забронировать", isGray: false})
+                    .card-booking__btn-container
+                        +button({ buttonType:"button-arrow", text:"забронировать", isGray: false})
                     

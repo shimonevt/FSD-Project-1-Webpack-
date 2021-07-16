@@ -18,13 +18,13 @@
         width: 20px;
         display: flex; 
         justify-content: center;            
-        i.material-icons.md-10{
+        i.material-icons{
             font-family: "Material Icons";
             font-size: 10px;
             color : $purple;
         }
     }
-    &.active {
+    &_active {
         border: 1px solid $purple;
         transition-duration: 500ms;
         .like-button__body {

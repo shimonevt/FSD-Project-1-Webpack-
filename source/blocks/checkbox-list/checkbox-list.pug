@@ -1,14 +1,14 @@
 mixin checkbox-list(props={})
         -const {listHeader,isActive, listValues, listItems} = props;
         if isActive
-            -listClass ="active"
+            -listClasses = ["js-checkbox-list__info checkbox-list__info checkbox-list__info_active","js-checkbox-list__options checkbox-list__options checkbox-list__options_active"];
         else
-            -listClass =""
+            -listClasses =["js-checkbox-list__info checkbox-list__info","js-checkbox-list__options checkbox-list__options"]
         .checkbox-list.js-checkbox-list
-            div.js-checkbox-list__info(class="checkbox-list__info "+listClass)
+            div(class=listClasses[0])
                 .checkbox-list__info-title=listHeader
                 .checkbox-list__info-arrow
                     i.material-icons.md-24 expand_more
-            div.js-checkbox-list__options(class="checkbox-list__options "+listClass)
+            div(class=listClasses[1])
                 +checkbox-buttons({values: listValues,items: listItems})
                 

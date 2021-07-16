@@ -2,30 +2,21 @@
     @extend %card;
     display: block;
     max-width: 318px;
-    .card__body{
-        display: block;
-    }
+    color: $dark-75;
     &__title {
         @extend %subsection-title;
         color: $dark-100;
         margin: 0px 0px 21px 0px;
     }
-    &__body {
-        color: $dark-75;
-    }
     &__subtitle{
         @extend %label-text;
+        margin: 0px 0px 5px 0px;
+        line-height: 14px;
     }
-    .select{
+    &__slct-container{
         margin: 21px 0px 0px 0px;
-        .info__type{
-            @extend %regular-text;
-            line-height: 15px;
-            color: $dark-100;
-        }
     }
-    .button-arrow {
-        position: relative;
+    &__btn-container {
         margin: 30px 0px 0px 0px;
     }
   } 

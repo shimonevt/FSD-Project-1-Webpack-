@@ -7,10 +7,10 @@
         align-items: baseline;
         height: 30px;
     }
-    .date-dropdown {
+    &__date-container {
         margin-bottom: 20px;
     }
-    .select {
+    &__select-container {
         margin: 0px 0px 20px 0px;
     }
     &__subtitle {
@@ -104,10 +104,10 @@
         flex-grow: 1;
         margin : 0px 5px;
     }
-    .card-booking__additional-description{
+    &__additional-description{
         line-height: 18px;
     }
-    .button-arrow {
+    &__btn-container {
         margin-top: 20px;
     }
 }  

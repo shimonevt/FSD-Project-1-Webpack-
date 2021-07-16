@@ -5,10 +5,11 @@ mixin card-comment(props={})
                 .card-comment__avatar
                     img.card-comment__img(src=require("source/blocks/card-comment/pictures/"+image))
                 include ../../blocks/like-button/like-button
-                +like-button({
-                    isLikeBtnActive: isActiveLikeBtn,
-                    likesNum: likesNum
-                    })
+                .card-comment__btn-container
+                    +like-button({
+                        isLikeBtnActive: isActiveLikeBtn,
+                        likesNum: likesNum
+                        })
             .card-comment__review
                 .card-comment__info
                     span.card-comment__info-name=profileName
